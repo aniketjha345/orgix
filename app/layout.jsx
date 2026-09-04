@@ -5,7 +5,6 @@ import ConsultationModal from "@/components/ui/ConsultationModal";
 import CustomCursor from "@/components/ui/CustomCursor";
 import CommandPalette from "@/components/ui/CommandPalette";
 import ViewTransitions from "@/components/ui/ViewTransitions";
-import StickyCta from "@/components/ui/StickyCta";
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -86,7 +85,6 @@ export default function RootLayout({ children }) {
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <StickyCta />
         <ConsultationModal />
       </body>
     </html>
