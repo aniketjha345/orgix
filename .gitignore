@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out/
+*.log
+.DS_Store
+
+# secrets — never commit real credentials
+.env
+.env.local
+.env*.local
+!.env.example
+
+# logs & testing artifacts
+.playwright-mcp/
+qa-*.txt
+research/shots/
+research/*.png

@@ -1,0 +1,1062 @@
+{
+  "data": {
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "scrollW": 390,
+    "scrollH": 18044,
+    "bodyFont": "16px",
+    "hCount": {
+      "h1": 1,
+      "h2": 10,
+      "h3": 28
+    },
+    "overflowSources": [
+      {
+        "tag": "div",
+        "cls": "hero-glow",
+        "w": 560,
+        "vw": 390
+      },
+      {
+        "tag": "div",
+        "cls": "hero-glow",
+        "w": 640,
+        "vw": 390
+      },
+      {
+        "tag": "div",
+        "cls": "type-marquee-track",
+        "w": 6057,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word ",
+        "w": 575,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word type-marquee-word--outline",
+        "w": 598,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word ",
+        "w": 516,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word type-marquee-word--outline",
+        "w": 496,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word ",
+        "w": 575,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word type-marquee-word--outline",
+        "w": 598,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word ",
+        "w": 516,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word type-marquee-word--outline",
+        "w": 496,
+        "vw": 390
+      },
+      {
+        "tag": "div",
+        "cls": "marquee-track",
+        "w": 6106,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "",
+        "w": 3046,
+        "vw": 390
+      },
+      {
+        "tag": "div",
+        "cls": "marquee-track",
+        "w": 4882,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "",
+        "w": 2434,
+        "vw": 390
+      },
+      {
+        "tag": "div",
+        "cls": "blob",
+        "w": 480,
+        "vw": 390
+      },
+      {
+        "tag": "div",
+        "cls": "blob",
+        "w": 580,
+        "vw": 390
+      },
+      {
+        "tag": "div",
+        "cls": "blob",
+        "w": 520,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "",
+        "w": 500,
+        "vw": 390
+      },
+      {
+        "tag": "div",
+        "cls": "blob",
+        "w": 540,
+        "vw": 390
+      },
+      {
+        "tag": "div",
+        "cls": "type-marquee-track",
+        "w": 6057,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word ",
+        "w": 575,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word type-marquee-word--outline",
+        "w": 598,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word ",
+        "w": 516,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word type-marquee-word--outline",
+        "w": 496,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word ",
+        "w": 575,
+        "vw": 390
+      }
+    ],
+    "imgs": [
+      {
+        "src": "orgix-logo.png",
+        "nw": 512,
+        "nh": 512,
+        "dispW": 44,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "aarti-malhotra.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 42,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "anuj-chhajerh.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 42,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "simran-balraj.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 42,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "gaurav-mahawar.jpg",
+        "nw": 1080,
+        "nh": 1080,
+        "dispW": 42,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "ruchira.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 42,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "aarti-malhotra.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 182,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "anuj-chhajerh.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 176,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "simran-balraj.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 169,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "simran-balraj.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "anuj-chhajerh.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "aarti-malhotra.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "gaurav-mahawar.jpg",
+        "nw": 1080,
+        "nh": 1080,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "taranveer-jaura.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "garima-barnoliya.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "radical-era.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "9skin.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "shivam.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "ruchira.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "kanikka-dewanii.png",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "daisy-morgan.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "demla-brothers.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "bhavit-patil.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "cellbell.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "simran-balraj.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "anuj-chhajerh.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "aarti-malhotra.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "gaurav-mahawar.jpg",
+        "nw": 1080,
+        "nh": 1080,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "taranveer-jaura.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "garima-barnoliya.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "radical-era.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "9skin.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "shivam.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "ruchira.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "kanikka-dewanii.png",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "daisy-morgan.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "demla-brothers.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "bhavit-patil.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "cellbell.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "royston-dias.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "radical-era.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "demla-brothers.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "aarti-malhotra.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "daisy-morgan.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "ruchira.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "imarticus.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "kanikka-dewanii.png",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "akash-pandey.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "anuj-chhajerh.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "simran-balraj.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "jyoti-goyal.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "royston-dias.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "radical-era.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "demla-brothers.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "aarti-malhotra.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "daisy-morgan.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "ruchira.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "imarticus.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "kanikka-dewanii.png",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "akash-pandey.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "anuj-chhajerh.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "simran-balraj.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "jyoti-goyal.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 188,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "pari-jain.jpg",
+        "nw": 1025,
+        "nh": 1458,
+        "dispW": 348,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "tools-fact.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 348,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "demla-brothers.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 348,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "shivam-careers.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 348,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "ca-jyoti-goyal.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 348,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "01-research.webp",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 0,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "02-scripting.webp",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 0,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "03-shooting.webp",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 0,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "04-editing.webp",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 0,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "05-posting.webp",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 0,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "06-growth.webp",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 0,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "vid_client1_poster.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 0,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "vid_client2_poster.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 0,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "img_6a8d49bc28c12.png",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 0,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "vid_client4_poster.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 0,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "img_6a8fdb40b555d.png",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 0,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "img_6a8d4a25881a7.png",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 0,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "gaurav-mahawar.jpg",
+        "nw": 1080,
+        "nh": 1080,
+        "dispW": 42,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "royston-dias.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 42,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "neha.jpg",
+        "nw": 1080,
+        "nh": 1080,
+        "dispW": 42,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "gaurav-mahawar.jpg",
+        "nw": 1080,
+        "nh": 1080,
+        "dispW": 52,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "royston-dias.jpg",
+        "nw": 1040,
+        "nh": 840,
+        "dispW": 51,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "neha.jpg",
+        "nw": 1080,
+        "nh": 1080,
+        "dispW": 51,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "pari-jain.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 198,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "anant-jain.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 198,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "deepak-jain.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 198,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "orgix-logo.png",
+        "nw": 512,
+        "nh": 512,
+        "dispW": 52,
+        "loading": "auto",
+        "hasAlt": true
+      }
+    ],
+    "a11y": {
+      "noAltImgs": 0,
+      "noNameButtons": [],
+      "emptyLinks": 0
+    },
+    "decorCount": 12,
+    "fontSizes": [
+      [
+        "13.0",
+        16
+      ],
+      [
+        "13.5",
+        12
+      ],
+      [
+        "14.5",
+        10
+      ],
+      [
+        "17.0",
+        10
+      ],
+      [
+        "15.0",
+        9
+      ],
+      [
+        "26.4",
+        7
+      ],
+      [
+        "15.2",
+        7
+      ],
+      [
+        "17.5",
+        6
+      ],
+      [
+        "11.5",
+        6
+      ],
+      [
+        "16.8",
+        6
+      ],
+      [
+        "41.6",
+        3
+      ],
+      [
+        "17.6",
+        3
+      ],
+      [
+        "21.6",
+        2
+      ],
+      [
+        "16.0",
+        2
+      ]
+    ],
+    "h1Style": {
+      "fontSize": "33.6px",
+      "lineHeight": "36.288px",
+      "letterSpacing": "-1.008px",
+      "fontFamily": "\"Space Grotesk\"",
+      "fontWeight": "700"
+    },
+    "sections": [
+      {
+        "i": 0,
+        "tag": "section",
+        "cls": "hero.grain",
+        "h": 1375
+      },
+      {
+        "i": 1,
+        "tag": "div",
+        "cls": "type-marquee..",
+        "h": 78
+      },
+      {
+        "i": 2,
+        "tag": "section",
+        "cls": "section--tight.trusted-by-section",
+        "h": 627
+      },
+      {
+        "i": 3,
+        "tag": "section",
+        "cls": "stats-band",
+        "h": 721
+      },
+      {
+        "i": 4,
+        "tag": "section",
+        "cls": "section",
+        "h": 2431
+      },
+      {
+        "i": 5,
+        "tag": "section",
+        "cls": "section",
+        "h": 1563
+      },
+      {
+        "i": 6,
+        "tag": "section",
+        "cls": "section",
+        "h": 2135
+      },
+      {
+        "i": 7,
+        "tag": "section",
+        "cls": "section.vt-section.grain",
+        "h": 667
+      },
+      {
+        "i": 8,
+        "tag": "section",
+        "cls": "section.grain",
+        "h": 1167
+      },
+      {
+        "i": 9,
+        "tag": "section",
+        "cls": "section.myth-section.grain",
+        "h": 1879
+      },
+      {
+        "i": 10,
+        "tag": "section",
+        "cls": "section.section--tight.leadership-strip",
+        "h": 1955
+      },
+      {
+        "i": 11,
+        "tag": "section",
+        "cls": "section",
+        "h": 1414
+      },
+      {
+        "i": 12,
+        "tag": "div",
+        "cls": "type-marquee.type-marquee--reverse.",
+        "h": 78
+      },
+      {
+        "i": 13,
+        "tag": "section",
+        "cls": "section.cta.grain",
+        "h": 625
+      },
+      {
+        "i": 14,
+        "tag": "footer",
+        "cls": "footer",
+        "h": 1230
+      }
+    ],
+    "suspiciousFixed": []
+  },
+  "consoleMsgs": [],
+  "failedReq": []
+}

@@ -1,0 +1,235 @@
+{
+  "data": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "scrollW": 1440,
+    "scrollH": 4104,
+    "bodyFont": "16px",
+    "hCount": {
+      "h1": 1,
+      "h2": 1,
+      "h3": 1
+    },
+    "overflowSources": [],
+    "imgs": [
+      {
+        "src": "orgix-logo.png",
+        "nw": 512,
+        "nh": 512,
+        "dispW": 44,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "pari-jain.jpg",
+        "nw": 1025,
+        "nh": 1458,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "shivam-careers.jpg",
+        "nw": 841,
+        "nh": 1249,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "akash-pandey.jpg",
+        "nw": 720,
+        "nh": 1413,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "ca-jyoti-goyal.jpg",
+        "nw": 1050,
+        "nh": 1599,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "tools-fact.jpg",
+        "nw": 1054,
+        "nh": 1079,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "taranveer-jaura.jpg",
+        "nw": 738,
+        "nh": 1116,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "amit-arora.jpg",
+        "nw": 738,
+        "nh": 1186,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "ruchira-pokhriyal.jpg",
+        "nw": 719,
+        "nh": 1455,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "cellbell.jpg",
+        "nw": 738,
+        "nh": 1140,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "roshnii-deshmukkh.jpg",
+        "nw": 719,
+        "nh": 1415,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "royston-dias.jpg",
+        "nw": 706,
+        "nh": 1421,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "alisha-chettri.jpg",
+        "nw": 715,
+        "nh": 1408,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "bhavit-patil.jpg",
+        "nw": 1080,
+        "nh": 1549,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "demla-brothers.jpg",
+        "nw": 738,
+        "nh": 1216,
+        "dispW": 278,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "orgix-logo.png",
+        "nw": 512,
+        "nh": 512,
+        "dispW": 52,
+        "loading": "auto",
+        "hasAlt": true
+      }
+    ],
+    "a11y": {
+      "noAltImgs": 0,
+      "noNameButtons": [],
+      "emptyLinks": 0
+    },
+    "decorCount": 5,
+    "fontSizes": [
+      [
+        "12.5",
+        14
+      ],
+      [
+        "11.0",
+        14
+      ],
+      [
+        "15.0",
+        14
+      ],
+      [
+        "76.8",
+        1
+      ],
+      [
+        "17.3",
+        1
+      ],
+      [
+        "20.0",
+        1
+      ],
+      [
+        "13.0",
+        1
+      ],
+      [
+        "41.6",
+        1
+      ],
+      [
+        "15.5",
+        1
+      ],
+      [
+        "13.5",
+        1
+      ],
+      [
+        "14.5",
+        1
+      ]
+    ],
+    "h1Style": {
+      "fontSize": "76.8px",
+      "lineHeight": "79.872px",
+      "letterSpacing": "-2.304px",
+      "fontFamily": "\"Space Grotesk\"",
+      "fontWeight": "700"
+    },
+    "sections": [
+      {
+        "i": 0,
+        "tag": "section",
+        "cls": "page-hero.grain",
+        "h": 680
+      },
+      {
+        "i": 1,
+        "tag": "section",
+        "cls": "section.section--tight",
+        "h": 2095
+      },
+      {
+        "i": 2,
+        "tag": "section",
+        "cls": "section.cta.grain",
+        "h": 676
+      },
+      {
+        "i": 3,
+        "tag": "footer",
+        "cls": "footer",
+        "h": 503
+      }
+    ],
+    "suspiciousFixed": []
+  },
+  "consoleMsgs": [],
+  "failedReq": []
+}

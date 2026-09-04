@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orgix Media, Best Social Media Marketing Agency in India</title>
+<meta name="description" content="Orgix Media is India&#039;s best social media marketing agency — we build personal brands the internet can&#039;t ignore. Organic Instagram &amp; YouTube growth, viral content strategy, scripting, shooting and editing for creators and founders. 1B+ views generated · 85+ creators scaled · 100% organic.">
+<meta name="keywords" content="best social media agency in India, social media marketing agency India, personal branding agency India, Instagram growth agency, YouTube growth agency, content creation agency, organic social media growth, influencer marketing India, video editing agency, creator marketing, Orgix Media">
+<meta name="author" content="Orgix Media">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0a0a1f">
+<link rel="canonical" href="https://orgixmedia.com/">
+<link rel="icon" href="image/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="image/logo.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Orgix Media">
+<meta property="og:title" content="Orgix Media, Best Social Media Marketing Agency in India">
+<meta property="og:description" content="Orgix Media is India&#039;s best social media marketing agency — we build personal brands the internet can&#039;t ignore. Organic Instagram &amp; YouTube growth, viral content strategy, scripting, shooting and editing for creators and founders. 1B+ views generated · 85+ creators scaled · 100% organic.">
+<meta property="og:url" content="https://orgixmedia.com/">
+<meta property="og:image" content="https://orgixmedia.com/image/logo.png">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Orgix Media, Best Social Media Marketing Agency in India">
+<meta name="twitter:description" content="Orgix Media is India&#039;s best social media marketing agency — we build personal brands the internet can&#039;t ignore. Organic Instagram &amp; YouTube growth, viral content strategy, scripting, shooting and editing for creators and founders. 1B+ views generated · 85+ creators scaled · 100% organic.">
+<meta name="twitter:image" content="https://orgixmedia.com/image/logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<!-- ─────────── Structured data (SEO) ─────────── -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Orgix Media","description":"Orgix Media is India's best social media marketing agency — we build personal brands the internet can't ignore. Organic Instagram & YouTube growth, viral content strategy, scripting, shooting and editing for creators and founders. 1B+ views generated · 85+ creators scaled · 100% organic.","url":"https://orgixmedia.com/","logo":"https://orgixmedia.com/image/logo.png","image":"https://orgixmedia.com/image/logo.png","areaServed":{"@type":"Country","name":"India"},"slogan":"We build personal brands the internet can't ignore.","address":{"@type":"PostalAddress","addressCountry":"IN"},"priceRange":"₹₹","sameAs":[],"contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"info@orgixmedia.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Orgix Media","url":"https://orgixmedia.com/"}</script>
+</head>
+<body>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="/"><img src="image/logo.png" class="nav-logo" alt="Orgix Media"></a>
+  <div class="nav-links">
+    <a href="#results">Client</a>
+    <a href="#stories">Result</a>
+    <a href="#protocol">Process</a>
+    <a href="#testimonials">Testimonial</a>
+    <a href="#services">Service</a>
+    <a href="#about">About Us</a>
+    <a href="#leadership">Our Leadership</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <button class="cta" id="openContact">Start Growing →</button>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#results" class="mob-link">Client</a>
+  <a href="#stories" class="mob-link">Result</a>
+  <a href="#protocol" class="mob-link">Process</a>
+  <a href="#testimonials" class="mob-link">Testimonial</a>
+  <a href="#services" class="mob-link">Service</a>
+  <a href="#about" class="mob-link">About Us</a>
+  <a href="#leadership" class="mob-link">Our Leadership</a>
+  <a href="#faq" class="mob-link">FAQ</a>
+  <a href="blog.php" class="mob-link">Blog</a>
+  <a href="careers.php" class="mob-link">Careers</a>
+  <button class="cta" style="margin-top:14px;width:100%;justify-content:center" onclick="openModal()">Start Growing →</button>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="home">
+  <canvas id="particles"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-glow hero-glow2"></div>
+
+  <!-- floating decorative chips -->
+  <div class="hero-orbit" aria-hidden="true">
+    <span class="hero-chip hero-chip--1"><span class="hc-dot"></span>Start Growing</span>
+    <span class="hero-chip hero-chip--2">📈 100% Organic</span>
+    <span class="hero-chip hero-chip--3">▶ 1B+ Views</span>
+    <span class="hero-chip hero-chip--4">✦ 85+ Creators</span>
+    <span class="hero-ring hero-ring--1"></span>
+    <span class="hero-ring hero-ring--2"></span>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge" id="heroBadge">
+      <span class="pulse-dot"></span>Personal Branding Agency in India    </div>
+
+    <h1 class="hero-h1" id="heroH1">
+      <span class="hero-line">Build the Brand</span>
+      <span class="hero-line hero-accent">Behind You.</span>
+    </h1>
+
+    <p class="hero-sub" id="heroSub">We turn expertise into personal brands that get noticed, trusted and remembered.</p>
+
+    <div class="hero-btns" id="heroBtns">
+      <button class="cta cta-glow" onclick="openModal()">Start Growing →</button>
+      <a href="#results" class="btn-ghost">See Results ↓</a>
+    </div>
+
+    <div class="hero-trust" id="heroTrust">
+      <div class="hero-trust-avatars">
+                <img src="image/pari.jpg" alt="" loading="lazy">
+                <img src="image/Taranveer Jauraa.jpg" alt="" loading="lazy">
+                <img src="image/Daisy Morgan.jpg" alt="" loading="lazy">
+                <img src="image/Gaurav Mahawar.jpg" alt="" loading="lazy">
+              </div>
+      <span class="hero-trust-text">Trusted by <b>85+ founders &amp; creators</b> across India</span>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ═══ CLIENTS SLIDER ═══ -->
+<!-- ═══ CLIENTS SLIDER ═══ -->
+<section class="clients-section" id="results">
+
+  <div class="clients-header">
+        <p class="eyebrow">Trusted By</p>    <h2 class="sec-title reveal">The people worth following, <br>work with us</h2>
+    <p class="sec-sub" style="margin-bottom:2px;margin-top:10px">From Instagram to YouTube, we help founders and experts become known for what they do best.</p>  </div>
+
+  <!-- ═══ CLIENT PHOTO BAND ═══ -->
+    <div class="cr-marquee">
+    <div class="cr-track cr-track--left">
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-01.jpg" alt="Royston Dias" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">Royston Dias</p>
+          <p class="cr-role">INDIAN CRICKETER</p>          <span class="cr-stat">→ 30.8k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-03.jpg" alt="RADICAL ERA" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">RADICAL ERA</p>
+          <p class="cr-role">BUSINESS BREAKDOWN</p>          <span class="cr-stat">→ 185k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-04.jpg" alt="DEMLA BROTHERS" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">DEMLA BROTHERS</p>
+          <p class="cr-role">FOUNDER CELLBELL Shark Tank Feature Brand</p>          <span class="cr-stat">→ 23.1k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-05.jpg" alt="AARTI MALHOTRA" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">AARTI MALHOTRA</p>
+          <p class="cr-role">INTERNET MOM</p>          <span class="cr-stat">→ 459k+ FOLLOWER</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-06.jpg" alt="DAISY MORGAN" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">DAISY MORGAN</p>
+          <p class="cr-role">FOUNDER of 9SKIN</p>          <span class="cr-stat">→ 30.6k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-07.jpg" alt="RUCHIRA ( From US)" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">RUCHIRA ( From US)</p>
+          <p class="cr-role">CYBER SECURITY</p>          <span class="cr-stat">→ 70.8k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a6c50df6742f.jpg" alt="Imarticus Learning" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">Imarticus Learning</p>
+          <p class="cr-role">EDUCATION</p>          <span class="cr-stat">→ 177K subscribers on YT</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a6c53b2eabc8.png" alt="KANIKKA DEWANII" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">KANIKKA DEWANII</p>
+          <p class="cr-role">FOUNDER OF MINTREE Shark Tank Featured Brand 66.7K Followers</p>                  </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-11.jpg" alt="AKASH PANDEY" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">AKASH PANDEY</p>
+          <p class="cr-role">CAREER COACH</p>          <span class="cr-stat">→ 119k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-12.jpg" alt="ANUJ CHHAJERH" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">ANUJ CHHAJERH</p>
+          <p class="cr-role">SKINCARE SPECIALIST</p>          <span class="cr-stat">→ 516k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-13.jpg" alt="SIMRAN BALAR JAIN" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">SIMRAN BALAR JAIN</p>
+          <p class="cr-role">INFLUENCER</p>          <span class="cr-stat">→ 1.4M+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-14.jpg" alt="JYOTI GOYAL" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">JYOTI GOYAL</p>
+          <p class="cr-role">Chartered Accountant</p>          <span class="cr-stat">→ 37.6k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-01.jpg" alt="Royston Dias" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">Royston Dias</p>
+          <p class="cr-role">INDIAN CRICKETER</p>          <span class="cr-stat">→ 30.8k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-03.jpg" alt="RADICAL ERA" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">RADICAL ERA</p>
+          <p class="cr-role">BUSINESS BREAKDOWN</p>          <span class="cr-stat">→ 185k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-04.jpg" alt="DEMLA BROTHERS" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">DEMLA BROTHERS</p>
+          <p class="cr-role">FOUNDER CELLBELL Shark Tank Feature Brand</p>          <span class="cr-stat">→ 23.1k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-05.jpg" alt="AARTI MALHOTRA" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">AARTI MALHOTRA</p>
+          <p class="cr-role">INTERNET MOM</p>          <span class="cr-stat">→ 459k+ FOLLOWER</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-06.jpg" alt="DAISY MORGAN" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">DAISY MORGAN</p>
+          <p class="cr-role">FOUNDER of 9SKIN</p>          <span class="cr-stat">→ 30.6k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-07.jpg" alt="RUCHIRA ( From US)" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">RUCHIRA ( From US)</p>
+          <p class="cr-role">CYBER SECURITY</p>          <span class="cr-stat">→ 70.8k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a6c50df6742f.jpg" alt="Imarticus Learning" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">Imarticus Learning</p>
+          <p class="cr-role">EDUCATION</p>          <span class="cr-stat">→ 177K subscribers on YT</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a6c53b2eabc8.png" alt="KANIKKA DEWANII" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">KANIKKA DEWANII</p>
+          <p class="cr-role">FOUNDER OF MINTREE Shark Tank Featured Brand 66.7K Followers</p>                  </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-11.jpg" alt="AKASH PANDEY" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">AKASH PANDEY</p>
+          <p class="cr-role">CAREER COACH</p>          <span class="cr-stat">→ 119k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-12.jpg" alt="ANUJ CHHAJERH" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">ANUJ CHHAJERH</p>
+          <p class="cr-role">SKINCARE SPECIALIST</p>          <span class="cr-stat">→ 516k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-13.jpg" alt="SIMRAN BALAR JAIN" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">SIMRAN BALAR JAIN</p>
+          <p class="cr-role">INFLUENCER</p>          <span class="cr-stat">→ 1.4M+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-14.jpg" alt="JYOTI GOYAL" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">JYOTI GOYAL</p>
+          <p class="cr-role">Chartered Accountant</p>          <span class="cr-stat">→ 37.6k+ FOLLOWERS</span>        </div>
+      </div>
+          </div>
+  </div>
+    <div class="cr-marquee">
+    <div class="cr-track cr-track--right">
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-15.jpg" alt="SHIVAM" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">SHIVAM</p>
+          <p class="cr-role">CAREER</p>          <span class="cr-stat">→ 100k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a7ecebb6f19c.jpeg" alt="9 SKIN" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">9 SKIN</p>
+          <p class="cr-role">(CELEBRITY OWNED BRAND ) 154k+ FOLLOWERS</p>                  </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a6c48aaad2a1.png" alt="AMIT ARORA" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">AMIT ARORA</p>
+          <p class="cr-role">INVESTOR, INTERNATIONAL TRADE ENTREPRENEUR</p>          <span class="cr-stat">→ 23.6k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a6c48bbc0739.jpg" alt="CELLBELL" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">CELLBELL</p>
+          <p class="cr-role">SHARK TANK FEATURED BRAND</p>          <span class="cr-stat">→ 19k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a7f1f28a05be.jpg" alt="Gaurav Mahawar" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">Gaurav Mahawar</p>
+          <p class="cr-role">PERSONAL FINANCE</p>          <span class="cr-stat">→ 358k+ Followers</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a955bfeaa966.png" alt="EKTA DAHIYA" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">EKTA DAHIYA</p>
+          <p class="cr-role">CONTENT CREATOR</p>          <span class="cr-stat">→ 66.6k+ Followers</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a955e4ce29cd.jpg" alt="RAJ VADHU" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">RAJ VADHU</p>
+          <p class="cr-role">CLOTHING BRAND</p>          <span class="cr-stat">→ 31.3k Followers</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a95619b0077b.jpg" alt="RAHIS" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">RAHIS</p>
+          <p class="cr-role">FITNESS COACH</p>          <span class="cr-stat">→ 20.9K + Followers</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a9561f91e59d.jpg" alt="BHAVIT PATIL" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">BHAVIT PATIL</p>
+          <p class="cr-role">FOUNDER</p>          <span class="cr-stat">→ 21.8K + Followers</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a9563608add7.jpg" alt="SHOPCASENCE" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">SHOPCASENCE</p>
+          <p class="cr-role">ENTREPRENEUR</p>          <span class="cr-stat">→ 55.9K+ Followers</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a95641f1187a.jpg" alt="GARIMA BARNOLIYA" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">GARIMA BARNOLIYA</p>
+          <p class="cr-role">FITNESS COACH</p>          <span class="cr-stat">→ 244K + Followers</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="image/team/team-15.jpg" alt="SHIVAM" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">SHIVAM</p>
+          <p class="cr-role">CAREER</p>          <span class="cr-stat">→ 100k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a7ecebb6f19c.jpeg" alt="9 SKIN" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">9 SKIN</p>
+          <p class="cr-role">(CELEBRITY OWNED BRAND ) 154k+ FOLLOWERS</p>                  </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a6c48aaad2a1.png" alt="AMIT ARORA" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">AMIT ARORA</p>
+          <p class="cr-role">INVESTOR, INTERNATIONAL TRADE ENTREPRENEUR</p>          <span class="cr-stat">→ 23.6k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a6c48bbc0739.jpg" alt="CELLBELL" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">CELLBELL</p>
+          <p class="cr-role">SHARK TANK FEATURED BRAND</p>          <span class="cr-stat">→ 19k+ FOLLOWERS</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a7f1f28a05be.jpg" alt="Gaurav Mahawar" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">Gaurav Mahawar</p>
+          <p class="cr-role">PERSONAL FINANCE</p>          <span class="cr-stat">→ 358k+ Followers</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a955bfeaa966.png" alt="EKTA DAHIYA" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">EKTA DAHIYA</p>
+          <p class="cr-role">CONTENT CREATOR</p>          <span class="cr-stat">→ 66.6k+ Followers</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a955e4ce29cd.jpg" alt="RAJ VADHU" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">RAJ VADHU</p>
+          <p class="cr-role">CLOTHING BRAND</p>          <span class="cr-stat">→ 31.3k Followers</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a95619b0077b.jpg" alt="RAHIS" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">RAHIS</p>
+          <p class="cr-role">FITNESS COACH</p>          <span class="cr-stat">→ 20.9K + Followers</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a9561f91e59d.jpg" alt="BHAVIT PATIL" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">BHAVIT PATIL</p>
+          <p class="cr-role">FOUNDER</p>          <span class="cr-stat">→ 21.8K + Followers</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a9563608add7.jpg" alt="SHOPCASENCE" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">SHOPCASENCE</p>
+          <p class="cr-role">ENTREPRENEUR</p>          <span class="cr-stat">→ 55.9K+ Followers</span>        </div>
+      </div>
+            <div class="cr-card cr-card--plain">
+        <img src="uploads/img_6a95641f1187a.jpg" alt="GARIMA BARNOLIYA" loading="lazy">
+
+        <!-- subtle depth only, no text -->
+        <div class="cr-bar" aria-hidden="true"></div>
+
+        <!-- theme-colour transparent overlay, full card, pops on hover -->
+                <div class="cr-overlay">
+          <p class="cr-name">GARIMA BARNOLIYA</p>
+          <p class="cr-role">FITNESS COACH</p>          <span class="cr-stat">→ 244K + Followers</span>        </div>
+      </div>
+          </div>
+  </div>
+  
+</section>
+
+<!-- ═══ RESULTS / STORIES (real screenshot style) ═══ -->
+<section class="stories-section" id="stories">
+    <p class="eyebrow text-center">Beyond the Numbers</p>  <h2 class="sec-title text-center reveal">People Who Became <span class="grad">Brands</span></h2>
+  <p class="sec-sub text-center">Every profile has a person. Every personal brand has a story</p>
+  <div class="shot-grid">
+            <div class="shot-card reveal" style="--delay:0s">
+            <a class="shot-frame shot-frame--link" href="https://instagram.com/officialparijain" target="_blank" rel="noopener" aria-label="Open Pari Jain on Instagram">
+              <img src="uploads/img_6a82cd24f15b5.jpeg" alt="Pari Jain — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">Pari Jain<span class="shot-verified">✓</span></span>
+          <div class="shot-meta">
+            <span class="shot-followers">125K+ followers</span>            <span class="shot-handle">@officialparijain</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">FOUNDER</p>          <p class="shot-rv-work">Built from 0 → 129K, 100% organic.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">125K+ followers</span>            <span class="shot-rv-handle">@officialparijain</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+            <div class="shot-card reveal" style="--delay:0.06s">
+            <a class="shot-frame shot-frame--link" href="https://www.instagram.com/shivamcareers?igsi=MWZ6NWJwMG0zM3M2MQ==" target="_blank" rel="noopener" aria-label="Open Shivam Careers on Instagram">
+              <img src="uploads/img_6a7ecb465116c.jpeg" alt="Shivam Careers — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">Shivam Careers</span>
+          <div class="shot-meta">
+            <span class="shot-followers">100K+ followers</span>            <span class="shot-handle">@shivamcareer</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">Career &amp; AI Creator</p>          <p class="shot-rv-work">Scaling production with AI to 100K in 80 posts.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">100K+ followers</span>            <span class="shot-rv-handle">@shivamcareer</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+            <div class="shot-card reveal" style="--delay:0.12s">
+            <a class="shot-frame shot-frame--link" href="https://www.instagram.com/growith_akash?igsi=MTYzc29jaDExa2MzNA==" target="_blank" rel="noopener" aria-label="Open Akash Pandey on Instagram">
+              <img src="image/stories/akash-pandey.jpg" alt="Akash Pandey — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">Akash Pandey<span class="shot-verified">✓</span></span>
+          <div class="shot-meta">
+            <span class="shot-followers">120K+ followers</span>            <span class="shot-handle">@growithakash</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">Tech &amp; Career Coach</p>          <p class="shot-rv-work">Leads generated, growth accelerated.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">120K+ followers</span>            <span class="shot-rv-handle">@growithakash</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+            <div class="shot-card reveal" style="--delay:0.18s">
+            <a class="shot-frame shot-frame--link" href="https://instagram.com/ca.jyotigoyal" target="_blank" rel="noopener" aria-label="Open CA Jyoti Goyal on Instagram">
+              <img src="uploads/img_6a7ec91c577cc.jpeg" alt="CA Jyoti Goyal — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">CA Jyoti Goyal</span>
+          <div class="shot-meta">
+            <span class="shot-followers">36.7K+ followers</span>            <span class="shot-handle">@ca.jyotigoyal</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">Finance Creator</p>          <p class="shot-rv-work">Turned influence into brand collaborations.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">36.7K+ followers</span>            <span class="shot-rv-handle">@ca.jyotigoyal</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+            <div class="shot-card reveal" style="--delay:0.24s">
+            <a class="shot-frame shot-frame--link" href="https://instagram.com/toolsfact" target="_blank" rel="noopener" aria-label="Open Tools Fact on Instagram">
+              <img src="uploads/img_6a82d279d91aa.jpeg" alt="Tools Fact — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">Tools Fact</span>
+          <div class="shot-meta">
+            <span class="shot-followers">97.6K+ followers</span>            <span class="shot-handle">@toolsfact</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">Content Brand</p>          <p class="shot-rv-work">From content to ₹35L in sales.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">97.6K+ followers</span>            <span class="shot-rv-handle">@toolsfact</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+            <div class="shot-card reveal" style="--delay:0.3s">
+            <a class="shot-frame shot-frame--link" href="https://instagram.com/techknowbee" target="_blank" rel="noopener" aria-label="Open Taranveer Jaura on Instagram">
+              <img src="uploads/img_6a7ecd381c087.jpeg" alt="Taranveer Jaura — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">Taranveer Jaura</span>
+          <div class="shot-meta">
+            <span class="shot-followers">280K+ followers</span>            <span class="shot-handle">@techknowbee</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">Tech Creator</p>          <p class="shot-rv-work">From content to ₹35L in sales.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">280K+ followers</span>            <span class="shot-rv-handle">@techknowbee</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+            <div class="shot-card reveal" style="--delay:0.36s">
+            <a class="shot-frame shot-frame--link" href="https://www.instagram.com/business_beyondborders?igsi=MTM5eGJoZWIwbnUyaA%3D%3D" target="_blank" rel="noopener" aria-label="Open Amit Arora on Instagram">
+              <img src="uploads/img_6a954161addd7.jpeg" alt="Amit Arora — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">Amit Arora</span>
+          <div class="shot-meta">
+            <span class="shot-followers">23.6K+ followers</span>            <span class="shot-handle">@amit_aroraa</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">Import Export Expert</p>          <p class="shot-rv-work">Built funnels that generate leads.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">23.6K+ followers</span>            <span class="shot-rv-handle">@amit_aroraa</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+            <div class="shot-card reveal" style="--delay:0.42s">
+            <a class="shot-frame shot-frame--link" href="https://instagram.com/cyberwithru" target="_blank" rel="noopener" aria-label="Open Ruchira Pokhriyal on Instagram">
+              <img src="image/stories/ruchira-pokhriyal.jpg" alt="Ruchira Pokhriyal — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">Ruchira Pokhriyal</span>
+          <div class="shot-meta">
+            <span class="shot-followers">70.9K+ followers</span>            <span class="shot-handle">@cyberwithru</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">Cybersecurity Creator</p>          <p class="shot-rv-work">High retention edits that perform.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">70.9K+ followers</span>            <span class="shot-rv-handle">@cyberwithru</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+            <div class="shot-card reveal" style="--delay:0.48s">
+            <a class="shot-frame shot-frame--link" href="https://instagram.com/cell_bell" target="_blank" rel="noopener" aria-label="Open Cellbell on Instagram">
+              <img src="uploads/img_6a953e7eae80b.jpeg" alt="Cellbell — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">Cellbell</span>
+          <div class="shot-meta">
+            <span class="shot-followers">19.7K+ followers</span>            <span class="shot-handle">@cell_bell</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">D2C Brand · Gaming Chairs</p>          <p class="shot-rv-work">Elevated the brand perception.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">19.7K+ followers</span>            <span class="shot-rv-handle">@cell_bell</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+            <div class="shot-card reveal" style="--delay:0.54s">
+            <a class="shot-frame shot-frame--link" href="https://instagram.com/growwithroshnii" target="_blank" rel="noopener" aria-label="Open Roshnii Deshmukkh on Instagram">
+              <img src="image/stories/roshnii-deshmukkh.jpg" alt="Roshnii Deshmukkh — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">Roshnii Deshmukkh</span>
+          <div class="shot-meta">
+            <span class="shot-followers">16.4K+ followers</span>            <span class="shot-handle">@growwithroshnii</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">Entrepreneur</p>          <p class="shot-rv-work">Turned jewellery into a brand.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">16.4K+ followers</span>            <span class="shot-rv-handle">@growwithroshnii</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+            <div class="shot-card reveal" style="--delay:0.6s">
+            <a class="shot-frame shot-frame--link" href="https://instagram.com/royston_dias313" target="_blank" rel="noopener" aria-label="Open Royston Dias on Instagram">
+              <img src="image/stories/royston-dias.jpg" alt="Royston Dias — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">Royston Dias</span>
+          <div class="shot-meta">
+            <span class="shot-followers">31.1K+ followers</span>            <span class="shot-handle">@royston_dias313</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">Indian Cricketer</p>          <p class="shot-rv-work">Turned reach into quality leads.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">31.1K+ followers</span>            <span class="shot-rv-handle">@royston_dias313</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+            <div class="shot-card reveal" style="--delay:0.66s">
+            <a class="shot-frame shot-frame--link" href="https://www.instagram.com/alishaa__chettri?igsi=MWp4cGZ2NXh6MnZuYw==" target="_blank" rel="noopener" aria-label="Open Alisha Chettri on Instagram">
+              <img src="image/stories/alisha-chettri.jpg" alt="Alisha Chettri — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">Alisha Chettri</span>
+          <div class="shot-meta">
+            <span class="shot-followers">25.5K+ followers</span>            <span class="shot-handle">@alishaa_chettri</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">Lifestyle Influencer</p>          <p class="shot-rv-work">Conversations that close deals.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">25.5K+ followers</span>            <span class="shot-rv-handle">@alishaa_chettri</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+            <div class="shot-card reveal" style="--delay:0.72s">
+            <a class="shot-frame shot-frame--link" href="https://www.instagram.com/mysticc_whispers_1111?igsi=MWV4enc5dTd6YWx2Ng==" target="_blank" rel="noopener" aria-label="Open Bhavit Patil on Instagram">
+              <img src="uploads/img_6a7ec8e166c0f.jpeg" alt="Bhavit Patil — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">Bhavit Patil</span>
+          <div class="shot-meta">
+            <span class="shot-followers">20.3K+ followers</span>            <span class="shot-handle">@bhavitpatil</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">Spiritual Guide</p>          <p class="shot-rv-work">From reels to 180 attendees.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">20.3K+ followers</span>            <span class="shot-rv-handle">@bhavitpatil</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+            <div class="shot-card reveal" style="--delay:0.78s">
+            <a class="shot-frame shot-frame--link" href="https://instagram.com/demlabrothers" target="_blank" rel="noopener" aria-label="Open Pawan &amp; Chirag Demla on Instagram">
+              <img src="uploads/img_6a953ef460b8d.jpeg" alt="Pawan &amp; Chirag Demla — Instagram growth with Orgix Media" loading="lazy">
+        <div class="shot-fade"></div>
+                <span class="shot-ig" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+        </span>
+        
+        <!-- always-visible identity tag (fades out on hover) -->
+        <div class="shot-tag">
+          <span class="shot-name">Pawan &amp; Chirag Demla<span class="shot-verified">✓</span></span>
+          <div class="shot-meta">
+            <span class="shot-followers">23.1K+ followers</span>            <span class="shot-handle">@demlabrothers</span>          </div>
+        </div>
+
+        <!-- hover reveal: WHAT WE DID -->
+        <div class="shot-reveal" aria-hidden="true">
+          <span class="shot-rv-badge">✦ What we did</span>
+          <p class="shot-rv-tag">Founders · Cellbell</p>          <p class="shot-rv-work">Founder-led brand growth, done organically.</p>
+          <div class="shot-rv-meta">
+            <span class="shot-rv-followers">23.1K+ followers</span>            <span class="shot-rv-handle">@demlabrothers</span>          </div>
+        </div>
+      </a>      <button class="shot-cta" onclick="openModal()">Get Results Like This →</button>
+    </div>
+    
+        <!-- closing card: next can be you -->
+    <div class="shot-card shot-card--next reveal" style="--delay:0.84s" onclick="openModal()" role="button" tabindex="0">
+      <div class="shot-next-frame">
+        <span class="shot-next-glow" aria-hidden="true"></span>
+        <span class="shot-next-plus" aria-hidden="true">+</span>
+        <h3 class="shot-next-title">Next can be you.</h3>
+        <p class="shot-next-text">Every name on this wall started exactly where you are right now one decision away.</p>
+      </div>
+      <button class="shot-cta shot-cta--solid" onclick="event.stopPropagation();openModal()">Start My Growth →</button>
+    </div>
+      </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<section class="stats-section">
+  <div class="stats-grid">
+        <div class="stat-card reveal" style="--delay:0s">
+      <div class="stat-icon">👁️</div>
+      <div class="stat-val counter" data-val="1B+">1B+</div>
+      <div class="stat-lbl">Views Generated</div>
+          </div>
+        <div class="stat-card reveal" style="--delay:0.08s">
+      <div class="stat-icon">🚀</div>
+      <div class="stat-val counter" data-val="85+">85+</div>
+      <div class="stat-lbl">Creators Scaled</div>
+          </div>
+        <div class="stat-card reveal stat-card--hi" style="--delay:0.16s">
+      <div class="stat-icon">📈</div>
+      <div class="stat-val counter" data-val="100%">100%</div>
+      <div class="stat-lbl">Organic Growth</div>
+      <span class="stat-glow" aria-hidden="true"></span>    </div>
+      </div>
+</section>
+
+<!-- ═══ PROTOCOL / GROWTH ENGINE ═══ -->
+<section class="protocol-section" id="protocol">
+  <p class="eyebrow text-center">How It Works</p>
+  <h2 class="sec-title text-center reveal">The Orgix <span class="grad">Growth Engine</span></h2>
+  <p class="sec-sub text-center"></p>
+
+  <div class="proto-wrap">
+    <div class="proto-line"></div>
+        <div class="proto-item reveal proto-left" style="--delay:0s">
+      <div class="proto-card">
+        <div class="proto-num">01</div>
+        <div class="proto-icon">🔍</div>
+        <h3 class="proto-title">Deep Dive Research</h3>
+        <p class="proto-body">We don&#039;t guess what will work. Our team puts in the research, analysing your niche, target audience, competitors, trends and content opportunities, to build a data, backed personal branding strategy designed for long term growth.</p>
+      </div>
+      <div class="proto-dot"><div class="proto-dot-inner"></div></div>
+      <div class="proto-visual proto-visual-1" aria-hidden="true">
+                <div class="pv-shot">
+          <img src="image/process/01-research.webp" alt="" loading="lazy">
+          <span class="pv-shot-ring"></span>
+          <span class="pv-shot-step">Step 01</span>
+        </div>
+              </div>
+    </div>
+        <div class="proto-item reveal proto-right" style="--delay:0.05s">
+      <div class="proto-card">
+        <div class="proto-num">02</div>
+        <div class="proto-icon">✍️</div>
+        <h3 class="proto-title">Viral Scripting</h3>
+        <p class="proto-body">Scripts That Stop the Scroll
+We turn your expertise, ideas and experiences into well researched scripts with powerful hooks and clear messaging that capture attention, keep viewers watching and strengthen your personal brand.</p>
+      </div>
+      <div class="proto-dot"><div class="proto-dot-inner"></div></div>
+      <div class="proto-visual proto-visual-2" aria-hidden="true">
+                <div class="pv-shot">
+          <img src="image/process/02-scripting.webp" alt="" loading="lazy">
+          <span class="pv-shot-ring"></span>
+          <span class="pv-shot-step">Step 02</span>
+        </div>
+              </div>
+    </div>
+        <div class="proto-item reveal proto-left" style="--delay:0.1s">
+      <div class="proto-card">
+        <div class="proto-num">03</div>
+        <div class="proto-icon">🎥</div>
+        <h3 class="proto-title">Guided Shooting</h3>
+        <p class="proto-body">2 Days of Recording. 30 Days of Content.
+We handle everything behind the camera. From planning and shot lists to real time shoot guidance, we make recording easy while keeping your personal brand consistent.</p>
+      </div>
+      <div class="proto-dot"><div class="proto-dot-inner"></div></div>
+      <div class="proto-visual proto-visual-3" aria-hidden="true">
+                <div class="pv-shot">
+          <img src="image/process/03-shooting.webp" alt="" loading="lazy">
+          <span class="pv-shot-ring"></span>
+          <span class="pv-shot-step">Step 03</span>
+        </div>
+              </div>
+    </div>
+        <div class="proto-item reveal proto-right" style="--delay:0.15s">
+      <div class="proto-card">
+        <div class="proto-num">04</div>
+        <div class="proto-icon">✂️</div>
+        <h3 class="proto-title">High Retention Editing</h3>
+        <p class="proto-body">We transform raw footage into high retention content using sharp cuts, dynamic captions, strategic B-roll and attention grabbing visuals. Every frame is crafted to hold attention and make your personal brand stand out.</p>
+      </div>
+      <div class="proto-dot"><div class="proto-dot-inner"></div></div>
+      <div class="proto-visual proto-visual-4" aria-hidden="true">
+                <div class="pv-shot">
+          <img src="image/process/04-editing.webp" alt="" loading="lazy">
+          <span class="pv-shot-ring"></span>
+          <span class="pv-shot-step">Step 04</span>
+        </div>
+              </div>
+    </div>
+        <div class="proto-item reveal proto-left" style="--delay:0.2s">
+      <div class="proto-card">
+        <div class="proto-num">05</div>
+        <div class="proto-icon">🚀</div>
+        <h3 class="proto-title">Strategic Posting</h3>
+        <p class="proto-body">We take care of the details that drive discoverability. From captions and hashtags to SEO optimisation and posting times, every piece of content is strategically prepared to reach the right audience and maximise your personal brand’s growth.</p>
+      </div>
+      <div class="proto-dot"><div class="proto-dot-inner"></div></div>
+      <div class="proto-visual proto-visual-5" aria-hidden="true">
+                <div class="pv-shot">
+          <img src="image/process/05-posting.webp" alt="" loading="lazy">
+          <span class="pv-shot-ring"></span>
+          <span class="pv-shot-step">Step 05</span>
+        </div>
+              </div>
+    </div>
+        <div class="proto-item reveal proto-right" style="--delay:0.25s">
+      <div class="proto-card">
+        <div class="proto-num">06</div>
+        <div class="proto-icon">💬</div>
+        <h3 class="proto-title">Growth Management</h3>
+        <p class="proto-body">We manage your community, engage with your audience and respond to comments to keep conversations active. With smart DM automation and lead nurturing, we turn engagement into relationships, qualified leads and business opportunities.</p>
+      </div>
+      <div class="proto-dot"><div class="proto-dot-inner"></div></div>
+      <div class="proto-visual proto-visual-6" aria-hidden="true">
+                <div class="pv-shot">
+          <img src="image/process/06-growth.webp" alt="" loading="lazy">
+          <span class="pv-shot-ring"></span>
+          <span class="pv-shot-step">Step 06</span>
+        </div>
+              </div>
+    </div>
+      </div>
+</section>
+
+
+<!-- ═══ CLIENT TESTIMONIALS (written) ═══ -->
+
+
+<!-- ═══  TESTIMONIALS ═══ -->
+<section class="vt-section" id="testimonials">
+    <p class="eyebrow text-center">In Their Own Words</p>  <h2 class="sec-title text-center reveal">Client <span class="grad">Testimonials</span></h2>
+  <p class="sec-sub text-center"></p>    <div class="vt-marquee">
+    <div class="vt-track">
+            <div class="vt-card" onclick='openVideo({"name":"DEMLA BROTHERS","role":"FOUNDER CELLBELL","thumb":"uploads\/vid_client1_poster.jpg","video_url":"uploads\/vid_client1.mp4","video_type":"file"})'>
+                <video class="vt-media" muted loop playsinline preload="none" poster="uploads/vid_client1_poster.jpg">
+          <source src="uploads/vid_client1.mp4" type="video/mp4">
+        </video>
+                <div class="vt-overlay"></div>
+        <div class="vt-quote">"</div>
+        <div class="vt-play"><span class="vt-play-icon">▶</span></div>
+        <div class="vt-info">
+          <p class="vt-name">DEMLA BROTHERS</p>
+          <p class="vt-role">FOUNDER CELLBELL</p>
+        </div>
+      </div>
+            <div class="vt-card" onclick='openVideo({"name":"SHIVAM","role":"FOUNDER","thumb":"uploads\/vid_client2_poster.jpg","video_url":"uploads\/vid_client2.mp4","video_type":"file"})'>
+                <video class="vt-media" muted loop playsinline preload="none" poster="uploads/vid_client2_poster.jpg">
+          <source src="uploads/vid_client2.mp4" type="video/mp4">
+        </video>
+                <div class="vt-overlay"></div>
+        <div class="vt-quote">"</div>
+        <div class="vt-play"><span class="vt-play-icon">▶</span></div>
+        <div class="vt-info">
+          <p class="vt-name">SHIVAM</p>
+          <p class="vt-role">FOUNDER</p>
+        </div>
+      </div>
+            <div class="vt-card" onclick='openVideo({"name":"JYOTI","role":"CHARTERED ACCOUNTANT","thumb":"uploads\/img_6a8d49bc28c12.png","video_url":"uploads\/vid_client3.mp4","video_type":"file"})'>
+                <video class="vt-media" muted loop playsinline preload="none" poster="uploads/img_6a8d49bc28c12.png">
+          <source src="uploads/vid_client3.mp4" type="video/mp4">
+        </video>
+                <div class="vt-overlay"></div>
+        <div class="vt-quote">"</div>
+        <div class="vt-play"><span class="vt-play-icon">▶</span></div>
+        <div class="vt-info">
+          <p class="vt-name">JYOTI</p>
+          <p class="vt-role">CHARTERED ACCOUNTANT</p>
+        </div>
+      </div>
+            <div class="vt-card" onclick='openVideo({"name":"AMIT ARORA","role":"INVESTOR, INTERNATIONAL TRADE ENTREPRENEUR","thumb":"uploads\/vid_client4_poster.jpg","video_url":"uploads\/vid_client4.mp4","video_type":"file"})'>
+                <video class="vt-media" muted loop playsinline preload="none" poster="uploads/vid_client4_poster.jpg">
+          <source src="uploads/vid_client4.mp4" type="video/mp4">
+        </video>
+                <div class="vt-overlay"></div>
+        <div class="vt-quote">"</div>
+        <div class="vt-play"><span class="vt-play-icon">▶</span></div>
+        <div class="vt-info">
+          <p class="vt-name">AMIT ARORA</p>
+          <p class="vt-role">INVESTOR, INTERNATIONAL TRADE ENTREPRENEUR</p>
+        </div>
+      </div>
+            <div class="vt-card" onclick='openVideo({"name":"PARI JAIN","role":"FOUNDER","thumb":"uploads\/img_6a8fdb40b555d.png","video_url":"uploads\/vid_6a86b1f254dda.mov","video_type":"file"})'>
+                <video class="vt-media" muted loop playsinline preload="none" poster="uploads/img_6a8fdb40b555d.png">
+          <source src="uploads/vid_6a86b1f254dda.mov" type="video/mp4">
+        </video>
+                <div class="vt-overlay"></div>
+        <div class="vt-quote">"</div>
+        <div class="vt-play"><span class="vt-play-icon">▶</span></div>
+        <div class="vt-info">
+          <p class="vt-name">PARI JAIN</p>
+          <p class="vt-role">FOUNDER</p>
+        </div>
+      </div>
+            <div class="vt-card" onclick='openVideo({"name":"ALISHA","role":"CONTENT CREATOR","thumb":"uploads\/img_6a8d4a25881a7.png","video_url":"uploads\/vid_6a8d4a2588542.mp4","video_type":"file"})'>
+                <video class="vt-media" muted loop playsinline preload="none" poster="uploads/img_6a8d4a25881a7.png">
+          <source src="uploads/vid_6a8d4a2588542.mp4" type="video/mp4">
+        </video>
+                <div class="vt-overlay"></div>
+        <div class="vt-quote">"</div>
+        <div class="vt-play"><span class="vt-play-icon">▶</span></div>
+        <div class="vt-info">
+          <p class="vt-name">ALISHA</p>
+          <p class="vt-role">CONTENT CREATOR</p>
+        </div>
+      </div>
+            <div class="vt-card" onclick='openVideo({"name":"DEMLA BROTHERS","role":"FOUNDER CELLBELL","thumb":"uploads\/vid_client1_poster.jpg","video_url":"uploads\/vid_client1.mp4","video_type":"file"})'>
+                <video class="vt-media" muted loop playsinline preload="none" poster="uploads/vid_client1_poster.jpg">
+          <source src="uploads/vid_client1.mp4" type="video/mp4">
+        </video>
+                <div class="vt-overlay"></div>
+        <div class="vt-quote">"</div>
+        <div class="vt-play"><span class="vt-play-icon">▶</span></div>
+        <div class="vt-info">
+          <p class="vt-name">DEMLA BROTHERS</p>
+          <p class="vt-role">FOUNDER CELLBELL</p>
+        </div>
+      </div>
+            <div class="vt-card" onclick='openVideo({"name":"SHIVAM","role":"FOUNDER","thumb":"uploads\/vid_client2_poster.jpg","video_url":"uploads\/vid_client2.mp4","video_type":"file"})'>
+                <video class="vt-media" muted loop playsinline preload="none" poster="uploads/vid_client2_poster.jpg">
+          <source src="uploads/vid_client2.mp4" type="video/mp4">
+        </video>
+                <div class="vt-overlay"></div>
+        <div class="vt-quote">"</div>
+        <div class="vt-play"><span class="vt-play-icon">▶</span></div>
+        <div class="vt-info">
+          <p class="vt-name">SHIVAM</p>
+          <p class="vt-role">FOUNDER</p>
+        </div>
+      </div>
+            <div class="vt-card" onclick='openVideo({"name":"JYOTI","role":"CHARTERED ACCOUNTANT","thumb":"uploads\/img_6a8d49bc28c12.png","video_url":"uploads\/vid_client3.mp4","video_type":"file"})'>
+                <video class="vt-media" muted loop playsinline preload="none" poster="uploads/img_6a8d49bc28c12.png">
+          <source src="uploads/vid_client3.mp4" type="video/mp4">
+        </video>
+                <div class="vt-overlay"></div>
+        <div class="vt-quote">"</div>
+        <div class="vt-play"><span class="vt-play-icon">▶</span></div>
+        <div class="vt-info">
+          <p class="vt-name">JYOTI</p>
+          <p class="vt-role">CHARTERED ACCOUNTANT</p>
+        </div>
+      </div>
+            <div class="vt-card" onclick='openVideo({"name":"AMIT ARORA","role":"INVESTOR, INTERNATIONAL TRADE ENTREPRENEUR","thumb":"uploads\/vid_client4_poster.jpg","video_url":"uploads\/vid_client4.mp4","video_type":"file"})'>
+                <video class="vt-media" muted loop playsinline preload="none" poster="uploads/vid_client4_poster.jpg">
+          <source src="uploads/vid_client4.mp4" type="video/mp4">
+        </video>
+                <div class="vt-overlay"></div>
+        <div class="vt-quote">"</div>
+        <div class="vt-play"><span class="vt-play-icon">▶</span></div>
+        <div class="vt-info">
+          <p class="vt-name">AMIT ARORA</p>
+          <p class="vt-role">INVESTOR, INTERNATIONAL TRADE ENTREPRENEUR</p>
+        </div>
+      </div>
+            <div class="vt-card" onclick='openVideo({"name":"PARI JAIN","role":"FOUNDER","thumb":"uploads\/img_6a8fdb40b555d.png","video_url":"uploads\/vid_6a86b1f254dda.mov","video_type":"file"})'>
+                <video class="vt-media" muted loop playsinline preload="none" poster="uploads/img_6a8fdb40b555d.png">
+          <source src="uploads/vid_6a86b1f254dda.mov" type="video/mp4">
+        </video>
+                <div class="vt-overlay"></div>
+        <div class="vt-quote">"</div>
+        <div class="vt-play"><span class="vt-play-icon">▶</span></div>
+        <div class="vt-info">
+          <p class="vt-name">PARI JAIN</p>
+          <p class="vt-role">FOUNDER</p>
+        </div>
+      </div>
+            <div class="vt-card" onclick='openVideo({"name":"ALISHA","role":"CONTENT CREATOR","thumb":"uploads\/img_6a8d4a25881a7.png","video_url":"uploads\/vid_6a8d4a2588542.mp4","video_type":"file"})'>
+                <video class="vt-media" muted loop playsinline preload="none" poster="uploads/img_6a8d4a25881a7.png">
+          <source src="uploads/vid_6a8d4a2588542.mp4" type="video/mp4">
+        </video>
+                <div class="vt-overlay"></div>
+        <div class="vt-quote">"</div>
+        <div class="vt-play"><span class="vt-play-icon">▶</span></div>
+        <div class="vt-info">
+          <p class="vt-name">ALISHA</p>
+          <p class="vt-role">CONTENT CREATOR</p>
+        </div>
+      </div>
+          </div>
+  </div>
+</section>
+<section class="tm-section" id="reviews">
+  <div class="tm-glow" aria-hidden="true"></div>
+
+    <!-- 6 or fewer → centered grid, no repeat -->
+  <div class="tm-grid">
+            <figure class="tm-card reveal" style="--delay:0s">
+      <span class="tm-mark" aria-hidden="true">"</span>
+            <div class="tm-stars" aria-label="5 out of 5">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>      </div>
+            <blockquote class="tm-quote">Orgix Media took my food content to the next level. Their editing made my videos more engaging, professional and enjoyable to watch. They understand social media and know exactly how to keep viewers hooked. Highly recommended!</blockquote>
+      <figcaption class="tm-person">
+                <img class="tm-avatar" src="uploads/img_6a95509bb99f1.jpg" alt="NEHA" loading="lazy">
+                <span class="tm-meta">
+                    <span class="tm-name">NEHA</span>
+                    <span class="tm-role">Content Creator</span>
+        </span>
+      </figcaption>
+    </figure>
+            <figure class="tm-card reveal" style="--delay:0.07s">
+      <span class="tm-mark" aria-hidden="true">"</span>
+            <div class="tm-stars" aria-label="5 out of 5">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>      </div>
+            <blockquote class="tm-quote">Working with Orgix Media has been a great experience. They helped me increase my followers and, more importantly, attract valuable, high quality leads through strategic content and personal branding. Their team understands how to create content that not only grows your audience but also brings real business opportunities.</blockquote>
+      <figcaption class="tm-person">
+                <img class="tm-avatar" src="uploads/img_6a8da0a165f4f.webp" alt="Royston Dias" loading="lazy">
+                <span class="tm-meta">
+                    <span class="tm-name">Royston Dias</span>
+                    <span class="tm-role">Indian Cricketer (31.1k+ Followers)</span>
+        </span>
+      </figcaption>
+    </figure>
+            <figure class="tm-card reveal" style="--delay:0.14s">
+      <span class="tm-mark" aria-hidden="true">"</span>
+            <div class="tm-stars" aria-label="5 out of 5">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>      </div>
+            <blockquote class="tm-quote">Working with Orgix Media has completely changed the way I approach content. Their team understands finance and knows how to turn complex topics into simple, engaging scripts that people actually want to watch. From content ideas and scripting to social media strategy, everything is well planned and executed. I’ve seen a clear improvement in my content quality, reach and overall personal brand. Highly recommended!</blockquote>
+      <figcaption class="tm-person">
+                <img class="tm-avatar" src="image/Gaurav Mahawar.jpg" alt="Gaurav Mahawar" loading="lazy">
+                <span class="tm-meta">
+                    <span class="tm-name">Gaurav Mahawar</span>
+                    <span class="tm-role">Finance Creator · 287K+</span>
+        </span>
+      </figcaption>
+    </figure>
+      </div>
+  
+  <div class="tm-cta reveal">
+    <p>Want your name on this list?</p>
+    <button class="cta cta-glow" onclick="openModal()">Start Growing →</button>
+  </div>
+</section>
+
+
+<!-- ═══ SERVICES ═══ -->
+<section class="services-section" id="services">
+  <div class="svc-bg-glow"></div>
+    <p class="eyebrow text-center">What We Do</p>  <h2 class="sec-title text-center reveal">We don&#039;t post content. <br> We build personal brands</h2>
+  <p class="sec-sub text-center">As one of the best social media agencies in India, we don&#039;t chase trends we build compounding, organic growth. Two elite services. One obsessive team.</p>
+  <div class="svc-duo">
+        <div class="svc-block svc-block--ig reveal " style="--delay:0s">
+            <div class="svc-glow-blob"></div>
+      <div class="svc-num">01</div>
+      <div class="svc-icon-big">
+                  <svg class="svc-logo" viewBox="0 0 24 24" role="img" aria-label="Instagram">
+            <defs>
+              <linearGradient id="svcIgGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%"   stop-color="#FFDD55"/>
+                <stop offset="25%"  stop-color="#FF543E"/>
+                <stop offset="55%"  stop-color="#C837AB"/>
+                <stop offset="100%" stop-color="#3771C8"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#svcIgGrad)" d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/>
+          </svg>
+              </div>
+      <div class="svc-sub-title">Social Media Growth</div>
+      <h3 class="svc-h3">Instagram Management</h3>
+      <p class="svc-desc">From Instagram profile to personal brand. Strategy first. Content that connects.</p>
+      <ul class="svc-list">
+                <li><span class="svc-check">✓</span>Profile Optimization</li>
+                <li><span class="svc-check">✓</span>Hook Based Reels</li>
+                <li><span class="svc-check">✓</span>Script Writing</li>
+                <li><span class="svc-check">✓</span>Growth Analytics</li>
+                <li><span class="svc-check">✓</span>Engagement</li>
+                <li><span class="svc-check">✓</span>Content Calendar</li>
+              </ul>
+      <button class="svc-cta" onclick="openModal()">Get Started →</button>
+    </div>
+        <div class="svc-block svc-block--yt reveal " style="--delay:0.15s">
+            <div class="svc-glow-blob"></div>
+      <div class="svc-num">02</div>
+      <div class="svc-icon-big">
+                  <svg class="svc-logo" viewBox="0 0 24 24" role="img" aria-label="YouTube">
+            <path fill="#FF0000" d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.51 3.5 12 3.5 12 3.5s-7.51 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14C4.49 20.5 12 20.5 12 20.5s7.51 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.81z"/>
+            <path fill="#fff" d="M9.6 15.6V8.4l6.27 3.6z"/>
+          </svg>
+              </div>
+      <div class="svc-sub-title">Words That Convert</div>
+      <h3 class="svc-h3">Youtube Management</h3>
+      <p class="svc-desc">We craft compelling hooks and scripts for long form YouTube videos that keep viewers watching and build your personal brand.</p>
+      <ul class="svc-list">
+                <li><span class="svc-check">✓</span>Viral Hook Writing</li>
+                <li><span class="svc-check">✓</span>YouTube Scriptwriting</li>
+                <li><span class="svc-check">✓</span>Brand Voice Guide</li>
+                <li><span class="svc-check">✓</span>Content Calendars</li>
+              </ul>
+      <button class="svc-cta" onclick="openModal()">Get Started →</button>
+    </div>
+      </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+ <section class="about-section" id="about">
+  <div class="about-wrap">
+    <div class="about-visual reveal">
+      <div class="about-img-stack">
+        <div class="aimg aimg1"><img src="image/anantsir.jpg" alt="Anant Jain"></div>
+        <div class="aimg aimg2"><img src="image/deepsir.jpg" alt="Deep"></div>
+      
+      </div>
+    </div>
+    <div class="about-content reveal">
+            <p class="eyebrow">Our Story</p>      <h2 class="sec-title" style="text-align:left;margin-bottom:12px">About <span class="grad">Us</span></h2>
+      <div class="about-badge-pill">We Turn Names Into Brands.</div>
+            <p class="about-para">From strategy to execution, we build personal brands through Instagram growth, YouTube content, scripting, high-retention editing and strategic social media management., </br>we build a complete content ecosystem around your expertise. Every strategy is designed around your target audience, niche, content opportunities and what you want to be known for.
+
+We won't only help you share more but will help you to position yourself right, to speak clearly and create your authority through the strategic content. Our task is to turn your ideas into content that will draw the attention, earn the trust and bring you opportunities.
+
+Our team at Orgix Media will develop your personal brand that not only gets views but is noticeable, recognizable and trusted.</p>
+            <!--<div class="about-founders">-->
+      <!--  <div class="founder-chip">-->
+      <!--    <img src="image/anantsir.jpg" alt="Anant"><div><strong>Anant Jain</strong></div>-->
+      <!--  </div>-->
+      <!--  <div class="founder-chip">-->
+      <!--    <img src="image/deepsir.jpg" alt="Deep"><div><strong>Deep</strong></div>-->
+      <!--  </div>-->
+      <!--</div>-->
+    </div>
+  </div>
+  <div class="about-glow-orb"></div>
+</section> 
+
+<!-- ═══ LEADERSHIP ═══ -->
+<section class="leadership-section" id="leadership">
+    <div class="lead-bg" style="background-image:url('image/team/team-02.jpg')"></div>
+  <div class="lead-bg-fade"></div>
+      <p class="eyebrow text-center">The People Behind It</p>  <h2 class="sec-title text-center reveal">Our <span class="grad">Leadership</span></h2>
+  <p class="sec-sub text-center">Strategy, creativity, and execution. We are the team behind the screens.</p>    <div class="lead-note reveal"><span class="lead-note-icon">👥</span>We&#039;re not just 3 faces we have a team of 25 30 people working with us: strategists, scriptwriters, editors and shooters, all under one roof.</div>
+    <div class="lead-row">
+    
+    <!-- Instagram brand gradient, defined once for all the icons -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="igGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#FFDD55"/>
+          <stop offset="25%"  stop-color="#FF543E"/>
+          <stop offset="55%"  stop-color="#C837AB"/>
+          <stop offset="100%" stop-color="#3771C8"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+        <div class="lead-card reveal" style="--delay:0s">
+      <div class="lead-photo-wrap"><img src="image/pari.jpg" alt="Pari Jain" loading="lazy"></div>
+      <div class="lead-badges">
+        <span class="lead-badge lead-badge-1">Co Founder</span>
+        <span class="lead-badge lead-badge-2">Personal Branding Expert</span>
+      </div>
+      <h3 class="lead-name">Pari Jain</h3>
+      <p class="lead-bio">Pari is the face of our creative team, bringing ideas to life through sharp scripts, scroll stopping hooks, storytelling and creative direction. She turns raw ideas into content that feels authentic, engaging and built to connect with the right audience.</p>
+
+            <div class="lead-links">
+                            <a href="https://www.instagram.com/officialparijain" target="_blank" rel="noopener"
+             class="lead-link lead-link--instagram"
+             aria-label="Pari Jain on Instagram" title="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+          </a>
+                                      <a href="https://www.linkedin.com/in/pari-jain-/" target="_blank" rel="noopener"
+             class="lead-link lead-link--linkedin"
+             aria-label="Pari Jain on LinkedIn" title="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+                                      <a href="https://www.youtube.com/@official.parijain" target="_blank" rel="noopener"
+             class="lead-link lead-link--youtube"
+             aria-label="Pari Jain on YouTube" title="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.51 3.5 12 3.5 12 3.5s-7.51 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14C4.49 20.5 12 20.5 12 20.5s7.51 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.81zM9.6 15.6V8.4l6.27 3.6z"/></svg>
+          </a>
+                        </div>
+    </div>
+        <div class="lead-card reveal" style="--delay:0.12s">
+      <div class="lead-photo-wrap"><img src="uploads/img_6a7ef418c2711.jpeg" alt="Anant Jain" loading="lazy"></div>
+      <div class="lead-badges">
+        <span class="lead-badge lead-badge-1">Co Founder</span>
+        <span class="lead-badge lead-badge-2">Growth Strategist</span>
+      </div>
+      <h3 class="lead-name">Anant Jain</h3>
+      <p class="lead-bio">Anant leads Orgix with a sharp focus on people, culture and execution. From hiring the right talent to managing the team and driving the office forward, his leadership keeps the entire organisation aligned, motivated and growing.</p>
+
+            <div class="lead-links">
+                            <a href="https://www.instagram.com/orgixcreate" target="_blank" rel="noopener"
+             class="lead-link lead-link--instagram"
+             aria-label="Anant Jain on Instagram" title="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+          </a>
+                                      <a href="https://www.linkedin.com/in/-anant-jain" target="_blank" rel="noopener"
+             class="lead-link lead-link--linkedin"
+             aria-label="Anant Jain on LinkedIn" title="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+                                      <span class="lead-link lead-link--youtube is-off" aria-hidden="true" title="YouTube — link not set">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.51 3.5 12 3.5 12 3.5s-7.51 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14C4.49 20.5 12 20.5 12 20.5s7.51 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.81zM9.6 15.6V8.4l6.27 3.6z"/></svg>
+          </span>
+                        </div>
+    </div>
+        <div class="lead-card reveal" style="--delay:0.24s">
+      <div class="lead-photo-wrap"><img src="uploads/img_6a7ef2e2ce9a3.jpeg" alt="Deepak Jain" loading="lazy"></div>
+      <div class="lead-badges">
+        <span class="lead-badge lead-badge-1">Co Founder</span>
+        <span class="lead-badge lead-badge-2">Content Strategist</span>
+      </div>
+      <h3 class="lead-name">Deepak Jain</h3>
+      <p class="lead-bio">Deepak oversees every piece of content before it goes live. From refining scripts to reviewing final videos, he ensures every piece aligns with the personal branding strategy, content quality and social media goals. From planning to execution, nothing moves forward without his eye on the details.</p>
+
+            <div class="lead-links">
+                            <a href="https://www.instagram.com/_digitaldeepak" target="_blank" rel="noopener"
+             class="lead-link lead-link--instagram"
+             aria-label="Deepak Jain on Instagram" title="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+          </a>
+                                      <a href="https://www.linkedin.com/in/-digitaldeepak" target="_blank" rel="noopener"
+             class="lead-link lead-link--linkedin"
+             aria-label="Deepak Jain on LinkedIn" title="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+                                      <span class="lead-link lead-link--youtube is-off" aria-hidden="true" title="YouTube — link not set">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.51 3.5 12 3.5 12 3.5s-7.51 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14C4.49 20.5 12 20.5 12 20.5s7.51 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.81zM9.6 15.6V8.4l6.27 3.6z"/></svg>
+          </span>
+                        </div>
+    </div>
+      </div>
+</section>
+<!-- <section class="timeline-section" id="journey">
+    <p class="eyebrow text-center">How We Got Here</p>  <h2 class="sec-title text-center reveal">Our <span class="grad">Journey</span></h2>
+    <div class="timeline-wrap">
+    <div class="timeline-line"></div>
+        <div class="tl-item reveal tl-left">
+      <div class="tl-card">
+        <div class="tl-year">2022</div>
+        <h3 class="tl-title">The Beginning</h3>
+        <p class="tl-body">Two passionate minds, Anant and Deepak, started brainstorming content strategies in a small room. No team, no big office just ideas and honest effort. They helped a few creators grow without running a single ad. The belief was simple: organic works.</p>
+      </div>
+      <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+    </div>
+        <div class="tl-item reveal tl-right">
+      <div class="tl-card">
+        <div class="tl-year">2023</div>
+        <h3 class="tl-title">Building Blocks</h3>
+        <p class="tl-body">Word of mouth spread. More creators joined. More results followed. Instagram growth, LinkedIn management, content writing and video scripting became our core. We weren&#039;t just delivering content we were building personal brands.</p>
+      </div>
+      <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+    </div>
+        <div class="tl-item reveal tl-left">
+      <div class="tl-card">
+        <div class="tl-year">2024</div>
+        <h3 class="tl-title">Official Launch</h3>
+        <p class="tl-body">Orgix Media became a full time agency. We helped creators grow from 0 to 50K+ followers. We onboarded brands and designed end to end content ecosystems. The focus wasn&#039;t on virality it was on value, visibility and voice.</p>
+      </div>
+      <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+    </div>
+        <div class="tl-item reveal tl-right">
+      <div class="tl-card">
+        <div class="tl-year">2025</div>
+        <h3 class="tl-title">The Impact Year</h3>
+        <p class="tl-body">We started building digital legacies. Long term growth partnerships, strategic influencer collaborations, deep storytelling content and a strong internal team that lives and breathes creativity. We&#039;re no longer just a service agency we&#039;re a growth partner.</p>
+      </div>
+      <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+    </div>
+      </div>
+</section> -->
+
+<!-- ═══ PILLARS ═══ -->
+<!-- <section class="pillars-section">
+    <p class="eyebrow text-center">Why We Win</p>  <h2 class="sec-title text-center reveal">Our <span class="grad">3 Pillars</span></h2>
+    <div class="pillars-row">
+        <div class="pillar-card reveal" style="--delay:0s">
+      <div class="pillar-num">01</div>
+      <div class="pillar-icon-wrap">✦</div>
+      <h3 class="pillar-title"><em>Specialisation</em></h3>
+      <p class="pillar-body">Most companies offering social media growth aren&#039;t truly social media growth companies. They&#039;re primarily Ad Agencies or Influencer Marketing Agencies, lacking the depth of specialisation.</p>
+      <p class="pillar-bold">We focus on one thing and we excel at it.</p>
+    </div>
+        <div class="pillar-card reveal" style="--delay:0.15s">
+      <div class="pillar-num">02</div>
+      <div class="pillar-icon-wrap">✦</div>
+      <h3 class="pillar-title"><em>Strategy First</em></h3>
+      <p class="pillar-body">Most companies focus on production or post production, but social media success demands a strategy, first approach.</p>
+      <p class="pillar-bold">We are strategists at heart, a team of thinkers driving every single decision.</p>
+    </div>
+        <div class="pillar-card reveal" style="--delay:0.3s">
+      <div class="pillar-num">03</div>
+      <div class="pillar-icon-wrap">✦</div>
+      <h3 class="pillar-title"><em>Audiences, not Algorithms</em></h3>
+      <p class="pillar-body">Many companies complicate social media with jargon about algorithms, simply because they lack true expertise.</p>
+      <p class="pillar-bold">We believe social media is rooted in first principles: know your audience, win the internet.</p>
+    </div>
+      </div>
+</section> -->
+
+
+
+
+
+<!-- ═══ MYTHS ═══ -->
+<!-- <section class="myth-section">
+    <p class="eyebrow text-center">Quick Test</p>  <h2 class="sec-title text-center reveal">Myth or <span class="grad">Fact?</span></h2>
+  <p class="sec-sub text-center">Flip the cards. Test what you know.</p>  <div class="myth-grid">
+        <div class="mf-card" tabindex="0" role="button">
+      <div class="mf-inner">
+        <div class="mf-front">
+          <span class="mf-label">Myth or Fact?</span>
+          <p class="mf-q">Posting every day guarantees Instagram growth.</p>
+          <span class="mf-tap">tap to reveal</span>
+        </div>
+        <div class="mf-back mf-back--myth">
+          <h3 class="mf-verdict">MYTH</h3>
+          <p class="mf-ans">Quality, retention and storytelling drive real growth not just daily posting.</p>
+        </div>
+      </div>
+    </div>
+        <div class="mf-card" tabindex="0" role="button">
+      <div class="mf-inner">
+        <div class="mf-front">
+          <span class="mf-label">Myth or Fact?</span>
+          <p class="mf-q">More hashtags make your posts go viral.</p>
+          <span class="mf-tap">tap to reveal</span>
+        </div>
+        <div class="mf-back mf-back--myth">
+          <h3 class="mf-verdict">MYTH</h3>
+          <p class="mf-ans">Instagram now prioritises watch time and engagement signals far more than hashtags.</p>
+        </div>
+      </div>
+    </div>
+        <div class="mf-card" tabindex="0" role="button">
+      <div class="mf-inner">
+        <div class="mf-front">
+          <span class="mf-label">Myth or Fact?</span>
+          <p class="mf-q">Audience retention matters more than upload frequency on YouTube.</p>
+          <span class="mf-tap">tap to reveal</span>
+        </div>
+        <div class="mf-back mf-back--fact">
+          <h3 class="mf-verdict">FACT</h3>
+          <p class="mf-ans">YouTube actively promotes videos that hold attention and keep viewers on the platform.</p>
+        </div>
+      </div>
+    </div>
+        <div class="mf-card" tabindex="0" role="button">
+      <div class="mf-inner">
+        <div class="mf-front">
+          <span class="mf-label">Myth or Fact?</span>
+          <p class="mf-q">Great editing is about flashy transitions and effects.</p>
+          <span class="mf-tap">tap to reveal</span>
+        </div>
+        <div class="mf-back mf-back--myth">
+          <h3 class="mf-verdict">MYTH</h3>
+          <p class="mf-ans">Great editing is about storytelling, pacing and emotional impact not flashy cuts.</p>
+        </div>
+      </div>
+    </div>
+        <div class="mf-card" tabindex="0" role="button">
+      <div class="mf-inner">
+        <div class="mf-front">
+          <span class="mf-label">Myth or Fact?</span>
+          <p class="mf-q">Scripts improve audience retention in videos.</p>
+          <span class="mf-tap">tap to reveal</span>
+        </div>
+        <div class="mf-back mf-back--fact">
+          <h3 class="mf-verdict">FACT</h3>
+          <p class="mf-ans">Well written scripts create clear structure that keeps viewers watching till the end.</p>
+        </div>
+      </div>
+    </div>
+        <div class="mf-card" tabindex="0" role="button">
+      <div class="mf-inner">
+        <div class="mf-front">
+          <span class="mf-label">Myth or Fact?</span>
+          <p class="mf-q">Viral videos happen by luck and cannot be engineered.</p>
+          <span class="mf-tap">tap to reveal</span>
+        </div>
+        <div class="mf-back mf-back--myth">
+          <h3 class="mf-verdict">MYTH</h3>
+          <p class="mf-ans">Most viral videos follow deliberate hooks, retention loops and emotional triggers.</p>
+        </div>
+      </div>
+    </div>
+      </div>
+</section> -->
+
+<!-- ═══ VIDEO BANNER (above footer) ═══ -->
+<!-- <section class="vb-section">
+  <div class="vb-wrap reveal" onclick='openVideo({name:"Orgix Media",role:"Watch Our Story",video_url:"https:\/\/youtu.be\/6N9-G5LtDy8?si=0Yzw_ueCbAWy9HPy"})' role="button" tabindex="0">
+    <img class="vb-thumb" src="https://img.youtube.com/vi/6N9-G5LtDy8/maxresdefault.jpg" alt="Watch our story" loading="lazy">
+    <div class="vb-fade"></div>
+    <div class="vb-content">
+      <div class="vb-play"><span class="vb-play-icon">▶</span></div>
+      <div class="vb-text">
+                <p class="vb-eyebrow">Watch Our Story</p>
+        <h3 class="vb-title">See how Orgix Media builds personal brands</h3>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ═══ FAQ ═══ -->
+<section class="faq-section" id="faq">
+  <div class="faq-wrap">
+
+    <div class="faq-intro">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="sec-title reveal">Questions, <span class="grad">answered.</span></h2>
+      <p class="faq-tagline">Everything people usually ask before working with us.</p>
+      <div class="faq-aside">
+        <p class="faq-aside-q">Still not sure?</p>
+        <button class="faq-aside-btn" onclick="openModal()">Talk to us →</button>
+      </div>
+    </div>
+
+    <div class="faq-list">
+            <details class="faq-item reveal" style="--delay:0s" open>
+        <summary class="faq-q">
+          <span class="faq-q-text">1. What does a personal branding agency do?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-a"><p>We help founders, creators, professionals and experts build a strong personal brand through strategy, content creation, social media and consistent storytelling.</p></div>
+      </details>
+            <details class="faq-item reveal" style="--delay:0.05s" >
+        <summary class="faq-q">
+          <span class="faq-q-text">Do I need to be comfortable on camera?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-a"><p>Not necessarily. We provide scripts, direction and recording guidance to help you become more confident and natural on camera.</p></div>
+      </details>
+            <details class="faq-item reveal" style="--delay:0.1s" >
+        <summary class="faq-q">
+          <span class="faq-q-text">How do you create a personal branding strategy?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-a"><p>We analyse your expertise, target audience, niche, competitors and industry trends to build strategic content pillars that define what you’re known for.</p></div>
+      </details>
+            <details class="faq-item reveal" style="--delay:0.15s" >
+        <summary class="faq-q">
+          <span class="faq-q-text">Can you build my personal brand from scratch?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-a"><p>Absolutely. We can take you from positioning and strategy to content creation, publishing and growth, even if you&#039;re starting with little or no online presence..</p></div>
+      </details>
+            <details class="faq-item reveal" style="--delay:0.2s" >
+        <summary class="faq-q">
+          <span class="faq-q-text">How do I get started with Orgix?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-a"><p>Simply book a consultation with our team. We&#039;ll understand your goals, expertise and current presence before recommending the right personal branding strategy.</p></div>
+      </details>
+          </div>
+
+  </div>
+</section>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"1. What does a personal branding agency do?","acceptedAnswer":{"@type":"Answer","text":"We help founders, creators, professionals and experts build a strong personal brand through strategy, content creation, social media and consistent storytelling."}},{"@type":"Question","name":"Do I need to be comfortable on camera?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. We provide scripts, direction and recording guidance to help you become more confident and natural on camera."}},{"@type":"Question","name":"How do you create a personal branding strategy?","acceptedAnswer":{"@type":"Answer","text":"We analyse your expertise, target audience, niche, competitors and industry trends to build strategic content pillars that define what you’re known for."}},{"@type":"Question","name":"Can you build my personal brand from scratch?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. We can take you from positioning and strategy to content creation, publishing and growth, even if you're starting with little or no online presence.."}},{"@type":"Question","name":"How do I get started with Orgix?","acceptedAnswer":{"@type":"Answer","text":"Simply book a consultation with our team. We'll understand your goals, expertise and current presence before recommending the right personal branding strategy."}}]}</script>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="footer-float">
+
+    <!-- Big call-to-action band -->
+    <div class="footer-cta-band">
+      <div class="footer-cta-copy">
+      
+        <h3 class="footer-cta-title">Ready to build a brand<br>the internet <span class="grad">can't ignore?</span></h3>
+      </div>
+      <div class="footer-cta-actions">
+        <button class="footer-cta-btn" onclick="openModal()">Start Growing →</button>
+              </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="image/logo.png" class="footer-logo" alt="Orgix Media">
+        <p class="footer-tagline">Strategy, scripting, shooting<br>and editing, under one roof.</p>
+        <div class="footer-socials">
+                                      </div>
+        <!--<div class="footer-badges">-->
+        <!--  <span class="footer-badge">100% Organic</span>-->
+        <!--  <span class="footer-badge">🇮🇳 Made in India</span>-->
+        <!--</div>-->
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Pages</h4>
+        <a href="#results">Client</a>
+        <a href="#stories">Result</a>
+        <a href="#protocol">Process</a>
+        <a href="#testimonials">Testimonial</a>
+        <a href="#services">Service</a>
+        <a href="#about">About Us</a>
+        <a href="#leadership">Our Leadership</a>
+        <a href="#faq">FAQ</a>
+        <a href="blog.php">Blog</a>
+        <a href="careers.php">Careers</a>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Services</h4>
+                <a href="#services">Instagram Management</a>
+                <a href="#services">Youtube Management</a>
+              </div>
+
+      <div class="footer-links-col">
+        <h4>Contact</h4>
+                <a href="mailto:info@orgixmedia.com">info@orgixmedia.com</a>
+                        <a href="careers.php">Work With Us</a>
+                <div class="footer-address">
+          <span class="footer-address-ico" aria-hidden="true">📍</span>
+          <span>Block D, 17/67, Sector 3, Rohini, Delhi, 110085</span>
+        </div>
+              </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Orgix Media. All rights reserved</p>
+    </div>
+  </div>
+  <div class="footer-bg-word">orgix</div>
+
+  <!-- CONTACT MODAL -->
+  <div class="popup-overlay" id="contactPopup">
+    <div class="popup-box">
+      <button class="popup-close" id="popupClose">✕</button>
+      <div class="popup-left">
+        <div class="popup-left-content">
+          <div class="popup-logo">OrgixMedia</div>
+          <h2 class="popup-headline">Let's build something<br><em>unforgettable.</em></h2>
+          <p class="popup-tagline">Strategy, scripting, shooting and editing, under one roof.</p>
+          <div class="popup-stats">
+                        <div class="popup-stat"><strong>1B+</strong><span>Views Generated</span></div>
+                        <div class="popup-stat"><strong>85+</strong><span>Creators Scaled</span></div>
+                        <div class="popup-stat"><strong>100%</strong><span>Organic Growth</span></div>
+                      </div>
+        </div>
+        <div class="popup-left-glow"></div>
+      </div>
+      <div class="popup-right">
+        <div id="formView">
+          <h3 class="popup-form-title">Send us a message</h3>
+          <p class="popup-form-sub">Fill this out and we'll reply within 24 hours.</p>
+          <form id="contactForm" class="popup-form">
+            <input type="hidden" name="access_key" value="8e37e05c-047a-4931-a673-a033709a036a">
+            <input type="hidden" name="subject" value="New Lead from OrgixMedia Website">
+            <input type="hidden" name="from_name" value="OrgixMedia Website">
+            <input type="hidden" name="replyto" value="email">
+            <input type="hidden" name="redirect" value="false">
+            <div class="pf-row">
+              <div class="pf-group"><label>YOUR NAME</label><div class="pf-input-wrap"><input type="text" name="name" placeholder="Full name" required></div></div>
+              <div class="pf-group"><label>EMAIL</label><div class="pf-input-wrap"><input type="email" name="email" placeholder="you@email.com" required></div></div>
+            </div>
+            <div class="pf-group"><label>PHONE</label><div class="pf-input-wrap"><input type="tel" name="phone" placeholder="+91 9XXXXXXXXX"></div></div>
+            <div class="pf-group"><label>SERVICE</label><div class="pf-input-wrap pf-select-wrap">
+              <select name="service" required>
+                <option value="" disabled selected>What do you need?</option>
+                <option>Instagram Management</option>
+                <option>Youtube Management</option>
+                <option>Other</option>
+              </select>
+              <svg class="pf-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#888" stroke-width="2" stroke-linecap="round"/></svg>
+            </div></div>
+            <div class="pf-group"><label>MESSAGE</label><div class="pf-input-wrap pf-textarea-wrap"><textarea name="message" placeholder="Tell us about your project..." rows="3" required></textarea></div></div>
+            <button type="submit" class="pf-submit" id="pfSubmit"><span id="pfBtnText">Send Message →</span></button>
+          </form>
+        </div>
+        <div id="successView" style="display:none;text-align:center;padding:50px 20px">
+          <div style="font-size:60px;margin-bottom:16px">🎉</div>
+          <h3 style="font-size:22px;font-weight:800;margin-bottom:8px">Thanks! Your message is in.</h3>
+          <p style="color:rgba(255,255,255,.6);font-size:14px;margin-bottom:28px">We'll get back to you soon, usually within 24 hours. Continue on WhatsApp for a faster response.</p>
+          <a id="waLink" href="#" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:white;padding:14px 20px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;margin-bottom:10px">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Continue on WhatsApp
+          </a>
+                    <button type="button" class="pf-founder-link" onclick="openPayLink()">⚡ Want it faster? Pay ₹299 for a direct, ASAP call with the founder →</button>
+                    <button onclick="closeModal()" style="width:100%;padding:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;color:white;font-size:14px;cursor:pointer;font-family:Poppins;margin-top:10px">Done</button>
+        </div>
+
+                <!-- FOUNDER CALL / PAYMENT VIEW -->
+        <div id="founderView" style="display:none">
+          <button type="button" class="fc-back" onclick="showFormView()">← Back</button>
+          <h3 class="popup-form-title">Skip the queue.</h3>
+          <p class="popup-form-sub">Book a direct, priority strategy call with our founder today. Pay ₹499 to lock your ASAP slot; we&#039;ll call you within the hour.</p>
+          <div class="fc-price-box">
+            <span class="fc-price">₹299</span>
+            <span class="fc-price-label">one time · ASAP priority call</span>
+          </div>
+          <form id="founderForm" class="popup-form" onsubmit="return false;">
+            <div class="pf-group"><label>YOUR NAME</label><div class="pf-input-wrap"><input type="text" id="fcName" placeholder="Full name" required></div></div>
+            <div class="pf-group"><label>PHONE (WhatsApp preferred)</label><div class="pf-input-wrap"><input type="tel" id="fcPhone" placeholder="+91 9XXXXXXXXX" required></div></div>
+            <div class="pf-group"><label>EMAIL</label><div class="pf-input-wrap"><input type="email" id="fcEmail" placeholder="you@email.com" required></div></div>
+            <button type="button" class="pf-submit" id="fcPayBtn" onclick="startFounderPayment()"><span id="fcPayBtnText">Pay ₹299 &amp; Book Call →</span></button>
+            <p id="fcError" class="fc-error" style="display:none"></p>
+          </form>
+        </div>
+        <div id="founderSuccessView" style="display:none;text-align:center;padding:50px 20px">
+          <div style="font-size:60px;margin-bottom:16px">✅</div>
+          <h3 style="font-size:22px;font-weight:800;margin-bottom:8px">Payment received!</h3>
+          <p style="color:rgba(255,255,255,.6);font-size:14px;margin-bottom:28px">The founder has been notified. Expect a call within the hour.</p>
+          <button onclick="closeModal()" style="width:100%;padding:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;color:white;font-size:14px;cursor:pointer;font-family:Poppins">Done</button>
+        </div>
+              </div>
+    </div>
+  </div>
+
+    <!-- DELAYED PROMO POPUP -->
+  <div class="promo-overlay" id="promoPopup">
+    <div class="promo-box">
+      <button class="promo-close" id="promoClose">✕</button>
+      <span class="promo-eyebrow">Limited Spots</span>
+      <h3 class="promo-heading">Still thinking about it?</h3>
+      <p class="promo-text">Only a few onboarding slots open this month. Let&#039;s see if we&#039;re a fit no pressure, no pitch.</p>
+      <button class="promo-cta" onclick="document.getElementById('promoPopup').classList.remove('active');openModal();">Talk to us →</button>
+    </div>
+  </div>
+  </footer>
+
+
+<!-- Video lightbox (shared — used by testimonials & video banner) -->
+<div class="vt-modal" id="vtModal">
+  <div class="vt-modal-inner">
+    <button class="vt-modal-close" id="vtModalClose">✕</button>
+    <div class="vt-modal-media" id="vtModalMedia"></div>
+    <div class="vt-modal-caption" id="vtModalCaption"></div>
+  </div>
+</div>
+
+<script>
+const WA_NUMBER='919XXXXXXXXX';
+const WA_MESSAGE='Hi Orgix Media! I want to grow my social media.';
+const ORGIX_POPUP_ENABLED=true;
+const ORGIX_FOUNDER_CALL_ENABLED=true;
+const ORGIX_FOUNDER_AMOUNT=299;
+</script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

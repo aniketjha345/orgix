@@ -1,0 +1,153 @@
+{
+  "home-desktop": {
+    "overflow": [
+      {
+        "tag": "div",
+        "cls": "type-marquee-track",
+        "w": 12786,
+        "vw": 1440
+      },
+      {
+        "tag": "div",
+        "cls": "marquee-track",
+        "w": 7906,
+        "vw": 1440
+      },
+      {
+        "tag": "span",
+        "cls": "",
+        "w": 3946,
+        "vw": 1440
+      },
+      {
+        "tag": "div",
+        "cls": "marquee-track",
+        "w": 6322,
+        "vw": 1440
+      },
+      {
+        "tag": "span",
+        "cls": "",
+        "w": 3154,
+        "vw": 1440
+      },
+      {
+        "tag": "div",
+        "cls": "type-marquee-track",
+        "w": 12786,
+        "vw": 1440
+      }
+    ],
+    "sectionCount": 15,
+    "scrollH": 13389,
+    "consoleMsgs": []
+  },
+  "home-mobile": {
+    "overflow": [
+      {
+        "tag": "div",
+        "cls": "hero-glow",
+        "w": 560,
+        "vw": 390
+      },
+      {
+        "tag": "div",
+        "cls": "hero-glow",
+        "w": 640,
+        "vw": 390
+      },
+      {
+        "tag": "div",
+        "cls": "type-marquee-track",
+        "w": 6057,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word ",
+        "w": 575,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word type-marquee-word--outline",
+        "w": 598,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word ",
+        "w": 516,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word type-marquee-word--outline",
+        "w": 496,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word ",
+        "w": 575,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word type-marquee-word--outline",
+        "w": 598,
+        "vw": 390
+      },
+      {
+        "tag": "span",
+        "cls": "type-marquee-word ",
+        "w": 516,
+        "vw": 390
+      }
+    ],
+    "sectionCount": 15,
+    "scrollH": 18044,
+    "consoleMsgs": []
+  },
+  "work-desktop": {
+    "overflow": [],
+    "sectionCount": 4,
+    "scrollH": 4104,
+    "consoleMsgs": []
+  },
+  "services-desktop": {
+    "overflow": [],
+    "sectionCount": 7,
+    "scrollH": 6743,
+    "consoleMsgs": [
+      "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
+      "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^"
+    ]
+  },
+  "about-desktop": {
+    "overflow": [],
+    "sectionCount": 0,
+    "scrollH": 900,
+    "consoleMsgs": [
+      "[error] Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+      "[pageerror] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
+      "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
+      "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
+      "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
+      "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^"
+    ]
+  },
+  "contact-desktop": {
+    "overflow": [],
+    "sectionCount": 0,
+    "scrollH": 900,
+    "consoleMsgs": [
+      "[error] Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+      "[pageerror] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
+      "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
+      "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
+      "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
+      "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^"
+    ]
+  }
+}

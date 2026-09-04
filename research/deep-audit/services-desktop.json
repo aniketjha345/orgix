@@ -1,0 +1,204 @@
+{
+  "data": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "scrollW": 1440,
+    "scrollH": 6743,
+    "bodyFont": "16px",
+    "hCount": {
+      "h1": 1,
+      "h2": 4,
+      "h3": 11
+    },
+    "overflowSources": [],
+    "imgs": [
+      {
+        "src": "orgix-logo.png",
+        "nw": 512,
+        "nh": 512,
+        "dispW": 36,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "01-research.webp",
+        "nw": 1360,
+        "nh": 1020,
+        "dispW": 158,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "02-scripting.webp",
+        "nw": 1360,
+        "nh": 1012,
+        "dispW": 158,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "03-shooting.webp",
+        "nw": 1360,
+        "nh": 1020,
+        "dispW": 158,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "04-editing.webp",
+        "nw": 765,
+        "nh": 1020,
+        "dispW": 158,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "05-posting.webp",
+        "nw": 1360,
+        "nh": 1020,
+        "dispW": 158,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "06-growth.webp",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 158,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "orgix-logo.png",
+        "nw": 512,
+        "nh": 512,
+        "dispW": 52,
+        "loading": "auto",
+        "hasAlt": true
+      }
+    ],
+    "a11y": {
+      "noAltImgs": 0,
+      "noNameButtons": [],
+      "emptyLinks": 0
+    },
+    "decorCount": 5,
+    "fontSizes": [
+      [
+        "15.0",
+        8
+      ],
+      [
+        "13.5",
+        7
+      ],
+      [
+        "14.5",
+        6
+      ],
+      [
+        "17.5",
+        6
+      ],
+      [
+        "22.0",
+        3
+      ],
+      [
+        "25.9",
+        2
+      ],
+      [
+        "16.0",
+        2
+      ],
+      [
+        "76.8",
+        1
+      ],
+      [
+        "17.3",
+        1
+      ],
+      [
+        "51.8",
+        1
+      ],
+      [
+        "36.8",
+        1
+      ],
+      [
+        "40.0",
+        1
+      ],
+      [
+        "15.8",
+        1
+      ],
+      [
+        "41.6",
+        1
+      ]
+    ],
+    "h1Style": {
+      "fontSize": "76.8px",
+      "lineHeight": "79.872px",
+      "letterSpacing": "-2.304px",
+      "fontFamily": "\"Space Grotesk\"",
+      "fontWeight": "700"
+    },
+    "sections": [
+      {
+        "i": 0,
+        "tag": "section",
+        "cls": "page-hero.grain",
+        "h": 810
+      },
+      {
+        "i": 1,
+        "tag": "section",
+        "cls": "section",
+        "h": 879
+      },
+      {
+        "i": 2,
+        "tag": "section",
+        "cls": "section",
+        "h": 1634
+      },
+      {
+        "i": 3,
+        "tag": "section",
+        "cls": "section",
+        "h": 713
+      },
+      {
+        "i": 4,
+        "tag": "section",
+        "cls": "section",
+        "h": 1329
+      },
+      {
+        "i": 5,
+        "tag": "section",
+        "cls": "section.cta.grain",
+        "h": 724
+      },
+      {
+        "i": 6,
+        "tag": "footer",
+        "cls": "footer",
+        "h": 503
+      }
+    ],
+    "suspiciousFixed": []
+  },
+  "consoleMsgs": [
+    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
+    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^"
+  ],
+  "failedReq": []
+}
