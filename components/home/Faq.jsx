@@ -1,69 +1,92 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Icon from "../core/Icon";
-import Reveal from "../core/Reveal";
-import SectionHead from "../ui/SectionHead";
+import SectionHeading from "../ui/SectionHeading";
 import { faqs } from "@/data/site";
 
-export default function Faq({ center = true, index = "09" }) {
+export default function Faq({ index = "10" }) {
   const [open, setOpen] = useState(0);
 
   return (
-    <section className="section" id="faq" style={{ background: "var(--bg-2)", borderBlock: "1px solid var(--line)" }}>
-      <div className="container">
-        <SectionHead
-          center={center}
+    <section className="py-20 md:py-28 bg-background border-t border-border/60" id="faq">
+      <div className="container max-w-4xl">
+        <SectionHeading
           index={index}
-          kicker="DIRECT INQUIRIES · INTEL DIRECTORY"
+          tag="DIRECT INQUIRIES · INTEL DIRECTORY"
+          highlightTag="TRANSPARENT"
           title={
             <>
-              Questions, <span className="grad-hot">answered.</span>
+              Questions,{" "}
+              <span className="text-accent block sm:inline">answered directly.</span>
             </>
           }
-          lead="Everything founders & creators ask before launching with Orgix Media."
+          subtitle="Everything founders, creators, and corporate leaders ask before partnering with Orgix Media."
         />
 
-        <div className="faq-list">
+        <div className="space-y-3">
           {faqs.map((f, i) => {
             const isOpen = open === i;
 
             return (
-              <Reveal delay={(i % 3) * 0.07} key={f.q} className={`faq-item ${isOpen ? "open" : ""}`}>
+              <div
+                key={f.q}
+                className="rounded-xl bg-surface-muted/70 border border-border overflow-hidden transition-colors"
+              >
                 <button
-                  className="faq-q"
+                  type="button"
                   onClick={() => setOpen(isOpen ? -1 : i)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${i}`}
+                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 select-none hover:bg-surface transition-colors"
                 >
-                  <span>{f.q}</span>
-                  <span className="x" aria-hidden="true">
-                    <Icon name={isOpen ? "minus" : "plus"} size={15} />
+                  <span className="text-body-md sm:text-heading-md font-display font-medium text-ink-primary">
+                    {f.q}
+                  </span>
+                  <span
+                    className={`w-7 h-7 rounded-full bg-surface border border-border flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                      isOpen ? "rotate-45 text-accent border-accent/40" : "text-ink-secondary"
+                    }`}
+                    aria-hidden="true"
+                  >
+                    +
                   </span>
                 </button>
-                <div
-                  id={`faq-answer-${i}`}
-                  className="faq-a"
-                  style={{ maxHeight: isOpen ? 400 : 0 }}
-                >
-                  <p>{f.a}</p>
-                </div>
-              </Reveal>
+
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      id={`faq-answer-${i}`}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <p className="px-5 pb-6 sm:px-6 sm:pb-6 text-body-md text-ink-secondary leading-relaxed font-light border-t border-border/40 pt-4">
+                        {f.a}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             );
           })}
         </div>
 
-        {center && (
-          <Reveal style={{ textAlign: "center", marginTop: 44 }}>
-            <p className="lead" style={{ fontSize: 16 }}>
-              Still not sure?{" "}
-              <Link href="/contact" style={{ color: "var(--lime)", fontWeight: 800, textDecoration: "underline", textUnderlineOffset: 4 }}>
-                Talk to us →
-              </Link>
-            </p>
-          </Reveal>
-        )}
+        <div className="text-center mt-12 pt-8 border-t border-border/60">
+          <p className="text-body-sm text-ink-secondary">
+            Have a specific scenario or custom team requirement?{" "}
+            <Link
+              href="/contact"
+              className="text-accent font-medium hover:underline underline-offset-4 ml-1"
+            >
+              Schedule a 1:1 Strategy Audit →
+            </Link>
+          </p>
+        </div>
       </div>
     </section>
   );

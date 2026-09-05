@@ -1,56 +1,46 @@
 import Hero from "@/components/home/Hero";
 import TrustedBy from "@/components/home/TrustedBy";
-import Stats from "@/components/home/Stats";
-import CaseWall from "@/components/home/CaseWall";
-import LeadershipStrip from "@/components/home/LeadershipStrip";
-import VideoTestimonials from "@/components/home/VideoTestimonials";
-import Testimonials from "@/components/home/Testimonials";
-import MythBusters from "@/components/home/MythBusters";
-import Process from "@/components/home/Process";
-import ServicesCards from "@/components/home/ServicesCards";
-import Faq from "@/components/home/Faq";
-import CtaSection from "@/components/ui/CtaSection";
-import SectionHead from "@/components/ui/SectionHead";
-import MarqueeStrip from "@/components/ui/MarqueeStrip";
+import ProductShowcase from "@/components/home/ProductShowcase";
+import PersonaCarousel from "@/components/home/PersonaCarousel";
+import GrowthEngine from "@/components/home/GrowthEngine";
+import TestimonialCarousel from "@/components/home/TestimonialCarousel";
+import SplitCtaBanner from "@/components/home/SplitCtaBanner";
+import LeadershipEditorial from "@/components/home/LeadershipEditorial";
+import FaqAccordion from "@/components/home/FaqAccordion";
+import LatestBlogGrid from "@/components/home/LatestBlogGrid";
 
 export default function HomePage() {
   return (
     <>
+      {/* 01 — Full-bleed video hero + floating follower chips + 2 CTAs */}
       <Hero />
-      <MarqueeStrip />
+
+      {/* 02 — Trusted-by avatar marquee strip */}
       <TrustedBy />
-      <Stats />
-      <CaseWall />
 
-      <section className="section" id="services">
-        <div className="container">
-          <SectionHead
-            center
-            index="03"
-            kicker="SERVICE CAPABILITIES · ENGAGEMENT MODELS"
-            title={
-              <>
-                We don't post content.
-                <br />
-                <span className="grad-brand">We build personal brands.</span>
-              </>
-            }
-            lead="As one of the highest-retention personal branding studios in India, we don't chase trends — we build compounding, organic growth. Two elite services. One obsessive team."
-          />
-        </div>
-        <div className="container" style={{ maxWidth: 1160 }}>
-          <ServicesCards />
-        </div>
-      </section>
+      {/* 03 — Alternating product showcase: Instagram & YouTube management */}
+      <ProductShowcase />
 
-      <Process index="04" />
-      <VideoTestimonials />
-      <Testimonials />
-      <MythBusters />
-      <LeadershipStrip index="08" />
-      <Faq index="09" />
-      <MarqueeStrip reverse />
-      <CtaSection index="10" kicker="STRATEGIC INITIATION · BESPOKE ONBOARDING" />
+      {/* 04 — Persona carousel: video thumbnails, tabbed by audience, 'Watch case' */}
+      <PersonaCarousel />
+
+      {/* 05 — The 6-step Growth Engine: sticky pinned visual with step scroll */}
+      <GrowthEngine />
+
+      {/* 06 — Video testimonials carousel + written quotes */}
+      <TestimonialCarousel />
+
+      {/* 07 — Split two-column CTA banner (For Creators / For Brands) */}
+      <SplitCtaBanner />
+
+      {/* 08 — Leadership editorial 3-card layout with real bios + social links */}
+      <LeadershipEditorial />
+
+      {/* 09 — FAQ accordion: plain text, thin divider lines */}
+      <FaqAccordion />
+
+      {/* 10 — Latest blog 3-card grid */}
+      <LatestBlogGrid />
     </>
   );
 }

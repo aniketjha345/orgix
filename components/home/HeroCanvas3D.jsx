@@ -38,7 +38,9 @@ export default function HeroCanvas3D() {
     window.addEventListener("resize", resize, { passive: true });
 
     // 3D Particle system
-    const PARTICLE_COUNT = 380;
+    // A deliberately sparse constellation reads more like a spatial object
+    // than particle noise, while keeping the hero light on mid-range phones.
+    const PARTICLE_COUNT = window.matchMedia("(max-width: 700px)").matches ? 110 : 230;
     const particles = [];
     const sphereRadius = Math.min(width, height) * 0.42 || 220;
 
@@ -215,6 +217,35 @@ export default function HeroCanvas3D() {
 
       // Sort by Z back to front
       projected.sort((a, b) => a.z - b.z);
+
+      // Atmospheric core and orbital paths sit behind the projected points.
+      // This gives the object a readable three-dimensional silhouette even
+      // before users move their pointer.
+      const atmosphere = ctx.createRadialGradient(cx, cy, 8, cx, cy, Math.min(width, height) * 0.42);
+      atmosphere.addColorStop(0, "rgba(200,240,77,0.08)");
+      atmosphere.addColorStop(0.42, "rgba(139,92,246,0.055)");
+      atmosphere.addColorStop(1, "rgba(139,92,246,0)");
+      ctx.fillStyle = atmosphere;
+      ctx.beginPath();
+      ctx.arc(cx, cy, Math.min(width, height) * 0.42, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(totalRotY * 0.22);
+      ctx.scale(1, 0.34 + Math.abs(Math.sin(totalRotX)) * 0.12);
+      ctx.strokeStyle = "rgba(200,240,77,0.20)";
+      ctx.lineWidth = 1;
+      ctx.setLineDash([3, 8]);
+      ctx.beginPath();
+      ctx.ellipse(0, 0, sphereRadius * 0.95, sphereRadius * 0.95, 0, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.strokeStyle = "rgba(139,92,246,0.17)";
+      ctx.beginPath();
+      ctx.ellipse(0, 0, sphereRadius * 1.22, sphereRadius * 1.22, Math.PI / 2.8, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
+      ctx.setLineDash([]);
 
       // Draw particle trails / constellation connections
       const maxConnectDist = 48;

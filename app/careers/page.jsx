@@ -1,3 +1,4 @@
+import PageHero from "@/components/ui/PageHero";
 import Reveal from "@/components/core/Reveal";
 import Icon from "@/components/core/Icon";
 import CtaSection from "@/components/ui/CtaSection";
@@ -43,16 +44,37 @@ const jobs = [
 export default function CareersPage() {
   return (
     <>
+      <PageHero
+        eyebrow="01 — JOIN THE STUDIO"
+        kicker="CAREERS AT ORGIX"
+        title={
+          <>
+            Build digital legacies <span className="grad-hot">with us.</span>
+          </>
+        }
+        lead="A 25–30 person studio of strategists, scriptwriters, editors and shooters under one roof in Delhi. If you obsess over retention, craft and honest growth — you'll fit right in."
+      >
+        <div className="tag-row">
+          <span className="mini-tag">Studio in Rohini, Delhi</span>
+          <span className="mini-tag">25–30 creators under one roof</span>
+          <span className="mini-tag">1B+ views generated</span>
+        </div>
+      </PageHero>
+
       {/* Job Openings Section */}
-      <section className="section" id="openings" style={{ paddingTop: "clamp(130px, 15vw, 180px)" }}>
+      <section className="section section--tight" id="openings">
         <div className="container">
           <Reveal style={{ maxWidth: 700, marginBottom: 44 }}>
-            <span className="eyebrow">01 — OPEN ROLES</span>
-            <h1 className="display" style={{ fontSize: "clamp(1.85rem, 3.4vw, 2.6rem)", marginTop: 14, letterSpacing: "-0.025em" }}>
-              Current <span className="grad-brand">opportunities.</span>
-            </h1>
+            <span className="eyebrow">02 — OPEN ROLES</span>
+            <h2 className="display" style={{ fontSize: "clamp(1.85rem, 3.4vw, 2.6rem)", marginTop: 14, letterSpacing: "-0.025em" }}>
+              Current opportunities.
+            </h2>
             <p className="lead" style={{ marginTop: 12 }}>
-              Don't see your exact title? If you're an exceptional creator, editor or writer, send us your portfolio anyway.
+              Don't see your exact title? If you're an exceptional creator, editor or writer, send us your portfolio anyway — or DM it to{" "}
+              <a href={company.instagram} target="_blank" rel="noopener noreferrer" style={{ color: "var(--lime)", fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>
+                @orgixmedia
+              </a>
+              .
             </p>
           </Reveal>
 
@@ -98,7 +120,16 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <CtaSection index="02" kicker="SPONTANEOUS APPLICATION" />
+      <CtaSection
+        index="03"
+        kicker="SPONTANEOUS APPLICATION"
+        title={
+          <>
+            Great work starts with <span className="grad-hot">a conversation.</span>
+          </>
+        }
+        lead="Send your portfolio, a link to something you're proud of, or just say hello — every application is read by the founders, not a filter."
+      />
     </>
   );
 }

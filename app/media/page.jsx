@@ -3,8 +3,9 @@ import MediaUploader from "@/components/media/MediaUploader";
 import Reveal from "@/components/core/Reveal";
 
 export const metadata = {
-  title: "Media Upload — Orgix Media",
-  description: "Upload images and videos for the Orgix website directly to Cloudinary — stored, optimized and delivered via CDN.",
+  title: "Orgix Media — Media Desk",
+  description: "Internal media upload desk for the Orgix website.",
+  robots: { index: false, follow: false },
 };
 
 export default function MediaPage() {
@@ -19,13 +20,7 @@ export default function MediaPage() {
           </>
         }
         lead="Drop new client portraits, case-study photos or brand videos here. Files land in your Cloudinary under orgix-media/… and the website serves them through the CDN — automatically compressed and optimized."
-      >
-        <div className="tag-row">
-          <span className="mini-tag">Cloud: dwjr5yrir</span>
-          <span className="mini-tag">Folder: orgix-media</span>
-          <span className="mini-tag">Preset: orgix_web (unsigned)</span>
-        </div>
-      </PageHero>
+      />
 
       <section className="section section--tight">
         <div className="container" style={{ maxWidth: 860 }}>

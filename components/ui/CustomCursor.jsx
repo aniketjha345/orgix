@@ -58,6 +58,17 @@ export default function CustomCursor() {
     document.addEventListener("focusin", onFocusIn, true);
     document.addEventListener("focusout", onFocusOut, true);
 
+    // Pause the rAF loop entirely while the tab is hidden — saves battery
+    // and keeps the ring from drifting when the user returns.
+    let running = !document.hidden;
+    const onVisibility = () => {
+      running = !document.hidden;
+      if (running && rafId.current == null) {
+        rafId.current = requestAnimationFrame(render);
+      }
+    };
+    document.addEventListener("visibilitychange", onVisibility);
+
     const render = () => {
       const ease = 0.18;
       ringPos.current.x += (pos.current.x - ringPos.current.x) * ease;
@@ -70,7 +81,7 @@ export default function CustomCursor() {
         ringRef.current.style.transform = `translate3d(${ringPos.current.x}px, ${ringPos.current.y}px, 0) translate(-50%, -50%)`;
       }
 
-      rafId.current = requestAnimationFrame(render);
+      rafId.current = running ? requestAnimationFrame(render) : null;
     };
 
     rafId.current = requestAnimationFrame(render);
@@ -81,6 +92,7 @@ export default function CustomCursor() {
       document.removeEventListener("mouseenter", onMouseEnter);
       document.removeEventListener("focusin", onFocusIn, true);
       document.removeEventListener("focusout", onFocusOut, true);
+      document.removeEventListener("visibilitychange", onVisibility);
       if (rafId.current) cancelAnimationFrame(rafId.current);
     };
   }, [visible]);
@@ -96,6 +108,7 @@ export default function CustomCursor() {
       <div ref={ringRef} className="cursor-ring">
         {cursorType === "VIEW" && <span className="cursor-badge">VIEW</span>}
         {cursorType === "DRAG" && <span className="cursor-badge">DRAG</span>}
+        {cursorType === "WATCH" && <span className="cursor-badge">WATCH</span>}
       </div>
     </div>
   );

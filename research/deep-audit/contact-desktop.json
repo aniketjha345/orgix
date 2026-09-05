@@ -5,42 +5,93 @@
       "h": 900
     },
     "scrollW": 1440,
-    "scrollH": 900,
+    "scrollH": 2607,
     "bodyFont": "16px",
     "hCount": {
-      "h1": 0,
-      "h2": 0,
+      "h1": 1,
+      "h2": 1,
       "h3": 0
     },
     "overflowSources": [],
-    "imgs": [],
+    "imgs": [
+      {
+        "src": "orgix-logo.png",
+        "nw": 512,
+        "nh": 512,
+        "dispW": 44,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "orgix-logo.png",
+        "nw": 512,
+        "nh": 512,
+        "dispW": 52,
+        "loading": "auto",
+        "hasAlt": true
+      }
+    ],
     "a11y": {
       "noAltImgs": 0,
       "noNameButtons": [],
       "emptyLinks": 0
     },
-    "decorCount": 0,
+    "decorCount": 8,
     "fontSizes": [
       [
-        "16.0",
+        "72.0",
+        1
+      ],
+      [
+        "17.3",
+        1
+      ],
+      [
+        "33.6",
+        1
+      ],
+      [
+        "15.0",
+        1
+      ],
+      [
+        "12.5",
+        1
+      ],
+      [
+        "14.5",
         1
       ]
     ],
-    "h1Style": null,
-    "sections": [],
+    "h1Style": {
+      "fontSize": "72px",
+      "lineHeight": "70.56px",
+      "letterSpacing": "-4.32px",
+      "fontFamily": "\"Bricolage Grotesque\"",
+      "fontWeight": "700"
+    },
+    "sections": [
+      {
+        "i": 0,
+        "tag": "section",
+        "cls": "page-hero.grain",
+        "h": 712
+      },
+      {
+        "i": 1,
+        "tag": "section",
+        "cls": "section.section--tight",
+        "h": 1281
+      },
+      {
+        "i": 2,
+        "tag": "footer",
+        "cls": "footer",
+        "h": 503
+      }
+    ],
     "suspiciousFixed": []
   },
-  "consoleMsgs": [
-    "[error] Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
-    "[pageerror] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^"
-  ],
+  "consoleMsgs": [],
   "failedReq": []
 }

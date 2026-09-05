@@ -309,14 +309,14 @@ export const testimonials = [
       "Working with Orgix Media has completely changed the way I approach content. Their team understands finance and knows how to turn complex topics into simple, engaging scripts that people actually want to watch. From content ideas and scripting to social media strategy, everything is well planned and executed. I've seen a clear improvement in my content quality, reach and overall personal brand. Highly recommended!",
     name: "Gaurav Mahawar",
     role: "Finance Creator · 287K+ followers",
-    img: "/images/testimonials/gaurav-mahawar.jpg",
+    img: "/images/creators/gaurav-mahawar.jpg",
   },
   {
     quote:
       "Working with Orgix Media has been a great experience. They helped me increase my followers and, more importantly, attract valuable, high-quality leads through strategic content and personal branding. Their team understands how to create content that not only grows your audience but also brings real business opportunities.",
     name: "Royston Dias",
     role: "Indian Cricketer · 31.1K+ followers",
-    img: "/images/testimonials/royston-dias.jpg",
+    img: "/images/creators/royston-dias.jpg",
   },
   {
     quote:
@@ -418,7 +418,7 @@ export const videoTestimonials = [
     badge: "Shark Tank Featured",
     followers: "23.1K+",
     handle: "@demlabrothers",
-    poster: "https://orgixmedia.com/uploads/vid_client1_poster.jpg",
+    poster: "/images/creators/demla-brothers.jpg",
     videoUrl: "https://orgixmedia.com/uploads/vid_client1.mp4",
     quote: "Orgix scaled our founder personal brands organically and generated massive inbound brand trust.",
   },
@@ -428,7 +428,7 @@ export const videoTestimonials = [
     badge: "100K in 80 Posts",
     followers: "100K+",
     handle: "@shivamcareer",
-    poster: "https://orgixmedia.com/uploads/vid_client2_poster.jpg",
+    poster: "/images/creators/shivam.jpg",
     videoUrl: "https://orgixmedia.com/uploads/vid_client2.mp4",
     quote: "Their scripting and hooks turned my expertise into videos that people actually watch till the end.",
   },
@@ -438,7 +438,7 @@ export const videoTestimonials = [
     badge: "Finance & Tax Authority",
     followers: "37.6K+",
     handle: "@ca.jyotigoyal",
-    poster: "https://orgixmedia.com/uploads/img_6a8d49bc28c12.png",
+    poster: "/images/stories/ca-jyoti-goyal.jpg",
     videoUrl: "https://orgixmedia.com/uploads/vid_client3.mp4",
     quote: "Turned technical tax laws into viral, engaging reels that consistently bring high-value client leads.",
   },
@@ -448,7 +448,7 @@ export const videoTestimonials = [
     badge: "B2B Trade Funnel",
     followers: "23.6K+",
     handle: "@amit_aroraa",
-    poster: "https://orgixmedia.com/uploads/vid_client4_poster.jpg",
+    poster: "/images/creators/amit-arora.png",
     videoUrl: "https://orgixmedia.com/uploads/vid_client4.mp4",
     quote: "We don't chase random views — Orgix built a strategic funnel that creates real international trade deals.",
   },
@@ -458,7 +458,7 @@ export const videoTestimonials = [
     badge: "0 → 129K Organic",
     followers: "129K+",
     handle: "@officialparijain",
-    poster: "https://orgixmedia.com/uploads/img_6a8fdb40b555d.png",
+    poster: "/images/founders/pari-jain.jpg",
     videoUrl: "https://orgixmedia.com/uploads/vid_6a86b1f254dda.mov",
     quote: "Proving our own method every day: genuine storytelling, scroll-stopping hooks, and 100% organic reach.",
   },
@@ -468,7 +468,7 @@ export const videoTestimonials = [
     badge: "High-Ticket Collabs",
     followers: "25.5K+",
     handle: "@alishaa_chettri",
-    poster: "https://orgixmedia.com/uploads/img_6a8d4a25881a7.png",
+    poster: "/images/stories/alisha-chettri.jpg",
     videoUrl: "https://orgixmedia.com/uploads/vid_6a8d4a2588542.mp4",
     quote: "Orgix helped me build authority with premium brands and turn everyday engagement into closed deals.",
   },
@@ -522,30 +522,6 @@ export const mythBusters = [
     verdict: "Virality follows repeatable human psychology, tension, and relatable payoffs.",
     detail: "Every piece of content we build follows deep audience research, contrarian perspective, and emotional triggers. That is how Orgix has generated 1B+ organic views.",
     badge: "Psychology > Luck",
-  },
-];
-
-export const agencyPillars = [
-  {
-    num: "01",
-    title: "Absolute Specialisation",
-    subtitle: "We don't do everything. We excel at one thing.",
-    text: "Most agencies offering social media are actually ad agencies or influencer brokers who treat personal branding as an afterthought. We don't run paid ads or broker random sponsorships. We focus exclusively on compounding organic personal branding for founders and creators.",
-    highlight: "100% Organic · Zero ad spend required",
-  },
-  {
-    num: "02",
-    title: "Strategy Before Production",
-    subtitle: "Thinkers driving every cut and caption.",
-    text: "Most agencies start with a camera and hope something sticks. We spend days researching your niche, identifying untapped content angles, and defining your narrative positioning before a single frame is recorded.",
-    highlight: "Positioning & narrative architecture",
-  },
-  {
-    num: "03",
-    title: "Audiences, Not Algorithms",
-    subtitle: "Built on human psychology, not fleeting hacks.",
-    text: "Algorithms update every month, but human psychology has stayed the same for millennia. We design content that earns attention, respect, and deep trust — turning casual scrollers into loyal advocates, clients, and partners.",
-    highlight: "Compounding authority & inbound leads",
   },
 ];
 

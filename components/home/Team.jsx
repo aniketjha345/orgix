@@ -13,7 +13,7 @@ export default function Team({ index = "05" }) {
           kicker="EXECUTIVE LEADERSHIP · CREATIVE DIRECTORS"
           title={
             <>
-              The leadership behind <span className="grad-brand">the benchmark.</span>
+              The leadership behind the benchmark.
             </>
           }
           lead={
