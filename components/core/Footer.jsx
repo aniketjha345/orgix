@@ -3,10 +3,9 @@
 import { useRef, useEffect } from "react";
 import Link from "next/link";
 import Icon from "./Icon";
-import { company, nav, imgSrc } from "@/data/site";
+import { company, imgSrc } from "@/data/site";
 
 export default function Footer() {
-  const timeRef = useRef("");
   const elRef = useRef(null);
 
   useEffect(() => {
@@ -23,7 +22,6 @@ export default function Footer() {
       } catch {
         s = new Date().toTimeString().slice(0, 8);
       }
-      timeRef.current = s;
       if (elRef.current) elRef.current.textContent = s;
     };
 
@@ -33,99 +31,157 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="footer">
+    <footer className="pt-20 pb-12 bg-background border-t border-border/80 text-ink-secondary">
       <div className="container">
-        <div className="footer-main">
-          <div>
-            <Link className="brand" href="/" aria-label={`${company.name} — home`}>
+        {/* Antigravity Minimal 4 Plain Columns Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-14 pb-16 border-b border-border/60">
+          {/* Col 1: Brand & Tagline (5 cols) */}
+          <div className="lg:col-span-5">
+            <Link className="inline-block mb-4" href="/" aria-label={`${company.name} — home`}>
               <img
                 src={imgSrc("/images/logo/orgix-logo.png")}
                 alt="Orgix Media"
-                width={52}
-                height={52}
-                className="brand-logo-img brand-logo-img--footer"
+                width={40}
+                height={40}
+                className="w-10 h-10 rounded-xl object-contain"
               />
             </Link>
-            <p className="about-p">
-              India's personal branding studio. We turn expertise into personal brands the internet
-              can't ignore — 100% organic growth, zero ad spend.
+
+            <h3 className="text-[17px] font-display font-medium text-ink-primary mb-2">
+              {company.name}
+            </h3>
+
+            <p className="text-body-sm text-ink-secondary max-w-sm leading-relaxed font-light mb-6">
+              {company.tagline} We turn expertise into personal brands that get noticed, trusted and remembered — 100% organic growth.
             </p>
-            <div className="socials">
-              <a href={company.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <Icon name="ig" size={19} />
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-3 mb-6">
+              <a
+                href={company.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-surface border border-border hover:border-accent hover:text-accent text-ink-muted flex items-center justify-center transition-colors"
+                aria-label="Instagram"
+              >
+                <Icon name="ig" size={14} />
               </a>
-              <a href={company.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <Icon name="youtube" size={19} />
+              <a
+                href={company.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-surface border border-border hover:border-accent hover:text-accent text-ink-muted flex items-center justify-center transition-colors"
+                aria-label="YouTube"
+              >
+                <Icon name="youtube" size={14} />
               </a>
-              <a href={`mailto:${company.email}`} aria-label="Email">
-                <Icon name="mail" size={19} />
+              <a
+                href={`mailto:${company.email}`}
+                className="w-8 h-8 rounded-full bg-surface border border-border hover:border-accent hover:text-accent text-ink-muted flex items-center justify-center transition-colors"
+                aria-label="Email"
+              >
+                <Icon name="mail" size={14} />
               </a>
             </div>
 
-            <div className="footer-clock">
-              <span className="pulse-dot" />
-              <span>DELHI HQ · <span ref={elRef}>12:00:00</span> IST</span>
+            {/* Live Studio Clock */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-border text-[11px] font-mono text-ink-muted">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+              <span>
+                DELHI HQ · <span ref={elRef} className="text-ink-primary font-medium">12:00:00</span> IST
+              </span>
             </div>
           </div>
 
-          <div>
-            <h4>Navigation</h4>
-            <div className="f-links">
-              <Link href="/">Home</Link>
-              <Link href="/work">Selected Work</Link>
-              <Link href="/services">Services &amp; Packages</Link>
-              <Link href="/about">About Studio</Link>
-              <Link href="/careers">Careers (We&apos;re Hiring)</Link>
-              <Link href="/contact">Book Strategy Call</Link>
+          {/* Col 2: Pages (2 cols) */}
+          <div className="lg:col-span-2">
+            <h4 className="font-mono text-[11px] uppercase tracking-wider text-ink-primary mb-4">
+              Pages
+            </h4>
+            <div className="flex flex-col space-y-2 text-[13.5px] font-body">
+              <Link href="/" className="hover:text-accent transition-colors">
+                Home
+              </Link>
+              <Link href="/work" className="hover:text-accent transition-colors">
+                Work
+              </Link>
+              <Link href="/services" className="hover:text-accent transition-colors">
+                Services
+              </Link>
+              <Link href="/about" className="hover:text-accent transition-colors">
+                About
+              </Link>
+              <Link href="/careers" className="hover:text-accent transition-colors">
+                Careers
+              </Link>
+              <Link href="/#faq" className="hover:text-accent transition-colors">
+                FAQ
+              </Link>
             </div>
           </div>
 
-          <div>
-            <h4>Capabilities &amp; Proof</h4>
-            <div className="f-links">
-              <Link href="/services">Instagram Management</Link>
-              <Link href="/services">YouTube Growth</Link>
-              <Link href="/work">Case Studies Vault</Link>
-              <Link href="/#video-testimonials">Client Video Proof</Link>
-              <Link href="/#faq">FAQ &amp; Pricing</Link>
+          {/* Col 3: Services (2 cols) */}
+          <div className="lg:col-span-2">
+            <h4 className="font-mono text-[11px] uppercase tracking-wider text-ink-primary mb-4">
+              Services
+            </h4>
+            <div className="flex flex-col space-y-2 text-[13.5px] font-body">
+              <Link href="/services" className="hover:text-accent transition-colors">
+                Instagram Growth
+              </Link>
+              <Link href="/services" className="hover:text-accent transition-colors">
+                YouTube Authority
+              </Link>
+              <Link href="/#engine" className="hover:text-accent transition-colors">
+                Growth Engine
+              </Link>
+              <Link href="/#video-proof" className="hover:text-accent transition-colors">
+                Video Testimonials
+              </Link>
             </div>
           </div>
 
-          <div>
-            <h4>HQ &amp; Contact</h4>
-            <div className="f-contact">
-              <a href={`mailto:${company.email}`}>
-                <Icon name="mail" size={17} />
+          {/* Col 4: Contact (3 cols) */}
+          <div className="lg:col-span-3">
+            <h4 className="font-mono text-[11px] uppercase tracking-wider text-ink-primary mb-4">
+              Contact
+            </h4>
+            <div className="flex flex-col space-y-2.5 text-[13px] font-body">
+              <a
+                href={`mailto:${company.email}`}
+                className="hover:text-accent transition-colors truncate"
+              >
                 {company.email}
               </a>
-              <a href={company.instagram} target="_blank" rel="noopener noreferrer">
-                <Icon name="ig" size={17} />
+              <a
+                href={company.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
                 @orgixmedia
               </a>
-              <a href={company.youtube} target="_blank" rel="noopener noreferrer">
-                <Icon name="youtube" size={17} />
-                Orgix Media YouTube
-              </a>
-              <span style={{ display: "flex", alignItems: "flex-start", gap: 10, color: "var(--ink-3)", fontSize: 13.5, lineHeight: 1.5 }}>
-                <Icon name="pin" size={17} style={{ flex: "none", marginTop: 3, color: "var(--lime)" }} />
-                <span>{company.address}</span>
-              </span>
+              <div className="text-ink-muted text-[12px] pt-2 border-t border-border/40">
+                {company.address}
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="footer-bar">
-          <span>© {new Date().getFullYear()} {company.name}. All rights reserved.</span>
-          <span className="footer-bar-right">
-            <span>Built in Delhi · 1B+ Organic Views Generated</span>
+        {/* Bottom Plain Row */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] font-mono text-ink-muted">
+          <span>&copy; 2026 {company.name}. 1B+ Organic Views Generated.</span>
+          <div className="flex items-center gap-4">
+            <span>Sector 3, Rohini, Delhi</span>
             <button
-              className="cmd-trigger-btn"
+              type="button"
+              className="px-2 py-0.5 rounded bg-surface border border-border text-ink-secondary text-[11px] hover:border-white/20 transition-colors"
               onClick={() => window.dispatchEvent(new CustomEvent("open-command-palette"))}
               aria-label="Open Command Palette"
             >
-              <span>⌘K</span>
+              ⌘K
             </button>
-          </span>
+          </div>
         </div>
       </div>
     </footer>

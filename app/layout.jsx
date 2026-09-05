@@ -1,30 +1,36 @@
-import { Space_Grotesk, Manrope, JetBrains_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Manrope, JetBrains_Mono } from "next/font/google";
 import Header from "@/components/core/Header";
 import Footer from "@/components/core/Footer";
 import ConsultationModal from "@/components/ui/ConsultationModal";
+import ExitIntentModal from "@/components/ui/ExitIntentModal";
+import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import CustomCursor from "@/components/ui/CustomCursor";
 import CommandPalette from "@/components/ui/CommandPalette";
 import ViewTransitions from "@/components/ui/ViewTransitions";
 import "./globals.css";
+import "./case-vault.css";
+import "./antigravity-studio.css";
 
-const display = Space_Grotesk({
+// Font variables are exposed as `-src` sources; globals.css maps them onto the
+// public --font-* tokens with local fallbacks (cascade-order independent).
+const display = Bricolage_Grotesque({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-display",
+  axes: ["opsz"],
+  variable: "--font-display-src",
   display: "swap",
 });
 
 const body = Manrope({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-body",
+  variable: "--font-body-src",
   display: "swap",
 });
 
 const mono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
-  variable: "--font-mono",
+  variable: "--font-mono-src",
   display: "swap",
 });
 
@@ -47,34 +53,30 @@ export const metadata = {
       "We turn expertise into personal brands that get noticed, trusted and remembered. 100% organic growth.",
     url: "https://orgixmedia.com",
     siteName: "Orgix Media",
-    images: [{ url: "/images/logo/orgix-logo.png", width: 512, height: 512 }],
+    images: [{ url: "/images/og/orgix-og.png", width: 1200, height: 630 }],
     locale: "en_IN",
     type: "website",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Orgix Media — Build the Brand Behind You",
     description:
-      "India's personal branding studio for founders & creators. 1B+ views· 85+ creators scaled · 100% organic.",
-    images: ["/images/logo/orgix-logo.png"],
+      "India's personal branding studio for founders & creators. 1B+ views · 85+ creators scaled · 100% organic.",
+    images: ["/images/og/orgix-og.png"],
   },
 };
 
 export const viewport = {
-  themeColor: "#07060c",
+  themeColor: "#0a0a1f",
   width: "device-width",
   initialScale: 1,
 };
-
-// Inline script runs before first paint so the saved theme applies without a
-// dark→light flash (FOUC) on load. Hydration later re-reads the same key.
-const themeBootScript = `(function(){try{var t=localStorage.getItem("orgix-theme");if(t==="light"){document.documentElement.dataset.theme="light";}}catch(e){}})();`;
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`} data-theme="dark">
       <body>
-        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
+        <div className="aurora-layer" aria-hidden="true" />
         <div className="noise-overlay" aria-hidden="true" />
         <CustomCursor />
         <CommandPalette />
@@ -86,6 +88,8 @@ export default function RootLayout({ children }) {
         <main id="main">{children}</main>
         <Footer />
         <ConsultationModal />
+        <ExitIntentModal />
+        <WhatsAppFloat />
       </body>
     </html>
   );

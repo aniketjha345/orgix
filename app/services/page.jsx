@@ -61,7 +61,7 @@ export default function ServicesPage() {
           <Reveal style={{ maxWidth: 640, marginBottom: 36 }}>
             <span className="eyebrow">03 — TARGET ARCHETYPES</span>
             <h2 className="display" style={{ fontSize: "clamp(1.65rem, 2.8vw, 2.3rem)", marginTop: 14, letterSpacing: "-0.025em" }}>
-              Built for people with <span className="grad-hot">something real to say.</span>
+              Built for people with something real to say.
             </h2>
           </Reveal>
           <div className="audiences-grid">

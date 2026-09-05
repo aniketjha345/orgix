@@ -5,7 +5,7 @@
       "h": 900
     },
     "scrollW": 1440,
-    "scrollH": 4104,
+    "scrollH": 4061,
     "bodyFont": "16px",
     "hCount": {
       "h1": 1,
@@ -26,7 +26,7 @@
         "src": "pari-jain.jpg",
         "nw": 1025,
         "nh": 1458,
-        "dispW": 278,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -34,7 +34,7 @@
         "src": "shivam-careers.jpg",
         "nw": 841,
         "nh": 1249,
-        "dispW": 278,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -42,7 +42,7 @@
         "src": "akash-pandey.jpg",
         "nw": 720,
         "nh": 1413,
-        "dispW": 278,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -50,7 +50,7 @@
         "src": "ca-jyoti-goyal.jpg",
         "nw": 1050,
         "nh": 1599,
-        "dispW": 278,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -58,7 +58,7 @@
         "src": "tools-fact.jpg",
         "nw": 1054,
         "nh": 1079,
-        "dispW": 278,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -66,7 +66,7 @@
         "src": "taranveer-jaura.jpg",
         "nw": 738,
         "nh": 1116,
-        "dispW": 278,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -74,7 +74,7 @@
         "src": "amit-arora.jpg",
         "nw": 738,
         "nh": 1186,
-        "dispW": 278,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -82,7 +82,7 @@
         "src": "ruchira-pokhriyal.jpg",
         "nw": 719,
         "nh": 1455,
-        "dispW": 278,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -90,7 +90,7 @@
         "src": "cellbell.jpg",
         "nw": 738,
         "nh": 1140,
-        "dispW": 278,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -98,7 +98,7 @@
         "src": "roshnii-deshmukkh.jpg",
         "nw": 719,
         "nh": 1415,
-        "dispW": 278,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -106,7 +106,7 @@
         "src": "royston-dias.jpg",
         "nw": 706,
         "nh": 1421,
-        "dispW": 278,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -114,23 +114,23 @@
         "src": "alisha-chettri.jpg",
         "nw": 715,
         "nh": 1408,
-        "dispW": 278,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
       {
         "src": "bhavit-patil.jpg",
-        "nw": 1080,
-        "nh": 1549,
-        "dispW": 278,
+        "nw": 0,
+        "nh": 0,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
       {
         "src": "demla-brothers.jpg",
-        "nw": 738,
-        "nh": 1216,
-        "dispW": 278,
+        "nw": 0,
+        "nh": 0,
+        "dispW": 276,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -148,7 +148,7 @@
       "noNameButtons": [],
       "emptyLinks": 0
     },
-    "decorCount": 5,
+    "decorCount": 9,
     "fontSizes": [
       [
         "12.5",
@@ -163,7 +163,7 @@
         14
       ],
       [
-        "76.8",
+        "72.0",
         1
       ],
       [
@@ -196,10 +196,10 @@
       ]
     ],
     "h1Style": {
-      "fontSize": "76.8px",
-      "lineHeight": "79.872px",
-      "letterSpacing": "-2.304px",
-      "fontFamily": "\"Space Grotesk\"",
+      "fontSize": "72px",
+      "lineHeight": "70.56px",
+      "letterSpacing": "-4.32px",
+      "fontFamily": "\"Bricolage Grotesque\"",
       "fontWeight": "700"
     },
     "sections": [
@@ -213,7 +213,7 @@
         "i": 1,
         "tag": "section",
         "cls": "section.section--tight",
-        "h": 2095
+        "h": 2091
       },
       {
         "i": 2,

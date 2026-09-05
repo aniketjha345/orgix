@@ -14,6 +14,16 @@ export default function WallCard({ s, i }) {
     );
   };
 
+  // Touch + keyboard users can't hover, so the whole card opens the
+  // consultation modal; the IG profile link inside still stops propagation.
+  const handleOpen = () => {
+    window.dispatchEvent(
+      new CustomEvent("open-consultation", {
+        detail: { creator: s.name, niche: s.role },
+      })
+    );
+  };
+
   return (
     <Reveal
       delay={(i % 3) * 0.08}
@@ -21,8 +31,15 @@ export default function WallCard({ s, i }) {
       className="wall-card group"
       tabIndex={0}
       role="group"
-      aria-label={`${s.name} — ${s.work}`}
+      aria-label={`${s.name} — ${s.work}. Activate to get results like this.`}
       data-cursor="HOVER"
+      onClick={handleOpen}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          handleOpen();
+        }
+      }}
     >
       <div className="wall-card-frame">
         <img
@@ -50,6 +67,10 @@ export default function WallCard({ s, i }) {
           </div>
           <span className="wall-card-handle">{s.handle}</span>
           <p className="wall-card-work">{s.work}</p>
+          <span className="wall-card-tap-hint">
+            <Icon name="arrow" size={12} />
+            Tap to claim your slot
+          </span>
         </div>
 
         {/* Hover Reveal: What We Did & Action */}

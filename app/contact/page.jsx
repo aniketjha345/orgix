@@ -22,7 +22,6 @@ const info = [
     t: "Official YouTube Channel",
     v: "@orgixmedia",
     href: company.youtube,
-    color: "#ff0000",
   },
   {
     icon: "ig",
@@ -96,6 +95,31 @@ export default function ContactPage() {
                   </Reveal>
                 ))}
               </div>
+
+              <Reveal delay={0.2}>
+                <div className="card" style={{ padding: "clamp(20px, 2.5vw, 28px)", marginTop: 26 }}>
+                  <span className="eyebrow" style={{ color: "var(--lime)" }}>
+                    WHAT HAPPENS NEXT
+                  </span>
+                  <ol style={{ margin: "16px 0 0", padding: 0, listStyle: "none", display: "grid", gap: 14 }}>
+                    {[
+                      ["01", "Profile review", "We study your current presence and niche competitors before we ever get on a call."],
+                      ["02", "Free 1:1 audit", "A 30-minute strategy call with a founding strategist — no pitch deck, no ad-spend talk."],
+                      ["03", "Your 90-day map", "You receive the exact organic content trajectory we'd run for your name."],
+                    ].map(([n, t, d]) => (
+                      <li key={n} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+                        <span className="mono" style={{ color: "var(--lime)", fontSize: 12, paddingTop: 3 }}>
+                          {n}
+                        </span>
+                        <span>
+                          <b style={{ display: "block", fontSize: 14.5 }}>{t}</b>
+                          <span style={{ color: "var(--ink-3)", fontSize: 13.5, lineHeight: 1.6 }}>{d}</span>
+                        </span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </Reveal>
             </div>
 
             <Reveal dir="right" delay={0.1}>

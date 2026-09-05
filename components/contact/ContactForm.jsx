@@ -79,13 +79,14 @@ export default function ContactForm() {
     //    If an endpoint is configured later it lands here; until then we
     //    fall straight through to the email client.
 
-    // 3) Client mailto fallback
+    // 3) Client mailto fallback — honest: we open a pre-filled email instead
+    //    of pretending the message was delivered server-side.
     const subject = encodeURIComponent(`Brand growth enquiry — ${form.name}`);
     const text = encodeURIComponent(
       `Hi Orgix Media,\n\nI'd like to grow my personal brand.\n\nName: ${form.name}\nEmail: ${form.email}\nCurrent handle/website: ${form.handle}\nNiche: ${form.niche}\nGoals: ${form.goals.join(", ")}\n\n${form.message}`
     );
     window.location.href = `mailto:info@orgixmedia.com?subject=${subject}&body=${text}`;
-    setState({ status: "ok", msg: "Opening your mail app… we can't wait to review your profile.", busy: false });
+    setState({ status: "ok", msg: "Your enquiry is pre-filled in your mail app — just press send and we'll reply within one business day.", busy: false });
   };
 
   const postJson = async (url, body, graceful = false) => {

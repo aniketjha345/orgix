@@ -128,7 +128,7 @@ export default function AboutPage() {
           <Reveal style={{ textAlign: "center", marginBottom: 40 }}>
             <span className="eyebrow center">03 — CORE CONVICTIONS</span>
             <h2 className="display" style={{ fontSize: "clamp(1.65rem, 2.8vw, 2.3rem)", marginTop: 14 }}>
-              Four non-negotiable rules. <span className="grad-hot">Zero exceptions.</span>
+              Four non-negotiable rules. Zero exceptions.
             </h2>
           </Reveal>
           <div className="values-grid">
