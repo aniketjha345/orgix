@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion, useScroll, useSpring, useReducedMotion } from "framer-motion";
 import { company, imgSrc } from "@/data/site";
 
 export default function Header() {
@@ -24,6 +25,17 @@ export default function Header() {
     setOpenDropdown(null);
   }, [pathname]);
 
+  // Escape closes any open menu — keyboard users are never trapped
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key !== "Escape") return;
+      setOpenDropdown(null);
+      setMobileOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   const handleMouseEnter = (menu) => {
     if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
     setOpenDropdown(menu);
@@ -36,20 +48,56 @@ export default function Header() {
   };
 
   const handleOpenConsultation = () => {
+    setOpenDropdown(null);
+    setMobileOpen(false);
     window.dispatchEvent(
       new CustomEvent("open-consultation", { detail: { source: "header" } })
     );
   };
 
+  const handleNavAnchor = (e, href) => {
+    setOpenDropdown(null);
+    setMobileOpen(false);
+
+    if (href.startsWith("/#") && pathname === "/") {
+      e.preventDefault();
+      const targetId = href.replace("/#", "");
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        if (typeof window !== "undefined") {
+          window.history.pushState(null, "", href);
+        }
+      }
+    }
+  };
+
+  // Reading-progress bar — a thin accent line that tracks scroll depth.
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 140,
+    damping: 30,
+    restDelta: 0.001,
+  });
+  const reduceMotion = useReducedMotion();
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none flex justify-center pt-3 sm:pt-4 px-4 transition-all duration-300">
+    <>
+      {!reduceMotion && (
+        <motion.div
+          className="fixed top-0 left-0 right-0 h-[2.5px] bg-accent origin-left z-[60] pointer-events-none"
+          style={{ scaleX }}
+          aria-hidden="true"
+        />
+      )}
+      <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none flex justify-center pt-3 sm:pt-4 px-4 transition-all duration-300">
       <div className="w-full max-w-5xl flex flex-col items-center">
         {/* Centered Floating Capsule Bar (Light, No Dark Colors) */}
         <div
           className={`pointer-events-auto rounded-full transition-all duration-300 px-4 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between w-full border ${
             scrolled
-              ? "liquid-glass shadow-[0_12px_36px_-8px_rgba(15,26,46,0.12)]"
-              : "bg-[#F6F4EF]/85 backdrop-blur-xl border-line shadow-[0_4px_24px_rgba(15,26,46,0.05)]"
+              ? "bg-[#F6F4EF]/95 backdrop-blur-2xl border-line/90 shadow-[0_12px_36px_-8px_rgba(15,26,46,0.14)]"
+              : "bg-[#F6F4EF]/90 backdrop-blur-xl border-line shadow-[0_4px_24px_rgba(15,26,46,0.05)]"
           }`}
         >
           {/* Brand Logo & Wordmark */}
@@ -97,8 +145,8 @@ export default function Header() {
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[440px] z-50">
                   <div className="p-3.5 rounded-2xl bg-white border border-line shadow-[0_20px_50px_rgba(15,26,46,0.14)] backdrop-blur-2xl grid gap-1.5 text-left">
                     <Link
-                      href="/#services"
-                      onClick={() => setOpenDropdown(null)}
+                      href="/#editing"
+                      onClick={(e) => handleNavAnchor(e, "/#editing")}
                       className="p-3 rounded-xl hover:bg-bg-alt transition-colors flex items-start gap-3 group"
                     >
                       <div className="w-8 h-8 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0 text-[13px] font-semibold">
@@ -115,7 +163,7 @@ export default function Header() {
                     </Link>
 
                     <Link
-                      href="/#services"
+                      href="/services"
                       onClick={() => setOpenDropdown(null)}
                       className="p-3 rounded-xl hover:bg-bg-alt transition-colors flex items-start gap-3 group"
                     >
@@ -133,8 +181,8 @@ export default function Header() {
                     </Link>
 
                     <Link
-                      href="/#services"
-                      onClick={() => setOpenDropdown(null)}
+                      href="/#service-instagram"
+                      onClick={(e) => handleNavAnchor(e, "/#service-instagram")}
                       className="p-3 rounded-xl hover:bg-bg-alt transition-colors flex items-start gap-3 group"
                     >
                       <div className="w-8 h-8 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0 text-[13px] font-semibold">
@@ -151,8 +199,8 @@ export default function Header() {
                     </Link>
 
                     <Link
-                      href="/#services"
-                      onClick={() => setOpenDropdown(null)}
+                      href="/#process"
+                      onClick={(e) => handleNavAnchor(e, "/#process")}
                       className="p-3 rounded-xl hover:bg-bg-alt transition-colors flex items-start gap-3 group border-t border-line"
                     >
                       <div className="w-8 h-8 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0 text-[13px] font-semibold">
@@ -166,6 +214,15 @@ export default function Header() {
                           2 recording days = 30 days of compounding authority content.
                         </p>
                       </div>
+                    </Link>
+
+                    <Link
+                      href="/services"
+                      onClick={() => setOpenDropdown(null)}
+                      className="mt-1 pt-2.5 border-t border-line text-[12px] font-mono text-accent hover:underline flex items-center justify-between px-2"
+                    >
+                      <span>Explore all capabilities &amp; pricing</span>
+                      <span>→</span>
                     </Link>
                   </div>
                 </div>
@@ -197,7 +254,7 @@ export default function Header() {
                   <div className="p-3.5 rounded-2xl bg-white border border-line shadow-[0_20px_50px_rgba(15,26,46,0.14)] backdrop-blur-2xl grid gap-1 text-left">
                     <Link
                       href="/#results"
-                      onClick={() => setOpenDropdown(null)}
+                      onClick={(e) => handleNavAnchor(e, "/#results")}
                       className="p-2.5 rounded-xl hover:bg-bg-alt transition-colors flex items-center justify-between group"
                     >
                       <div className="flex items-center gap-2.5">
@@ -211,7 +268,7 @@ export default function Header() {
 
                     <Link
                       href="/#results"
-                      onClick={() => setOpenDropdown(null)}
+                      onClick={(e) => handleNavAnchor(e, "/#results")}
                       className="p-2.5 rounded-xl hover:bg-bg-alt transition-colors flex items-center justify-between group"
                     >
                       <div className="flex items-center gap-2.5">
@@ -225,7 +282,7 @@ export default function Header() {
 
                     <Link
                       href="/#results"
-                      onClick={() => setOpenDropdown(null)}
+                      onClick={(e) => handleNavAnchor(e, "/#results")}
                       className="p-2.5 rounded-xl hover:bg-bg-alt transition-colors flex items-center justify-between group"
                     >
                       <div className="flex items-center gap-2.5">
@@ -251,17 +308,32 @@ export default function Header() {
             </div>
 
             {/* Flat Links */}
-            <Link href="/#results" className="hover:text-ink transition-colors font-medium">
+            <Link
+              href="/#results"
+              onClick={(e) => handleNavAnchor(e, "/#results")}
+              className="hover:text-ink transition-colors font-medium"
+            >
               Results
             </Link>
-            <Link href="/#testimonials" className="hover:text-ink transition-colors font-medium">
+            <Link
+              href="/#testimonials"
+              onClick={(e) => handleNavAnchor(e, "/#testimonials")}
+              className="hover:text-ink transition-colors font-medium"
+            >
               Testimonials
             </Link>
-            <Link href="/#process" className="hover:text-ink transition-colors font-medium">
+            <Link
+              href="/#process"
+              onClick={(e) => handleNavAnchor(e, "/#process")}
+              className="hover:text-ink transition-colors font-medium"
+            >
               Process
             </Link>
             <Link href="/about" className="hover:text-ink transition-colors font-medium">
               About
+            </Link>
+            <Link href="/contact" className="hover:text-ink transition-colors font-medium">
+              Contact
             </Link>
           </nav>
 
@@ -291,37 +363,37 @@ export default function Header() {
 
         {/* Mobile Navigation Drawer (Clean Pure White / Light, No Dark Color) */}
         {mobileOpen && (
-          <div className="md:hidden mt-2 p-5 rounded-2xl bg-white border border-line shadow-[0_20px_60px_rgba(15,26,46,0.14)] backdrop-blur-2xl flex flex-col space-y-3 w-full text-left pointer-events-auto">
+          <div className="md:hidden mt-2 p-5 rounded-2xl bg-white border border-line shadow-[0_20px_60px_rgba(15,26,46,0.14)] backdrop-blur-2xl flex flex-col space-y-2 w-full text-left pointer-events-auto">
             <Link
-              href="/#services"
+              href="/services"
               onClick={() => setMobileOpen(false)}
               className="text-[14.5px] font-medium text-ink hover:text-accent py-2 px-2.5 rounded-xl hover:bg-bg-alt flex items-center justify-between"
             >
-              <span>Services</span>
+              <span>Services &amp; Pricing</span>
               <span className="text-[11px] font-mono text-ink-soft">01</span>
             </Link>
             <Link
-              href="/#results"
+              href="/work"
               onClick={() => setMobileOpen(false)}
               className="text-[14.5px] font-medium text-ink hover:text-accent py-2 px-2.5 rounded-xl hover:bg-bg-alt flex items-center justify-between"
             >
-              <span>Results &amp; Proof</span>
+              <span>Work &amp; Case Studies</span>
               <span className="text-[11px] font-mono text-ink-soft">02</span>
             </Link>
             <Link
-              href="/#testimonials"
-              onClick={() => setMobileOpen(false)}
+              href="/#results"
+              onClick={(e) => handleNavAnchor(e, "/#results")}
               className="text-[14.5px] font-medium text-ink hover:text-accent py-2 px-2.5 rounded-xl hover:bg-bg-alt flex items-center justify-between"
             >
-              <span>Testimonials</span>
+              <span>Results &amp; Metrics</span>
               <span className="text-[11px] font-mono text-ink-soft">03</span>
             </Link>
             <Link
               href="/#process"
-              onClick={() => setMobileOpen(false)}
+              onClick={(e) => handleNavAnchor(e, "/#process")}
               className="text-[14.5px] font-medium text-ink hover:text-accent py-2 px-2.5 rounded-xl hover:bg-bg-alt flex items-center justify-between"
             >
-              <span>Method &amp; Process</span>
+              <span>Process &amp; System</span>
               <span className="text-[11px] font-mono text-ink-soft">04</span>
             </Link>
             <Link
@@ -331,6 +403,22 @@ export default function Header() {
             >
               <span>About Us</span>
               <span className="text-[11px] font-mono text-ink-soft">05</span>
+            </Link>
+            <Link
+              href="/careers"
+              onClick={() => setMobileOpen(false)}
+              className="text-[14.5px] font-medium text-ink hover:text-accent py-2 px-2.5 rounded-xl hover:bg-bg-alt flex items-center justify-between"
+            >
+              <span>Careers</span>
+              <span className="text-[11px] font-mono text-ink-soft">06</span>
+            </Link>
+            <Link
+              href="/contact"
+              onClick={() => setMobileOpen(false)}
+              className="text-[14.5px] font-medium text-ink hover:text-accent py-2 px-2.5 rounded-xl hover:bg-bg-alt flex items-center justify-between"
+            >
+              <span>Contact Us</span>
+              <span className="text-[11px] font-mono text-ink-soft">07</span>
             </Link>
 
             <button
@@ -347,5 +435,6 @@ export default function Header() {
         )}
       </div>
     </header>
+    </>
   );
 }

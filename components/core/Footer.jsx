@@ -130,8 +130,8 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h4 className={colHead}>Services</h4>
             <div className={colLinks} style={{ color: DIM }}>
-              <Link href="/#services" className={colLink}>Video Editing</Link>
-              <Link href="/#service-linkedin" className={colLink}>LinkedIn Authority</Link>
+              <Link href="/#editing" className={colLink}>Video Editing</Link>
+              <Link href="/services" className={colLink}>LinkedIn Authority</Link>
               <Link href="/#service-instagram" className={colLink}>Instagram Growth</Link>
               <Link href="/#results" className={colLink}>Results &amp; Proof</Link>
             </div>

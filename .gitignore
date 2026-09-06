@@ -15,5 +15,6 @@ out/
 qa-*.txt
 research/shots/
 research/*.png
-*.png
+/*.png
+!public/**
 .freebuff/

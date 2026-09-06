@@ -1,10 +1,6 @@
-import { Instrument_Sans, Inter, Playfair_Display } from "next/font/google";
-import Header from "@/components/core/Header";
-import Footer from "@/components/core/Footer";
+import { Instrument_Sans, Inter, Playfair_Display, Space_Grotesk } from "next/font/google";
 import Effects from "@/components/ui/Effects";
-import ConsultationModal from "@/components/ui/ConsultationModal";
-import ExitIntentModal from "@/components/ui/ExitIntentModal";
-import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
+import OrgixChrome from "@/components/core/OrgixChrome";
 import "./globals.css";
 
 const displayFont = Instrument_Sans({
@@ -26,6 +22,13 @@ const quoteFont = Playfair_Display({
   weight: ["500"],
   style: ["italic"],
   variable: "--font-quote",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-agney-display",
   display: "swap",
 });
 
@@ -61,18 +64,16 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable} ${quoteFont.variable}`}>
+    <html
+      lang="en"
+      className={`${displayFont.variable} ${bodyFont.variable} ${quoteFont.variable} ${spaceGrotesk.variable}`}
+    >
       <body>
         <a className="skip-link" href="#main">
           Skip to content
         </a>
         <Effects />
-        <Header />
-        <main id="main">{children}</main>
-        <Footer />
-        <ConsultationModal />
-        <ExitIntentModal />
-        <WhatsAppFloat />
+        <OrgixChrome>{children}</OrgixChrome>
       </body>
     </html>
   );

@@ -16,13 +16,17 @@ function InstagramShowstopper() {
   const [progress, setProgress] = useState(0);
   const [followerCount, setFollowerCount] = useState(8000);
   const [hasTriggeredAfter, setHasTriggeredAfter] = useState(false);
+  const [unlocked, setUnlocked] = useState([]);
   const animatingRef = useRef(false);
+
+  const MILESTONES = [10000, 50000, 100000];
 
   // Monitor scroll progress across 40%-60%
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setFollowerCount(111000);
       setHasTriggeredAfter(true);
+      setUnlocked([10000, 50000, 100000]);
       return;
     }
 
@@ -51,6 +55,7 @@ function InstagramShowstopper() {
   const triggerAfterAnimation = () => {
     animatingRef.current = true;
     setHasTriggeredAfter(true);
+    setUnlocked([]);
 
     const startVal = 8000;
     const targetVal = 111000;
@@ -64,6 +69,14 @@ function InstagramShowstopper() {
       const ease = 1 - Math.pow(1 - p, 3);
       const currentCount = Math.round(startVal + (targetVal - startVal) * ease);
       setFollowerCount(currentCount);
+
+      // Milestone unlocks pop in as the counter crosses each threshold
+      setUnlocked((prev) => {
+        const next = MILESTONES.filter(
+          (m) => currentCount >= m && !prev.includes(m)
+        );
+        return next.length ? [...prev, ...next] : prev;
+      });
 
       if (p < 1) {
         requestAnimationFrame(updateCounter);
@@ -143,6 +156,31 @@ function InstagramShowstopper() {
               <div className="text-[9px] text-ink-soft">{isAfter ? "Organic" : "Reach"}</div>
             </div>
           </div>
+
+          {/* Milestone unlocks — pop in as the counter crosses each threshold */}
+          <div
+            className={`ig-milestones ${unlocked.length ? "is-on" : ""}`}
+            aria-live="polite"
+          >
+            {MILESTONES.map((m, i) => (
+              <span
+                key={m}
+                className={`ig-milestone ${
+                  unlocked.includes(m) ? "is-unlocked" : ""
+                }`}
+                style={{ "--mi": i }}
+              >
+                ✓ {m >= 1000 ? `${m / 1000}K` : m}
+              </span>
+            ))}
+          </div>
+
+          {/* Before-state context — only while the profile is still stale */}
+          {!isAfter && (
+            <div className="ig-stale font-mono text-[9px] tracking-[0.14em] uppercase text-ink-soft text-center py-1.5 rounded-full border border-line bg-white/60">
+              Flat for 90 days · 2.1% reach
+            </div>
+          )}
         </div>
 
         {/* Growth Graph Line Draws Itself Bottom-Left to Top-Right */}
@@ -183,12 +221,14 @@ function InstagramShowstopper() {
                 }}
               />
 
-              {/* Active Pulse Dot at Peak */}
+              {/* Milestone dots — pop sequentially after the line draws */}
               {isAfter && (
-                <>
-                  <circle cx="230" cy="8" r="4" fill="#2E5BFF" />
+                <g className="growth-dots">
+                  <circle cx="140" cy="30" r="3.5" fill="#2E5BFF" style={{ "--gi": 0 }} />
+                  <circle cx="185" cy="17" r="3.5" fill="#2E5BFF" style={{ "--gi": 1 }} />
+                  <circle cx="230" cy="8" r="4" fill="#2E5BFF" style={{ "--gi": 2 }} />
                   <circle cx="230" cy="8" r="8" fill="#2E5BFF" opacity="0.3" className="animate-ping" />
-                </>
+                </g>
               )}
             </svg>
           </div>
@@ -248,7 +288,7 @@ export default function InstagramGrowthSection() {
       paragraph="100% organic growth architecture through daily reels, carousel funnels, and algorithmic retention velocity."
       visual={<InstagramShowstopper />}
       visualPosition="right"
-      kicker="05 / Instagram Growth Engine"
+      kicker="07 / Instagram Growth Engine"
     />
   );
 }

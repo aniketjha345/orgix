@@ -2,7 +2,7 @@
 
 import Icon from "../core/Icon";
 import Reveal from "../core/Reveal";
-import { imgSrc } from "@/data/site";
+import InstagramCard from "../ui/InstagramCard";
 
 export default function WallCard({ s, i }) {
   const handleClaim = (e) => {
@@ -15,7 +15,7 @@ export default function WallCard({ s, i }) {
   };
 
   // Touch + keyboard users can't hover, so the whole card opens the
-  // consultation modal; the IG profile link inside still stops propagation.
+  // consultation modal; the real Instagram links inside stop propagation.
   const handleOpen = () => {
     window.dispatchEvent(
       new CustomEvent("open-consultation", {
@@ -28,7 +28,7 @@ export default function WallCard({ s, i }) {
     <Reveal
       delay={(i % 3) * 0.08}
       as="article"
-      className="wall-card group"
+      className="wall-card ig-wall-item group"
       tabIndex={0}
       role="group"
       aria-label={`${s.name} — ${s.work}. Activate to get results like this.`}
@@ -41,63 +41,20 @@ export default function WallCard({ s, i }) {
         }
       }}
     >
-      <div className="wall-card-frame">
-        <img
-          src={imgSrc(s.img)}
-          alt={`${s.name} — Instagram growth with Orgix Media`}
-          loading="eager"
-          className="wall-card-img"
-        />
-        <div className="wall-card-gradient" />
+      {/* Authentic Instagram profile card — real photo, real data */}
+      <InstagramCard s={s} />
 
-        {/* Top Badges */}
-        <div className="wall-card-top">
-          <span className="wall-card-badge">{s.role}</span>
-          <span className="wall-card-followers">
-            <Icon name="trend" size={12} style={{ color: "var(--accent)" }} />
-            {s.followers}
-          </span>
+      {/* Footer: what Orgix did + action */}
+      <div className="ig-wall-foot">
+        <div className="ig-wall-foot-top">
+          <span className="ig-wall-tag">✦ What we did</span>
+          <span className="ig-wall-cat">{s.cat}</span>
         </div>
-
-        {/* Default Bottom Meta (Visible before hover) */}
-        <div className="wall-card-meta">
-          <div className="wall-card-name-row">
-            <h4 className="wall-card-name">{s.name}</h4>
-            {s.verified && <Icon name="verified" size={15} style={{ color: "var(--accent)" }} />}
-          </div>
-          <span className="wall-card-handle">{s.handle}</span>
-          <p className="wall-card-work">{s.work}</p>
-          <span className="wall-card-tap-hint">
-            <Icon name="arrow" size={12} />
-            Tap to claim your slot
-          </span>
-        </div>
-
-        {/* Hover Reveal: What We Did & Action */}
-        <div className="wall-card-reveal" aria-hidden="true">
-          <span className="wall-reveal-tag">✦ What We Did</span>
-          <p className="wall-reveal-role">{s.role}</p>
-          <p className="wall-reveal-work">{s.work}</p>
-          <div className="wall-reveal-stats">
-            <span className="wall-stat-followers">{s.followers} Followers</span>
-            <a
-              href={`https://instagram.com/${s.handle.replace('@', '')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="wall-stat-handle"
-              onClick={(e) => e.stopPropagation()}
-              title={`View ${s.name} on Instagram`}
-              style={{ display: "inline-flex", alignItems: "center", gap: 4, color: "var(--accent)", textDecoration: "none" }}
-            >
-              <Icon name="ig" size={13} />
-              {s.handle}
-            </a>
-          </div>
-          <button className="wall-card-cta" onClick={handleClaim}>
-            Get Results Like This →
-          </button>
-        </div>
+        <p className="ig-wall-work">{s.work}</p>
+        <button className="ig-wall-cta" onClick={handleClaim}>
+          Get results like this <Icon name="arrow" size={13} className="arr" />
+        </button>
       </div>
     </Reveal>
   );
-}
+}

@@ -51,7 +51,7 @@ export default function ComparisonMatrix() {
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <span className="editorial-kicker mb-3 inline-block">09 / Strategic Comparison</span>
+          <span className="editorial-kicker mb-3 inline-block">11 / Strategic Comparison</span>
           <h2 className="display-h2 mb-4">Renting reach vs. owning authority.</h2>
           <p className="body-editorial text-center mx-auto">
             Why high-ticket founders and venture-backed creators partner with Orgix instead of burning budget on performance ads or gambling on freelancer roulette.
@@ -68,8 +68,8 @@ export default function ComparisonMatrix() {
                 Strategic Dimension
               </div>
 
-              {/* Orgix Column Highlight */}
-              <div className="col-span-3 p-5 lg:p-6 bg-ink text-white relative flex flex-col justify-center">
+              {/* Orgix Column Highlight — one-time accent wash answers the question */}
+              <div className="cmp-winner col-span-3 p-5 lg:p-6 bg-ink text-white relative flex flex-col justify-center">
                 <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-accent text-[9px] font-mono uppercase tracking-wider font-semibold text-white mb-2 w-fit whitespace-nowrap">
                   The Compounding Engine
                 </div>
@@ -101,11 +101,12 @@ export default function ComparisonMatrix() {
               {COMPARISON_ROWS.map((row, idx) => (
                 <div
                   key={idx}
-                  className="grid grid-cols-12 items-stretch transition-colors hover:bg-[#FAF8F5]/50"
+                  className="cmp-row grid grid-cols-12 items-stretch transition-colors hover:bg-[#FAF8F5]/50"
                 >
                   {/* Dimension label */}
                   <div className="col-span-3 p-5 lg:p-6 flex items-center">
-                    <span className="text-[14px] font-semibold text-ink font-body">
+                    <span className="cmp-dimension flex items-center gap-2 text-[14px] font-semibold text-ink font-body">
+                      <span className="cmp-tick" aria-hidden="true">→</span>
                       {row.dimension}
                     </span>
                   </div>
@@ -174,8 +175,13 @@ export default function ComparisonMatrix() {
 
               {/* Orgix Option */}
               <div className="p-3 rounded-[12px] bg-[#0F1A2E] text-white space-y-1">
-                <div className="flex items-center gap-1.5 text-[11px] font-mono text-accent uppercase tracking-wider font-semibold">
-                  <span>✓</span> Orgix Media
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-1.5 text-[11px] font-mono text-accent uppercase tracking-wider font-semibold">
+                    <span>✓</span> Orgix Media
+                  </div>
+                  <span className="cmp-verdict-win font-mono text-[8.5px] uppercase tracking-[0.14em] px-1.5 py-0.5 rounded-full border">
+                    Wins
+                  </span>
                 </div>
                 <p className="text-[12px] leading-relaxed text-white/90">
                   {row.orgix}
@@ -184,8 +190,13 @@ export default function ComparisonMatrix() {
 
               {/* Paid Ads */}
               <div className="p-2.5 rounded-[12px] bg-[#FBF9F5] border border-line space-y-0.5 text-left">
-                <div className="text-[10.5px] font-mono text-red-600 font-semibold uppercase tracking-wider">
-                  ✕ Paid Meta / Google Ads
+                <div className="flex items-center justify-between gap-2">
+                  <div className="text-[10.5px] font-mono text-red-600 font-semibold uppercase tracking-wider">
+                    ✕ Paid Ads
+                  </div>
+                  <span className="cmp-verdict-lose font-mono text-[8.5px] uppercase tracking-[0.14em] px-1.5 py-0.5 rounded-full border">
+                    Loses
+                  </span>
                 </div>
                 <p className="text-[11.5px] leading-snug text-ink-soft">
                   {row.ads}
@@ -194,8 +205,13 @@ export default function ComparisonMatrix() {
 
               {/* Freelancers */}
               <div className="p-2.5 rounded-[12px] bg-[#FBF9F5] border border-line space-y-0.5 text-left">
-                <div className="text-[10.5px] font-mono text-amber-700 font-semibold uppercase tracking-wider">
-                  △ Freelancers / Upwork
+                <div className="flex items-center justify-between gap-2">
+                  <div className="text-[10.5px] font-mono text-amber-700 font-semibold uppercase tracking-wider">
+                    △ Freelancers
+                  </div>
+                  <span className="cmp-verdict-depends font-mono text-[8.5px] uppercase tracking-[0.14em] px-1.5 py-0.5 rounded-full border">
+                    Depends
+                  </span>
                 </div>
                 <p className="text-[11.5px] leading-snug text-ink-soft">
                   {row.freelancer}

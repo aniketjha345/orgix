@@ -11,7 +11,7 @@ export default function LeadershipEditorial() {
         {/* ONE headline, ONE paragraph */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <span className="editorial-kicker reveal-item reveal-stagger-1 is-revealed">
-            08 / Leadership
+            13 / Leadership
           </span>
           <h2 className="display-h2 mb-4 reveal-item reveal-stagger-1 is-revealed">
             The strategists behind the numbers.
@@ -34,7 +34,7 @@ export default function LeadershipEditorial() {
                   <img
                     src={imgSrc(member.img)}
                     alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                    className="w-full h-full object-cover object-top scale-[1.12] origin-top group-hover:scale-[1.16] transition-transform duration-700 ease-out"
                     loading="lazy"
                   />
                   <span className="absolute top-4 left-4 font-body text-[10.5px] font-semibold px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-line text-ink">
@@ -100,11 +100,16 @@ export default function LeadershipEditorial() {
             ))}
           </div>
 
-          {/* Collective note */}
-          <p className="text-center font-body text-[14px] text-ink-soft">
-            <span className="text-ink font-medium">{teamStat.headline}</span>{" "}
-            <span className="font-semibold">{teamStat.highlight}</span> {teamStat.rest}
-          </p>
+          {/* Collective Studio Badge from Live Website */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-line shadow-xs flex items-center justify-center gap-3 max-w-2xl mx-auto">
+            <span className="w-9 h-9 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-accent text-lg shrink-0">
+              👥
+            </span>
+            <p className="font-body text-[13px] sm:text-[14px] text-ink leading-snug text-left">
+              <span className="font-semibold text-ink">{teamStat.headline}</span>{" "}
+              We have a dedicated team of <span className="font-semibold text-accent">{teamStat.highlight}</span> working under one roof — strategists, scriptwriters, editors and shooters at our Delhi headquarters.
+            </p>
+          </div>
         </div>
       </div>
     </Section>

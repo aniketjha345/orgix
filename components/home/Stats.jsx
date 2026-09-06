@@ -4,9 +4,26 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Icon from "../core/Icon";
 import SectionHeading from "../ui/SectionHeading";
+import { trustedBy } from "@/data/site";
+
+// Milestones ticker — the biggest real outcomes from the roster, derived
+// from data/site.js so the numbers always match the rest of the site.
+function parseFollowerNum(f) {
+  const m = String(f).replace(/[+,]/g, "").match(/([\d.]+)\s*([KM]?)/i);
+  if (!m) return 0;
+  const v = parseFloat(m[1]);
+  const unit = (m[2] || "").toUpperCase();
+  return unit === "M" ? v * 1e6 : unit === "K" ? v * 1e3 : v;
+}
+
+const MILESTONES = [...trustedBy]
+  .sort((a, b) => parseFollowerNum(b.followers) - parseFollowerNum(a.followers))
+  .slice(0, 8)
+  .map((c) => ({ name: c.name, followers: c.followers }));
 
 function AnimatedNumber({ value, suffix = "", decimals = 0 }) {
   const [displayValue, setDisplayValue] = useState(value);
+  const [landed, setLanded] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const hasAnimated = useRef(false);
@@ -37,6 +54,8 @@ function AnimatedNumber({ value, suffix = "", decimals = 0 }) {
         requestAnimationFrame(step);
       } else {
         setDisplayValue(value);
+        // One-shot landing glow — a small reward the moment the number settles
+        setLanded(true);
       }
     };
 
@@ -44,7 +63,7 @@ function AnimatedNumber({ value, suffix = "", decimals = 0 }) {
   }, [isInView, value, decimals]);
 
   return (
-    <span ref={ref}>
+    <span ref={ref} className={landed ? "stat-land" : undefined}>
       {decimals > 0 ? displayValue.toFixed(decimals) : displayValue.toLocaleString()}
       {suffix}
     </span>
@@ -97,6 +116,17 @@ export default function Stats() {
             <p className="text-body-sm text-ink-secondary leading-relaxed font-light mt-4 pt-4 border-t border-border/80">
               Generated exclusively across Instagram Reels and YouTube long-form content. Real human attention, verified watch time, and zero ad spend.
             </p>
+
+            {/* Milestones ticker — real roster outcomes, compounding live */}
+            <div className="stat-ticker mt-4" aria-hidden="true">
+              <div className="stat-ticker-track">
+                {[...MILESTONES, ...MILESTONES].map((m, i) => (
+                  <span className="stat-ticker-chip" key={i}>
+                    <span className="stat-ticker-up">▲</span> {m.name} · {m.followers}
+                  </span>
+                ))}
+              </div>
+            </div>
           </motion.div>
 
           {/* Monument 2: 85+ Scaled Authorities */}
@@ -105,7 +135,7 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.5, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-            className="p-7 sm:p-8 rounded-2xl bg-surface-muted/60 border border-border shadow-subtle flex flex-col justify-between hover:border-white/20 transition-colors"
+            className="p-7 sm:p-8 rounded-2xl bg-surface-muted/60 border border-border shadow-subtle flex flex-col justify-between hover:border-ink/25 transition-colors"
           >
             <div>
               <div className="inline-flex items-center gap-2 text-[11px] font-mono tracking-wider uppercase text-ink-secondary mb-4">
@@ -133,7 +163,7 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.5, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
-            className="p-7 sm:p-8 rounded-2xl bg-surface-muted/60 border border-border shadow-subtle flex flex-col justify-between hover:border-white/20 transition-colors"
+            className="p-7 sm:p-8 rounded-2xl bg-surface-muted/60 border border-border shadow-subtle flex flex-col justify-between hover:border-ink/25 transition-colors"
           >
             <div>
               <div className="inline-flex items-center gap-2 text-[11px] font-mono tracking-wider uppercase text-ink-secondary mb-4">

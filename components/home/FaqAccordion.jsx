@@ -17,7 +17,7 @@ export default function FaqAccordion() {
         {/* ONE headline, ONE paragraph */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <span className="editorial-kicker reveal-item reveal-stagger-1 is-revealed">
-            09 / FAQ
+            14 / FAQ
           </span>
           <h2 className="display-h2 mb-4 reveal-item reveal-stagger-1 is-revealed">
             Everything you need to know.
@@ -58,7 +58,43 @@ export default function FaqAccordion() {
             );
           })}
         </div>
+
+        {/* Still not sure? — mirror of orgixmedia.com's FAQ closer */}
+        <div className="flex flex-col items-center gap-4 mt-10 text-center reveal-visual is-revealed">
+          <p className="font-body text-[15px] text-ink-soft">
+            Still not sure? Get a free 1:1 strategy audit — zero obligation.
+          </p>
+          <button
+            type="button"
+            onClick={() =>
+              window.dispatchEvent(
+                new CustomEvent("open-consultation", {
+                  detail: { source: "faq" },
+                })
+              )
+            }
+            className="btn-pill inline-flex items-center gap-2 rounded-full px-7 py-3 bg-ink text-white font-body text-[14px] font-semibold hover:bg-[#1A2440] transition-colors cursor-pointer"
+          >
+            Book a Free Strategy Call <span aria-hidden="true">→</span>
+          </button>
+        </div>
       </div>
+
+      {/* FAQPage structured data — eligible for Google rich results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          }),
+        }}
+      />
     </Section>
   );
 }

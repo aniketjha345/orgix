@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import Section from "@/components/core/Section";
 
 const LINES = [
-  "We don't run ads.",
-  "We don't buy followers.",
-  "We build digital identities",
-  "that outlast algorithms.",
+  { pre: "We don't ", em: "run ads.", post: "" },
+  { pre: "We don't ", em: "buy followers.", post: "" },
+  { pre: "We ", em: "build digital identities", post: "" },
+  { pre: "that ", em: "outlast algorithms.", post: "" },
 ];
 
 /**
@@ -53,7 +53,7 @@ export default function Manifesto() {
         className="flex flex-col items-center text-center max-w-4xl mx-auto w-full py-6"
       >
         <span className="editorial-kicker mb-6 reveal-item reveal-stagger-1 is-revealed">
-          02 / The Manifesto
+          01 / The Manifesto
         </span>
         <h2 className="display-h2 flex flex-col items-center justify-center gap-3 sm:gap-4">
           {LINES.map((line, i) => {
@@ -63,14 +63,35 @@ export default function Manifesto() {
 
             return (
               <span
-                key={line}
+                key={line.em}
                 className={`manif-line text-[32px] sm:text-[48px] lg:text-[64px] font-display font-semibold tracking-[-0.03em] leading-[1.08] ${stateClass}`}
               >
-                {line}
+                {line.pre}
+                <em className="manif-em">{line.em}</em>
+                {line.post}
               </span>
             );
           })}
         </h2>
+
+        {/* Progress — which conviction is on screen right now */}
+        <span
+          className="mt-6 font-mono text-[11px] tracking-[0.28em] text-ink-soft select-none"
+          aria-live="polite"
+        >
+          {String(activeIdx + 1).padStart(2, "0")} / {String(LINES.length).padStart(2, "0")}
+        </span>
+
+        {/* Signature — the team behind the statement */}
+        <div className="flex flex-col items-center gap-3 mt-10 sm:mt-12">
+          <span
+            className="w-10 h-px bg-ink/20"
+            aria-hidden="true"
+          />
+          <p className="font-mono text-[11px] sm:text-[12px] uppercase tracking-[0.22em] text-ink-soft">
+            One obsessive team · Rohini, Delhi
+          </p>
+        </div>
       </div>
     </Section>
   );

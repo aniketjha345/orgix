@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Section from "@/components/core/Section";
 
 /**
@@ -11,10 +11,60 @@ import Section from "@/components/core/Section";
  * Phone enters from right with rotateY(8deg→0).
  * Floating animation (translateY ±8px, 3s).
  * Screen glare: diagonal white gradient overlay 5% opacity.
+ *
+ * Enhancements:
+ * - Retention progress bar synced to real playback (timeupdate).
+ * - Live views counter that ticks up while the reel plays.
+ * - Pointer-follow 3D tilt (max 4°) on fine pointers, reduced-motion safe.
  */
 function PhoneReelMockup() {
   const videoRef = useRef(null);
+  const tiltRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const [views, setViews] = useState(1204830);
+
+  // Retention progress + live views ticker — synced to real playback.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const onTime = () => {
+      if (video.duration) setProgress(video.currentTime / video.duration);
+      // Views tick up as the reel plays — one view per ~300ms of playback,
+      // so the number feels alive but never runs away.
+      if (!video.paused) setViews((v) => v + 1);
+    };
+    video.addEventListener("timeupdate", onTime);
+    return () => video.removeEventListener("timeupdate", onTime);
+  }, []);
+
+  // Pointer-follow tilt — ±4° max, fine pointers only.
+  useEffect(() => {
+    const el = tiltRef.current;
+    if (!el) return;
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const onMove = (e) => {
+      const r = el.getBoundingClientRect();
+      const nx = (e.clientX - r.left) / r.width - 0.5;
+      const ny = (e.clientY - r.top) / r.height - 0.5;
+      el.style.setProperty("--rx", `${(-ny * 4).toFixed(2)}deg`);
+      el.style.setProperty("--ry", `${(nx * 4).toFixed(2)}deg`);
+    };
+    const onLeave = () => {
+      el.style.setProperty("--rx", "0deg");
+      el.style.setProperty("--ry", "0deg");
+    };
+    el.addEventListener("mousemove", onMove);
+    el.addEventListener("mouseleave", onLeave);
+    return () => {
+      el.removeEventListener("mousemove", onMove);
+      el.removeEventListener("mouseleave", onLeave);
+    };
+  }, []);
 
   const toggleSound = (e) => {
     e.stopPropagation();
@@ -28,7 +78,11 @@ function PhoneReelMockup() {
   };
 
   return (
-    <div className="phone-enter-r w-full max-w-[340px] mx-auto select-none">
+    <div
+      ref={tiltRef}
+      className="phone-enter-r phone-tilt w-full max-w-[340px] mx-auto select-none"
+      style={{ "--rx": "0deg", "--ry": "0deg" }}
+    >
       {/* Outer iPhone 15 Pro Titanium Chassis */}
       <div className="float-phone relative rounded-[48px] p-3 bg-[#1F242D] border-[3px] border-[#363E4D] shadow-[0_30px_80px_rgba(15,26,46,0.22)]">
         {/* Screen Bezel */}
@@ -60,10 +114,10 @@ function PhoneReelMockup() {
 
           {/* Reel Telemetry & Retention Overlays */}
           <div className="absolute inset-0 z-20 flex flex-col justify-between p-4 pt-10 pointer-events-none bg-gradient-to-t from-black/80 via-transparent to-black/40">
-            {/* Top Bar with Interactive Sound Toggle */}
+            {/* Top Bar with Interactive Sound Toggle + live views */}
             <div className="flex items-center justify-between text-[10px] font-mono text-white/90">
               <span className="bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
-                REEL // 4K 60FPS
+                ▶ {views.toLocaleString("en-US")} watching
               </span>
 
               {/* Sound Design Interactive Pill */}
@@ -89,6 +143,14 @@ function PhoneReelMockup() {
                   </>
                 )}
               </button>
+            </div>
+
+            {/* Retention progress bar — synced to real playback */}
+            <div className="absolute top-0 left-0 right-0 z-30 h-[3px] bg-white/15">
+              <div
+                className="h-full bg-accent transition-[width] duration-150 ease-linear"
+                style={{ width: `${(progress * 100).toFixed(1)}%` }}
+              />
             </div>
 
             {/* Bottom Captions & Metrics */}
@@ -127,13 +189,13 @@ function PhoneReelMockup() {
 export default function VideoEditingSection() {
   return (
     <Section
-      id="services"
+      id="editing"
       bgAlt={false}
       headline="Edits that stop the scroll."
       paragraph="High-retention pacing, kinetic typography, and precision sound design engineered to hold viewer attention and trigger algorithmic distribution."
       visual={<PhoneReelMockup />}
       visualPosition="right"
-      kicker="03 / Short-Form Video Editing"
+      kicker="06 / Short-Form Video Editing"
     />
   );
 }

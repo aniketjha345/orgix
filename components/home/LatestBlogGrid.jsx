@@ -10,11 +10,16 @@ import Button from "../core/Button";
  */
 export default function LatestBlogGrid() {
   return (
-    <Section id="insights" bgAlt={true} className="select-none">
+    <Section
+      id="insights"
+      bgAlt={true}
+      className="select-none"
+      style={{ minHeight: "auto", scrollSnapAlign: "start" }}
+    >
       <div className="w-full flex flex-col items-center">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <span className="editorial-kicker reveal-item reveal-stagger-1 is-revealed">
-            10 / Intel &amp; perspective
+            13 / Intel &amp; Perspective
           </span>
           <h2 className="display-h2 mb-4 reveal-item reveal-stagger-1 is-revealed">
             Latest from the studio.
@@ -31,18 +36,32 @@ export default function LatestBlogGrid() {
             <h3 className="display-h3 mb-3">
               First breakdowns drop soon.
             </h3>
-            <p className="editorial-lead text-center mb-8">
-              Hook frameworks and algorithm notes from 1B+ organic views — currently being written.
+            <p className="editorial-lead text-center mb-8 max-w-xl">
+              Hook frameworks, retention curves and teardowns written from
+              1B+ organic views — currently being written by the team itself.
             </p>
+
+            {/* What's inside — honest teaser chips */}
+            <div className="flex flex-wrap items-center justify-center gap-2.5 mb-8 max-w-lg">
+              {["Hook frameworks", "Retention curves", "Case teardowns", "Platform notes"].map(
+                (chip) => (
+                  <span
+                    key={chip}
+                    className="px-3.5 py-1.5 rounded-full bg-bg border border-line font-mono text-[10.5px] uppercase tracking-wider text-ink-soft"
+                  >
+                    {chip}
+                  </span>
+                )
+              )}
+            </div>
+
             <div className="btn-actions-row justify-center !mt-0">
               <Button
-                variant="ghost"
-                href="https://orgixmedia.com/blog.php"
-                target="_blank"
-                rel="noopener noreferrer"
-                ariaLabel="Visit the Orgix blog"
+                variant="primary"
+                href="/contact"
+                ariaLabel="Request a Free Content Teardown"
               >
-                Visit the blog <span aria-hidden="true">↗</span>
+                Request a Free Content Teardown <span aria-hidden="true">→</span>
               </Button>
             </div>
           </div>

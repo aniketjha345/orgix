@@ -92,7 +92,6 @@ export default function Section({
         className={`editorial-section ${bgClass} ${revealedClass} ${className}`}
         style={{
           scrollSnapAlign: "start",
-          minHeight: "100svh",
         }}
         {...rest}
       >
