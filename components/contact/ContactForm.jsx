@@ -79,13 +79,14 @@ export default function ContactForm() {
     //    If an endpoint is configured later it lands here; until then we
     //    fall straight through to the email client.
 
-    // 3) Client mailto fallback
+    // 3) Client mailto fallback — honest: we open a pre-filled email instead
+    //    of pretending the message was delivered server-side.
     const subject = encodeURIComponent(`Brand growth enquiry — ${form.name}`);
     const text = encodeURIComponent(
       `Hi Orgix Media,\n\nI'd like to grow my personal brand.\n\nName: ${form.name}\nEmail: ${form.email}\nCurrent handle/website: ${form.handle}\nNiche: ${form.niche}\nGoals: ${form.goals.join(", ")}\n\n${form.message}`
     );
     window.location.href = `mailto:info@orgixmedia.com?subject=${subject}&body=${text}`;
-    setState({ status: "ok", msg: "Opening your mail app… we can't wait to review your profile.", busy: false });
+    setState({ status: "ok", msg: "Your enquiry is pre-filled in your mail app — just press send and we'll reply within one business day.", busy: false });
   };
 
   const postJson = async (url, body, graceful = false) => {
@@ -223,6 +224,22 @@ export default function ContactForm() {
             </>
           )}
         </button>
+
+        <a
+          href="https://wa.me/918287528395?text=Hi%20Orgix%20Media!%20I'd%20like%20to%20schedule%20a%201:1%20strategy%20audit."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn"
+          style={{
+            background: "rgba(37, 211, 102, 0.08)",
+            color: "#128C7E",
+            border: "1px solid rgba(37, 211, 102, 0.25)",
+            padding: "14px 24px",
+            fontSize: 14.5,
+          }}
+        >
+          <Icon name="whatsapp" size={18} /> Chat on WhatsApp
+        </a>
       </div>
 
       <p className="form-note" role="status" aria-live="polite">

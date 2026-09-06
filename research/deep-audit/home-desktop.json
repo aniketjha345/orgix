@@ -5,20 +5,14 @@
       "h": 900
     },
     "scrollW": 1440,
-    "scrollH": 13389,
+    "scrollH": 13214,
     "bodyFont": "16px",
     "hCount": {
       "h1": 1,
-      "h2": 10,
+      "h2": 9,
       "h3": 28
     },
     "overflowSources": [
-      {
-        "tag": "div",
-        "cls": "type-marquee-track",
-        "w": 12786,
-        "vw": 1440
-      },
       {
         "tag": "div",
         "cls": "marquee-track",
@@ -46,7 +40,7 @@
       {
         "tag": "div",
         "cls": "type-marquee-track",
-        "w": 12786,
+        "w": 12044,
         "vw": 1440
       }
     ],
@@ -103,7 +97,7 @@
         "src": "aarti-malhotra.jpg",
         "nw": 1040,
         "nh": 840,
-        "dispW": 268,
+        "dispW": 368,
         "loading": "auto",
         "hasAlt": true
       },
@@ -111,7 +105,7 @@
         "src": "anuj-chhajerh.jpg",
         "nw": 1040,
         "nh": 840,
-        "dispW": 225,
+        "dispW": 269,
         "loading": "auto",
         "hasAlt": true
       },
@@ -119,7 +113,7 @@
         "src": "simran-balraj.jpg",
         "nw": 1040,
         "nh": 840,
-        "dispW": 232,
+        "dispW": 312,
         "loading": "auto",
         "hasAlt": true
       },
@@ -557,32 +551,32 @@
       },
       {
         "src": "pari-jain.jpg",
-        "nw": 1025,
-        "nh": 1458,
+        "nw": 1080,
+        "nh": 1080,
         "dispW": 774,
         "loading": "lazy",
         "hasAlt": true
       },
       {
         "src": "tools-fact.jpg",
-        "nw": 1054,
-        "nh": 1079,
+        "nw": 0,
+        "nh": 0,
         "dispW": 374,
         "loading": "lazy",
         "hasAlt": true
       },
       {
         "src": "demla-brothers.jpg",
-        "nw": 738,
-        "nh": 1216,
+        "nw": 0,
+        "nh": 0,
         "dispW": 369,
         "loading": "lazy",
         "hasAlt": true
       },
       {
         "src": "shivam-careers.jpg",
-        "nw": 841,
-        "nh": 1249,
+        "nw": 0,
+        "nh": 0,
         "dispW": 374,
         "loading": "lazy",
         "hasAlt": true
@@ -647,7 +641,7 @@
         "src": "vid_client1_poster.jpg",
         "nw": 0,
         "nh": 0,
-        "dispW": 0,
+        "dispW": 374,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -655,7 +649,7 @@
         "src": "vid_client2_poster.jpg",
         "nw": 0,
         "nh": 0,
-        "dispW": 0,
+        "dispW": 374,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -663,7 +657,7 @@
         "src": "img_6a8d49bc28c12.png",
         "nw": 0,
         "nh": 0,
-        "dispW": 0,
+        "dispW": 374,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -671,7 +665,7 @@
         "src": "vid_client4_poster.jpg",
         "nw": 0,
         "nh": 0,
-        "dispW": 0,
+        "dispW": 374,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -679,7 +673,7 @@
         "src": "img_6a8fdb40b555d.png",
         "nw": 0,
         "nh": 0,
-        "dispW": 0,
+        "dispW": 374,
         "loading": "lazy",
         "hasAlt": true
       },
@@ -687,62 +681,14 @@
         "src": "img_6a8d4a25881a7.png",
         "nw": 0,
         "nh": 0,
-        "dispW": 0,
+        "dispW": 374,
         "loading": "lazy",
         "hasAlt": true
       },
       {
-        "src": "gaurav-mahawar.jpg",
-        "nw": 1080,
-        "nh": 1080,
-        "dispW": 42,
-        "loading": "auto",
-        "hasAlt": true
-      },
-      {
-        "src": "royston-dias.jpg",
-        "nw": 1040,
-        "nh": 840,
-        "dispW": 42,
-        "loading": "auto",
-        "hasAlt": true
-      },
-      {
-        "src": "neha.jpg",
-        "nw": 1080,
-        "nh": 1080,
-        "dispW": 42,
-        "loading": "auto",
-        "hasAlt": true
-      },
-      {
-        "src": "gaurav-mahawar.jpg",
-        "nw": 1080,
-        "nh": 1080,
-        "dispW": 52,
-        "loading": "auto",
-        "hasAlt": true
-      },
-      {
-        "src": "royston-dias.jpg",
-        "nw": 1040,
-        "nh": 840,
-        "dispW": 51,
-        "loading": "auto",
-        "hasAlt": true
-      },
-      {
-        "src": "neha.jpg",
-        "nw": 1080,
-        "nh": 1080,
-        "dispW": 51,
-        "loading": "auto",
-        "hasAlt": true
-      },
-      {
         "src": "pari-jain.jpg",
-        "nw": 0,
-        "nh": 0,
+        "nw": 1080,
+        "nh": 1080,
         "dispW": 218,
         "loading": "lazy",
         "hasAlt": true
@@ -777,7 +723,7 @@
       "noNameButtons": [],
       "emptyLinks": 0
     },
-    "decorCount": 12,
+    "decorCount": 11,
     "fontSizes": [
       [
         "13.0",
@@ -797,15 +743,15 @@
       ],
       [
         "15.0",
-        9
+        8
       ],
       [
         "40.0",
-        7
+        6
       ],
       [
         "15.8",
-        7
+        6
       ],
       [
         "17.5",
@@ -820,6 +766,10 @@
         6
       ],
       [
+        "16.0",
+        3
+      ],
+      [
         "67.2",
         3
       ],
@@ -830,17 +780,13 @@
       [
         "25.9",
         2
-      ],
-      [
-        "16.0",
-        2
       ]
     ],
     "h1Style": {
-      "fontSize": "57.6px",
-      "lineHeight": "62.208px",
-      "letterSpacing": "-1.728px",
-      "fontFamily": "\"Space Grotesk\"",
+      "fontSize": "79.92px",
+      "lineHeight": "76.7232px",
+      "letterSpacing": "-4.95504px",
+      "fontFamily": "\"Bricolage Grotesque\"",
       "fontWeight": "700"
     },
     "sections": [
@@ -848,88 +794,76 @@
         "i": 0,
         "tag": "section",
         "cls": "hero.grain",
-        "h": 1153
+        "h": 1152
       },
       {
         "i": 1,
-        "tag": "div",
-        "cls": "type-marquee..",
-        "h": 155
-      },
-      {
-        "i": 2,
         "tag": "section",
         "cls": "section--tight.trusted-by-section",
         "h": 659
       },
       {
-        "i": 3,
+        "i": 2,
         "tag": "section",
         "cls": "stats-band",
         "h": 411
       },
       {
-        "i": 4,
+        "i": 3,
         "tag": "section",
-        "cls": "section",
-        "h": 2035
+        "cls": "section.case-vault",
+        "h": 1927
       },
       {
-        "i": 5,
+        "i": 4,
         "tag": "section",
         "cls": "section",
         "h": 992
       },
       {
-        "i": 6,
+        "i": 5,
         "tag": "section",
         "cls": "section",
         "h": 1634
       },
       {
-        "i": 7,
+        "i": 6,
         "tag": "section",
         "cls": "section.vt-section.grain",
-        "h": 535
+        "h": 1546
       },
       {
-        "i": 8,
-        "tag": "section",
-        "cls": "section.grain",
-        "h": 882
-      },
-      {
-        "i": 9,
+        "i": 7,
         "tag": "section",
         "cls": "section.myth-section.grain",
         "h": 982
       },
       {
-        "i": 10,
+        "i": 8,
         "tag": "section",
         "cls": "section.section--tight.leadership-strip",
         "h": 1139
       },
       {
-        "i": 11,
+        "i": 9,
         "tag": "section",
         "cls": "section",
         "h": 1329
       },
       {
-        "i": 12,
+        "i": 10,
         "tag": "div",
         "cls": "type-marquee.type-marquee--reverse.",
         "h": 155
       },
       {
-        "i": 13,
+        "i": 11,
         "tag": "section",
         "cls": "section.cta.grain",
         "h": 675
       },
       {
-        "i": 14,
+        "i": 12,
         "tag": "footer",
         "cls": "footer",
         "h": 503

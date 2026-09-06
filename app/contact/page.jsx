@@ -12,21 +12,21 @@ export const metadata = {
 
 const info = [
   {
+    icon: "whatsapp",
+    t: "WhatsApp & Priority Desk",
+    v: company.phone,
+    href: "https://wa.me/918287528395?text=Hi%20Orgix%20Media!%20I%20want%20to%20grow%20my%20social%20media.",
+    color: "#25D366",
+  },
+  {
     icon: "mail",
     t: "Direct Studio Email",
     v: company.email,
     href: `mailto:${company.email}`,
   },
   {
-    icon: "youtube",
-    t: "Official YouTube Channel",
-    v: "@orgixmedia",
-    href: company.youtube,
-    color: "#ff0000",
-  },
-  {
     icon: "ig",
-    t: "Instagram Channel",
+    t: "Instagram Direct",
     v: "@orgixmedia",
     href: company.instagram,
   },
@@ -34,7 +34,7 @@ const info = [
     icon: "pin",
     t: "Delhi Studio HQ",
     v: company.address,
-    href: null,
+    href: "https://maps.google.com/?q=Rohini+Delhi+110085",
   },
 ];
 
@@ -46,14 +46,14 @@ export default function ContactPage() {
         kicker="FOUNDER STRATEGY SLOT"
         title={
           <>
-            Your brand is one <span className="grad-hot">decision away.</span>
+            Your brand is one <span className="grad-brand">decision away.</span>
           </>
         }
-        lead="Tell us where your personal brand stands today and your 12-month ambition — we'll map the exact organic content architecture to get you there. No pressure, zero spam."
+        lead="Tell us where you stand and where you want to be — we'll map the exact organic path there. No pressure, zero spam."
       >
         <div className="tag-row">
           <span className="mini-tag">
-            <Icon name="check" size={12} style={{ color: "var(--lime)", marginRight: 6, display: "inline", verticalAlign: "-1px" }} />
+            <Icon name="check" size={12} style={{ color: "var(--accent)", marginRight: 6, display: "inline", verticalAlign: "-1px" }} />
             Free 1:1 Strategy Audit
           </span>
           <span className="mini-tag">No Ad-Spend Pitch</span>
@@ -96,6 +96,31 @@ export default function ContactPage() {
                   </Reveal>
                 ))}
               </div>
+
+              <Reveal delay={0.2}>
+                <div className="card" style={{ padding: "clamp(20px, 2.5vw, 28px)", marginTop: 26 }}>
+                  <span className="eyebrow" style={{ color: "var(--accent)" }}>
+                    WHAT HAPPENS NEXT
+                  </span>
+                  <ol style={{ margin: "16px 0 0", padding: 0, listStyle: "none", display: "grid", gap: 14 }}>
+                    {[
+                      ["01", "Profile review", "We study your current presence and niche competitors before we ever get on a call."],
+                      ["02", "Free 1:1 audit", "A 30-minute strategy call with a founding strategist — no pitch deck, no ad-spend talk."],
+                      ["03", "Your 90-day map", "You receive the exact organic content trajectory we'd run for your name."],
+                    ].map(([n, t, d]) => (
+                      <li key={n} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+                        <span className="mono" style={{ color: "var(--accent)", fontSize: 12, paddingTop: 3 }}>
+                          {n}
+                        </span>
+                        <span>
+                          <b style={{ display: "block", fontSize: 14.5 }}>{t}</b>
+                          <span style={{ color: "var(--ink-soft)", fontSize: 13.5, lineHeight: 1.6 }}>{d}</span>
+                        </span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </Reveal>
             </div>
 
             <Reveal dir="right" delay={0.1}>

@@ -1,190 +1,129 @@
 "use client";
 
-import { useRef } from "react";
-import Link from "next/link";
-import Icon from "../core/Icon";
-import Reveal from "../core/Reveal";
-import HeroCanvas3D from "./HeroCanvas3D";
-import BrandEngine from "../ui/BrandEngine";
-import { heroCreators, company, imgSrc } from "@/data/site";
+import { useEffect, useState } from "react";
+import ParticleRing from "../ParticleRing";
+import Button from "../core/Button";
+import { heroCreators, imgSrc } from "@/data/site";
 
-const avatars = [
-  "/images/creators/aarti-malhotra.jpg",
-  "/images/creators/anuj-chhajerh.jpg",
-  "/images/creators/simran-balraj.jpg",
-  "/images/creators/gaurav-mahawar.jpg",
-  "/images/creators/ruchira.jpg",
-].map(imgSrc);
+const HEADLINE = "Grow Organically.";
 
-// Safety: the collage expects exactly 3 creator cards. If the data ever has
-// fewer entries, cycle what's available instead of crashing.
-const casts = Array.from({ length: 3 }, (_, i) => heroCreators[i % Math.max(heroCreators.length, 1)]);
-const castClass = ["a", "b", "c"];
-
+/**
+ * Hero — giant typewriter headline, one-line subtitle, two pills,
+ * particle ring behind (fades in after the headline), real creator
+ * trust pill, scroll cue + self-drawing baseline.
+ */
 export default function Hero() {
-  const stage = useRef(null);
+  const [chars, setChars] = useState(0);
+  const [reduced, setReduced] = useState(false);
+  const [ringOn, setRingOn] = useState(false);
 
-  const reduced = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setReduced(true);
+      setChars(HEADLINE.length);
+      setRingOn(true);
+      return;
+    }
+    const step = 1200 / HEADLINE.length;
+    const iv = setInterval(() => {
+      setChars((c) => {
+        if (c >= HEADLINE.length) {
+          clearInterval(iv);
+          return c;
+        }
+        return c + 1;
+      });
+    }, step);
+    const ring = setTimeout(() => setRingOn(true), 1250);
+    return () => {
+      clearInterval(iv);
+      clearTimeout(ring);
+    };
+  }, []);
 
-  const onMove = (e) => {
-    if (reduced || !stage.current) return;
-    const r = stage.current.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - 0.5;
-    const y = (e.clientY - r.top) / r.height - 0.5;
-    stage.current.style.setProperty("--rx", `${(-y * 7).toFixed(2)}deg`);
-    stage.current.style.setProperty("--ry", `${(x * 9).toFixed(2)}deg`);
+  const done = chars >= HEADLINE.length;
+
+  const handleBookCall = (e) => {
+    if (typeof window !== "undefined") {
+      e.preventDefault();
+      window.dispatchEvent(
+        new CustomEvent("open-consultation", { detail: { source: "hero" } })
+      );
+    }
   };
-
-  const onLeave = () => {
-    if (!stage.current) return;
-    stage.current.style.setProperty("--rx", "0deg");
-    stage.current.style.setProperty("--ry", "0deg");
-  };
-
-  const baseRot = { a: "-7deg", b: "5deg", c: "3deg" };
-  const cardStyle = (k) => ({
-    transform: `rotate(${baseRot[k]}) perspective(1200px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))`,
-  });
 
   return (
-    <section className="hero grain">
-      <HeroCanvas3D />
-      <div className="grid-lines" style={{ position: "absolute", inset: 0 }} aria-hidden="true" />
+    <section
+      id="hero"
+      className="editorial-section section-bg relative overflow-hidden flex flex-col justify-center items-center text-center"
+      style={{ minHeight: "100svh", scrollSnapAlign: "start" }}
+    >
+      {/* Particle ring — fades in after the headline */}
       <div
-        className="hero-glow"
-        style={{
-          width: 560,
-          height: 560,
-          top: -160,
-          left: "12%",
-          background: "radial-gradient(circle, rgba(139,92,246,0.28), transparent 65%)",
-        }}
+        className="absolute inset-0 transition-opacity duration-700"
+        style={{ opacity: ringOn ? 1 : 0 }}
         aria-hidden="true"
-      />
-      <div
-        className="hero-glow"
-        style={{
-          width: 640,
-          height: 640,
-          bottom: -220,
-          right: "-8%",
-          background: "radial-gradient(circle, rgba(255,61,127,0.16), transparent 65%)",
-        }}
-        aria-hidden="true"
-      />
+      >
+        <ParticleRing />
+      </div>
 
-      <div className="container">
-        <div className="hero-grid">
-          <div>
-            <Reveal delay={0.02}>
-              <div className="hero-badge">
-                <span className="pulse" />
-                00 — THE ORGANIC MEDIA ENGINE
-                <span style={{ color: "var(--lime)", fontWeight: 800 }}>100% ORGANIC</span>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.09}>
-              <h1 className="display">
-                Build the brand <br />
-                <span className="grad-hot">behind you.</span>
-              </h1>
-            </Reveal>
-
-            <Reveal delay={0.17}>
-              <p className="lead sub">
-                We turn founders, Shark Tank innovators, and high-impact thinkers into undisputed category authorities —
-                with research-backed <b style={{ color: "var(--ink)" }}>Instagram &amp; YouTube</b> video engines.
-                Zero ad spend. Zero noise. Content that compounds into enterprise equity.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.24}>
-              <div className="hero-actions">
-                <Link href="/contact" className="btn btn--lime btn--lg shine">
-                  Start Growing <Icon name="arrow" size={18} className="arr" />
-                </Link>
-                <Link href="/work" className="btn btn--ghost btn--lg">
-                  Explore case studies <Icon name="arrow" size={18} className="arr" />
-                </Link>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.32}>
-              <div className="hero-proof">
-                <div className="avatar-stack">
-                  {avatars.map((a) => (
-                    <img key={a} src={a} alt="" width={42} height={42} />
-                  ))}
-                </div>
-                <p>
-                  Trusted by <b>85+ founders &amp; creators</b> across India
-                  <br />
-                  <span style={{ fontSize: 12 }}>{company.location}</span>
-                </p>
-              </div>
-            </Reveal>
-          </div>
-
-          {/* collage */}
-          <div className="hero-stage" ref={stage} onPointerMove={onMove} onPointerLeave={onLeave}>
-            <div className="hero-orb" aria-hidden="true" />
-            <div className="ring" aria-hidden="true" />
-
-            {casts.map((m, i) => (
-              <div className={`hero-card hero-card--${castClass[i]}`} key={castClass[i]} style={cardStyle(castClass[i])}>
-                <div className="card-img">
-                  <img src={imgSrc(m.img)} alt={m.handle || "Creator"} width={400} height={500} />
-                  <div className="meta">
-                    <div className="role">{m.role}</div>
-                    <div className="row">
-                      <b>{m.handle}</b>
-                      <span className="fcount">
-                        <Icon name="ig" size={11} />
-                        {m.followers}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            <div className="hero-chip chip--a" style={{ animationDelay: "-1s" }}>
-              <span className="ic" style={{ background: "rgba(200,240,77,.16)", color: "var(--lime)" }}>
-                <Icon name="zap" size={20} />
-              </span>
-              <span>
-                <b>1B+</b>
-                <span>Views generated</span>
-              </span>
-            </div>
-            <div className="hero-chip chip--b">
-              <span className="ic" style={{ background: "rgba(139,92,246,.2)", color: "var(--violet-2)" }}>
-                <Icon name="trend" size={20} />
-              </span>
-              <span>
-                <b>+129K</b>
-                <span>followers in 9 months</span>
-              </span>
-            </div>
-            <div className="hero-chip chip--c" style={{ animationDelay: "-3.4s" }}>
-              <span className="ic" style={{ background: "rgba(255,61,127,.16)", color: "#ff7aa9" }}>
-                <Icon name="heart" size={20} />
-              </span>
-              <span>
-                <b>100%</b>
-                <span>Organic growth</span>
-              </span>
-            </div>
-          </div>
+      <div className="editorial-container relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto px-4">
+        {/* Urgent Exclusive Cohort Status Pill */}
+        <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/80 border border-line shadow-xs mb-5 text-[11px] sm:text-[12px] font-mono tracking-wide text-ink select-none backdrop-blur-md">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+          </span>
+          <span className="font-semibold text-accent uppercase tracking-wider">Q2 Founder Cohort</span>
+          <span className="text-ink/30">|</span>
+          <span className="text-ink-soft font-body font-medium">3 of 5 Retainer Slots Filled</span>
         </div>
 
-        <BrandEngine variant="hero" label="01 · THE ORGIX GROWTH ENGINE" />
+        <span className="editorial-kicker mb-4">Content-First Personal Branding</span>
 
-        <Reveal delay={0.45}>
-          <div className="scroll-cue">Scroll to explore</div>
-        </Reveal>
+        <h1 className="display-h1 text-center mb-6 select-none" aria-label={HEADLINE}>
+          <span aria-hidden="true">
+            {HEADLINE.slice(0, chars)}
+            {!done && !reduced && <span className="type-caret" />}
+          </span>
+        </h1>
+
+        <p className="body-editorial text-center max-w-2xl mx-auto mb-9 leading-relaxed">
+          We help creators and brands grow on Instagram, LinkedIn and beyond — with organic content, not ads.
+        </p>
+
+        <div className="btn-actions-row justify-center mt-0 gap-3.5 mb-7">
+          <Button variant="primary" href="/contact" onClick={handleBookCall} ariaLabel="Book a free call">
+            Book a Free Call
+          </Button>
+          <Button variant="ghost" href="/work" ariaLabel="See our work">
+            See Our Work <span aria-hidden="true">→</span>
+          </Button>
+        </div>
+
+        {/* Verified Social Proof Pill */}
+        <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/70 border border-line backdrop-blur-md shadow-sm text-left select-none">
+          <div className="flex -space-x-2">
+            {heroCreators.slice(0, 4).map((c) => (
+              <img
+                key={c.handle}
+                src={imgSrc(c.img)}
+                alt={c.role || c.handle}
+                width={26}
+                height={26}
+                className="w-6 h-6 sm:w-6.5 sm:h-6.5 rounded-full object-cover border-2 border-white"
+              />
+            ))}
+          </div>
+          <div className="text-[11.5px] sm:text-[12px] font-body text-ink-soft leading-tight">
+            <span className="font-medium text-ink">85+ creators scaled</span> ·{" "}
+            <span className="font-medium text-accent">1.0B+ organic views</span>
+          </div>
+        </div>
       </div>
+
+      {/* Thin horizontal line draws left→right at section bottom (2s) */}
+      <div className="hero-draw-line" aria-hidden="true" />
     </section>
   );
 }

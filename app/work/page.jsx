@@ -1,7 +1,6 @@
 import PageHero from "@/components/ui/PageHero";
 import WorkExplorer from "@/components/work/WorkExplorer";
 import CtaSection from "@/components/ui/CtaSection";
-import Reveal from "@/components/core/Reveal";
 
 export const metadata = {
   title: "Our Work — Orgix Media | 14+ Personal Branding Case Studies",
@@ -13,30 +12,39 @@ export default function WorkPage() {
   return (
     <>
       <PageHero
-        eyebrow="01 — ARCHIVE OF WINS"
-        kicker="PROOF OVER PROMISES"
+        eyebrow="ARCHIVE OF SELECTED WORK"
+        kicker="PORTFOLIO"
         title={
           <>
-            Wall of <span className="grad-hot">wins.</span>
+            Selected work. <br />
+            <span className="text-accent">Documented authority.</span>
           </>
         }
-        lead="Every card below is a real founder, creator or D2C brand — with a verified follower count and a documented compounding engine. Filter by category, hover to inspect deliverables."
+        lead="Real founders, real numbers — scaled from zero to category prominence with zero ad spend."
       >
-        <div className="tag-row">
-          <span className="mini-tag">1B+ views generated</span>
-          <span className="mini-tag">85+ creators scaled</span>
-          <span className="mini-tag">100% organic</span>
-          <span className="mini-tag">₹0 ad budget</span>
+        <div className="flex flex-wrap gap-2.5">
+          <span className="px-3 py-1 rounded-full bg-surface-muted/90 border border-border text-[11px] font-mono text-ink-secondary">
+            1.0B+ Views Generated
+          </span>
+          <span className="px-3 py-1 rounded-full bg-surface-muted/90 border border-border text-[11px] font-mono text-ink-secondary">
+            85+ Category Authorities Scaled
+          </span>
+          <span className="px-3 py-1 rounded-full bg-surface-muted/90 border border-border text-[11px] font-mono text-accent">
+            100% Organic Distribution
+          </span>
+          <span className="px-3 py-1 rounded-full bg-surface-muted/90 border border-border text-[11px] font-mono text-ink-muted">
+            ₹0 Spent on Paid Ads
+          </span>
         </div>
       </PageHero>
 
-      <section className="section section--tight">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <WorkExplorer />
         </div>
       </section>
 
-      <CtaSection index="02" kicker="INITIATE YOUR CASE STUDY" />
+      <CtaSection index="02" />
     </>
   );
 }

@@ -5,7 +5,7 @@
       "h": 900
     },
     "scrollW": 1440,
-    "scrollH": 6743,
+    "scrollH": 6628,
     "bodyFont": "16px",
     "hCount": {
       "h1": 1,
@@ -18,7 +18,7 @@
         "src": "orgix-logo.png",
         "nw": 512,
         "nh": 512,
-        "dispW": 36,
+        "dispW": 44,
         "loading": "auto",
         "hasAlt": true
       },
@@ -56,8 +56,8 @@
       },
       {
         "src": "05-posting.webp",
-        "nw": 1360,
-        "nh": 1020,
+        "nw": 0,
+        "nh": 0,
         "dispW": 158,
         "loading": "lazy",
         "hasAlt": true
@@ -84,7 +84,7 @@
       "noNameButtons": [],
       "emptyLinks": 0
     },
-    "decorCount": 5,
+    "decorCount": 9,
     "fontSizes": [
       [
         "15.0",
@@ -115,7 +115,7 @@
         2
       ],
       [
-        "76.8",
+        "72.0",
         1
       ],
       [
@@ -144,10 +144,10 @@
       ]
     ],
     "h1Style": {
-      "fontSize": "76.8px",
-      "lineHeight": "79.872px",
-      "letterSpacing": "-2.304px",
-      "fontFamily": "\"Space Grotesk\"",
+      "fontSize": "72px",
+      "lineHeight": "70.56px",
+      "letterSpacing": "-4.32px",
+      "fontFamily": "\"Bricolage Grotesque\"",
       "fontWeight": "700"
     },
     "sections": [
@@ -155,7 +155,7 @@
         "i": 0,
         "tag": "section",
         "cls": "page-hero.grain",
-        "h": 810
+        "h": 783
       },
       {
         "i": 1,
@@ -185,7 +185,7 @@
         "i": 5,
         "tag": "section",
         "cls": "section.cta.grain",
-        "h": 724
+        "h": 676
       },
       {
         "i": 6,
@@ -196,9 +196,6 @@
     ],
     "suspiciousFixed": []
   },
-  "consoleMsgs": [
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^"
-  ],
+  "consoleMsgs": [],
   "failedReq": []
 }
