@@ -254,7 +254,7 @@ export default function ResultsSection() {
             {resultsData.map((res, index) => (
               <div
                 key={res.id}
-                className="device-mockup shrink-0 w-[320px] sm:w-[350px] p-6 bg-white border border-line rounded-[24px] shadow-device flex flex-col justify-between scroll-snap-align-start select-none reveal-visual is-revealed"
+                className="device-mockup shrink-0 w-[320px] sm:w-[350px] p-6 liquid-glass rounded-[24px] shadow-device flex flex-col justify-between scroll-snap-align-start select-none reveal-visual is-revealed hover:scale-[1.02] transition-transform duration-300"
                 style={{
                   scrollSnapAlign: "start",
                   transitionDelay: `${index * 120}ms`, // Stagger entrance 120ms

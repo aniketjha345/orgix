@@ -48,7 +48,7 @@ export default function Header() {
         <div
           className={`pointer-events-auto rounded-full transition-all duration-300 px-4 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between w-full border ${
             scrolled
-              ? "bg-[#F6F4EF]/95 backdrop-blur-xl border-line shadow-[0_12px_36px_-8px_rgba(15,26,46,0.10)]"
+              ? "liquid-glass shadow-[0_12px_36px_-8px_rgba(15,26,46,0.12)]"
               : "bg-[#F6F4EF]/85 backdrop-blur-xl border-line shadow-[0_4px_24px_rgba(15,26,46,0.05)]"
           }`}
         >
