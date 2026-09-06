@@ -5,42 +5,187 @@
       "h": 900
     },
     "scrollW": 1440,
-    "scrollH": 900,
+    "scrollH": 6971,
     "bodyFont": "16px",
     "hCount": {
-      "h1": 0,
-      "h2": 0,
-      "h3": 0
+      "h1": 1,
+      "h2": 5,
+      "h3": 11
     },
     "overflowSources": [],
-    "imgs": [],
+    "imgs": [
+      {
+        "src": "orgix-logo.png",
+        "nw": 512,
+        "nh": 512,
+        "dispW": 44,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "anant-jain.jpg",
+        "nw": 465,
+        "nh": 529,
+        "dispW": 48,
+        "loading": "auto",
+        "hasAlt": true
+      },
+      {
+        "src": "pari-jain.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 375,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "anant-jain.jpg",
+        "nw": 465,
+        "nh": 529,
+        "dispW": 375,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "deepak-jain.jpg",
+        "nw": 0,
+        "nh": 0,
+        "dispW": 375,
+        "loading": "lazy",
+        "hasAlt": true
+      },
+      {
+        "src": "orgix-logo.png",
+        "nw": 512,
+        "nh": 512,
+        "dispW": 52,
+        "loading": "auto",
+        "hasAlt": true
+      }
+    ],
     "a11y": {
       "noAltImgs": 0,
       "noNameButtons": [],
       "emptyLinks": 0
     },
-    "decorCount": 0,
+    "decorCount": 10,
     "fontSizes": [
       [
+        "18.0",
+        8
+      ],
+      [
+        "13.5",
+        5
+      ],
+      [
+        "14.0",
+        4
+      ],
+      [
+        "67.2",
+        3
+      ],
+      [
+        "15.5",
+        3
+      ],
+      [
+        "21.0",
+        3
+      ],
+      [
         "16.0",
+        3
+      ],
+      [
+        "40.0",
+        2
+      ],
+      [
+        "15.8",
+        2
+      ],
+      [
+        "72.0",
+        1
+      ],
+      [
+        "17.3",
+        1
+      ],
+      [
+        "29.6",
+        1
+      ],
+      [
+        "36.8",
+        1
+      ],
+      [
+        "41.6",
         1
       ]
     ],
-    "h1Style": null,
-    "sections": [],
+    "h1Style": {
+      "fontSize": "72px",
+      "lineHeight": "70.56px",
+      "letterSpacing": "-4.32px",
+      "fontFamily": "\"Bricolage Grotesque\"",
+      "fontWeight": "700"
+    },
+    "sections": [
+      {
+        "i": 0,
+        "tag": "section",
+        "cls": "page-hero.grain",
+        "h": 680
+      },
+      {
+        "i": 1,
+        "tag": "section",
+        "cls": "stats-band",
+        "h": 411
+      },
+      {
+        "i": 2,
+        "tag": "section",
+        "cls": "section.editorial-split-section",
+        "h": 1043
+      },
+      {
+        "i": 3,
+        "tag": "section",
+        "cls": "section",
+        "h": 608
+      },
+      {
+        "i": 4,
+        "tag": "section",
+        "cls": "section.journey-section.grain",
+        "h": 1823
+      },
+      {
+        "i": 5,
+        "tag": "section",
+        "cls": "section",
+        "h": 1117
+      },
+      {
+        "i": 6,
+        "tag": "section",
+        "cls": "section.cta.grain",
+        "h": 676
+      },
+      {
+        "i": 7,
+        "tag": "footer",
+        "cls": "footer",
+        "h": 503
+      }
+    ],
     "suspiciousFixed": []
   },
-  "consoleMsgs": [
-    "[error] Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
-    "[pageerror] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^",
-    "[error] Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "[error] ./app/layout.jsx:8:1\nError: Module not found: Can't resolve '@/components/ui/StickyCta'\n   6 | import CommandPalette from \"@/components/ui/CommandPalette\";\n   7 | import ViewTransitions from \"@/components/ui/ViewTransitions\";\n>  8 | import StickyCta from \"@/components/ui/StickyCta\";\n     | ^^^^^^^^^"
-  ],
+  "consoleMsgs": [],
   "failedReq": []
 }

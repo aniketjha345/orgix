@@ -5,19 +5,24 @@
 
 // Media CDN. All site images live on Cloudinary (orgix-media/<subfolder>/<name>)
 // and are served optimized (f_auto,q_auto). Set MEDIA_LOCAL=1 to fall back to
-// the local copies in /public/images instead.
 const CLOUD_BASE = "https://res.cloudinary.com/dwjr5yrir/image/upload/f_auto,q_auto/orgix-media/";
 
 export function imgSrc(p) {
-  if (!p || process.env.NEXT_PUBLIC_MEDIA_LOCAL === "1") return p;
+  if (!p) return "";
   if (p.startsWith("http")) return p;
-  return CLOUD_BASE + p.replace(/^\/images\//, "");
+  if (process.env.NEXT_PUBLIC_MEDIA_REMOTE === "1") {
+    return CLOUD_BASE + p.replace(/^\/images\//, "");
+  }
+  // Normalise path to local public image asset
+  return p.startsWith("/") ? p : `/${p}`;
 }
 
 export const company = {
   name: "Orgix Media",
   tagline: "Build the Brand Behind You.",
   email: "info@orgixmedia.com",
+  phone: "+91 82875 28395",
+  whatsapp: "https://wa.me/918287528395",
   instagram: "https://www.instagram.com/orgixmedia",
   youtube: "https://www.youtube.com/@orgixmedia",
   location: "Rohini, Delhi · Serving creators & founders worldwide",
@@ -25,52 +30,10 @@ export const company = {
   responseTime: "Free 1:1 strategy call — zero obligation",
 };
 
-export const nav = [
-  { label: "Work", href: "/work" },
-  { label: "Services", href: "/services" },
-  { label: "About", href: "/about" },
-  { label: "Careers", href: "/careers" },
-  { label: "FAQ", href: "/#faq" },
-];
-
 export const stats = [
   { value: 1, suffix: "B+", decimals: 0, label: "Views generated", sub: "across Instagram & YouTube" },
   { value: 85, suffix: "+", decimals: 0, label: "Creators & founders scaled", sub: "from 0 to millions of followers" },
   { value: 100, suffix: "%", decimals: 0, label: "Organic growth", sub: "no ads, no bots, no shortcuts" },
-];
-
-// Marquee strip under the hero + "trusted by" band
-export const marquee = [
-  { name: "Simran Balar Jain", role: "Influencer", handle: "@simranbalraj", followers: "1.4M+", img: "/images/creators/simran-balraj.jpg" },
-  { name: "Anuj Chhajerh", role: "Skincare Specialist", handle: "@anujchhajerh", followers: "516k+", img: "/images/creators/anuj-chhajerh.jpg" },
-  { name: "Aarti Malhotra", role: "Internet Mom", handle: "@aartimalhotra", followers: "459k+", img: "/images/creators/aarti-malhotra.jpg" },
-  { name: "Gaurav Mahawar", role: "Personal Finance", handle: "@gauravmahawar", followers: "358k+", img: "/images/creators/gaurav-mahawar.jpg" },
-  { name: "Taranveer Jaura", role: "Tech Creator", handle: "@techknowbee", followers: "280k+", img: "/images/creators/taranveer-jaura.jpg" },
-  { name: "Garima Barnoliya", role: "Fitness Coach", handle: "@garimabarnoliya", followers: "244k+", img: "/images/creators/garima-barnoliya.jpg" },
-  { name: "Radical Era", role: "Business Breakdown", handle: "@radicalera", followers: "185k+", img: "/images/creators/radical-era.jpg" },
-  { name: "9 Skin", role: "Celebrity-owned brand", handle: "@9skin", followers: "154k+", img: "/images/creators/9skin.jpg" },
-  { name: "Shivam", role: "Career Creator", handle: "@shivamcareer", followers: "100k+", img: "/images/creators/shivam.jpg" },
-  { name: "Ruchira", role: "Cyber Security", handle: "@cyberwithru", followers: "70.8k+", img: "/images/creators/ruchira.jpg" },
-  { name: "Kanikka Dewanii", role: "Founder · Mintree", handle: "@kanikkadewanii", followers: "66.7k+", img: "/images/creators/kanikka-dewanii.png" },
-  { name: "Daisy Morgan", role: "Founder · 9SKIN", handle: "@daisymorgan", followers: "30.6k+", img: "/images/creators/daisy-morgan.jpg" },
-  { name: "Demla Brothers", role: "Founders · Cellbell", handle: "@demlabrothers", followers: "23.1k+", img: "/images/creators/demla-brothers.jpg" },
-  { name: "Bhavit Patil", role: "Founder", handle: "@bhavitpatil", followers: "21.8k+", img: "/images/creators/bhavit-patil.jpg" },
-  { name: "Cellbell", role: "Shark Tank featured", handle: "@cell_bell", followers: "19k+", img: "/images/creators/cellbell.jpg" },
-];
-
-export const trusted = [
-  { name: "Royston Dias", role: "Indian Cricketer", followers: "30.8k+", img: "/images/creators/royston-dias.jpg" },
-  { name: "Radical Era", role: "Business Breakdown", followers: "185k+", img: "/images/creators/radical-era.jpg" },
-  { name: "Demla Brothers", role: "Founders · Cellbell", followers: "23.1k+", img: "/images/creators/demla-brothers.jpg" },
-  { name: "Aarti Malhotra", role: "Internet Mom", followers: "459k+", img: "/images/creators/aarti-malhotra.jpg" },
-  { name: "Daisy Morgan", role: "Founder · 9SKIN", followers: "30.6k+", img: "/images/creators/daisy-morgan.jpg" },
-  { name: "Ruchira", role: "Cyber Security", followers: "70.8k+", img: "/images/creators/ruchira.jpg" },
-  { name: "Imarticus Learning", role: "Education · YouTube", followers: "177k subs", img: "/images/creators/imarticus.jpg" },
-  { name: "Kanikka Dewanii", role: "Founder · Mintree", followers: "66.7k+", img: "/images/creators/kanikka-dewanii.png" },
-  { name: "Akash Pandey", role: "Career Coach", followers: "119k+", img: "/images/creators/akash-pandey.jpg" },
-  { name: "Anuj Chhajerh", role: "Skincare Specialist", followers: "516k+", img: "/images/creators/anuj-chhajerh.jpg" },
-  { name: "Simran Balar Jain", role: "Influencer", followers: "1.4M+", img: "/images/creators/simran-balraj.jpg" },
-  { name: "Jyoti Goyal", role: "Chartered Accountant", followers: "37.6k+", img: "/images/creators/jyoti-goyal.jpg" },
 ];
 
 // The "wall" — case studies with images
@@ -80,7 +43,7 @@ export const stories = [
     role: "Founder",
     handle: "@officialparijain",
     followers: "129K+",
-    img: "/images/stories/pari-jain.jpg",
+    img: "/images/founders/pari-jain.jpg",
     work: "Built from 0 → 129K, 100% organic.",
     verified: true,
     cat: "Founders",
@@ -90,7 +53,7 @@ export const stories = [
     role: "Career & AI Creator",
     handle: "@shivamcareer",
     followers: "100K+",
-    img: "/images/stories/shivam-careers.jpg",
+    img: "/images/creators/shivam.jpg",
     work: "Scaling production with AI to 100K in 80 posts.",
     verified: false,
     cat: "Creators",
@@ -100,7 +63,7 @@ export const stories = [
     role: "Tech & Career Coach",
     handle: "@growithakash",
     followers: "120K+",
-    img: "/images/stories/akash-pandey.jpg",
+    img: "/images/creators/akash-pandey.jpg",
     work: "Leads generated, growth accelerated.",
     verified: true,
     cat: "Founders",
@@ -110,7 +73,7 @@ export const stories = [
     role: "Finance Creator",
     handle: "@ca.jyotigoyal",
     followers: "36.7K+",
-    img: "/images/stories/ca-jyoti-goyal.jpg",
+    img: "/images/creators/jyoti-goyal.jpg",
     work: "Turned influence into brand collaborations.",
     verified: false,
     cat: "Creators",
@@ -120,7 +83,7 @@ export const stories = [
     role: "Content Brand",
     handle: "@toolsfact",
     followers: "97.6K+",
-    img: "/images/stories/tools-fact.jpg",
+    img: "/images/creators/shopcasence.jpg",
     work: "From content to ₹35L in sales.",
     verified: false,
     cat: "Brands",
@@ -130,7 +93,7 @@ export const stories = [
     role: "Tech Creator",
     handle: "@techknowbee",
     followers: "280K+",
-    img: "/images/stories/taranveer-jaura.jpg",
+    img: "/images/creators/taranveer-jaura.jpg",
     work: "High-retention content that compounds.",
     verified: false,
     cat: "Creators",
@@ -140,7 +103,7 @@ export const stories = [
     role: "Import-Export Expert",
     handle: "@amit_aroraa",
     followers: "23.6K+",
-    img: "/images/stories/amit-arora.jpg",
+    img: "/images/creators/amit-arora.png",
     work: "Built funnels that generate leads.",
     verified: false,
     cat: "Founders",
@@ -150,7 +113,7 @@ export const stories = [
     role: "Cybersecurity Creator",
     handle: "@cyberwithru",
     followers: "70.9K+",
-    img: "/images/stories/ruchira-pokhriyal.jpg",
+    img: "/images/creators/ruchira.jpg",
     work: "High-retention edits that perform.",
     verified: false,
     cat: "Creators",
@@ -160,7 +123,7 @@ export const stories = [
     role: "D2C Brand · Gaming chairs",
     handle: "@cell_bell",
     followers: "19.7K+",
-    img: "/images/stories/cellbell.jpg",
+    img: "/images/creators/cellbell.jpg",
     work: "Elevated the brand perception.",
     verified: false,
     cat: "Brands",
@@ -170,7 +133,7 @@ export const stories = [
     role: "Entrepreneur",
     handle: "@growwithroshnii",
     followers: "16.4K+",
-    img: "/images/stories/roshnii-deshmukkh.jpg",
+    img: "/images/creators/daisy-morgan.jpg",
     work: "Turned jewellery into a brand.",
     verified: false,
     cat: "Founders",
@@ -180,7 +143,7 @@ export const stories = [
     role: "Indian Cricketer",
     handle: "@royston_dias313",
     followers: "31.1K+",
-    img: "/images/stories/royston-dias.jpg",
+    img: "/images/creators/royston-dias.jpg",
     work: "Turned reach into quality leads.",
     verified: false,
     cat: "Creators",
@@ -190,7 +153,7 @@ export const stories = [
     role: "Lifestyle Influencer",
     handle: "@alishaa_chettri",
     followers: "25.5K+",
-    img: "/images/stories/alisha-chettri.jpg",
+    img: "/images/creators/garima-barnoliya.jpg",
     work: "Conversations that close deals.",
     verified: false,
     cat: "Creators",
@@ -200,20 +163,120 @@ export const stories = [
     role: "Spiritual Guide",
     handle: "@bhavitpatil",
     followers: "20.3K+",
-    img: "/images/stories/bhavit-patil.jpg",
+    img: "/images/creators/bhavit-patil.jpg",
     work: "From reels to 180 event attendees.",
     verified: false,
     cat: "Founders",
   },
   {
     name: "Pawan & Chirag Demla",
-    role: "Founders · Cellbell",
+    role: "Founders · Cellbell (Shark Tank)",
     handle: "@demlabrothers",
     followers: "23.1K+",
-    img: "/images/stories/demla-brothers.jpg",
-    work: "Founder-led brand growth, done organically.",
+    img: "/images/creators/demla-brothers.jpg",
+    work: "Shark Tank brand scale · 100% organic.",
     verified: true,
     cat: "Founders",
+  },
+  {
+    name: "Kanikka Dewanii",
+    role: "Founder · Mintree (Shark Tank)",
+    handle: "@kanikkadewanii",
+    followers: "66.7K",
+    img: "/images/creators/kanikka-dewanii.png",
+    work: "Shark Tank featured beauty brand.",
+    verified: true,
+    cat: "Founders",
+  },
+  {
+    name: "Daisy Morgan",
+    role: "Founder · 9SKIN",
+    handle: "@daisymorgan",
+    followers: "30.6K+",
+    img: "/images/creators/daisy-morgan.jpg",
+    work: "Celebrity skincare brand expansion.",
+    verified: true,
+    cat: "Brands",
+  },
+  {
+    name: "Gaurav Mahawar",
+    role: "Finance Creator",
+    handle: "@gauravmahawar",
+    followers: "358K+",
+    img: "/images/creators/gaurav-mahawar.jpg",
+    work: "Complex finance simplified into viral scripts.",
+    verified: true,
+    cat: "Creators",
+  },
+  {
+    name: "Aarti Malhotra",
+    role: "Internet Mom",
+    handle: "@aartimalhotra",
+    followers: "459K+",
+    img: "/images/creators/aarti-malhotra.jpg",
+    work: "Relatable family storytelling that converts.",
+    verified: true,
+    cat: "Creators",
+  },
+  {
+    name: "Radical Era",
+    role: "Business Breakdown",
+    handle: "@radicalera",
+    followers: "185K+",
+    img: "/images/creators/radical-era.jpg",
+    work: "Deep business teardowns & case studies.",
+    verified: false,
+    cat: "Creators",
+  },
+  {
+    name: "Anuj Chhajerh",
+    role: "Skincare Specialist",
+    handle: "@anujchhajerh",
+    followers: "516K+",
+    img: "/images/creators/anuj-chhajerh.jpg",
+    work: "Clinical authority to half-million audience.",
+    verified: true,
+    cat: "Creators",
+  },
+  {
+    name: "Simran Balar Jain",
+    role: "Lifestyle & Social Impact",
+    handle: "@simranbalarjain",
+    followers: "1.4M+",
+    img: "/images/creators/simran-balraj.jpg",
+    work: "Seven-figure community with compounding reach.",
+    verified: true,
+    cat: "Creators",
+  },
+  {
+    name: "Imarticus Learning",
+    role: "Education Channel",
+    handle: "@imarticus",
+    followers: "177K",
+    img: "/images/creators/imarticus.jpg",
+    work: "YouTube long-form educational authority.",
+    verified: true,
+    cat: "Brands",
+  },
+  {
+    name: "Garima Barnoliya",
+    role: "Fitness Coach",
+    handle: "@garimabarnoliya",
+    followers: "244K+",
+    img: "/images/creators/garima-barnoliya.jpg",
+    work: "High-retention fitness reels & coaching leads.",
+    verified: false,
+    cat: "Creators",
+  },
+  {
+    name: "Ekta Dahiya",
+    role: "Content Creator",
+    handle: "@ektadahiya",
+    followers: "66.6K+",
+    img: "/images/creators/ekta-dahiya.png",
+    work: "Authentic lifestyle storytelling engine.",
+    verified: false,
+    cat: "Creators",
   },
 ];
 
@@ -279,7 +342,7 @@ export const services = [
       "Content calendar",
     ],
     stat: { value: "129K+", label: "followers built from zero — Pari Jain" },
-    img: "/images/stories/pari-jain.jpg",
+    img: "/images/founders/pari-jain.jpg",
     accent: "lime",
   },
   {
@@ -298,32 +361,46 @@ export const services = [
       "Retention editing",
     ],
     stat: { value: "177K+", label: "YouTube subscribers — Imarticus Learning" },
-    img: "/images/stories/taranveer-jaura.jpg",
+    img: "/images/creators/taranveer-jaura.jpg",
     accent: "violet",
   },
-];
-
-export const testimonials = [
   {
-    quote:
-      "Working with Orgix Media has completely changed the way I approach content. Their team understands finance and knows how to turn complex topics into simple, engaging scripts that people actually want to watch. From content ideas and scripting to social media strategy, everything is well planned and executed. I've seen a clear improvement in my content quality, reach and overall personal brand. Highly recommended!",
-    name: "Gaurav Mahawar",
-    role: "Finance Creator · 287K+ followers",
-    img: "/images/testimonials/gaurav-mahawar.jpg",
+    id: "video-editing",
+    index: "03",
+    name: "Post-Production Systems",
+    title: "High-Retention Video Editing",
+    tag: "Every frame earns the next",
+    desc: "Transform raw footage into viral retention assets. Motion graphics, custom sound design, kinetic typography, and precision pacing built for algorithmic discovery.",
+    features: [
+      "Dynamic kinetic captions",
+      "Pacing & retention curve optimization",
+      "Sound design & audio mastery",
+      "Custom 2D/3D motion graphics",
+      "B-roll sourcing & color grading",
+      "Format re-versioning (9:16, 16:9)",
+    ],
+    stat: { value: "1.0B+", label: "organic views across edited reels & shorts" },
+    img: "/images/creators/shivam.jpg",
+    accent: "accent",
   },
   {
-    quote:
-      "Working with Orgix Media has been a great experience. They helped me increase my followers and, more importantly, attract valuable, high-quality leads through strategic content and personal branding. Their team understands how to create content that not only grows your audience but also brings real business opportunities.",
-    name: "Royston Dias",
-    role: "Indian Cricketer · 31.1K+ followers",
-    img: "/images/testimonials/royston-dias.jpg",
-  },
-  {
-    quote:
-      "Orgix Media took my food content to the next level. Their editing made my videos more engaging, professional and enjoyable to watch. They understand social media and know exactly how to keep viewers hooked. Highly recommended!",
-    name: "Neha",
-    role: "Content Creator",
-    img: "/images/testimonials/neha.jpg",
+    id: "linkedin",
+    index: "04",
+    name: "Executive Positioning",
+    title: "LinkedIn Thought Leadership",
+    tag: "B2B pipeline & authority",
+    desc: "Position founders and C-suite leaders as undisputed industry authorities. Intellectual property extraction, ghostwritten essays, and high-converting carousels.",
+    features: [
+      "Executive voice & narrative design",
+      "Contrarian framework essays",
+      "High-converting carousel design",
+      "Network reach & comment strategy",
+      "Inbound deal flow optimization",
+      "Profile & banner architectural revamp",
+    ],
+    stat: { value: "85+", label: "founders & executives positioned" },
+    img: "/images/creators/amit-arora.png",
+    accent: "accent",
   },
 ];
 
@@ -372,6 +449,10 @@ export const teamStat = {
 
 export const faqs = [
   {
+    q: "What does a personal branding agency actually do?",
+    a: "We help founders, creators, professionals and experts build a strong personal brand through strategy, content creation, social media and consistent storytelling — so your expertise gets noticed, trusted and remembered, and turns into inbound opportunity.",
+  },
+  {
     q: "How long until I see real traction?",
     a: "Most clients see their first algorithmic breakout within 30–45 days of the first engineered reels. Compounding authority — where each post lifts the next — typically shows up between month 2 and month 3. We don't sell a one-reel miracle; we build an engine that gets stronger every week.",
   },
@@ -405,148 +486,39 @@ export const faqs = [
   },
 ];
 
+// Real trusted-by roster — every photo verified pixel-identical to the
+// one orgixmedia.com shows for that person (see scripts/verify-client-photos.mjs).
+export const trustedBy = [
+  { name: "Royston Dias", tag: "Indian Cricketer", followers: "30.8K+", img: "/images/creators/royston-dias.jpg" },
+  { name: "Radical Era", tag: "Business Breakdown", followers: "185K+", img: "/images/creators/radical-era.jpg" },
+  { name: "Demla Brothers", tag: "Founders · Cellbell (Shark Tank)", followers: "23.1K+", img: "/images/creators/demla-brothers.jpg" },
+  { name: "Aarti Malhotra", tag: "Internet Mom", followers: "459K+", img: "/images/creators/aarti-malhotra.jpg" },
+  { name: "Daisy Morgan", tag: "Founder · 9SKIN", followers: "30.6K+", img: "/images/creators/daisy-morgan.jpg" },
+  { name: "Ruchira", tag: "Cybersecurity (US)", followers: "70.8K+", img: "/images/creators/ruchira.jpg" },
+  { name: "Imarticus Learning", tag: "Education · YouTube", followers: "177K", img: "/images/creators/imarticus.jpg" },
+  { name: "Kanikka Dewanii", tag: "Founder · Mintree (Shark Tank)", followers: "66.7K", img: "/images/creators/kanikka-dewanii.png" },
+  { name: "Akash Pandey", tag: "Career Coach", followers: "119K+", img: "/images/creators/akash-pandey.jpg" },
+  { name: "Anuj Chhajerh", tag: "Skincare Specialist", followers: "516K+", img: "/images/creators/anuj-chhajerh.jpg" },
+  { name: "Simran Balar Jain", tag: "Influencer", followers: "1.4M+", img: "/images/creators/simran-balraj.jpg" },
+  { name: "Jyoti Goyal", tag: "Chartered Accountant", followers: "37.6K+", img: "/images/creators/jyoti-goyal.jpg" },
+  { name: "Shivam", tag: "Career & AI Creator", followers: "100K+", img: "/images/creators/shivam.jpg" },
+  { name: "9SKIN", tag: "Celebrity-Owned Brand", followers: "154K+", img: "/images/creators/9skin.jpg" },
+  { name: "Amit Arora", tag: "Investor · Intl. Trade", followers: "23.6K+", img: "/images/creators/amit-arora.png" },
+  { name: "Cellbell", tag: "Shark Tank Featured Brand", followers: "19K+", img: "/images/creators/cellbell.jpg" },
+  { name: "Gaurav Mahawar", tag: "Personal Finance", followers: "358K+", img: "/images/creators/gaurav-mahawar.jpg" },
+  { name: "Ekta Dahiya", tag: "Content Creator", followers: "66.6K+", img: "/images/creators/ekta-dahiya.png" },
+  { name: "Raj Vadhu", tag: "Clothing Brand", followers: "31.3K", img: "/images/creators/raj-vadhu.jpg" },
+  { name: "Rahis", tag: "Fitness Coach", followers: "20.9K+", img: "/images/creators/rahis.jpg" },
+  { name: "Bhavit Patil", tag: "Founder", followers: "21.8K+", img: "/images/creators/bhavit-patil.jpg" },
+  { name: "Shopcasence", tag: "Entrepreneur", followers: "55.9K+", img: "/images/creators/shopcasence.jpg" },
+  { name: "Garima Barnoliya", tag: "Fitness Coach", followers: "244K+", img: "/images/creators/garima-barnoliya.jpg" },
+];
+
 export const heroCreators = [
-  { img: "/images/creators/aarti-malhotra.jpg", handle: "@aartimalhotra", followers: "459k+", role: "Internet Mom" },
-  { img: "/images/creators/anuj-chhajerh.jpg", handle: "@anujchhajerh", followers: "516k+", role: "Skincare Specialist" },
-  { img: "/images/creators/simran-balraj.jpg", handle: "@simranbalraj", followers: "1.4M+", role: "Influencer" },
-];
-
-export const videoTestimonials = [
-  {
-    name: "Demla Brothers",
-    role: "Founders · Cellbell",
-    badge: "Shark Tank Featured",
-    followers: "23.1K+",
-    handle: "@demlabrothers",
-    poster: "https://orgixmedia.com/uploads/vid_client1_poster.jpg",
-    videoUrl: "https://orgixmedia.com/uploads/vid_client1.mp4",
-    quote: "Orgix scaled our founder personal brands organically and generated massive inbound brand trust.",
-  },
-  {
-    name: "Shivam Careers",
-    role: "Career & Tech Creator",
-    badge: "100K in 80 Posts",
-    followers: "100K+",
-    handle: "@shivamcareer",
-    poster: "https://orgixmedia.com/uploads/vid_client2_poster.jpg",
-    videoUrl: "https://orgixmedia.com/uploads/vid_client2.mp4",
-    quote: "Their scripting and hooks turned my expertise into videos that people actually watch till the end.",
-  },
-  {
-    name: "CA Jyoti Goyal",
-    role: "Chartered Accountant",
-    badge: "Finance & Tax Authority",
-    followers: "37.6K+",
-    handle: "@ca.jyotigoyal",
-    poster: "https://orgixmedia.com/uploads/img_6a8d49bc28c12.png",
-    videoUrl: "https://orgixmedia.com/uploads/vid_client3.mp4",
-    quote: "Turned technical tax laws into viral, engaging reels that consistently bring high-value client leads.",
-  },
-  {
-    name: "Amit Arora",
-    role: "Investor & International Trade",
-    badge: "B2B Trade Funnel",
-    followers: "23.6K+",
-    handle: "@amit_aroraa",
-    poster: "https://orgixmedia.com/uploads/vid_client4_poster.jpg",
-    videoUrl: "https://orgixmedia.com/uploads/vid_client4.mp4",
-    quote: "We don't chase random views — Orgix built a strategic funnel that creates real international trade deals.",
-  },
-  {
-    name: "Pari Jain",
-    role: "Co-Founder & Creator",
-    badge: "0 → 129K Organic",
-    followers: "129K+",
-    handle: "@officialparijain",
-    poster: "https://orgixmedia.com/uploads/img_6a8fdb40b555d.png",
-    videoUrl: "https://orgixmedia.com/uploads/vid_6a86b1f254dda.mov",
-    quote: "Proving our own method every day: genuine storytelling, scroll-stopping hooks, and 100% organic reach.",
-  },
-  {
-    name: "Alisha Chettri",
-    role: "Lifestyle & Content Creator",
-    badge: "High-Ticket Collabs",
-    followers: "25.5K+",
-    handle: "@alishaa_chettri",
-    poster: "https://orgixmedia.com/uploads/img_6a8d4a25881a7.png",
-    videoUrl: "https://orgixmedia.com/uploads/vid_6a8d4a2588542.mp4",
-    quote: "Orgix helped me build authority with premium brands and turn everyday engagement into closed deals.",
-  },
-];
-
-export const mythBusters = [
-  {
-    id: "daily-posting",
-    type: "MYTH",
-    statement: "Posting every day guarantees Instagram growth.",
-    verdict: "Quality, retention & storytelling drive distribution — not daily low-effort spam.",
-    detail: "Instagram's recommendation algorithm rewards watch-time, completions, and replay rates. One high-retention reel generates more algorithmic compounding than 10 hurried posts.",
-    badge: "Retention > Frequency",
-  },
-  {
-    id: "hashtags",
-    type: "MYTH",
-    statement: "More hashtags make your posts go viral.",
-    verdict: "Watch-time, DM shares, and saves matter 10x more than hashtag counts.",
-    detail: "Instagram categorizes content using audio, speech-to-text, and visual AI. DM shares and saves signal genuine relevance to the algorithm far beyond 30 stuffed hashtags.",
-    badge: "Shares > Tags",
-  },
-  {
-    id: "youtube-retention",
-    type: "FACT",
-    statement: "Audience retention matters more than upload frequency on YouTube.",
-    verdict: "YouTube actively pushes videos with 50%+ retention loops to browse & suggested feeds.",
-    detail: "YouTube's business model is session time. If your video keeps viewers glued, YouTube continues suggesting it to hundreds of thousands of new viewers for months.",
-    badge: "Session Watch Time",
-  },
-  {
-    id: "flashy-editing",
-    type: "MYTH",
-    statement: "Great editing is about flashy transitions, zooming, and sound effects.",
-    verdict: "Masterful editing is about pacing, narrative rhythm, and holding cognitive focus.",
-    detail: "Over-edited reels feel like ads and increase drop-offs. Strategic B-roll, clean typography, and purposeful pacing hold attention without exhausting the viewer.",
-    badge: "Pacing > Effects",
-  },
-  {
-    id: "scripting-retention",
-    type: "FACT",
-    statement: "Structured scripting doubles audience completion rates.",
-    verdict: "A calculated 3-second hook + open loops keep viewers watching to the final frame.",
-    detail: "Without a structured script, creators ramble in the first 5 seconds where 70% of viewers drop off. Hook architecture and progressive payoff double retention.",
-    badge: "Hook Architecture",
-  },
-  {
-    id: "viral-luck",
-    type: "MYTH",
-    statement: "Viral videos happen by pure luck and cannot be engineered.",
-    verdict: "Virality follows repeatable human psychology, tension, and relatable payoffs.",
-    detail: "Every piece of content we build follows deep audience research, contrarian perspective, and emotional triggers. That is how Orgix has generated 1B+ organic views.",
-    badge: "Psychology > Luck",
-  },
-];
-
-export const agencyPillars = [
-  {
-    num: "01",
-    title: "Absolute Specialisation",
-    subtitle: "We don't do everything. We excel at one thing.",
-    text: "Most agencies offering social media are actually ad agencies or influencer brokers who treat personal branding as an afterthought. We don't run paid ads or broker random sponsorships. We focus exclusively on compounding organic personal branding for founders and creators.",
-    highlight: "100% Organic · Zero ad spend required",
-  },
-  {
-    num: "02",
-    title: "Strategy Before Production",
-    subtitle: "Thinkers driving every cut and caption.",
-    text: "Most agencies start with a camera and hope something sticks. We spend days researching your niche, identifying untapped content angles, and defining your narrative positioning before a single frame is recorded.",
-    highlight: "Positioning & narrative architecture",
-  },
-  {
-    num: "03",
-    title: "Audiences, Not Algorithms",
-    subtitle: "Built on human psychology, not fleeting hacks.",
-    text: "Algorithms update every month, but human psychology has stayed the same for millennia. We design content that earns attention, respect, and deep trust — turning casual scrollers into loyal advocates, clients, and partners.",
-    highlight: "Compounding authority & inbound leads",
-  },
+  { img: "/images/founders/pari-jain.jpg", handle: "@officialparijain", followers: "129K+", role: "Founder" },
+  { img: "/images/creators/taranveer-jaura.jpg", handle: "@techknowbee", followers: "280K+", role: "Tech Creator" },
+  { img: "/images/creators/daisy-morgan.jpg", handle: "@daisymorgan", followers: "30.6K+", role: "Founder · 9SKIN" },
+  { img: "/images/creators/gaurav-mahawar.jpg", handle: "@gauravmahawar", followers: "358K+", role: "Finance Creator" },
 ];
 
 export const timelineJourney = [
@@ -577,7 +549,7 @@ export const timelineJourney = [
 ];
 
 // Point every image field at the Cloudinary CDN (single source of truth for media).
-const IMAGE_ARRAYS = [marquee, trusted, stories, processSteps, services, testimonials, team, heroCreators];
+const IMAGE_ARRAYS = [stories, processSteps, services, team, heroCreators, trustedBy];
 for (const arr of IMAGE_ARRAYS) {
   for (const item of arr) {
     if (item && item.img) item.img = imgSrc(item.img);

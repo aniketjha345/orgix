@@ -1,0 +1,58 @@
+[
+  {
+    "route": "/ @ desktop",
+    "overflowX": null,
+    "pageHeight": 19746,
+    "h1": "Grow Organically.",
+    "brokenImgs": [],
+    "imgCount": 110
+  },
+  {
+    "route": "/ @ mobile",
+    "overflowX": null,
+    "pageHeight": 28346,
+    "h1": "Grow Organically.",
+    "brokenImgs": [],
+    "imgCount": 110
+  },
+  {
+    "route": "/work @ desktop",
+    "overflowX": null,
+    "pageHeight": 6467,
+    "h1": "Selected work. Documented authority.",
+    "brokenImgs": [],
+    "imgCount": 142
+  },
+  {
+    "route": "/services @ desktop",
+    "overflowX": null,
+    "pageHeight": 6968,
+    "h1": "Everything your brand needs to dominate.",
+    "brokenImgs": [],
+    "imgCount": 3
+  },
+  {
+    "route": "/about @ desktop",
+    "overflowX": null,
+    "pageHeight": 6204,
+    "h1": "We turn names into brands.",
+    "brokenImgs": [],
+    "imgCount": 6
+  },
+  {
+    "route": "/contact @ desktop",
+    "overflowX": null,
+    "pageHeight": 2422,
+    "h1": "Your brand is one decision away.",
+    "brokenImgs": [],
+    "imgCount": 2
+  },
+  {
+    "route": "/media @ desktop",
+    "overflowX": null,
+    "pageHeight": 1627,
+    "h1": "Ship media straight to the cloud.",
+    "brokenImgs": [],
+    "imgCount": 2
+  }
+]
