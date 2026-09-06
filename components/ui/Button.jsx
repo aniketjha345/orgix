@@ -2,44 +2,57 @@
 
 import Link from "next/link";
 import Icon from "../core/Icon";
-import { MagneticButton } from "../motion/MotionPrimitives";
 
+/**
+ * Button — Implements the Orgix Media design system button specifications:
+ * - Pill radius: 999px
+ * - Padding: 14px 28px
+ * - Primary: --ink (#0F1A2E) background / white text
+ * - Ghost: transparent background + 1px --line border
+ * - Accent: #2E5BFF on link / hover states only
+ */
 export default function Button({
   children,
-  variant = "primary", // "primary" | "secondary" | "ghost" | "accent"
-  size = "md", // "sm" | "md" | "lg"
+  variant = "primary", // "primary" | "ghost"
+  size, // optional override
   href,
   onClick,
-  icon = true,
+  icon = false,
   iconName = "arrow",
-  magnetic = false,
   className = "",
   type = "button",
   disabled = false,
   ariaLabel,
+  target,
+  rel,
+  magnetic,
   ...props
 }) {
-  const baseStyles =
-    "relative inline-flex items-center justify-center font-body font-medium transition-all duration-200 outline-none select-none disabled:opacity-50 disabled:cursor-not-allowed";
+  const normalizedVariant =
+    variant === "secondary" ? "ghost" : variant === "accent" ? "primary" : variant;
 
-  const sizeStyles = {
-    sm: "text-[12.5px] px-3.5 py-1.5 gap-1.5 rounded-full tracking-normal",
-    md: "text-[13.5px] px-5 py-2.5 gap-2 rounded-full tracking-normal",
-    lg: "text-[15px] px-6 py-3.5 gap-2.5 rounded-full font-semibold tracking-tight",
-  };
+  const baseStyles =
+    `inline-flex items-center justify-center gap-2.5 font-body text-[15px] font-medium leading-none select-none text-center transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none ${
+      magnetic ? "interactive-magnetic" : ""
+    }`.trim();
+
+  // Exact 14px 28px padding & 999px pill radius (allows smaller size if explicitly specified)
+  const shapeStyles =
+    size === "sm"
+      ? "rounded-[999px] px-[20px] py-[10px] text-[13.5px]"
+      : size === "lg"
+      ? "rounded-[999px] px-[32px] py-[16px] text-[16px]"
+      : "rounded-[999px] px-[28px] py-[14px]";
 
   const variantStyles = {
     primary:
-      "bg-accent text-accent-foreground hover:bg-accent-hover shadow-[0_2px_12px_-2px_rgba(196,240,66,0.35)] active:scale-[0.98]",
-    secondary:
-      "bg-surface-muted/60 text-ink-primary border border-border hover:bg-surface-elevated hover:border-white/20 active:scale-[0.98] backdrop-blur-md",
+      "bg-ink text-white border border-ink hover:bg-[#1A2440] hover:border-[#1A2440] hover:-translate-y-0.5 active:translate-y-0 shadow-sm",
     ghost:
-      "bg-transparent text-ink-secondary hover:text-ink-primary hover:bg-white/[0.04] active:scale-[0.98]",
-    accent:
-      "bg-white text-black hover:bg-white/90 shadow-[0_2px_16px_rgba(255,255,255,0.2)] active:scale-[0.98]",
+      "bg-transparent text-ink border border-line hover:border-ink hover:text-accent hover:-translate-y-0.5 active:translate-y-0",
   };
 
-  const combinedClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;
+  const currentVariantStyle = variantStyles[normalizedVariant] || variantStyles.primary;
+  const combinedClasses = `${baseStyles} ${shapeStyles} ${currentVariantStyle} ${className}`.trim();
 
   const content = (
     <>
@@ -47,18 +60,29 @@ export default function Button({
       {icon && (
         <Icon
           name={iconName}
-          size={size === "sm" ? 13 : size === "lg" ? 17 : 15}
+          size={14}
           className="transition-transform duration-200 group-hover:translate-x-0.5"
         />
       )}
     </>
   );
 
-  const innerElement = href ? (
-    <Link href={href} className={`group ${combinedClasses}`} aria-label={ariaLabel} {...props}>
-      {content}
-    </Link>
-  ) : (
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className={`group ${combinedClasses}`}
+        aria-label={ariaLabel}
+        target={target}
+        rel={rel}
+        {...props}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
     <button
       type={type}
       onClick={onClick}
@@ -70,10 +94,4 @@ export default function Button({
       {content}
     </button>
   );
-
-  if (magnetic) {
-    return <MagneticButton>{innerElement}</MagneticButton>;
-  }
-
-  return innerElement;
 }

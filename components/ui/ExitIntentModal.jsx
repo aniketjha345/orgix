@@ -47,49 +47,49 @@ export default function ExitIntentModal() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[rgba(15,26,46,0.6)] backdrop-blur-sm animate-fade-in"
       role="dialog"
       aria-modal="true"
       onClick={() => setIsOpen(false)}
     >
       <div
-        className="relative w-full max-w-md rounded-2xl bg-[#0e1026] border border-accent/40 shadow-elevated p-6 sm:p-8 text-center"
+        className="relative w-full max-w-md rounded-[24px] bg-white border border-line shadow-[0_30px_90px_rgba(15,26,46,0.2)] p-6 sm:p-8 text-center"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           type="button"
           onClick={() => setIsOpen(false)}
-          className="absolute top-4 right-4 text-ink-muted hover:text-ink-primary text-sm cursor-pointer"
+          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[var(--bg)] border border-line flex items-center justify-center text-[var(--ink-soft)] hover:text-[var(--ink)] hover:bg-[var(--bg-alt)] text-sm cursor-pointer transition-colors"
           aria-label="Close popup"
         >
           ✕
         </button>
 
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent font-mono text-[11px] font-semibold uppercase tracking-wider mb-4">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[rgba(46,91,255,0.08)] border border-[rgba(46,91,255,0.2)] text-accent font-mono text-[11px] font-semibold uppercase tracking-wider mb-4">
           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-          Limited Spots
+          Limited Cohort Spots
         </span>
 
-        <h3 className="text-[1.65rem] font-display font-medium text-ink-primary mb-2">
+        <h3 className="font-display font-medium text-[24px] sm:text-[28px] text-[var(--ink)] tracking-tight mb-2">
           Still thinking about it?
         </h3>
 
-        <p className="text-body-sm text-ink-secondary leading-relaxed font-light mb-6">
-          Only a few onboarding slots open this month. Let&apos;s see if we&apos;re a fit — zero pressure, zero pitch.
+        <p className="text-[14.5px] text-[var(--ink-soft)] leading-relaxed font-normal mb-6">
+          We only take 3–4 new personal brand clients each month to preserve output quality. Let&apos;s see if we&apos;re a fit — zero pitch, 100% organic strategy.
         </p>
 
         <div className="space-y-3">
           <button
             type="button"
             onClick={handleCta}
-            className="w-full py-3.5 rounded-full bg-accent text-[#0a0a1f] font-body font-semibold text-[14px] hover:bg-[#d2f758] transition-colors shadow-[0_0_20px_rgba(196,240,66,0.3)] cursor-pointer"
+            className="w-full py-3.5 rounded-full bg-[var(--ink)] text-white font-medium text-[14.5px] hover:bg-[#1A2440] transition-colors cursor-pointer"
           >
-            Talk to us →
+            Claim Free Strategy Audit →
           </button>
           <button
             type="button"
             onClick={() => setIsOpen(false)}
-            className="w-full py-2 text-ink-muted hover:text-ink-secondary text-[12px] font-mono cursor-pointer"
+            className="w-full py-2 text-[var(--ink-soft)] hover:text-[var(--ink)] text-[12.5px] font-mono cursor-pointer"
           >
             I&apos;ll explore on my own
           </button>

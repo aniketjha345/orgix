@@ -20,7 +20,7 @@ export default function WorkPage() {
             <span className="text-accent">Documented authority.</span>
           </>
         }
-        lead="Every case study below represents a real founder, creator, or venture scaled from ground zero to category prominence — with verified audience data, algorithmic retention analysis, and zero ad spend."
+        lead="Real founders, real numbers — scaled from zero to category prominence with zero ad spend."
       >
         <div className="flex flex-wrap gap-2.5">
           <span className="px-3 py-1 rounded-full bg-surface-muted/90 border border-border text-[11px] font-mono text-ink-secondary">

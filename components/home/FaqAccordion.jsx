@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Section from "../core/Section";
 import { faqs } from "@/data/site";
-import Icon from "../core/Icon";
 
 export default function FaqAccordion() {
   const [openIdx, setOpenIdx] = useState(0);
@@ -12,25 +12,23 @@ export default function FaqAccordion() {
   };
 
   return (
-    <section className="py-24 md:py-32 bg-background border-t border-border/60" id="faq">
-      <div className="container max-w-4xl">
-        {/* Section Header */}
-        <div className="mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-border text-[11px] font-mono uppercase tracking-wider text-accent mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            <span>07 — DIRECT FAQ</span>
-          </div>
-          <h2 className="text-[2.25rem] sm:text-[3rem] md:text-[3.5rem] font-display font-normal text-ink-primary tracking-[-0.03em] leading-[1.08] mb-4">
-            Everything you need <br />
-            <span className="text-accent">to know.</span>
+    <Section id="faq" bgAlt={false} className="select-none">
+      <div className="w-full max-w-4xl mx-auto flex flex-col items-center">
+        {/* ONE headline, ONE paragraph */}
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+          <span className="editorial-kicker reveal-item reveal-stagger-1 is-revealed">
+            09 / FAQ
+          </span>
+          <h2 className="display-h2 mb-4 reveal-item reveal-stagger-1 is-revealed">
+            Everything you need to know.
           </h2>
-          <p className="text-body-md text-ink-secondary font-light">
-            Clear answers about our engagement model, shoot schedules, and organic trajectory.
+          <p className="body-editorial text-center mx-auto reveal-item reveal-stagger-2 is-revealed">
+            Engagement model, shoot schedules and organic trajectory.
           </p>
         </div>
 
-        {/* Antigravity Accordion: plain text, thin divider lines, no card backgrounds */}
-        <div className="divide-y divide-border/60 border-y border-border/60">
+        {/* ONE visual: plain divider accordion */}
+        <div className="w-full divide-y divide-[var(--line)] border-y border-line reveal-visual is-revealed">
           {faqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
@@ -41,17 +39,17 @@ export default function FaqAccordion() {
                   className="w-full text-left flex items-start justify-between gap-6 group cursor-pointer"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-[1.125rem] sm:text-[1.25rem] font-display font-medium text-ink-primary group-hover:text-accent transition-colors leading-snug">
+                  <span className="font-display font-medium text-[18px] sm:text-[20px] text-ink group-hover:text-accent transition-colors leading-snug tracking-tight">
                     {faq.q}
                   </span>
-                  <span className="w-7 h-7 rounded-full bg-surface border border-border flex items-center justify-center text-ink-muted group-hover:text-accent group-hover:border-accent shrink-0 transition-all font-mono text-[14px]">
+                  <span className="w-7 h-7 rounded-full bg-transparent border border-line flex items-center justify-center text-ink-soft group-hover:text-accent group-hover:border-ink shrink-0 transition-all font-body text-[14px]">
                     {isOpen ? "−" : "+"}
                   </span>
                 </button>
 
                 {isOpen && (
                   <div className="pt-4 pr-10">
-                    <p className="text-body-md text-ink-secondary leading-relaxed font-light">
+                    <p className="font-body text-[16px] text-ink-soft leading-relaxed">
                       {faq.a}
                     </p>
                   </div>
@@ -61,6 +59,6 @@ export default function FaqAccordion() {
           })}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

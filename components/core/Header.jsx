@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Icon from "./Icon";
 import { company, imgSrc } from "@/data/site";
 
 export default function Header() {
@@ -43,36 +42,38 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none transition-all duration-300">
-      <div className="container pt-3 sm:pt-4">
+    <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none flex justify-center pt-3 sm:pt-4 px-4 transition-all duration-300">
+      <div className="w-full max-w-5xl flex flex-col items-center">
+        {/* Centered Floating Capsule Bar (Light, No Dark Colors) */}
         <div
-          className={`pointer-events-auto rounded-full transition-all duration-300 px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between border ${
+          className={`pointer-events-auto rounded-full transition-all duration-300 px-4 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between w-full border ${
             scrolled
-              ? "bg-[#0a0a1f]/92 backdrop-blur-xl border-white/12 shadow-[0_16px_36px_-12px_rgba(0,0,0,0.8)]"
-              : "bg-[#0a0a1f]/70 backdrop-blur-lg border-white/8"
+              ? "bg-[#F6F4EF]/95 backdrop-blur-xl border-line shadow-[0_12px_36px_-8px_rgba(15,26,46,0.10)]"
+              : "bg-[#F6F4EF]/85 backdrop-blur-xl border-line shadow-[0_4px_24px_rgba(15,26,46,0.05)]"
           }`}
         >
-          {/* Brand Logo */}
+          {/* Brand Logo & Wordmark */}
           <Link
             href="/"
-            className="flex items-center gap-2.5 text-ink-primary select-none group shrink-0"
+            className="flex items-center gap-2.5 text-ink select-none group shrink-0"
             aria-label={`${company.name} Home`}
           >
             <img
               src={imgSrc("/images/logo/orgix-logo.png")}
               alt="Orgix Media"
-              width={34}
-              height={34}
-              className="w-8 h-8 sm:w-8.5 sm:h-8.5 rounded-lg object-contain"
+              width={32}
+              height={32}
+              className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg object-contain"
             />
-            <span className="font-display font-medium text-[15px] sm:text-[16px] tracking-tight">
-              ORGIX
+            <span className="font-display font-medium text-[15px] sm:text-[16px] tracking-tight text-ink flex items-center gap-1.5">
+              <span>ORGIX</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block" />
             </span>
           </Link>
 
-          {/* Desktop Navigation Links (Antigravity pattern: thin, mostly text, 2 mega dropdowns) */}
-          <nav className="hidden md:flex items-center gap-7 text-[13.5px] font-body text-ink-secondary">
-            {/* 1. Services Mega Dropdown */}
+          {/* Desktop Navigation Links */}
+          <nav className="hidden md:flex items-center gap-7 text-[13.5px] font-body text-ink-soft">
+            {/* 1. Services Dropdown */}
             <div
               className="relative"
               onMouseEnter={() => handleMouseEnter("services")}
@@ -80,70 +81,89 @@ export default function Header() {
             >
               <button
                 type="button"
-                className={`py-1.5 flex items-center gap-1 hover:text-ink-primary transition-colors cursor-pointer ${
-                  openDropdown === "services" ? "text-ink-primary" : ""
+                className={`py-1.5 flex items-center gap-1 hover:text-ink transition-colors cursor-pointer font-medium ${
+                  openDropdown === "services" ? "text-ink" : ""
                 }`}
                 onClick={() => setOpenDropdown((prev) => (prev === "services" ? null : "services"))}
                 aria-expanded={openDropdown === "services"}
               >
                 <span>Services</span>
-                <span className="text-[10px] text-ink-muted transition-transform duration-200">
+                <span className="text-[9px] text-ink-soft transition-transform duration-200">
                   {openDropdown === "services" ? "▲" : "▼"}
                 </span>
               </button>
 
               {openDropdown === "services" && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[460px] z-50">
-                  <div className="p-4 rounded-2xl bg-[#0e1026] border border-white/12 shadow-elevated backdrop-blur-2xl grid gap-2">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[440px] z-50">
+                  <div className="p-3.5 rounded-2xl bg-white border border-line shadow-[0_20px_50px_rgba(15,26,46,0.14)] backdrop-blur-2xl grid gap-1.5 text-left">
                     <Link
-                      href="/services"
-                      className="p-3 rounded-xl hover:bg-white/5 transition-colors flex items-start gap-3 group"
+                      href="/#services"
+                      onClick={() => setOpenDropdown(null)}
+                      className="p-3 rounded-xl hover:bg-bg-alt transition-colors flex items-start gap-3 group"
                     >
-                      <div className="w-8 h-8 rounded-lg bg-accent/15 text-accent flex items-center justify-center shrink-0 text-[14px]">
-                        ★
+                      <div className="w-8 h-8 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0 text-[13px] font-semibold">
+                        01
                       </div>
                       <div>
-                        <div className="text-[13.5px] font-medium text-ink-primary group-hover:text-accent transition-colors flex items-center gap-1.5">
-                          <span>Instagram Management</span>
-                          <span className="text-[10px] font-mono text-accent">01</span>
+                        <div className="text-[13.5px] font-medium text-ink group-hover:text-accent transition-colors">
+                          High-Retention Video Editing
                         </div>
-                        <p className="text-[12px] text-ink-muted leading-relaxed font-light">
-                          Profile optimization, hook-based reels, viral scripting &amp; analytics.
+                        <p className="text-[12px] text-ink-soft leading-relaxed">
+                          Pacing, dynamic kinetic captions, audio design &amp; B-roll.
                         </p>
                       </div>
                     </Link>
 
                     <Link
-                      href="/services"
-                      className="p-3 rounded-xl hover:bg-white/5 transition-colors flex items-start gap-3 group"
+                      href="/#services"
+                      onClick={() => setOpenDropdown(null)}
+                      className="p-3 rounded-xl hover:bg-bg-alt transition-colors flex items-start gap-3 group"
                     >
-                      <div className="w-8 h-8 rounded-lg bg-white/10 text-ink-primary flex items-center justify-center shrink-0 text-[14px]">
-                        ▶
+                      <div className="w-8 h-8 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0 text-[13px] font-semibold">
+                        02
                       </div>
                       <div>
-                        <div className="text-[13.5px] font-medium text-ink-primary group-hover:text-accent transition-colors flex items-center gap-1.5">
-                          <span>YouTube Management</span>
-                          <span className="text-[10px] font-mono text-ink-muted">02</span>
+                        <div className="text-[13.5px] font-medium text-ink group-hover:text-accent transition-colors">
+                          LinkedIn Founder Authority
                         </div>
-                        <p className="text-[12px] text-ink-muted leading-relaxed font-light">
-                          Viral hook writing, long-form scriptwriting &amp; retention pacing.
+                        <p className="text-[12px] text-ink-soft leading-relaxed">
+                          Contrarian hooks, authority carousels &amp; B2B deal pipelines.
                         </p>
                       </div>
                     </Link>
 
                     <Link
-                      href="/#engine"
-                      className="p-3 rounded-xl hover:bg-white/5 transition-colors flex items-start gap-3 group border-t border-border/40"
+                      href="/#services"
+                      onClick={() => setOpenDropdown(null)}
+                      className="p-3 rounded-xl hover:bg-bg-alt transition-colors flex items-start gap-3 group"
                     >
-                      <div className="w-8 h-8 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0 text-[13px]">
-                        ⚙
+                      <div className="w-8 h-8 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0 text-[13px] font-semibold">
+                        03
                       </div>
                       <div>
-                        <div className="text-[13px] font-medium text-ink-primary group-hover:text-accent transition-colors">
-                          The 6-Step Growth Engine
+                        <div className="text-[13.5px] font-medium text-ink group-hover:text-accent transition-colors">
+                          Instagram Growth Engine
                         </div>
-                        <p className="text-[11.5px] text-ink-muted leading-relaxed font-light">
-                          Research, scripting, guided shooting, high-retention editing &amp; DM growth.
+                        <p className="text-[12px] text-ink-soft leading-relaxed">
+                          100% organic algorithmic reach &amp; automated inbound conversion.
+                        </p>
+                      </div>
+                    </Link>
+
+                    <Link
+                      href="/#services"
+                      onClick={() => setOpenDropdown(null)}
+                      className="p-3 rounded-xl hover:bg-bg-alt transition-colors flex items-start gap-3 group border-t border-line"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0 text-[13px] font-semibold">
+                        04
+                      </div>
+                      <div>
+                        <div className="text-[13.5px] font-medium text-ink group-hover:text-accent transition-colors">
+                          Content Strategy &amp; Guided Shoot
+                        </div>
+                        <p className="text-[12px] text-ink-soft leading-relaxed">
+                          2 recording days = 30 days of compounding authority content.
                         </p>
                       </div>
                     </Link>
@@ -152,7 +172,7 @@ export default function Header() {
               )}
             </div>
 
-            {/* 2. Work Mega Dropdown */}
+            {/* 2. Work Dropdown */}
             <div
               className="relative"
               onMouseEnter={() => handleMouseEnter("work")}
@@ -160,65 +180,69 @@ export default function Header() {
             >
               <button
                 type="button"
-                className={`py-1.5 flex items-center gap-1 hover:text-ink-primary transition-colors cursor-pointer ${
-                  openDropdown === "work" ? "text-ink-primary" : ""
+                className={`py-1.5 flex items-center gap-1 hover:text-ink transition-colors cursor-pointer font-medium ${
+                  openDropdown === "work" ? "text-ink" : ""
                 }`}
                 onClick={() => setOpenDropdown((prev) => (prev === "work" ? null : "work"))}
                 aria-expanded={openDropdown === "work"}
               >
                 <span>Work</span>
-                <span className="text-[10px] text-ink-muted transition-transform duration-200">
+                <span className="text-[9px] text-ink-soft transition-transform duration-200">
                   {openDropdown === "work" ? "▲" : "▼"}
                 </span>
               </button>
 
               {openDropdown === "work" && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[420px] z-50">
-                  <div className="p-4 rounded-2xl bg-[#0e1026] border border-white/12 shadow-elevated backdrop-blur-2xl grid gap-2">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[380px] z-50">
+                  <div className="p-3.5 rounded-2xl bg-white border border-line shadow-[0_20px_50px_rgba(15,26,46,0.14)] backdrop-blur-2xl grid gap-1 text-left">
                     <Link
-                      href="/work"
-                      className="p-2.5 rounded-xl hover:bg-white/5 transition-colors flex items-center justify-between group"
+                      href="/#results"
+                      onClick={() => setOpenDropdown(null)}
+                      className="p-2.5 rounded-xl hover:bg-bg-alt transition-colors flex items-center justify-between group"
                     >
                       <div className="flex items-center gap-2.5">
                         <span className="w-2 h-2 rounded-full bg-accent" />
-                        <span className="text-[13px] font-medium text-ink-primary group-hover:text-accent transition-colors">
+                        <span className="text-[13px] font-medium text-ink group-hover:text-accent transition-colors">
                           Pari Jain · 129K+
                         </span>
                       </div>
-                      <span className="text-[11px] font-mono text-ink-muted">Founder Authority</span>
+                      <span className="text-[11px] font-mono text-ink-soft">Founder Authority</span>
                     </Link>
 
                     <Link
-                      href="/work"
-                      className="p-2.5 rounded-xl hover:bg-white/5 transition-colors flex items-center justify-between group"
+                      href="/#results"
+                      onClick={() => setOpenDropdown(null)}
+                      className="p-2.5 rounded-xl hover:bg-bg-alt transition-colors flex items-center justify-between group"
                     >
                       <div className="flex items-center gap-2.5">
-                        <span className="w-2 h-2 rounded-full bg-orange-400" />
-                        <span className="text-[13px] font-medium text-ink-primary group-hover:text-accent transition-colors">
+                        <span className="w-2 h-2 rounded-full bg-accent" />
+                        <span className="text-[13px] font-medium text-ink group-hover:text-accent transition-colors">
                           Tools Fact · ₹35L Sales
                         </span>
                       </div>
-                      <span className="text-[11px] font-mono text-ink-muted">Software Funnel</span>
+                      <span className="text-[11px] font-mono text-ink-soft">Software Inbound</span>
                     </Link>
 
                     <Link
-                      href="/work"
-                      className="p-2.5 rounded-xl hover:bg-white/5 transition-colors flex items-center justify-between group"
+                      href="/#results"
+                      onClick={() => setOpenDropdown(null)}
+                      className="p-2.5 rounded-xl hover:bg-bg-alt transition-colors flex items-center justify-between group"
                     >
                       <div className="flex items-center gap-2.5">
-                        <span className="w-2 h-2 rounded-full bg-violet-400" />
-                        <span className="text-[13px] font-medium text-ink-primary group-hover:text-accent transition-colors">
+                        <span className="w-2 h-2 rounded-full bg-accent" />
+                        <span className="text-[13px] font-medium text-ink group-hover:text-accent transition-colors">
                           Demla Brothers · Shark Tank
                         </span>
                       </div>
-                      <span className="text-[11px] font-mono text-ink-muted">Cellbell Founders</span>
+                      <span className="text-[11px] font-mono text-ink-soft">Cellbell 2.4M Reach</span>
                     </Link>
 
                     <Link
                       href="/work"
-                      className="mt-2 pt-2.5 border-t border-border/40 text-[12px] font-mono text-accent hover:text-[#d2f758] flex items-center justify-between px-2"
+                      onClick={() => setOpenDropdown(null)}
+                      className="mt-2 pt-2.5 border-t border-line text-[12px] font-mono text-accent hover:underline flex items-center justify-between px-2"
                     >
-                      <span>Explore all 85+ creators archive</span>
+                      <span>Explore all 85+ creator case studies</span>
                       <span>→</span>
                     </Link>
                   </div>
@@ -227,44 +251,37 @@ export default function Header() {
             </div>
 
             {/* Flat Links */}
-            <Link href="/about" className="hover:text-ink-primary transition-colors">
+            <Link href="/#results" className="hover:text-ink transition-colors font-medium">
+              Results
+            </Link>
+            <Link href="/#testimonials" className="hover:text-ink transition-colors font-medium">
+              Testimonials
+            </Link>
+            <Link href="/#process" className="hover:text-ink transition-colors font-medium">
+              Process
+            </Link>
+            <Link href="/about" className="hover:text-ink transition-colors font-medium">
               About
-            </Link>
-            <Link href="/careers" className="hover:text-ink-primary transition-colors">
-              Careers
-            </Link>
-            <Link href="/#faq" className="hover:text-ink-primary transition-colors">
-              FAQ
             </Link>
           </nav>
 
-          {/* Right Actions: Command Palette Button + "Start Growing" Button */}
-          <div className="flex items-center gap-3">
-            <button
-              type="button"
-              onClick={() => window.dispatchEvent(new CustomEvent("open-command-palette"))}
-              className="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-surface border border-white/10 text-[11px] font-mono text-ink-muted hover:text-ink-primary hover:border-white/20 transition-colors"
-              title="Open Command Palette (⌘K)"
-              aria-label="Open command palette"
-            >
-              <Icon name="search" size={12} />
-              <span>⌘K</span>
-            </button>
-
+          {/* Right Actions: Pill CTA (Book a call) */}
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            {/* Primary Pill Button — Official Antigravity Ink (#0F1A2E) */}
             <button
               type="button"
               onClick={handleOpenConsultation}
-              className="px-4 sm:px-5 py-2 rounded-full bg-accent text-[#0a0a1f] font-body font-semibold text-[13px] sm:text-[13.5px] hover:bg-[#d2f758] transition-all duration-200 shadow-[0_0_20px_-6px_rgba(196,240,66,0.35)] flex items-center gap-1.5 group cursor-pointer"
+              className="px-4 sm:px-5 py-2 rounded-full bg-ink text-white font-body font-medium text-[13px] sm:text-[13.5px] hover:bg-[#1A2440] transition-all duration-200 shadow-sm flex items-center gap-1.5 group cursor-pointer"
             >
-              <span>Start Growing</span>
+              <span>Book a call</span>
               <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
             </button>
 
-            {/* Mobile Burger Toggle */}
+            {/* Mobile Burger Toggle (Light) */}
             <button
               type="button"
               onClick={() => setMobileOpen((prev) => !prev)}
-              className="md:hidden w-8 h-8 rounded-full bg-surface border border-white/10 flex items-center justify-center text-ink-primary"
+              className="md:hidden w-8 h-8 rounded-full bg-bg-alt border border-line flex items-center justify-center text-ink"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
             >
               {mobileOpen ? "✕" : "☰"}
@@ -272,48 +289,48 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer */}
+        {/* Mobile Navigation Drawer (Clean Pure White / Light, No Dark Color) */}
         {mobileOpen && (
-          <div className="md:hidden mt-2 p-5 rounded-2xl bg-[#0c0e24] border border-white/12 shadow-elevated backdrop-blur-2xl flex flex-col space-y-4">
+          <div className="md:hidden mt-2 p-5 rounded-2xl bg-white border border-line shadow-[0_20px_60px_rgba(15,26,46,0.14)] backdrop-blur-2xl flex flex-col space-y-3 w-full text-left pointer-events-auto">
             <Link
-              href="/work"
+              href="/#services"
               onClick={() => setMobileOpen(false)}
-              className="text-[15px] font-medium text-ink-primary hover:text-accent flex items-center justify-between"
-            >
-              <span>Work</span>
-              <span className="text-[12px] font-mono text-ink-muted">01</span>
-            </Link>
-            <Link
-              href="/services"
-              onClick={() => setMobileOpen(false)}
-              className="text-[15px] font-medium text-ink-primary hover:text-accent flex items-center justify-between"
+              className="text-[14.5px] font-medium text-ink hover:text-accent py-2 px-2.5 rounded-xl hover:bg-bg-alt flex items-center justify-between"
             >
               <span>Services</span>
-              <span className="text-[12px] font-mono text-ink-muted">02</span>
+              <span className="text-[11px] font-mono text-ink-soft">01</span>
+            </Link>
+            <Link
+              href="/#results"
+              onClick={() => setMobileOpen(false)}
+              className="text-[14.5px] font-medium text-ink hover:text-accent py-2 px-2.5 rounded-xl hover:bg-bg-alt flex items-center justify-between"
+            >
+              <span>Results &amp; Proof</span>
+              <span className="text-[11px] font-mono text-ink-soft">02</span>
+            </Link>
+            <Link
+              href="/#testimonials"
+              onClick={() => setMobileOpen(false)}
+              className="text-[14.5px] font-medium text-ink hover:text-accent py-2 px-2.5 rounded-xl hover:bg-bg-alt flex items-center justify-between"
+            >
+              <span>Testimonials</span>
+              <span className="text-[11px] font-mono text-ink-soft">03</span>
+            </Link>
+            <Link
+              href="/#process"
+              onClick={() => setMobileOpen(false)}
+              className="text-[14.5px] font-medium text-ink hover:text-accent py-2 px-2.5 rounded-xl hover:bg-bg-alt flex items-center justify-between"
+            >
+              <span>Method &amp; Process</span>
+              <span className="text-[11px] font-mono text-ink-soft">04</span>
             </Link>
             <Link
               href="/about"
               onClick={() => setMobileOpen(false)}
-              className="text-[15px] font-medium text-ink-primary hover:text-accent flex items-center justify-between"
+              className="text-[14.5px] font-medium text-ink hover:text-accent py-2 px-2.5 rounded-xl hover:bg-bg-alt flex items-center justify-between"
             >
-              <span>About</span>
-              <span className="text-[12px] font-mono text-ink-muted">03</span>
-            </Link>
-            <Link
-              href="/careers"
-              onClick={() => setMobileOpen(false)}
-              className="text-[15px] font-medium text-ink-primary hover:text-accent flex items-center justify-between"
-            >
-              <span>Careers</span>
-              <span className="text-[12px] font-mono text-ink-muted">04</span>
-            </Link>
-            <Link
-              href="/#faq"
-              onClick={() => setMobileOpen(false)}
-              className="text-[15px] font-medium text-ink-primary hover:text-accent flex items-center justify-between"
-            >
-              <span>FAQ</span>
-              <span className="text-[12px] font-mono text-ink-muted">05</span>
+              <span>About Us</span>
+              <span className="text-[11px] font-mono text-ink-soft">05</span>
             </Link>
 
             <button
@@ -322,9 +339,9 @@ export default function Header() {
                 setMobileOpen(false);
                 handleOpenConsultation();
               }}
-              className="w-full py-3 rounded-full bg-accent text-[#0a0a1f] font-body font-semibold text-[14px] mt-2"
+              className="w-full py-3 rounded-full bg-ink text-white font-body font-medium text-[14px] hover:bg-[#1A2440] transition-colors mt-2"
             >
-              Start Growing →
+              Book a Strategy Call →
             </button>
           </div>
         )}

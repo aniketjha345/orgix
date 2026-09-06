@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function WhatsAppFloat() {
   const [hovered, setHovered] = useState(false);
-  const waUrl = "https://wa.me/919999999999?text=Hi%20Orgix%20Media!%20I%20want%20to%20grow%20my%20social%20media%20organically.";
+  const waUrl = "https://wa.me/918287528395?text=Hi%20Orgix%20Media!%20I%20want%20to%20grow%20my%20social%20media.";
 
   return (
     <aside

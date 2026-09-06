@@ -224,6 +224,22 @@ export default function ContactForm() {
             </>
           )}
         </button>
+
+        <a
+          href="https://wa.me/918287528395?text=Hi%20Orgix%20Media!%20I'd%20like%20to%20schedule%20a%201:1%20strategy%20audit."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn"
+          style={{
+            background: "rgba(37, 211, 102, 0.08)",
+            color: "#128C7E",
+            border: "1px solid rgba(37, 211, 102, 0.25)",
+            padding: "14px 24px",
+            fontSize: 14.5,
+          }}
+        >
+          <Icon name="whatsapp" size={18} /> Chat on WhatsApp
+        </a>
       </div>
 
       <p className="form-note" role="status" aria-live="polite">

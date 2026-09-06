@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Icon from "../core/Icon";
+import Reveal from "../core/Reveal";
 import Button from "../ui/Button";
 import { services } from "@/data/site";
 
@@ -16,92 +15,96 @@ export default function ServicesCards({ detailed = false }) {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {services.map((svc, idx) => {
-        const isInstagram = svc.id === "instagram";
+        const isFeatured = svc.id === "instagram" || svc.id === "video-editing";
 
         return (
-          <motion.article
+          <Reveal
             key={svc.id}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0 }}
-            transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className={`relative rounded-2xl p-7 sm:p-9 flex flex-col justify-between overflow-hidden border transition-all duration-300 group ${
-              isInstagram
-                ? "bg-surface-muted/90 border-accent/30 shadow-[0_16px_40px_-12px_rgba(196,240,66,0.12)] hover:border-accent/60"
-                : "bg-surface-muted/70 border-border hover:border-white/20 shadow-subtle"
-            }`}
+            as="article"
+            delay={idx * 0.08}
+            className="h-full"
           >
-            {/* Top Meta Bar */}
-            <div>
-              <div className="flex items-center justify-between font-mono text-[11px] mb-4">
-                <span
-                  className={`px-2.5 py-1 rounded-full border ${
-                    isInstagram
-                      ? "bg-accent/10 text-accent border-accent/25"
-                      : "bg-white/5 text-ink-secondary border-white/10"
-                  }`}
-                >
-                  {svc.tag}
-                </span>
-                <span className="text-ink-muted">STAGE 0{svc.index}</span>
-              </div>
-
-              <div className="text-[12px] font-mono uppercase tracking-wider text-ink-muted mb-1">
-                {svc.name}
-              </div>
-
-              <h3 className="text-heading-xl font-display font-normal text-ink-primary tracking-tight mb-3">
-                {svc.title}
-              </h3>
-
-              <p className="text-body-md text-ink-secondary leading-relaxed font-light mb-6">
-                {svc.desc}
-              </p>
-
-              {/* Core Features List */}
-              <div className="p-4 rounded-xl bg-surface border border-border-subtle mb-6">
-                <div className="font-mono text-[10.5px] uppercase tracking-wider text-ink-muted mb-3">
-                  Scope of Delivery &amp; Architecture
-                </div>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  {svc.features.map((feat) => (
-                    <li
-                      key={feat}
-                      className="flex items-center gap-2 text-[12.5px] text-ink-secondary font-body"
-                    >
-                      <span className="w-4 h-4 rounded-full bg-accent/15 text-accent flex items-center justify-center text-[10px] shrink-0 font-bold">
-                        ✓
-                      </span>
-                      <span>{feat}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Bottom Card Footer with Metric Benchmark & CTA */}
-            <div className="pt-6 border-t border-border/80 flex flex-wrap items-center justify-between gap-4">
+            <div
+              className={`rounded-[24px] p-7 sm:p-9 flex flex-col justify-between h-full border transition-all duration-300 group bg-white ${
+                isFeatured
+                  ? "border-[rgba(46,91,255,0.22)] shadow-[0_20px_50px_rgba(46,91,255,0.08)] hover:border-accent"
+                  : "border-line shadow-[0_20px_50px_rgba(15,26,46,0.05)] hover:border-[rgba(15,26,46,0.24)]"
+              }`}
+            >
+              {/* Top Meta Bar */}
               <div>
-                <div className="text-[1.5rem] font-display font-medium text-accent leading-none mb-1">
-                  {svc.stat.value}
+                <div className="flex items-center justify-between font-mono text-[11px] mb-4">
+                  <span
+                    className={`px-3 py-1 rounded-full text-[12px] font-medium tracking-wide ${
+                      isFeatured
+                        ? "bg-[rgba(46,91,255,0.08)] text-accent border border-[rgba(46,91,255,0.2)]"
+                        : "bg-[var(--bg-alt)] text-[var(--ink-soft)] border border-line"
+                    }`}
+                  >
+                    {svc.tag}
+                  </span>
+                  <span className="text-[var(--ink-soft)] font-mono tracking-widest text-[11px]">
+                    STAGE 0{svc.index}
+                  </span>
                 </div>
-                <div className="text-[11px] font-mono text-ink-muted">
-                  {svc.stat.label}
+
+                <div className="text-[12px] font-mono uppercase tracking-wider text-[var(--ink-soft)] mb-1">
+                  {svc.name}
+                </div>
+
+                <h3 className="font-display font-medium text-[26px] sm:text-[30px] text-[var(--ink)] tracking-tight mb-3">
+                  {svc.title}
+                </h3>
+
+                <p className="text-[15px] sm:text-[16px] text-[var(--ink-soft)] leading-relaxed font-normal mb-6">
+                  {svc.desc}
+                </p>
+
+                {/* Core Features List */}
+                <div className="p-5 rounded-[16px] bg-[var(--bg)] border border-line mb-6">
+                  <div className="font-mono text-[11px] uppercase tracking-wider text-[var(--ink-soft)] mb-3 font-semibold">
+                    Scope of Delivery &amp; Architecture
+                  </div>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {svc.features.map((feat) => (
+                      <li
+                        key={feat}
+                        className="flex items-center gap-2.5 text-[13.5px] text-[var(--ink)]"
+                      >
+                        <span className="w-4 h-4 rounded-full bg-[rgba(46,91,255,0.12)] text-accent flex items-center justify-center text-[10px] shrink-0 font-bold">
+                          ✓
+                        </span>
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
-              <Button
-                variant={isInstagram ? "primary" : "secondary"}
-                size="md"
-                onClick={(e) => handleStrategyClick(e, svc)}
-                iconName="arrow"
-              >
-                Get a Strategy
-              </Button>
+              {/* Bottom Card Footer with Metric Benchmark & CTA */}
+              <div className="pt-6 border-t border-line flex flex-wrap items-center justify-between gap-4 mt-auto">
+                <div>
+                  <div className="text-[1.65rem] font-display font-medium text-[var(--ink)] leading-none mb-1">
+                    {svc.stat.value}
+                  </div>
+                  <div className="text-[12px] text-[var(--ink-soft)]">
+                    {svc.stat.label}
+                  </div>
+                </div>
+
+                <Button
+                  variant={isFeatured ? "primary" : "secondary"}
+                  size="md"
+                  onClick={(e) => handleStrategyClick(e, svc)}
+                  iconName="arrow"
+                >
+                  Get a Strategy
+                </Button>
+              </div>
             </div>
-          </motion.article>
+          </Reveal>
         );
       })}
     </div>

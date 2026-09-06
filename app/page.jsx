@@ -1,46 +1,75 @@
 import Hero from "@/components/home/Hero";
-import TrustedBy from "@/components/home/TrustedBy";
-import ProductShowcase from "@/components/home/ProductShowcase";
-import PersonaCarousel from "@/components/home/PersonaCarousel";
-import GrowthEngine from "@/components/home/GrowthEngine";
-import TestimonialCarousel from "@/components/home/TestimonialCarousel";
+import CreatorMarquee from "@/components/home/CreatorMarquee";
+import Manifesto from "@/components/home/Manifesto";
+import VideoEditingSection from "@/components/home/VideoEditingSection";
+import LinkedInSection from "@/components/home/LinkedInSection";
+import InstagramGrowthSection from "@/components/home/InstagramGrowthSection";
+import StrategySection from "@/components/home/StrategySection";
+import ResultsSection from "@/components/home/ResultsSection";
+import GrowthCalculator from "@/components/home/GrowthCalculator";
+import ComparisonMatrix from "@/components/home/ComparisonMatrix";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
+import ProcessStrip from "@/components/home/ProcessStrip";
 import SplitCtaBanner from "@/components/home/SplitCtaBanner";
-import LeadershipEditorial from "@/components/home/LeadershipEditorial";
-import FaqAccordion from "@/components/home/FaqAccordion";
-import LatestBlogGrid from "@/components/home/LatestBlogGrid";
 
+/**
+ * Orgix Media — High-Converting Luxury Authority Landing Page
+ * Architectural Flow:
+ * - Section 1: Hero (typewriter reveal, live cohort urgency, breathing particle ring)
+ * - Section 2: Social Proof Bar (greyscale marquee)
+ * - Section 3: Manifesto (bg #ECE9E2, progressive blur reveal)
+ * - Section 4: Video Editing (iPhone 15 Pro, interactive sound design, reel.webm)
+ * - Section 5: LinkedIn (bg #ECE9E2, flipped MacBook, reflection)
+ * - Section 6: Instagram Growth (8K->111K counter, drawing graph)
+ * - Section 7: Strategy (bg #ECE9E2, calendar 8s scroll loop)
+ * - Section 8: Results Carousel (4 verified creator outcome cards)
+ * - Section 9: 90-Day Organic Velocity & ROI Calculator (interactive modeler)
+ * - Section 10: Comparison Matrix (Orgix Engine vs Paid Ads vs Freelancer Roulette)
+ * - Section 11: Testimonials (5s crossfade, Playfair italic, watermark)
+ * - Section 12: Process (bg #ECE9E2, sine wave line, #2E5BFF fill)
+ * - Section 13: CTA (bg #0F1A2E dark, white ring, aurora gradient)
+ */
 export default function HomePage() {
   return (
     <>
-      {/* 01 — Full-bleed video hero + floating follower chips + 2 CTAs */}
+      {/* SECTION 1 — HERO */}
       <Hero />
 
-      {/* 02 — Trusted-by avatar marquee strip */}
-      <TrustedBy />
+      {/* SECTION 2 — SOCIAL PROOF BAR */}
+      <CreatorMarquee />
 
-      {/* 03 — Alternating product showcase: Instagram & YouTube management */}
-      <ProductShowcase />
+      {/* SECTION 3 — MANIFESTO */}
+      <Manifesto />
 
-      {/* 04 — Persona carousel: video thumbnails, tabbed by audience, 'Watch case' */}
-      <PersonaCarousel />
+      {/* SECTION 4 — VIDEO EDITING WITH SOUND DESIGN */}
+      <VideoEditingSection />
 
-      {/* 05 — The 6-step Growth Engine: sticky pinned visual with step scroll */}
-      <GrowthEngine />
+      {/* SECTION 5 — LINKEDIN */}
+      <LinkedInSection />
 
-      {/* 06 — Video testimonials carousel + written quotes */}
-      <TestimonialCarousel />
+      {/* SECTION 6 — INSTAGRAM GROWTH */}
+      <InstagramGrowthSection />
 
-      {/* 07 — Split two-column CTA banner (For Creators / For Brands) */}
+      {/* SECTION 7 — STRATEGY */}
+      <StrategySection />
+
+      {/* SECTION 8 — RESULTS CAROUSEL */}
+      <ResultsSection />
+
+      {/* SECTION 9 — INTERACTIVE 90-DAY ROI & VELOCITY CALCULATOR */}
+      <GrowthCalculator />
+
+      {/* SECTION 10 — STRATEGIC COMPARISON MATRIX */}
+      <ComparisonMatrix />
+
+      {/* SECTION 11 — TESTIMONIALS */}
+      <TestimonialsSection />
+
+      {/* SECTION 12 — PROCESS */}
+      <ProcessStrip />
+
+      {/* SECTION 13 — CTA */}
       <SplitCtaBanner />
-
-      {/* 08 — Leadership editorial 3-card layout with real bios + social links */}
-      <LeadershipEditorial />
-
-      {/* 09 — FAQ accordion: plain text, thin divider lines */}
-      <FaqAccordion />
-
-      {/* 10 — Latest blog 3-card grid */}
-      <LatestBlogGrid />
     </>
   );
 }

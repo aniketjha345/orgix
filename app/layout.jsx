@@ -1,36 +1,31 @@
-import { Bricolage_Grotesque, Manrope, JetBrains_Mono } from "next/font/google";
+import { Instrument_Sans, Inter, Playfair_Display } from "next/font/google";
 import Header from "@/components/core/Header";
 import Footer from "@/components/core/Footer";
+import Effects from "@/components/ui/Effects";
 import ConsultationModal from "@/components/ui/ConsultationModal";
 import ExitIntentModal from "@/components/ui/ExitIntentModal";
 import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
-import CustomCursor from "@/components/ui/CustomCursor";
-import CommandPalette from "@/components/ui/CommandPalette";
-import ViewTransitions from "@/components/ui/ViewTransitions";
 import "./globals.css";
-import "./case-vault.css";
-import "./antigravity-studio.css";
 
-// Font variables are exposed as `-src` sources; globals.css maps them onto the
-// public --font-* tokens with local fallbacks (cascade-order independent).
-const display = Bricolage_Grotesque({
+const displayFont = Instrument_Sans({
   subsets: ["latin"],
-  axes: ["opsz"],
-  variable: "--font-display-src",
+  weight: ["500", "600"],
+  variable: "--font-display",
   display: "swap",
 });
 
-const body = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-body-src",
-  display: "swap",
-});
-
-const mono = JetBrains_Mono({
+const bodyFont = Inter({
   subsets: ["latin"],
   weight: ["400", "500"],
-  variable: "--font-mono-src",
+  variable: "--font-body",
+  display: "swap",
+});
+
+const quoteFont = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["500"],
+  style: ["italic"],
+  variable: "--font-quote",
   display: "swap",
 });
 
@@ -38,15 +33,7 @@ export const metadata = {
   metadataBase: new URL("https://orgixmedia.com"),
   title: "Orgix Media — Personal Branding Studio for Founders & Creators",
   description:
-    "Orgix Media is India's premier personal branding studio for founders & creators. Organic Instagram & YouTube growth, viral scripting, guided shooting & high-retention editing. 1B+ views generated · 85+ creators scaled · 100% organic.",
-  keywords: [
-    "personal branding agency India",
-    "social media marketing agency India",
-    "Instagram growth agency",
-    "YouTube growth agency",
-    "creator economy",
-    "Orgix Media",
-  ],
+    "Orgix Media is India's premier personal branding studio for founders & creators. 100% organic Instagram & YouTube growth, viral scripting, guided shooting & retention editing.",
   openGraph: {
     title: "Orgix Media — Build the Brand Behind You",
     description:
@@ -67,23 +54,19 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#0a0a1f",
+  themeColor: "#F6F4EF",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`} data-theme="dark">
+    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable} ${quoteFont.variable}`}>
       <body>
-        <div className="aurora-layer" aria-hidden="true" />
-        <div className="noise-overlay" aria-hidden="true" />
-        <CustomCursor />
-        <CommandPalette />
-        <ViewTransitions />
         <a className="skip-link" href="#main">
           Skip to content
         </a>
+        <Effects />
         <Header />
         <main id="main">{children}</main>
         <Footer />

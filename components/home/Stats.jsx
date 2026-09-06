@@ -75,7 +75,7 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="relative p-7 sm:p-8 rounded-2xl bg-surface-muted/80 border border-accent/30 shadow-[0_12px_32px_-10px_rgba(196,240,66,0.12)] flex flex-col justify-between overflow-hidden group hover:border-accent/60 transition-colors"
+            className="relative p-7 sm:p-8 rounded-2xl bg-surface-muted/80 border border-accent/30 shadow-[0_12px_32px_-10px_rgba(46,91,255,0.14)] flex flex-col justify-between overflow-hidden group hover:border-accent/60 transition-colors"
           >
             {/* Top Tag */}
             <div>

@@ -13,14 +13,19 @@ const audiences = [
     icon: "rocket",
   },
   {
-    title: "Experts & CAs / Consultants",
-    text: "Chartered accountants, tax strategists, doctors, lawyers, trainers. We translate technical complexity into punchy, viral education that commands prestige and attracts high-ticket clients.",
+    title: "Experts & Consultants",
+    text: "Chartered accountants, tax strategists, doctors, lawyers, finance mentors. We translate technical complexity into punchy, viral education that commands prestige and attracts high-ticket clients.",
     icon: "compass",
   },
   {
     title: "Creators & D2C Brands",
     text: "Already posting but hitting retention plateaus? We engineer your full production pipeline — research, scripting, directed shooting and retention editing that compounds month after month.",
     icon: "camera",
+  },
+  {
+    title: "Coaches & Educators",
+    text: "Trainers, workshop leaders and cohort educators. We turn your lived frameworks into scroll-stopping short-form hooks and YouTube authority videos that convert followers into high-ticket students.",
+    icon: "sparkles",
   },
 ];
 
@@ -41,7 +46,7 @@ export default function ServicesPage() {
             Everything your brand needs <span className="grad-brand">to dominate.</span>
           </>
         }
-        lead="Two elite services. One obsessive team. From research and viral scripting to cinematic shoots and retention editing — we run the entire growth ecosystem behind your name."
+        lead="Research, scripting, shoots and edits — the full organic engine behind your name."
       >
         <div className="tag-row">
           <span className="mini-tag">Strategy → Script → Shoot → Edit → Post → Convert</span>
@@ -76,8 +81,8 @@ export default function ServicesPage() {
                       borderRadius: 14,
                       display: "grid",
                       placeItems: "center",
-                      background: "rgba(139, 92, 246, 0.15)",
-                      color: "var(--violet-2)",
+                      background: "rgba(46, 91, 255, 0.08)",
+                      color: "var(--accent)",
                       marginBottom: 22,
                     }}
                   >
@@ -86,7 +91,7 @@ export default function ServicesPage() {
                   <h3 className="display" style={{ fontSize: 22, marginBottom: 12, letterSpacing: "-0.01em" }}>
                     {a.title}
                   </h3>
-                  <p style={{ color: "var(--ink-3)", fontSize: 14.5, lineHeight: 1.75 }}>{a.text}</p>
+                  <p style={{ color: "var(--ink-soft)", fontSize: 14.5, lineHeight: 1.75 }}>{a.text}</p>
                 </div>
               </Reveal>
             ))}

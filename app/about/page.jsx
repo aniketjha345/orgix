@@ -1,6 +1,5 @@
 import PageHero from "@/components/ui/PageHero";
 import Team from "@/components/home/Team";
-import Stats from "@/components/home/Stats";
 import AgencyJourney from "@/components/about/AgencyJourney";
 import CtaSection from "@/components/ui/CtaSection";
 import Reveal from "@/components/core/Reveal";
@@ -31,10 +30,8 @@ export default function AboutPage() {
             We turn names <span className="grad-brand">into brands.</span>
           </>
         }
-        lead="Orgix Media is a dedicated personal branding studio based in Delhi. Not a generic marketing agency, not an ad buyer — we build the complete organic content ecosystem behind your name."
+        lead="Strategy to execution — Instagram, YouTube, scripting and edits. One complete ecosystem around your expertise."
       />
-
-      <Stats />
 
       {/* 2-Column Editorial Split with Sticky Left Anchor */}
       <section className="section editorial-split-section">
@@ -42,7 +39,7 @@ export default function AboutPage() {
           {/* Left: Sticky oversized statement / anchor */}
           <div className="editorial-sticky-col">
             <div className="editorial-sticky-inner">
-              <span className="eyebrow" style={{ color: "var(--lime)" }}>
+              <span className="eyebrow" style={{ color: "var(--accent)" }}>
                 02 — THE MANIFESTO
               </span>
               <div className="editorial-display-anchor">
@@ -138,8 +135,8 @@ export default function AboutPage() {
                   <span
                     className="value-icon-box"
                     style={{
-                      background: `rgba(${i % 2 ? "139, 92, 246" : "200, 240, 77"}, 0.14)`,
-                      color: i % 2 ? "var(--violet-2)" : "var(--lime)",
+                      background: "rgba(46, 91, 255, 0.08)",
+                      color: "var(--accent)",
                     }}
                   >
                     <Icon name={v.icon} size={22} />

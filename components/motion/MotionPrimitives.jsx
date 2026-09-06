@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { useRef, useState } from "react";
 
 export const transitions = {
   fast: { duration: 0.18, ease: [0.16, 1, 0.3, 1] },
@@ -159,54 +158,6 @@ export function StaggerItem({
         },
       }}
       className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
-
-/**
- * MagneticButton
- */
-export function MagneticButton({
-  children,
-  strength = 0.25,
-  className = "",
-  ...props
-}) {
-  const ref = useRef(null);
-  const [pos, setPos] = useState({ x: 0, y: 0 });
-  const prefersReduced = useReducedMotion();
-
-  const handleMouseMove = (e) => {
-    if (prefersReduced || !ref.current) return;
-    const { left, top, width, height } = ref.current.getBoundingClientRect();
-    const x = (e.clientX - (left + width / 2)) * strength;
-    const y = (e.clientY - (top + height / 2)) * strength;
-    setPos({ x, y });
-  };
-
-  const handleMouseLeave = () => {
-    setPos({ x: 0, y: 0 });
-  };
-
-  if (prefersReduced) {
-    return (
-      <div className={className} {...props}>
-        {children}
-      </div>
-    );
-  }
-
-  return (
-    <motion.div
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      animate={{ x: pos.x, y: pos.y }}
-      transition={{ type: "spring", stiffness: 260, damping: 20, mass: 0.5 }}
-      className={`inline-block ${className}`}
-      {...props}
     >
       {children}
     </motion.div>

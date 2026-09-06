@@ -45,7 +45,7 @@ export default function WallCard({ s, i }) {
         <img
           src={imgSrc(s.img)}
           alt={`${s.name} — Instagram growth with Orgix Media`}
-          loading="lazy"
+          loading="eager"
           className="wall-card-img"
         />
         <div className="wall-card-gradient" />
@@ -54,7 +54,7 @@ export default function WallCard({ s, i }) {
         <div className="wall-card-top">
           <span className="wall-card-badge">{s.role}</span>
           <span className="wall-card-followers">
-            <Icon name="trend" size={12} style={{ color: "var(--lime)" }} />
+            <Icon name="trend" size={12} style={{ color: "var(--accent)" }} />
             {s.followers}
           </span>
         </div>
@@ -63,7 +63,7 @@ export default function WallCard({ s, i }) {
         <div className="wall-card-meta">
           <div className="wall-card-name-row">
             <h4 className="wall-card-name">{s.name}</h4>
-            {s.verified && <Icon name="verified" size={15} style={{ color: "var(--lime)" }} />}
+            {s.verified && <Icon name="verified" size={15} style={{ color: "var(--accent)" }} />}
           </div>
           <span className="wall-card-handle">{s.handle}</span>
           <p className="wall-card-work">{s.work}</p>
@@ -87,7 +87,7 @@ export default function WallCard({ s, i }) {
               className="wall-stat-handle"
               onClick={(e) => e.stopPropagation()}
               title={`View ${s.name} on Instagram`}
-              style={{ display: "inline-flex", alignItems: "center", gap: 4, color: "var(--lime)", textDecoration: "none" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 4, color: "var(--accent)", textDecoration: "none" }}
             >
               <Icon name="ig" size={13} />
               {s.handle}

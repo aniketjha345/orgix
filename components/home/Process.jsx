@@ -112,7 +112,7 @@ export default function Process({ index = "03" }) {
                     <div className="flex items-center gap-3">
                       <span
                         className={`w-2 h-2 rounded-full transition-colors ${
-                          isActive ? "bg-accent shadow-[0_0_8px_#c4f042]" : "bg-white/20"
+                          isActive ? "bg-accent shadow-[0_0_8px_#2E5BFF]" : "bg-white/20"
                         }`}
                       />
                       <span className="font-mono text-[11.5px] text-ink-muted">

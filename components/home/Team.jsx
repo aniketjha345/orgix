@@ -18,7 +18,7 @@ export default function Team({ index = "05" }) {
           }
           lead={
             <>
-              {teamStat.headline} <b style={{ color: "var(--lime)" }}>{teamStat.highlight}</b> {teamStat.rest}
+              {teamStat.headline} <b style={{ color: "var(--accent)" }}>{teamStat.highlight}</b> {teamStat.rest}
             </>
           }
         />
@@ -27,7 +27,7 @@ export default function Team({ index = "05" }) {
           {team.map((m, i) => (
             <Reveal delay={i * 0.12} as="article" key={m.name} className="member">
               <div className="ph">
-                <img src={imgSrc(m.img)} alt={m.name} loading="lazy" width={500} height={520} />
+                <img src={imgSrc(m.img)} alt={m.name} loading="eager" width={500} height={520} />
                 <div className="tag">
                   <div>
                     <div className="role-t">{m.role}</div>
