@@ -63,7 +63,7 @@ export default function WorkExplorer() {
                 YOUR PROFILE
               </span>
               <span className="wall-card-followers">
-                <Icon name="trend" size={12} style={{ color: "var(--lime)" }} />
+                <Icon name="trend" size={12} style={{ color: "var(--accent)" }} />
                 Next In Line
               </span>
             </div>

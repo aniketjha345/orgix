@@ -13,11 +13,7 @@ export default function AgencyJourney({ index = "04" }) {
           center
           index={index}
           kicker="EVOLUTION &amp; MILESTONES"
-          title={
-            <>
-              From a small room to <span className="grad-hot">1 Billion+ views.</span>
-            </>
-          }
+          title={<>From a small room to 1 Billion+ views.</>}
           lead="How two founders turned a belief in organic growth into India's most dedicated personal branding studio."
         />
 

@@ -110,7 +110,7 @@ export default function MediaUploader() {
             display: "grid",
             placeItems: "center",
             margin: "0 auto 18px",
-            background: "rgba(139,92,246,.16)",
+            background: "rgba(46,91,255,0.12)",
             color: "var(--violet-2)",
           }}
         >

@@ -1,9 +1,10 @@
 # Orgix Media — Next-Level Redesign
 
 A complete redesign of [orgixmedia.com](https://orgixmedia.com/) — India's personal branding
-agency — built to win the pitch. Dark premium canvas, lime/violet/IG-gradient system,
-Space Grotesk display type, scroll-reveal motion, animated counters, infinite marquees,
-pointer-parallax hero collage and a fully working contact flow.
+agency — built to win the pitch. Antigravity-style light editorial system: warm paper
+canvas, navy ink, blue accent, Instrument Sans display type, scroll-reveal motion,
+animated counters, GSAP-augmented character cast, device mockups, an interactive 6-step
+Growth Engine and a fully working contact flow.
 
 Built with **Next.js 16 (App Router)** + handcrafted CSS. No Tailwind, no UI-kit bloat —
 every pixel is custom. Content lives in one editable file (`data/site.js`), so text,
