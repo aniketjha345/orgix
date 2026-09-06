@@ -59,97 +59,105 @@ export default function ComparisonMatrix() {
         </div>
 
         {/* Desktop / Tablet Comparison Grid */}
-        <div className="hidden md:block bg-white rounded-[28px] border border-line overflow-hidden shadow-[0_20px_50px_rgba(15,26,46,0.05)]">
-          {/* Table Header */}
-          <div className="grid grid-cols-12 border-b border-line bg-[#FAF8F5] text-left">
-            <div className="col-span-3 p-5 lg:p-6 text-[11.5px] font-mono uppercase tracking-wider text-ink-soft flex items-center">
-              Strategic Dimension
-            </div>
-            {/* Orgix Column Highlight */}
-            <div className="col-span-3.5 p-5 lg:p-6 bg-ink text-white relative">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-accent text-[9.5px] font-mono uppercase tracking-wider font-semibold text-white mb-1.5">
-                The Compounding Engine
+        <div className="hidden md:block overflow-x-auto pb-4">
+          <div className="min-w-[840px] bg-white rounded-[28px] border border-line overflow-hidden shadow-[0_20px_50px_rgba(15,26,46,0.05)]">
+            {/* Table Header */}
+            <div className="grid grid-cols-12 border-b border-line bg-[#FAF8F5] text-left">
+              {/* Strategic Dimension */}
+              <div className="col-span-3 p-5 lg:p-6 text-[12px] font-mono uppercase tracking-wider text-ink-soft flex items-center">
+                Strategic Dimension
               </div>
-              <div className="text-[17px] font-display font-semibold">Orgix Media</div>
-              <div className="text-[11px] text-white/60 mt-0.5">End-to-End Organic Authority</div>
-            </div>
-            <div className="col-span-2.5 p-5 lg:p-6 text-left border-l border-line">
-              <div className="text-[10px] font-mono uppercase tracking-wider text-ink-soft mb-1">
-                Alternative A
-              </div>
-              <div className="text-[15px] font-semibold text-ink">Paid Meta & Google Ads</div>
-              <div className="text-[11px] text-ink-soft mt-0.5">Ad-spend dependent</div>
-            </div>
-            <div className="col-span-3 p-5 lg:p-6 text-left border-l border-line">
-              <div className="text-[10px] font-mono uppercase tracking-wider text-ink-soft mb-1">
-                Alternative B
-              </div>
-              <div className="text-[15px] font-semibold text-ink">Freelancers / Agencies</div>
-              <div className="text-[11px] text-ink-soft mt-0.5">Disjointed execution</div>
-            </div>
-          </div>
 
-          {/* Table Body Rows */}
-          <div className="divide-y divide-line">
-            {COMPARISON_ROWS.map((row, idx) => (
-              <div
-                key={idx}
-                className="grid grid-cols-12 items-stretch transition-colors hover:bg-[#FAF8F5]/50"
+              {/* Orgix Column Highlight */}
+              <div className="col-span-3 p-5 lg:p-6 bg-ink text-white relative flex flex-col justify-center">
+                <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-accent text-[9px] font-mono uppercase tracking-wider font-semibold text-white mb-2 w-fit whitespace-nowrap">
+                  The Compounding Engine
+                </div>
+                <div className="text-[18px] font-display font-semibold">Orgix Media</div>
+                <div className="text-[11.5px] text-white/60 mt-0.5">End-to-End Organic Authority</div>
+              </div>
+
+              {/* Alternative A */}
+              <div className="col-span-3 p-5 lg:p-6 text-left border-l border-line flex flex-col justify-center">
+                <div className="text-[10px] font-mono uppercase tracking-wider text-ink-soft mb-1.5">
+                  Alternative A
+                </div>
+                <div className="text-[16px] font-semibold text-ink">Paid Meta & Google Ads</div>
+                <div className="text-[11.5px] text-ink-soft mt-0.5">Ad-spend dependent</div>
+              </div>
+
+              {/* Alternative B */}
+              <div className="col-span-3 p-5 lg:p-6 text-left border-l border-line flex flex-col justify-center">
+                <div className="text-[10px] font-mono uppercase tracking-wider text-ink-soft mb-1.5">
+                  Alternative B
+                </div>
+                <div className="text-[16px] font-semibold text-ink">Freelancers / Agencies</div>
+                <div className="text-[11.5px] text-ink-soft mt-0.5">Disjointed execution</div>
+              </div>
+            </div>
+
+            {/* Table Body Rows */}
+            <div className="divide-y divide-line">
+              {COMPARISON_ROWS.map((row, idx) => (
+                <div
+                  key={idx}
+                  className="grid grid-cols-12 items-stretch transition-colors hover:bg-[#FAF8F5]/50"
+                >
+                  {/* Dimension label */}
+                  <div className="col-span-3 p-5 lg:p-6 flex items-center">
+                    <span className="text-[14px] font-semibold text-ink font-body">
+                      {row.dimension}
+                    </span>
+                  </div>
+
+                  {/* Orgix cell (highlighted) */}
+                  <div className="col-span-3 p-5 lg:p-6 bg-[#0F1A2E]/[0.03] border-x border-ink/10 flex items-start gap-3">
+                    <span className="w-5 h-5 rounded-full bg-accent/15 text-accent flex items-center justify-center shrink-0 mt-0.5 text-[12px] font-bold">
+                      ✓
+                    </span>
+                    <p className="text-[13px] leading-relaxed text-ink font-medium">
+                      {row.orgix}
+                    </p>
+                  </div>
+
+                  {/* Paid Ads cell */}
+                  <div className="col-span-3 p-5 lg:p-6 border-r border-line flex items-start gap-2.5">
+                    <span className="w-4 h-4 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-bold">
+                      ✕
+                    </span>
+                    <p className="text-[12.5px] leading-relaxed text-ink-soft">
+                      {row.ads}
+                    </p>
+                  </div>
+
+                  {/* Freelancers cell */}
+                  <div className="col-span-3 p-5 lg:p-6 flex items-start gap-2.5">
+                    <span className="w-4 h-4 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-bold">
+                      △
+                    </span>
+                    <p className="text-[12.5px] leading-relaxed text-ink-soft">
+                      {row.freelancer}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Table Footer Action */}
+            <div className="p-6 bg-[#FAF8F5] border-t border-line flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="text-[13px] text-ink-soft">
+                Ready to stop renting attention and start owning permanent distribution?
+              </div>
+              <Button
+                variant="primary"
+                href="/contact"
+                onClick={handleOpenConsult}
+                className="whitespace-nowrap"
+                ariaLabel="Switch to organic authority"
               >
-                {/* Dimension label */}
-                <div className="col-span-3 p-5 lg:p-6 flex items-center">
-                  <span className="text-[13.5px] font-semibold text-ink font-body">
-                    {row.dimension}
-                  </span>
-                </div>
-
-                {/* Orgix cell (highlighted) */}
-                <div className="col-span-3.5 p-5 lg:p-6 bg-[#0F1A2E]/[0.03] border-x border-ink/10 flex items-start gap-3">
-                  <span className="w-5 h-5 rounded-full bg-accent/15 text-accent flex items-center justify-center shrink-0 mt-0.5 text-[12px] font-bold">
-                    ✓
-                  </span>
-                  <p className="text-[13px] leading-relaxed text-ink font-medium">
-                    {row.orgix}
-                  </p>
-                </div>
-
-                {/* Paid Ads cell */}
-                <div className="col-span-2.5 p-5 lg:p-6 border-r border-line flex items-start gap-2.5">
-                  <span className="w-4 h-4 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-bold">
-                    ✕
-                  </span>
-                  <p className="text-[12.5px] leading-relaxed text-ink-soft">
-                    {row.ads}
-                  </p>
-                </div>
-
-                {/* Freelancers cell */}
-                <div className="col-span-3 p-5 lg:p-6 flex items-start gap-2.5">
-                  <span className="w-4 h-4 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-bold">
-                    △
-                  </span>
-                  <p className="text-[12.5px] leading-relaxed text-ink-soft">
-                    {row.freelancer}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Table Footer Action */}
-          <div className="p-6 bg-[#FAF8F5] border-t border-line flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-[13px] text-ink-soft">
-              Ready to stop renting attention and start owning permanent distribution?
+                Partner with Orgix →
+              </Button>
             </div>
-            <Button
-              variant="primary"
-              href="/contact"
-              onClick={handleOpenConsult}
-              className="whitespace-nowrap"
-              ariaLabel="Switch to organic authority"
-            >
-              Partner with Orgix →
-            </Button>
           </div>
         </div>
 
