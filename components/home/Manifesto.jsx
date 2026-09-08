@@ -27,17 +27,24 @@ export default function Manifesto() {
       return;
     }
 
+    let ticking = false;
     const onScroll = () => {
-      const root = rootRef.current;
-      if (!root) return;
-      const rect = root.getBoundingClientRect();
-      const h = window.innerHeight;
-      
-      // Calculate how far through the section the viewport is
-      // rect.top starts at h (entering) down to -rect.height (leaving)
-      const progress = Math.min(Math.max((h * 0.7 - rect.top) / (rect.height * 0.7), 0), 1);
-      const step = Math.min(Math.floor(progress * LINES.length), LINES.length - 1);
-      setActiveIdx(step);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const root = rootRef.current;
+        if (root) {
+          const rect = root.getBoundingClientRect();
+          const h = window.innerHeight;
+          
+          // Calculate how far through the section the viewport is
+          // rect.top starts at h (entering) down to -rect.height (leaving)
+          const progress = Math.min(Math.max((h * 0.7 - rect.top) / (rect.height * 0.7), 0), 1);
+          const step = Math.min(Math.floor(progress * LINES.length), LINES.length - 1);
+          setActiveIdx(step);
+        }
+        ticking = false;
+      });
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });

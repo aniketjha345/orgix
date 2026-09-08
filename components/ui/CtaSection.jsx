@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Button from "./Button";
 import { FadeUp } from "../motion/MotionPrimitives";
 

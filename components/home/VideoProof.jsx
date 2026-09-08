@@ -44,7 +44,7 @@ const VIDEOS = [
     stat: "23.6K+ followers",
     badge: "International Trade",
     quote: "Constructed high-converting inbound funnels that consistently generate qualified international trade leads.",
-    poster: "/images/creators/amit-arora.png",
+    poster: "/images/creators/amit-arora.webp",
     src: `${CLOUD}/orgix-media/vid_client4.mp4`,
   },
   {

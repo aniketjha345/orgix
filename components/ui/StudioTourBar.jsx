@@ -5,72 +5,73 @@ import { usePathname } from "next/navigation";
 import { sound } from "@/lib/sound";
 
 // ============================================================================
-// ALL 8 FREESTANDING 3D FIGURINE HEROES
+// THE 8-MEMBER ORGIX TEAM (the people behind the engine)
+// Human roles — no game jargon.
 // ============================================================================
 const FIGURINES = [
   {
     id: "strategist",
     name: "The Strategist",
-    role: "Moat Architect · Lvl 5",
-    avatar: "/images/figurines/strategist.png",
+    role: "Brand Strategist",
+    avatar: "/images/figurines/strategist.webp",
     themeColor: "#EA580C",
-    intro: "I engineer non-linear category moats. Paid ads expire; organic monopolies compound forever.",
+    intro: "I help you claim the territory nobody's taken yet — so every reel you make builds a position no one can copy.",
   },
   {
     id: "creator",
-    name: "The Creator",
-    role: "Hook Architect · Lvl 4",
-    avatar: "/images/figurines/creator.png",
+    name: "The Scriptwriter",
+    role: "Scriptwriter",
+    avatar: "/images/figurines/creator.webp",
     themeColor: "#16A34A",
-    intro: "I design scroll-stopping hooks. The first 1.2 seconds decides if your reel gets 1K or 1M views.",
+    intro: "I turn the things you already know into hooks and stories people actually watch till the end.",
   },
   {
     id: "director",
     name: "The Director",
-    role: "Camera Commander · Lvl 5",
-    avatar: "/images/figurines/director.png",
+    role: "Shooting Director",
+    avatar: "/images/figurines/director.webp",
     themeColor: "#DB2777",
-    intro: "I guide 2-day shoots in our Delhi studio that produce 30 days of high-authority content.",
+    intro: "I run calm, guided shoot days in our Delhi studio that give you a month of content in one sitting.",
   },
   {
     id: "alchemist",
-    name: "The Alchemist",
-    role: "Sound Foley Master · Lvl 5",
-    avatar: "/images/figurines/alchemist.png",
+    name: "The Editor",
+    role: "Video Editor",
+    avatar: "/images/figurines/alchemist.webp",
     themeColor: "#0891B2",
-    intro: "I craft kinetic subtitles & sound foley that keep 73% of mute viewers watching till the end.",
+    intro: "I cut with rhythm and add kinetic text and sound so viewers — even on mute — stay till the last frame.",
   },
   {
     id: "analyst",
     name: "The Analyst",
-    role: "Algorithm Scientist · Lvl 5",
-    avatar: "/images/figurines/analyst.png",
+    role: "Growth Analyst",
+    avatar: "/images/figurines/analyst.webp",
     themeColor: "#7C3AED",
-    intro: "I track Average Percentage Viewed & retention curves. Data before drama, always.",
+    intro: "I watch retention curves and average-percentage-viewed. Data before drama, every time.",
   },
   {
     id: "whisperer",
-    name: "The Whisperer",
-    role: "Conversion Sage · Lvl 6",
-    avatar: "/images/figurines/whisperer.png",
+    name: "The Strategist",
+    role: "Conversion Strategist",
+    avatar: "/images/figurines/whisperer.webp",
     themeColor: "#059669",
-    intro: "I engineer comment-to-DM funnels and automated inbound flows that turn views into high-ticket contracts.",
+    intro: "I turn views into replies and replies into paying clients — with funnels that feel like conversation, not marketing.",
   },
   {
     id: "catalyst",
-    name: "The Catalyst",
-    role: "Trend Igniter · Lvl 5",
-    avatar: "/images/figurines/catalyst.png",
+    name: "The Trend Scout",
+    role: "Trend Strategist",
+    avatar: "/images/figurines/catalyst.webp",
     themeColor: "#D97706",
-    intro: "I identify cultural momentum and algorithmic triggers to explode your reach across Explore feeds.",
+    intro: "I spot momentum early and help you ride the right wave before your niche gets crowded.",
   },
   {
     id: "builder",
     name: "The Builder",
-    role: "Scale General · Lvl 6",
-    avatar: "/images/figurines/builder.png",
+    role: "Founder & Account Lead",
+    avatar: "/images/figurines/builder.webp",
     themeColor: "#2E5BFF",
-    intro: "I scale empires from 0 to 1M+ followers. All 8 minds work under one roof at our Delhi headquarters.",
+    intro: "I keep all of us aligned on your goal — from the first call to the day you hit 1M followers.",
   },
 ];
 
@@ -85,120 +86,120 @@ const PAGE_QUESTS = {
       stepNum: 1,
       side: "left",
       character: "The Strategist",
-      role: "Moat Architect · Lvl 5",
-      avatar: "/images/figurines/strategist.png",
+      role: "Brand Strategist",
+      avatar: "/images/figurines/strategist.webp",
       themeColor: "#EA580C",
-      kicker: "STEP 01 · THE ORGANIC RULE",
+      kicker: "01 · WHY 100% ORGANIC",
       dialogue:
-        "Chief! Look right here at our founding rule: '100% Organic Growth · No Ads · No Bots'. Paid ads rent attention that leaves when your budget ends. Organic authority builds a compound monopoly!",
+        "See that promise up top? '100% Organic Growth · No Ads · No Bots'. Here's why it matters: ads stop working the moment you stop paying. Organic authority keeps compounding — that's the honest way to build a brand people trust.",
       target: ".hero-rise-1",
-      targetLabel: "Inspect Organic Rule",
-      actionHint: "👉 Pointing right at our No-Ad guarantee!",
+      targetLabel: "See our promise",
+      actionHint: "Right there — our no-shortcuts guarantee.",
     },
     {
       id: "home-2",
       stepNum: 2,
       side: "right",
-      character: "The Creator",
-      role: "Hook Architect · Lvl 4",
-      avatar: "/images/figurines/creator.png",
+      character: "The Scriptwriter",
+      role: "Scriptwriter",
+      avatar: "/images/figurines/creator.webp",
       themeColor: "#16A34A",
-      kicker: "STEP 02 · VERIFIED SOCIAL PROOF",
+      kicker: "02 · REAL, VERIFIED RESULTS",
       dialogue:
-        "Chief! Switched over to your right side! Inspect this proof pill: 85+ creator partners and 1.0B+ organic views. Every view earned purely through storytelling and retention hooks!",
+        "This is what we've actually done: 85+ creators and founders grown, over a billion organic views. No bought followers, no fake numbers — every view earned through stories people chose to watch.",
       target: ".hero-rise-5",
-      targetLabel: "Inspect 1.0B Views",
-      actionHint: "👈 Pointing left at our 1.0B views stat!",
+      targetLabel: "See the numbers",
+      actionHint: "Left there — our track record at a glance.",
     },
     {
       id: "home-3",
       stepNum: 3,
       side: "left",
-      character: "The Catalyst",
-      role: "Trend Igniter · Lvl 5",
-      avatar: "/images/figurines/catalyst.png",
+      character: "The Trend Scout",
+      role: "Trend Strategist",
+      avatar: "/images/figurines/catalyst.webp",
       themeColor: "#D97706",
-      kicker: "STEP 03 · THE CREATOR PROOF WALL",
+      kicker: "03 · THE CLIENTS BEHIND THE GROWTH",
       dialogue:
-        "Chief! Flying down to our Results Wall! Look at these 24 real creators — Shark Tank brands like Cellbell, cricketer Royston Dias, and finance creator Gaurav Mahawar. Tap 'Inspect' to fly directly to their verified metrics!",
+        "Scroll down and you'll meet the people behind the growth — Shark Tank brands like Cellbell, cricketer Royston Dias, finance creator Gaurav Mahawar. These aren't stock images; they're real clients we've scaled.",
       target: "#results",
-      targetLabel: "Inspect 24 Creator Proofs",
-      actionHint: "👉 Check each creator card & growth numbers!",
+      targetLabel: "Meet the clients",
+      actionHint: "Take a look at their results.",
     },
     {
       id: "home-4",
       stepNum: 4,
       side: "right",
       character: "The Director",
-      role: "Camera Commander · Lvl 5",
-      avatar: "/images/figurines/director.png",
+      role: "Shooting Director",
+      avatar: "/images/figurines/director.webp",
       themeColor: "#DB2777",
-      kicker: "STEP 04 · DELHI STUDIO ENGINE",
+      kicker: "04 · OUR DELHI STUDIO",
       dialogue:
-        "Back on your right, Chief! Look at our 6-step engine. We are not freelancers on laptops — we operate a 25-30 member dedicated team under one roof in Delhi HQ. Check out our real studio operations!",
+        "We're not freelancers working from laptops. There's a full team of 25–30 strategists, writers, editors and shooters under one roof in Delhi. This is how we go from a single shoot day to a full month of content — reliably.",
       target: "#process",
-      targetLabel: "Tour Delhi Studio HQ",
-      actionHint: "👈 Pointing at our real in-house studio team!",
+      targetLabel: "Tour the studio",
+      actionHint: "See how the engine actually runs.",
     },
     {
       id: "home-5",
       stepNum: 5,
       side: "left",
-      character: "The Alchemist",
-      role: "Sound Foley Master · Lvl 5",
-      avatar: "/images/figurines/alchemist.png",
+      character: "The Editor",
+      role: "Video Editor",
+      avatar: "/images/figurines/alchemist.webp",
       themeColor: "#0891B2",
-      kicker: "STEP 05 · RETENTION CUTS & SOUND",
+      kicker: "05 · RETENTION-DRIVEN EDITING",
       dialogue:
-        "Chief! Jumped over to the left! In short-form video, 73% watch on mute. We inject kinetic typography, audio foley, and micro-cuts so viewers never scroll away. Test our retention edits!",
+        "Here's a little detail most people miss: about 73% watch reels on mute. So we add kinetic text, sound design and tight pacing that keep people watching even with sound off. That's what makes a video impossible to scroll past.",
       target: "#editing",
-      targetLabel: "Test Retention Edits",
-      actionHint: "👉 Inspect our audio foley & micro-pacing!",
+      targetLabel: "Watch our edits",
+      actionHint: "Test the retention for yourself.",
     },
     {
       id: "home-6",
       stepNum: 6,
       side: "right",
-      character: "The Whisperer",
-      role: "Conversion Sage · Lvl 6",
-      avatar: "/images/figurines/whisperer.png",
+      character: "The Strategist",
+      role: "Conversion Strategist",
+      avatar: "/images/figurines/whisperer.webp",
       themeColor: "#059669",
-      kicker: "STEP 06 · HIGH-TICKET MONETIZATION",
+      kicker: "06 · GROWTH THAT PAYS FOR ITSELF",
       dialogue:
-        "Chief! I'm on your right! A million views means nothing without pipeline. We build automated DM funnels and lead nurturing so every viral post converts into high-ticket clients and deals!",
+        "A million views means nothing if it doesn't pay. We also build comment-to-DM funnels and lead nurturing, so your viral reach actually turns into clients and deals — not just likes.",
       target: "#cast",
-      targetLabel: "Inspect 8-Mind Cast",
-      actionHint: "👈 Meet all 8 minds working in your corner!",
+      targetLabel: "Meet the full team",
+      actionHint: "Everyone working in your corner.",
     },
     {
       id: "home-7",
       stepNum: 7,
       side: "left",
       character: "The Analyst",
-      role: "Algorithm Scientist · Lvl 5",
-      avatar: "/images/figurines/analyst.png",
+      role: "Growth Analyst",
+      avatar: "/images/figurines/analyst.webp",
       themeColor: "#7C3AED",
-      kicker: "STEP 07 · THE UNFAIR ADVANTAGE MATRIX",
+      kicker: "07 · WHY WE'RE DIFFERENT",
       dialogue:
-        "Chief! Check the data telemetry on your left! Inspect our Comparison Matrix — see how Orgix gives you a 100% in-house studio, proprietary research, and custom DM funnels that amateur agencies can't touch!",
+        "Want to see the honest comparison? Set us against paid ads and freelancers. We keep everything in-house — strategy, shooting, editing, funnels. That's how you get consistent results, not one-off videos.",
       target: "#comparison",
-      targetLabel: "Inspect Moat Matrix",
-      actionHint: "👉 See our 6 unfair competitive advantages!",
+      targetLabel: "See the comparison",
+      actionHint: "The real difference, side by side.",
     },
     {
       id: "home-8",
       stepNum: 8,
       side: "right",
       character: "The Builder",
-      role: "Scale General · Lvl 6",
-      avatar: "/images/figurines/builder.png",
+      role: "Founder & Account Lead",
+      avatar: "/images/figurines/builder.webp",
       themeColor: "#2E5BFF",
-      kicker: "FINAL STEP · MOBILIZE YOUR EMPIRE",
+      kicker: "08 · YOUR TURN",
       dialogue:
-        "Final Quest, Chief! All 8 studio minds are assembled and standing by. Viral reach means nothing without revenue. Tap 'Book Free Strategy Call' to claim your 90-day trajectory slot!",
+        "All right — that's the whole picture. If it feels like the right fit, book a free call and we'll map out your 90-day growth plan. No pressure, just a real conversation about your brand.",
       target: "#cta",
-      targetLabel: "Claim 90-Day Slot",
-      actionHint: "👈 Tap Deploy to assemble the squad behind you!",
+      targetLabel: "Book a free call",
+      actionHint: "Start with a real conversation.",
     },
   ],
 
@@ -208,75 +209,75 @@ const PAGE_QUESTS = {
       stepNum: 1,
       side: "left",
       character: "The Strategist",
-      role: "Moat Architect · Lvl 5",
-      avatar: "/images/figurines/strategist.png",
+      role: "Brand Strategist",
+      avatar: "/images/figurines/strategist.webp",
       themeColor: "#EA580C",
-      kicker: "STEP 01 · CATEGORY FILTERS",
+      kicker: "01 · BROWSE THE PORTFOLIO",
       dialogue:
-        "Chief! Welcome to the Work Vault! Use these filter tabs — 'All', 'Founders', 'Creators', and 'Brands' — to explore 24 authentic creator profiles scaled 100% organically!",
+        "Welcome to our work — a portfolio of 24 creators and founders we've grown, 100% organically. Use these filters to explore by 'All', 'Founders', 'Creators', or 'Brands'.",
       target: ".filters",
-      targetLabel: "Inspect Filter Tabs",
-      actionHint: "👉 Tap tabs to switch between Founders and Brands!",
+      targetLabel: "Browse the filters",
+      actionHint: "Switch between founders and brands.",
     },
     {
       id: "work-2",
       stepNum: 2,
       side: "right",
       character: "The Analyst",
-      role: "Algorithm Scientist · Lvl 5",
-      avatar: "/images/figurines/analyst.png",
+      role: "Growth Analyst",
+      avatar: "/images/figurines/analyst.webp",
       themeColor: "#7C3AED",
-      kicker: "STEP 02 · SHARK TANK PROOF",
+      kicker: "02 · PROOF THAT TRANSLATES",
       dialogue:
-        "Over on your right, Chief! Check out Shark Tank brand Cellbell (23.1k followers) and Mintree! Real founder-led authority built purely through organic video retention!",
+        "Notice the names that matter — Shark Tank brands like Cellbell and Mintree. Real, founder-led authority built purely through organic video retention.",
       target: ".wall-grid",
-      targetLabel: "Inspect Shark Tank Case Studies",
-      actionHint: "👈 Check verified metrics on client cards!",
+      targetLabel: "See the case studies",
+      actionHint: "Each card shows verified results.",
     },
     {
       id: "work-3",
       stepNum: 3,
       side: "left",
-      character: "The Catalyst",
-      role: "Trend Igniter · Lvl 5",
-      avatar: "/images/figurines/catalyst.png",
+      character: "The Trend Scout",
+      role: "Trend Strategist",
+      avatar: "/images/figurines/catalyst.webp",
       themeColor: "#D97706",
-      kicker: "STEP 03 · CELEBRITY & NICHE REACH",
+      kicker: "03 · AUTHORITY IN EVERY NICHE",
       dialogue:
-        "Jumped to the left! Look at cricketer Royston Dias (31.1k), CA Jyoti Goyal (36.7k), and 9SKIN (30.6k)! We build authority in high-ticket niches that generate high-paying clients!",
+        "Across the grid you'll see cricketer Royston Dias, CA Jyoti Goyal, and 9SKIN. We build authority in high-ticket niches that attract serious clients.",
       target: ".wall-grid",
-      targetLabel: "Inspect Niche Authorities",
-      actionHint: "👉 Notice the Instagram handles and growth stats!",
+      targetLabel: "Explore the niche",
+      actionHint: "Notice the handles and growth stats.",
     },
     {
       id: "work-4",
       stepNum: 4,
       side: "right",
-      character: "The Whisperer",
-      role: "Conversion Sage · Lvl 6",
-      avatar: "/images/figurines/whisperer.png",
+      character: "The Strategist",
+      role: "Conversion Strategist",
+      avatar: "/images/figurines/whisperer.webp",
       themeColor: "#059669",
-      kicker: "STEP 04 · REVENUE CONVERSIONS",
+      kicker: "04 · GROWTH THAT CONVERTS",
       dialogue:
-        "Chief! Look at Tools Fact — scaled from short reels to ₹35L in direct revenue! Every piece of content is engineered to drive discoverability and real business inbound!",
+        "Take Tools Fact — scaled from short reels to ₹35L in direct revenue. Great content should do more than get views; it should bring in business.",
       target: ".wall-grid",
-      targetLabel: "Inspect Revenue Proof",
-      actionHint: "👈 Pointing at commercial growth outcomes!",
+      targetLabel: "See the revenue proof",
+      actionHint: "Real commercial outcomes, not vanity metrics.",
     },
     {
       id: "work-5",
       stepNum: 5,
       side: "left",
       character: "The Builder",
-      role: "Scale General · Lvl 6",
-      avatar: "/images/figurines/builder.png",
+      role: "Founder & Account Lead",
+      avatar: "/images/figurines/builder.webp",
       themeColor: "#2E5BFF",
-      kicker: "STEP 05 · NEXT CAN BE YOU",
+      kicker: "05 · YOU COULD BE NEXT",
       dialogue:
-        "Chief! The final card in this vault is reserved for your personal brand! Every founder here started with one conversation. Tap 'Claim Your Slot' to start!",
+        "There's one slot in this portfolio still open — yours. Every founder here started with a single conversation. Let's have that conversation.",
       target: ".wall-card--next",
-      targetLabel: "Claim Your Slot",
-      actionHint: "👉 Tap this card to open your consultation!",
+      targetLabel: "Claim your slot",
+      actionHint: "Open a conversation about your brand.",
     },
   ],
 
@@ -285,76 +286,76 @@ const PAGE_QUESTS = {
       id: "svc-1",
       stepNum: 1,
       side: "left",
-      character: "The Creator",
-      role: "Hook Architect · Lvl 4",
-      avatar: "/images/figurines/creator.png",
+      character: "The Scriptwriter",
+      role: "Scriptwriter",
+      avatar: "/images/figurines/creator.webp",
       themeColor: "#16A34A",
-      kicker: "STEP 01 · INSTAGRAM MANAGEMENT",
+      kicker: "01 · INSTAGRAM MANAGEMENT",
       dialogue:
-        "Chief! Pillar 01 is Instagram Management! We optimize your profile, script viral hooks, and engineer high-retention reels that turn random scrollers into lifelong brand advocates!",
+        "First, Instagram. We build a strategy, script hooks people actually stop for, and publish high-retention reels that turn casual scrollers into loyal followers.",
       target: ".audiences-grid, .card",
-      targetLabel: "Inspect Capabilities",
-      actionHint: "👉 Pointing at our Reels-first architecture!",
+      targetLabel: "Explore the capability",
+      actionHint: "A reels-first approach to your profile.",
     },
     {
       id: "svc-2",
       stepNum: 2,
       side: "right",
       character: "The Director",
-      role: "Camera Commander · Lvl 5",
-      avatar: "/images/figurines/director.png",
+      role: "Shooting Director",
+      avatar: "/images/figurines/director.webp",
       themeColor: "#DB2777",
-      kicker: "STEP 02 · YOUTUBE AUTHORITY",
+      kicker: "02 · YOUTUBE AUTHORITY",
       dialogue:
-        "Over on your right, Chief! Pillar 02 is YouTube Management: Compelling long-form storytelling, retention-curved scripts, and strategic thumbnails that build deep intellectual authority!",
+        "Then YouTube — where your ideas get depth. Long-form storytelling, retention-focused scripts, and structured content that builds real intellectual authority.",
       target: ".section",
-      targetLabel: "Inspect YouTube Pillar",
-      actionHint: "👈 Long-form compounding authority!",
+      targetLabel: "Explore the capability",
+      actionHint: "Deep, compounding authority over time.",
     },
     {
       id: "svc-3",
       stepNum: 3,
       side: "left",
-      character: "The Alchemist",
-      role: "Sound Foley Master · Lvl 5",
-      avatar: "/images/figurines/alchemist.png",
+      character: "The Editor",
+      role: "Video Editor",
+      avatar: "/images/figurines/alchemist.webp",
       themeColor: "#0891B2",
-      kicker: "STEP 03 · RETENTION EDITING",
+      kicker: "03 · RETENTION EDITING",
       dialogue:
-        "Jumped to your left! Pillar 03 is High-Retention Video Editing: Dynamic kinetic typography, custom sound design, and precision cuts designed for algorithmic discovery!",
+        "Editing is where attention is won or lost. Dynamic text, thoughtful sound design, and precise pacing — built to keep even the 73% watching on mute locked in.",
       target: ".section",
-      targetLabel: "Inspect Editing Post-Production",
-      actionHint: "👉 Pacing engineered for the 73% mute viewers!",
+      targetLabel: "Explore the capability",
+      actionHint: "Pacing designed for real viewers.",
     },
     {
       id: "svc-4",
       stepNum: 4,
       side: "right",
       character: "The Strategist",
-      role: "Moat Architect · Lvl 5",
-      avatar: "/images/figurines/strategist.png",
+      role: "Brand Strategist",
+      avatar: "/images/figurines/strategist.webp",
       themeColor: "#EA580C",
-      kicker: "STEP 04 · LINKEDIN LEADERSHIP",
+      kicker: "04 · LINKEDIN LEADERSHIP",
       dialogue:
-        "Back on your right, Chief! Pillar 04 is LinkedIn Executive Positioning: Transforming founders and C-suite leaders into respected industry titans who attract high-ticket B2B deals!",
+        "And LinkedIn — for founders and C-suite leaders. We shape the positioning that earns high-ticket B2B trust, so your personal brand opens doors professionally.",
       target: ".section",
-      targetLabel: "Inspect Executive Positioning",
-      actionHint: "👈 B2B pipeline & intellectual property extraction!",
+      targetLabel: "Explore the capability",
+      actionHint: "Executive positioning that attracts clients.",
     },
     {
       id: "svc-5",
       stepNum: 5,
       side: "left",
-      character: "The Whisperer",
-      role: "Conversion Sage · Lvl 6",
-      avatar: "/images/figurines/whisperer.png",
-      themeColor: "#059669",
-      kicker: "STEP 05 · ASSEMBLE SQUAD",
+      character: "The Builder",
+      role: "Founder & Account Lead",
+      avatar: "/images/figurines/builder.webp",
+      themeColor: "#2E5BFF",
+      kicker: "05 · READY TO START?",
       dialogue:
-        "Chief! Whether you are a Founder, Consultant, Creator, or Coach, all 8 studio minds are ready to mobilize behind your name. Tap Deploy to book your free strategy audit!",
+        "Whether you're a founder, consultant, creator, or coach — the whole team is ready to work behind you. Book a free call and we'll map out your plan.",
       target: "#cta, .audiences-grid",
-      targetLabel: "Deploy Studio Squad",
-      actionHint: "👉 Ready to claim your organic distribution moat!",
+      targetLabel: "Book your free call",
+      actionHint: "A real conversation about your brand.",
     },
   ],
 
@@ -364,75 +365,75 @@ const PAGE_QUESTS = {
       stepNum: 1,
       side: "left",
       character: "The Strategist",
-      role: "Moat Architect · Lvl 5",
-      avatar: "/images/figurines/strategist.png",
+      role: "Brand Strategist",
+      avatar: "/images/figurines/strategist.webp",
       themeColor: "#EA580C",
-      kicker: "STEP 01 · THE MANIFESTO",
+      kicker: "01 · THE MANIFESTO",
       dialogue:
-        "Chief! Read our manifesto on the left: 'Everyone has expertise. Few command attention.' We treat your personal brand like an enterprise asset that survives every algorithm change!",
+        "Read our manifesto to the left — 'Everyone has expertise. Few command attention.' We treat your personal brand as an asset built to survive every algorithm change.",
       target: ".editorial-display-anchor",
-      targetLabel: "Inspect Studio Manifesto",
-      actionHint: "👉 Pure organic ethos · No shortcuts!",
+      targetLabel: "Read the manifesto",
+      actionHint: "Our founding belief, in a few lines.",
     },
     {
       id: "abt-2",
       stepNum: 2,
       side: "right",
-      character: "The Creator",
-      role: "Hook Architect · Lvl 4",
-      avatar: "/images/figurines/creator.png",
+      character: "The Scriptwriter",
+      role: "Scriptwriter",
+      avatar: "/images/figurines/creator.webp",
       themeColor: "#16A34A",
-      kicker: "STEP 02 · MEET THE 3 CO-FOUNDERS",
+      kicker: "02 · THE CO-FOUNDERS",
       dialogue:
-        "Over on your right, Chief! Meet our leadership: Pari Jain (Creative Face & Hook Lead), Anant Jain (Growth & Culture), and Deepak Jain (Content Quality Gatekeeper)!",
+        "To the right you'll meet the three of us — Pari Jain, Anant Jain, and Deepak Jain. This is the leadership making every call behind the brand.",
       target: ".team-section, .editorial-quote-card",
-      targetLabel: "Meet the Founders",
-      actionHint: "👈 3 minds leading India's top branding agency!",
+      targetLabel: "Meet the founders",
+      actionHint: "Three people behind every decision.",
     },
     {
       id: "abt-3",
       stepNum: 3,
       side: "left",
       character: "The Director",
-      role: "Camera Commander · Lvl 5",
-      avatar: "/images/figurines/director.png",
+      role: "Shooting Director",
+      avatar: "/images/figurines/director.webp",
       themeColor: "#DB2777",
-      kicker: "STEP 03 · 25-30 UNDER ONE ROOF",
+      kicker: "03 · A REAL TEAM, ONE ROOF",
       dialogue:
-        "Chief! We are NOT freelancers scattered in cafes. 25–30 specialists work under one roof at our Delhi headquarters — strategists, scriptwriters, directors, and editors aligned in single focus!",
+        "We're not freelancers scattered across cafés. 25–30 specialists — strategists, writers, directors, editors — work under one roof in Delhi, aligned on your growth.",
       target: ".editorial-anchor-stats, .team-stat",
-      targetLabel: "Inspect Delhi HQ Setup",
-      actionHint: "👉 100% in-house production studio in Delhi!",
+      targetLabel: "See the team setup",
+      actionHint: "A fully in-house studio in Delhi.",
     },
     {
       id: "abt-4",
       stepNum: 4,
       side: "right",
       character: "The Analyst",
-      role: "Algorithm Scientist · Lvl 5",
-      avatar: "/images/figurines/analyst.png",
+      role: "Growth Analyst",
+      avatar: "/images/figurines/analyst.webp",
       themeColor: "#7C3AED",
-      kicker: "STEP 04 · TIMELINE JOURNEY",
+      kicker: "04 · THE JOURNEY SO FAR",
       dialogue:
-        "Chief! Look at our journey on the right: From two passionate minds brainstorming in a modest room in 2022 to 1.0 Billion+ views and 85+ scaled authorities in 2026!",
+        "Look at the timeline to the right — from two founders brainstorming in a small room in 2022 to a billion+ views and 85+ scaled brands by 2026.",
       target: ".journey-timeline, #journey",
-      targetLabel: "Inspect 2022-2026 Timeline",
-      actionHint: "👈 Zero external funding · Pure organic results!",
+      targetLabel: "See the timeline",
+      actionHint: "From 2022 to today, no funding, only organic.",
     },
     {
       id: "abt-5",
       stepNum: 5,
       side: "left",
       character: "The Builder",
-      role: "Scale General · Lvl 6",
-      avatar: "/images/figurines/builder.png",
+      role: "Founder & Account Lead",
+      avatar: "/images/figurines/builder.webp",
       themeColor: "#2E5BFF",
-      kicker: "STEP 05 · VISIT DELHI STUDIO",
+      kicker: "05 · COME SEE US",
       dialogue:
-        "Chief! Visit our headquarters in Rohini, Delhi or book a free 1:1 strategy audit to see how we build your organic engine!",
+        "Visit us in Rohini, Delhi, or book a free 1:1 strategy call to see how we'd build your organic engine. We'd love to meet you.",
       target: "#cta",
-      targetLabel: "Book Strategy Call",
-      actionHint: "👉 Let's connect directly with our founders!",
+      targetLabel: "Book a strategy call",
+      actionHint: "Let's connect directly.",
     },
   ],
 
@@ -442,74 +443,93 @@ const PAGE_QUESTS = {
       stepNum: 1,
       side: "left",
       character: "The Strategist",
-      role: "Moat Architect · Lvl 5",
-      avatar: "/images/figurines/strategist.png",
+      role: "Brand Strategist",
+      avatar: "/images/figurines/strategist.webp",
       themeColor: "#EA580C",
-      kicker: "STEP 01 · ZERO-RISK AUDIT",
+      kicker: "01 · A FREE STRATEGY AUDIT",
       dialogue:
-        "Chief! You're one step away from your customized 90-day organic growth blueprint. No ad spend pitches, no spam — pure high-leverage strategic insight!",
+        "You're one step from a personalized 90-day organic growth blueprint. No ad-spend pitches, no spam — just high-leverage strategic guidance.",
       target: "h1, .page-hero",
-      targetLabel: "Inspect Free Strategy Audit",
-      actionHint: "👉 100% free 1:1 consultation with lead strategist!",
+      targetLabel: "Explore the free audit",
+      actionHint: "A free 1:1 with the lead strategist.",
     },
     {
       id: "cnt-2",
       stepNum: 2,
       side: "right",
-      character: "The Creator",
-      role: "Hook Architect · Lvl 4",
-      avatar: "/images/figurines/creator.png",
+      character: "The Scriptwriter",
+      role: "Scriptwriter",
+      avatar: "/images/figurines/creator.webp",
       themeColor: "#16A34A",
-      kicker: "STEP 02 · PROFILE DETAILS",
+      kicker: "02 · SHARE A FEW DETAILS",
       dialogue:
-        "Chief! Enter your details, your current Instagram or YouTube handle, and your core category. We'll analyze your retention bottlenecks before we even hop on the call!",
+        "Add your handle and your category on the form, and we'll look at your growth bottlenecks before we even get on the call.",
       target: "form",
-      targetLabel: "Inspect Intake Form",
-      actionHint: "👈 Enter handle and growth objectives!",
+      targetLabel: "Fill the intake form",
+      actionHint: "Your handle and goals help us prep.",
     },
     {
       id: "cnt-3",
       stepNum: 3,
       side: "left",
-      character: "The Alchemist",
-      role: "Sound Foley Master · Lvl 5",
-      avatar: "/images/figurines/alchemist.png",
+      character: "The Editor",
+      role: "Video Editor",
+      avatar: "/images/figurines/alchemist.webp",
       themeColor: "#0891B2",
-      kicker: "STEP 03 · INSTANT WHATSAPP",
+      kicker: "03 · PREFER WHATSAPP?",
       dialogue:
-        "Need immediate VIP communication, Chief? You can also message our Delhi team directly on WhatsApp for same-day scheduling!",
+        "If you'd rather message us directly, our Delhi team is on WhatsApp for quick, same-day scheduling.",
       target: "a[href*='wa.me']",
-      targetLabel: "Inspect WhatsApp VIP Line",
-      actionHint: "👉 Direct line to Delhi HQ production desk!",
+      targetLabel: "Message us on WhatsApp",
+      actionHint: "A direct line to our Delhi team.",
     },
     {
       id: "cnt-4",
       stepNum: 4,
       side: "right",
       character: "The Builder",
-      role: "Scale General · Lvl 6",
-      avatar: "/images/figurines/builder.png",
+      role: "Founder & Account Lead",
+      avatar: "/images/figurines/builder.webp",
       themeColor: "#2E5BFF",
-      kicker: "STEP 04 · LOCK YOUR SLOT",
+      kicker: "04 · LOCK IN YOUR CALL",
       dialogue:
-        "Chief! We only onboard 3 new creator partners each month to protect production quality. Hit Submit to lock your slot!",
+        "We onboard a limited number of new partners each month to protect quality. Hit submit and we'll be in touch to schedule your call.",
       target: "button[type='submit']",
-      targetLabel: "Lock Your Strategy Slot",
-      actionHint: "👈 Tap submit to mobilize the Orgix squad!",
+      targetLabel: "Submit & schedule",
+      actionHint: "Send it and we'll reach out quickly.",
     },
   ],
 };
 
 const CHIEF_TIPS = [
-  "Chief! 73% of viewers watch reels on mute — always demand kinetic subtitles with contrast!",
-  "Chief! The first 1.2 seconds decides if your reel hits 1K views or 1M views!",
-  "Chief! 2 shoot days per month gives you a full 30-day content moat with zero daily stress!",
-  "Chief! Organic followers buy your products. Paid ad followers vanish when your ad budget ends!",
-  "Chief! Audio foley and subtle whooshes trigger dopamine hits that hold retention past 30 seconds!",
-  "Chief! Contrarian angles get 4.2x more comments than generic motivational quotes!",
-  "Chief! A high-converting DM funnel converts 10x better than putting links in bio!",
-  "Chief! Ride cultural trend waves in the first 4 hours to index on the Explore page!",
+  "Fun fact: about 73% of viewers watch reels on mute — so kinetic subtitles with strong contrast make all the difference.",
+  "The first 1.2 seconds decides whether a reel gets 1K views or 1M views — that's where the hook earns its keep.",
+  "Two efficient shoot days a month give you a full 30-day content bank, with zero daily stress.",
+  "Organic followers actually buy from you. Paid-ad followers disappear the moment the ad budget ends.",
+  "Thoughtful sound design and subtle effects keep retention high far past the 30-second mark.",
+  "Specific, contrarian angles reliably get more comments than generic motivational quotes.",
+  "A well-built comment-to-DM funnel converts far better than a simple link in bio.",
+  "Riding a cultural wave within the first few hours is often what gets a post onto the Explore page.",
 ];
+
+const GUIDE_STATE_KEY = "orgix_guide_state";
+
+function readGuideState() {
+  if (typeof window === "undefined") return "welcome";
+  try {
+    return window.localStorage.getItem(GUIDE_STATE_KEY) === "minimized" ? "minimized" : "welcome";
+  } catch (_) {
+    return "welcome";
+  }
+}
+
+function saveGuideState(state) {
+  try {
+    window.localStorage.setItem(GUIDE_STATE_KEY, state);
+  } catch (_) {
+    /* no-op */
+  }
+}
 
 export default function StudioTourBar() {
   const pathname = usePathname() || "/";
@@ -517,6 +537,7 @@ export default function StudioTourBar() {
     return PAGE_QUESTS[pathname] || PAGE_QUESTS["/"];
   }, [pathname]);
 
+  const [guideState, setGuideState] = useState(readGuideState); // "welcome" | "touring" | "minimized"
   const [stepIdx, setStepIdx] = useState(0);
   const [bubbleOpen, setBubbleOpen] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
@@ -532,25 +553,27 @@ export default function StudioTourBar() {
   const [chatMessages, setChatMessages] = useState([
     {
       sender: "mascot",
-      text: "Chief! I am The Strategist. Ask me anything about building an organic brand moat, viral hooks, or our Delhi studio!",
+      text: "Hi, I'm the Orgix team guide. Ask me anything about building a personal brand, going organic, or how our Delhi studio works!",
     },
   ]);
   const [chatLoading, setChatLoading] = useState(false);
-  const [engineTag, setEngineTag] = useState("Tactical Engine Active");
+  const [engineTag, setEngineTag] = useState("Orgix Guide");
 
   // Reset step on page navigation
   useEffect(() => {
     setStepIdx(0);
-    setBubbleOpen(true);
+    if (guideState === "touring") setBubbleOpen(true);
   }, [pathname]);
 
   const currentStep = currentSteps[stepIdx] || currentSteps[0];
   const isLeft = currentStep.side === "left";
+  const guide = FIGURINES.find((f) => f.name === currentStep.character) || FIGURINES[0];
 
   // Global listener from Hero or buttons
   useEffect(() => {
     const handleStartTour = () => {
       sound.playFanfare();
+      setGuideState("touring");
       setBubbleOpen(true);
       setStepIdx(0);
       setBounce(true);
@@ -641,8 +664,17 @@ export default function StudioTourBar() {
     sound.playPop();
     setBounce(true);
     setSparkles(true);
+    setTimeout(() => setBounce(false), 450);
 
-    // Show fresh easter egg tip
+    // If tour was dismissed, tapping the guide reopens the welcome invite
+    if (guideState === "minimized") {
+      setGuideState("welcome");
+      setBubbleOpen(true);
+      setEasterEgg(null);
+      return;
+    }
+
+    // Otherwise show a fresh "did you know" tip
     const randomTip = CHIEF_TIPS[Math.floor(Math.random() * CHIEF_TIPS.length)];
     setEasterEgg(randomTip);
     setBubbleOpen(true);
@@ -653,6 +685,30 @@ export default function StudioTourBar() {
       setSparkles(false);
       setEasterEgg(null);
     }, 4500);
+  };
+
+  const startTour = () => {
+    sound.playPop();
+    setGuideState("touring");
+    setBubbleOpen(true);
+    setEasterEgg(null);
+    setStepIdx(0);
+    const el = document.querySelector(currentSteps[0].target);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
+  const dismissToMinimized = () => {
+    sound.playClick();
+    setGuideState("minimized");
+    setBubbleOpen(false);
+    setEasterEgg(null);
+    saveGuideState("minimized");
+  };
+
+  const reopenGuide = () => {
+    sound.playPop();
+    setGuideState("welcome");
+    setBubbleOpen(true);
   };
 
   const toggleSound = (e) => {
@@ -666,7 +722,7 @@ export default function StudioTourBar() {
     sound.playFanfare();
     window.dispatchEvent(
       new CustomEvent("open-consultation", {
-        detail: { source: `walkthrough-${pathname}`, quest: "Quest Completed" },
+        detail: { source: `walkthrough-${pathname}`, step: "Guide Complete" },
       })
     );
   };
@@ -713,7 +769,7 @@ export default function StudioTourBar() {
           ...prev,
           {
             sender: "mascot",
-            text: "Chief! Network link re-routing. Check that your question is clear or tap one of our quick tactical chips below!",
+            text: "Sorry, I couldn't quite catch that. Could you rephrase, or tap one of the quick questions below?",
           },
         ]);
       }
@@ -722,7 +778,7 @@ export default function StudioTourBar() {
         ...prev,
         {
           sender: "mascot",
-          text: "Chief! Offline backup: Our 100% organic engine generates 1.0B+ views without ads. Book your free 1:1 strategy audit at orgixmedia.com!",
+          text: "We're offline right now, but the team's still here: 100% organic growth, 1B+ views, no ads. Book a free strategy call at orgixmedia.com and we'll get back to you.",
         },
       ]);
     } finally {
@@ -737,7 +793,7 @@ export default function StudioTourBar() {
           NO SQUARE CONTAINER BOX!
          ============================================================ */}
       <aside
-        aria-label="Clash of Clans Style Studio Walkthrough"
+        aria-label="Orgix guided walkthrough"
         className={`fixed bottom-3 sm:bottom-6 z-50 select-none pointer-events-auto transition-all duration-500 ease-out flex flex-col ${
           isLeft
             ? "left-3 sm:left-7 items-start animate-in slide-in-from-left-6"
@@ -759,22 +815,30 @@ export default function StudioTourBar() {
               aria-hidden="true"
             />
 
-            {/* Top Bar: Quest Badge + Current Side + Sound + Close */}
+            {/* Top Bar: Guide identity / Step Badge + Sound + Close */}
             <div className="flex items-center justify-between gap-1 pb-2 mb-2 border-b border-line/60 font-mono text-[9.5px]">
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1.5 min-w-0">
                 <span
                   className="w-2 h-2 rounded-full animate-pulse transition-colors"
                   style={{ backgroundColor: currentStep.themeColor }}
                 />
-                <span className="font-bold text-accent uppercase tracking-wider">
-                  {currentStep.kicker}
-                </span>
+                {guideState === "welcome" ? (
+                  <span className="font-bold text-accent uppercase tracking-wider truncate">
+                    Hi, I'm the Orgix guide 👋
+                  </span>
+                ) : (
+                  <span className="font-bold text-accent uppercase tracking-wider truncate">
+                    {currentStep.kicker}
+                  </span>
+                )}
               </div>
 
               <div className="flex items-center gap-1">
-                <span className="text-[9px] text-ink-soft bg-black/5 px-1.5 py-0.5 rounded-md font-mono">
-                  {stepIdx + 1}/{currentSteps.length}
-                </span>
+                {guideState === "touring" && (
+                  <span className="text-[9px] text-ink-soft bg-black/5 px-1.5 py-0.5 rounded-md font-mono">
+                    {stepIdx + 1}/{currentSteps.length}
+                  </span>
+                )}
                 <button
                   type="button"
                   onClick={toggleSound}
@@ -785,19 +849,49 @@ export default function StudioTourBar() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => {
-                    sound.playClick();
-                    setBubbleOpen(false);
-                  }}
+                  onClick={dismissToMinimized}
                   className="w-5 h-5 rounded-full hover:bg-black/5 flex items-center justify-center transition-colors cursor-pointer text-ink-soft hover:text-ink text-[11px]"
-                  title="Hide speech bubble (Mascot stays visible)"
+                  title="Hide the guide (tap me anytime to bring it back)"
                 >
                   ✕
                 </button>
               </div>
             </div>
 
-            {/* Spoken Dialogue to Chief */}
+            {guideState === "welcome" ? (
+              <>
+                {/* Spoken greeting — a human offering to show you around */}
+                <p className="font-body text-[12.5px] sm:text-[13px] text-ink leading-relaxed font-normal mb-2">
+                  Welcome to Orgix 👋 I'm {guide.name} — I can show you around this page and point out what
+                  matters. It only takes a minute.
+                </p>
+                <div className="mb-2 flex items-center gap-2 flex-wrap">
+                  <button
+                    type="button"
+                    onClick={startTour}
+                    className="inline-flex px-3.5 py-1.5 rounded-full bg-ink hover:bg-accent text-white font-body text-[12px] font-semibold items-center gap-1.5 transition-all cursor-pointer shadow-xs active:scale-95"
+                  >
+                    <span>▶ Start tour</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={dismissToMinimized}
+                    className="px-3 py-1.5 rounded-full bg-white border border-line hover:border-accent text-ink-soft font-body text-[11.5px] transition-colors cursor-pointer"
+                  >
+                    Not now
+                  </button>
+                  <button
+                    type="button"
+                    onClick={openChatModal}
+                    className="px-3 py-1.5 rounded-full bg-white border border-line hover:border-accent text-ink-soft font-body text-[11.5px] transition-colors cursor-pointer"
+                  >
+                    💬 Ask me
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>
+            {/* Spoken Dialogue to the visitor */}
             <p className="font-body text-[12px] sm:text-[12.5px] text-ink leading-relaxed font-normal mb-2">
               {easterEgg ? (
                 <span className="text-accent font-semibold block animate-in fade-in">
@@ -852,10 +946,12 @@ export default function StudioTourBar() {
                   onClick={handleClaimSlot}
                   className="px-3.5 py-1 rounded-full bg-accent text-white font-body text-[11px] font-bold flex items-center gap-1 transition-all cursor-pointer shadow-xs active:scale-95 animate-pulse"
                 >
-                  <span>Deploy 🚀</span>
+                  <span>Book Free Call →</span>
                 </button>
               )}
             </div>
+              </>
+            )}
           </div>
         )}
 
@@ -866,7 +962,7 @@ export default function StudioTourBar() {
           className={`relative flex flex-col items-center cursor-pointer select-none group/mascot transition-all duration-300 ${
             isLeft ? "origin-bottom-left" : "origin-bottom-right"
           }`}
-          title={`Chief! Tap ${currentStep.character} for game secret!`}
+          title={`Tap ${currentStep.character} again for a quick tip!`}
         >
           {/* Floating Sparkle Particles */}
           {sparkles && (
@@ -896,7 +992,7 @@ export default function StudioTourBar() {
               }`}
               style={{ backgroundColor: currentStep.themeColor }}
             >
-              {currentStep.role.split(" · ")[1] || "Lvl 5"}
+              {currentStep.role || "Orgix"}
             </div>
           </div>
 
@@ -905,20 +1001,25 @@ export default function StudioTourBar() {
 
           {/* Character Name under feet */}
           <div className="mt-1 px-2.5 py-0.5 rounded-full bg-white/90 border border-line shadow-2xs font-display font-medium text-[11px] text-ink flex items-center justify-center">
-            <span>{currentStep.character}</span>
+            <span>{guideState === "minimized" ? "Your guide" : currentStep.character}</span>
           </div>
 
-          {/* Closed hint */}
-          {!bubbleOpen && (
-            <div className="mt-1 px-2 py-0.5 rounded-full bg-accent text-white text-[9px] font-mono font-semibold shadow-xs flex items-center gap-1 animate-bounce">
-              <span>💬 Tap me, Chief!</span>
+          {/* Minimized dock pill — human-style "ask me" invite */}
+          {guideState === "minimized" && (
+            <div
+              onClick={reopenGuide}
+              className="mt-1 px-2.5 py-1 rounded-full bg-accent text-white text-[10px] font-body font-semibold shadow-xs flex items-center gap-1.5 cursor-pointer hover:bg-blue-600 transition-colors animate-bounce"
+              title="Open the guide"
+            >
+              <span>💬</span>
+              <span>Hello! Ask me anything</span>
             </div>
           )}
         </div>
       </aside>
 
       {/* ============================================================
-          AI MASCOT CHAT DIALOGUE MODAL (CLASH OF CLANS TACTICAL HUD)
+          AI MASCOT CHAT DIALOGUE MODAL (ORGIX TEAM GUIDE)
          ============================================================ */}
       {chatOpen && (
         <div
@@ -950,11 +1051,11 @@ export default function StudioTourBar() {
                       className="text-[9px] px-1.5 py-0.2 rounded font-mono font-bold uppercase"
                       style={{ backgroundColor: selectedFigurine.themeColor }}
                     >
-                      {selectedFigurine.role.split(" · ")[1]}
+                      {selectedFigurine.role.split(" · ")[0]}
                     </span>
                   </div>
                   <p className="text-[10.5px] text-white/70 font-mono mt-0.5">
-                    {selectedFigurine.role.split(" · ")[0]}
+                    Orgix team
                   </p>
                 </div>
               </div>
@@ -992,7 +1093,7 @@ export default function StudioTourBar() {
                         ...prev,
                         {
                           sender: "mascot",
-                          text: `Chief! ${fig.name} here. ${fig.intro}`,
+                          text: `${fig.name} — ${fig.intro}`,
                         },
                       ]);
                     }}
@@ -1046,12 +1147,12 @@ export default function StudioTourBar() {
               {chatLoading && (
                 <div className="flex items-center gap-2 text-ink-soft font-mono text-xs">
                   <div className="w-2 h-2 rounded-full bg-accent animate-ping" />
-                  <span>{selectedFigurine.name} is calculating response...</span>
+                  <span>{selectedFigurine.name} is typing...</span>
                 </div>
               )}
             </div>
 
-            {/* Quick Tactical Prompt Chips */}
+            {/* Quick Question Prompt Chips */}
             <div className="px-4 py-2 border-t border-line/60 bg-white/50 flex flex-wrap gap-1.5">
               {[
                 "How do we get 1M+ organic views?",
@@ -1080,7 +1181,7 @@ export default function StudioTourBar() {
                 onKeyDown={(e) => {
                   if (e.key === "Enter") handleSendChatMessage();
                 }}
-                placeholder={`Ask ${selectedFigurine.name} anything, Chief...`}
+                placeholder={`Ask ${selectedFigurine.name} anything...`}
                 className="flex-1 px-4 py-2.5 rounded-full border border-line focus:border-accent focus:outline-hidden text-ink font-body text-[13px] bg-[#F6F4EF]/50"
               />
 

@@ -3,8 +3,10 @@
 // Edit text, links and stats here — every page reads from this single source.
 // ---------------------------------------------------------------------------
 
-// Media CDN. All site images live on Cloudinary (orgix-media/<subfolder>/<name>)
-// and are served optimized (f_auto,q_auto). Set MEDIA_LOCAL=1 to fall back to
+// Media: local /public/images (WebP, pre-sized — see scripts/optimize-images.mjs).
+// Set NEXT_PUBLIC_MEDIA_REMOTE=1 to serve instead from the Cloudinary CDN
+// (orgix-media/<subfolder>/<name>, f_auto,q_auto). If you do, upload the
+// current /public/images tree (including .webp files) to the same paths.
 const CLOUD_BASE = "https://res.cloudinary.com/dwjr5yrir/image/upload/f_auto,q_auto/orgix-media/";
 
 export function imgSrc(p) {
@@ -103,7 +105,7 @@ export const stories = [
     role: "Import-Export Expert",
     handle: "@amit_aroraa",
     followers: "23.6K+",
-    img: "/images/creators/amit-arora.png",
+    img: "/images/creators/amit-arora.webp",
     work: "Built funnels that generate leads.",
     verified: false,
     cat: "Founders",
@@ -183,7 +185,7 @@ export const stories = [
     role: "Founder · Mintree (Shark Tank)",
     handle: "@kanikkadewanii",
     followers: "66.7K",
-    img: "/images/creators/kanikka-dewanii.png",
+    img: "/images/creators/kanikka-dewanii.webp",
     work: "Shark Tank featured beauty brand.",
     verified: true,
     cat: "Founders",
@@ -273,7 +275,7 @@ export const stories = [
     role: "Content Creator",
     handle: "@ektadahiya",
     followers: "66.6K+",
-    img: "/images/creators/ekta-dahiya.png",
+    img: "/images/creators/ekta-dahiya.webp",
     work: "Authentic lifestyle storytelling engine.",
     verified: false,
     cat: "Creators",
@@ -399,7 +401,7 @@ export const services = [
       "Profile & banner architectural revamp",
     ],
     stat: { value: "85+", label: "founders & executives positioned" },
-    img: "/images/creators/amit-arora.png",
+    img: "/images/creators/amit-arora.webp",
     accent: "accent",
   },
 ];
@@ -496,17 +498,17 @@ export const trustedBy = [
   { name: "Daisy Morgan", tag: "Founder · 9SKIN", followers: "30.6K+", img: "/images/creators/daisy-morgan.jpg" },
   { name: "Ruchira", tag: "Cybersecurity (US)", followers: "70.8K+", img: "/images/creators/ruchira.jpg" },
   { name: "Imarticus Learning", tag: "Education · YouTube", followers: "177K", img: "/images/creators/imarticus.jpg" },
-  { name: "Kanikka Dewanii", tag: "Founder · Mintree (Shark Tank)", followers: "66.7K", img: "/images/creators/kanikka-dewanii.png" },
+  { name: "Kanikka Dewanii", tag: "Founder · Mintree (Shark Tank)", followers: "66.7K", img: "/images/creators/kanikka-dewanii.webp" },
   { name: "Akash Pandey", tag: "Career Coach", followers: "119K+", img: "/images/creators/akash-pandey.jpg" },
   { name: "Anuj Chhajerh", tag: "Skincare Specialist", followers: "516K+", img: "/images/creators/anuj-chhajerh.jpg" },
   { name: "Simran Balar Jain", tag: "Influencer", followers: "1.4M+", img: "/images/creators/simran-balraj.jpg" },
   { name: "Jyoti Goyal", tag: "Chartered Accountant", followers: "37.6K+", img: "/images/creators/jyoti-goyal.jpg" },
   { name: "Shivam", tag: "Career & AI Creator", followers: "100K+", img: "/images/creators/shivam.jpg" },
   { name: "9SKIN", tag: "Celebrity-Owned Brand", followers: "154K+", img: "/images/creators/9skin.jpg" },
-  { name: "Amit Arora", tag: "Investor · Intl. Trade", followers: "23.6K+", img: "/images/creators/amit-arora.png" },
+  { name: "Amit Arora", tag: "Investor · Intl. Trade", followers: "23.6K+", img: "/images/creators/amit-arora.webp" },
   { name: "Cellbell", tag: "Shark Tank Featured Brand", followers: "19K+", img: "/images/creators/cellbell.jpg" },
   { name: "Gaurav Mahawar", tag: "Personal Finance", followers: "358K+", img: "/images/creators/gaurav-mahawar.jpg" },
-  { name: "Ekta Dahiya", tag: "Content Creator", followers: "66.6K+", img: "/images/creators/ekta-dahiya.png" },
+  { name: "Ekta Dahiya", tag: "Content Creator", followers: "66.6K+", img: "/images/creators/ekta-dahiya.webp" },
   { name: "Raj Vadhu", tag: "Clothing Brand", followers: "31.3K", img: "/images/creators/raj-vadhu.jpg" },
   { name: "Rahis", tag: "Fitness Coach", followers: "20.9K+", img: "/images/creators/rahis.jpg" },
   { name: "Bhavit Patil", tag: "Founder", followers: "21.8K+", img: "/images/creators/bhavit-patil.jpg" },

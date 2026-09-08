@@ -220,10 +220,20 @@ function Magnetic({ disabled }) {
  * Page transition: "ORGIX" text fills like water, 1.5s, then reveals page.
  */
 function Loader({ disabled }) {
-  const [gone, setGone] = useState(disabled);
+  // Lazily skip on repeat views so no loader flashes before the effect runs.
+  const [gone, setGone] = useState(() => {
+    if (disabled) return true;
+    try {
+      return sessionStorage.getItem("orgix_boot") === "1";
+    } catch {
+      return disabled;
+    }
+  });
   const [progress, setProgress] = useState(0);
   const [isFinishing, setIsFinishing] = useState(false);
   const pathname = usePathname();
+  const barRef = useRef(null);
+  const lineRef = useRef(null);
 
   useEffect(() => {
     if (disabled || pathname?.startsWith("/agney")) {
@@ -237,23 +247,44 @@ function Loader({ disabled }) {
       return;
     }
 
-    const DURATION = 3000; // Exactly 3 seconds
+    // Repeat visits + client-side nav skip the boot screen entirely —
+    // the loader exists for first impression, not every route change.
+    try {
+      if (sessionStorage.getItem("orgix_boot") === "1") {
+        setGone(true);
+        return;
+      }
+    } catch {}
+
+    const DURATION = 800; // was 1100ms — every ms here delays first paint
     const startTime = performance.now();
     let animationFrameId;
+    let lastShown = -1;
 
     const tick = (now) => {
       const elapsed = now - startTime;
       const fraction = Math.min(elapsed / DURATION, 1);
       const currentProgress = Math.min(Math.round(fraction * 100), 100);
-      setProgress(currentProgress);
+      // Throttle React re-renders to ~10 (was ~100: one per frame).
+      // The bar/line widths update cheaply via refs every frame.
+      if (barRef.current) barRef.current.style.width = `${currentProgress}%`;
+      if (lineRef.current) lineRef.current.style.width = `${currentProgress}%`;
+      if (currentProgress !== lastShown && (currentProgress % 10 === 0 || fraction === 1)) {
+        lastShown = currentProgress;
+        setProgress(currentProgress);
+      }
 
       if (fraction < 1) {
         animationFrameId = requestAnimationFrame(tick);
       } else {
+        setProgress(100);
         setIsFinishing(true);
+        try {
+          sessionStorage.setItem("orgix_boot", "1");
+        } catch {}
         setTimeout(() => {
           setGone(true);
-        }, 500);
+        }, 300);
       }
     };
 
@@ -307,8 +338,9 @@ function Loader({ disabled }) {
           {/* Thin Percentage Line Bar ("ek line patali se percentage bar") */}
           <div className="w-56 sm:w-72 h-[2.5px] bg-black/10 rounded-full overflow-hidden relative shadow-inner">
             <div
-              className="h-full bg-gradient-to-r from-accent via-[#2E5BFF] to-ink transition-[width] duration-75 ease-out shadow-[0_0_10px_rgba(46,91,255,0.7)] rounded-full"
-              style={{ width: `${progress}%` }}
+              ref={barRef}
+              className="h-full bg-gradient-to-r from-accent via-[#2E5BFF] to-ink rounded-full"
+              style={{ width: "0%" }}
             />
           </div>
 
@@ -330,11 +362,11 @@ function Loader({ disabled }) {
 
       {/* Screen bottom thin line */}
       <div
+        ref={lineRef}
         className="page-loader-line"
         style={{
-          width: `${progress}%`,
+          width: "0%",
           animation: "none",
-          transition: "width 75ms ease-out",
         }}
       />
     </div>
@@ -376,12 +408,18 @@ export default function Effects() {
   return (
     <>
       <Loader disabled={reduced} />
-      <SmoothScroll disabled={reduced} />
-      <Cursor disabled={reduced} />
-      <Progress disabled={reduced} />
-      <Magnetic disabled={reduced} />
+      {/* UX overhaul: Lenis smooth-scroll disabled — conflicted with long page,
+          caused floaty/janky feel. Native smooth scroll is faster + predictable. */}
+      {/* <SmoothScroll disabled={reduced} /> */}
+      {/* UX overhaul: custom cursor disabled — stray dot visible in screenshots,
+          cursor:none hurt usability. Real cursor always wins. */}
+      {/* <Cursor disabled={reduced} /> */}
+      {/* UX overhaul: duplicate progress bar removed — Header already has one. */}
+      {/* <Progress disabled={reduced} /> */}
+      {/* UX overhaul: magnetic pull disabled — fought with hover lift, caused jitter. */}
+      {/* <Magnetic disabled={reduced} /> */}
       <ColorWipeObserver disabled={reduced} />
-      <span className="film-grain" aria-hidden="true" />
+      {/* UX overhaul: film-grain removed — extra paint cost, near-zero visual gain. */}
     </>
   );
 }

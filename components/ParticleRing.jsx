@@ -11,12 +11,12 @@ export default function ParticleRing({ className = "", tone = "dark" }) {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const COUNT = 150;
+    const COUNT = 90;
     const REPEL_DIST = 120;
     const DAMPING = 0.08;
     const SPRING_K = 0.045;
     const REV_SEC = 90;
-    const COLOR = tone === "light" ? "rgba(255, 255, 255, 0.35)" : "rgba(15, 26, 46, 0.3)";
+    const COLOR = tone === "light" ? "rgba(255, 255, 255, 0.28)" : "rgba(15, 26, 46, 0.18)";
 
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -33,7 +33,7 @@ export default function ParticleRing({ className = "", tone = "dark" }) {
     const drawRing = (angleOffset = 0) => {
       ctx.clearRect(0, 0, w, h);
       ctx.fillStyle = COLOR;
-      const cx = w / 2, cy = h / 2, r = 0.38 * Math.min(w, h);
+      const cx = w / 2, cy = h / 2, r = 0.44 * Math.min(w, h);
       for (let i = 0; i < COUNT; i++) {
         const d = dots[i];
         const a = d.angle + angleOffset;
@@ -76,7 +76,7 @@ export default function ParticleRing({ className = "", tone = "dark" }) {
 
       ctx.clearRect(0, 0, w, h);
       ctx.fillStyle = COLOR;
-      const cx = w / 2, cy = h / 2, baseR = 0.38 * Math.min(w, h) * breathe;
+      const cx = w / 2, cy = h / 2, baseR = 0.44 * Math.min(w, h) * breathe;
 
       for (let i = 0; i < COUNT; i++) {
         const d = dots[i];
@@ -128,17 +128,43 @@ export default function ParticleRing({ className = "", tone = "dark" }) {
     const onVisibility = () => {
       if (document.hidden) {
         if (animId) { cancelAnimationFrame(animId); animId = null; }
-      } else if (!animId) {
+      } else if (!animId && onScreen) {
         lastTime = 0;
         animId = requestAnimationFrame(render);
       }
     };
     document.addEventListener("visibilitychange", onVisibility);
 
+    // Pause the rAF loop while the hero is off-screen — the canvas costs
+    // a full repaint every frame and nobody can see it below the fold.
+    let onScreen = true;
+    let io = null;
+    const start = () => {
+      if (!animId && onScreen && !document.hidden) {
+        lastTime = 0;
+        animId = requestAnimationFrame(render);
+      }
+    };
+    const stop = () => {
+      if (animId) { cancelAnimationFrame(animId); animId = null; }
+    };
+    if (typeof IntersectionObserver !== "undefined") {
+      io = new IntersectionObserver(
+        (entries) => {
+          onScreen = entries[0].isIntersecting;
+          if (onScreen) start();
+          else stop();
+        },
+        { threshold: 0 }
+      );
+      io.observe(canvas);
+    }
+
     animId = requestAnimationFrame(render);
 
     return () => {
       if (animId) cancelAnimationFrame(animId);
+      if (io) io.disconnect();
       window.removeEventListener("resize", resize);
       window.removeEventListener("pointermove", onMove);
       document.removeEventListener("pointerleave", onLeave);

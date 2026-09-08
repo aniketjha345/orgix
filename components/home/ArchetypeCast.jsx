@@ -14,7 +14,7 @@ const CAST = [
     n: "01",
     id: "strategist",
     emoji: "🔍",
-    img: "/images/figurines/strategist.png",
+    img: "/images/figurines/strategist.webp",
     name: "The Strategist",
     role: "Moat Architect",
     level: "Lvl 5",
@@ -28,7 +28,7 @@ const CAST = [
     n: "02",
     id: "creator",
     emoji: "✍️",
-    img: "/images/figurines/creator.png",
+    img: "/images/figurines/creator.webp",
     name: "The Creator",
     role: "Hook Architect",
     level: "Lvl 4",
@@ -42,7 +42,7 @@ const CAST = [
     n: "03",
     id: "director",
     emoji: "🎥",
-    img: "/images/figurines/director.png",
+    img: "/images/figurines/director.webp",
     name: "The Director",
     role: "Camera Commander",
     level: "Lvl 5",
@@ -56,7 +56,7 @@ const CAST = [
     n: "04",
     id: "alchemist",
     emoji: "🎧",
-    img: "/images/figurines/alchemist.png",
+    img: "/images/figurines/alchemist.webp",
     name: "The Alchemist",
     role: "Sound & Foley",
     level: "Lvl 5",
@@ -70,7 +70,7 @@ const CAST = [
     n: "05",
     id: "analyst",
     emoji: "📊",
-    img: "/images/figurines/analyst.png",
+    img: "/images/figurines/analyst.webp",
     name: "The Analyst",
     role: "Algorithm Scientist",
     level: "Lvl 5",
@@ -84,7 +84,7 @@ const CAST = [
     n: "06",
     id: "whisperer",
     emoji: "💬",
-    img: "/images/figurines/whisperer.png",
+    img: "/images/figurines/whisperer.webp",
     name: "The Whisperer",
     role: "Conversion Sage",
     level: "Lvl 6",
@@ -98,7 +98,7 @@ const CAST = [
     n: "07",
     id: "catalyst",
     emoji: "⚡",
-    img: "/images/figurines/catalyst.png",
+    img: "/images/figurines/catalyst.webp",
     name: "The Catalyst",
     role: "Trend Igniter",
     level: "Lvl 5",
@@ -112,7 +112,7 @@ const CAST = [
     n: "08",
     id: "builder",
     emoji: "🚀",
-    img: "/images/figurines/builder.png",
+    img: "/images/figurines/builder.webp",
     name: "The Builder",
     role: "Scale General",
     level: "Lvl 6",
@@ -156,7 +156,6 @@ export default function ArchetypeCast() {
     <section
       id="cast"
       className="editorial-section section-bg-alt relative overflow-hidden select-none py-16 sm:py-22"
-      style={{ scrollSnapAlign: "start" }}
     >
       {/* Subtle radial backdrop ambient glow */}
       <div

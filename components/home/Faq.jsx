@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Icon from "../core/Icon";
 import SectionHeading from "../ui/SectionHeading";
@@ -55,22 +54,19 @@ export default function Faq({ index = "10" }) {
                   </span>
                 </button>
 
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      id={`faq-answer-${i}`}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                      className="overflow-hidden"
-                    >
-                      <p className="px-5 pb-6 sm:px-6 sm:pb-6 text-body-md text-ink-secondary leading-relaxed font-light border-t border-border/40 pt-4">
-                        {f.a}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                {/* Zero-dep CSS expand (grid-rows) — was framer-motion AnimatePresence */}
+                <div
+                  id={`faq-answer-${i}`}
+                  className={`grid transition-[grid-template-rows,opacity] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <p className="px-5 pb-6 sm:px-6 sm:pb-6 text-body-md text-ink-secondary leading-relaxed font-light border-t border-border/40 pt-4">
+                      {f.a}
+                    </p>
+                  </div>
+                </div>
               </div>
             );
           })}

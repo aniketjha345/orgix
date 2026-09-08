@@ -34,6 +34,10 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata = {
   metadataBase: new URL("https://orgixmedia.com"),
+  alternates: { canonical: "https://orgixmedia.com" },
+  robots: { index: true, follow: true },
+  authors: [{ name: "Orgix Media" }],
+  creator: "Orgix Media",
   title: "Orgix Media — Personal Branding Studio for Founders & Creators",
   description:
     "Orgix Media is India's premier personal branding studio for founders & creators. 100% organic Instagram & YouTube growth, viral scripting, guided shooting & retention editing.",

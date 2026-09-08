@@ -11,7 +11,7 @@ export default function NotFound() {
         {/* The Director — even he can't cut to this scene */}
         <div style={{ marginBottom: 20 }} aria-hidden="true">
           <img
-            src="/images/figurines/director.png"
+            src="/images/figurines/director.webp"
             alt=""
             width={112}
             height={144}

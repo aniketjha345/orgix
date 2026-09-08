@@ -90,9 +90,6 @@ export default function Section({
         ref={sectionRef}
         id={id}
         className={`editorial-section ${bgClass} ${revealedClass} ${className}`}
-        style={{
-          scrollSnapAlign: "start",
-        }}
         {...rest}
       >
         <div className="editorial-container">

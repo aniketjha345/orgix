@@ -222,7 +222,7 @@ export default function CreatorMarquee() {
 
   const handleSelectClient = (client) => {
     if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
-    sound?.playPop?.();
+    // UX fix: no sound on hover — was firing pop on every mouse pass, very annoying
     setActiveClient(client);
   };
 

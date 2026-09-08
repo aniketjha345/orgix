@@ -68,8 +68,9 @@ html {
   font-size: 16px;
   line-height: 1.5;
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
-  scroll-snap-type: y proximity; /* Non-negotiable proximity snap */
+  scroll-padding-top: 110px;
+  /* scroll-snap removed for UX: proximity snap caused section sticking,
+     header overlap and jank with smooth-scroll on long 18-section page */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -97,6 +98,14 @@ h1,
   line-height: 0.95;
   color: var(--ink);
   max-width: 100%;
+}
+
+/* Long hero headline (Build the Brand Behind You) — slightly smaller so it
+   wraps cleanly to 2 lines instead of overflowing on desktop */
+.hero-long-headline {
+  font-size: min(clamp(44px, 7vw, 96px), 10vw);
+  line-height: 1.02;
+  text-wrap: balance;
 }
 
 h2,
@@ -177,10 +186,17 @@ a:hover,
   place-items: center;
   align-content: center;
   padding: clamp(60px, 8vh, 104px) 6vw;
-  scroll-snap-align: start;
+  /* scroll-snap-align removed — was causing header overlap + mobile sticking */
   width: 100%;
   position: relative;
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .editorial-section {
+    min-height: auto;
+    padding: 56px 6vw;
+  }
 }
 
 /* Alternate --bg / --bg-alt between sections */
@@ -526,9 +542,11 @@ a:hover,
   border: 1px solid var(--ink);
   opacity: 0.35;
 }
+/* Custom cursor follows natively — never hide the real cursor
+   (cursor:none caused usability issues + stray dot in screenshots) */
 .has-cursor a,
 .has-cursor button {
-  cursor: none;
+  cursor: pointer;
 }
 
 /* Film grain — pure CSS noise, 2% opacity */
@@ -1112,6 +1130,11 @@ a.btn-pill {
   to { transform: translateX(120%); }
 }
 
+/* Stage-change enter (zero-dep replacement for AnimatePresence fade/slide) */
+.process-stage-enter {
+  animation: stale-in 320ms var(--ease-editorial) both;
+}
+
 /* ============================================================
    ARCHETYPE CAST — glow ring · stage tooltip
    ============================================================ */
@@ -1239,6 +1262,9 @@ a.btn-pill {
   }
   .process-rail {
     display: none;
+  }
+  .process-stage-enter {
+    animation: none !important;
   }
   .artifact-sweep::after {
     animation: none !important;
@@ -1589,10 +1615,10 @@ a.btn-pill {
   transition: filter 500ms var(--ease-editorial), opacity 500ms var(--ease-editorial), transform 500ms var(--ease-editorial), color 500ms var(--ease-editorial);
 }
 .manif-line.manif-upcoming {
-  filter: blur(1.5px);
-  opacity: 0.35;
+  filter: none;
+  opacity: 0.8;
   color: var(--ink-soft);
-  transform: translateY(8px);
+  transform: translateY(0);
 }
 .manif-line.manif-active,
 .manif-line.is-on {
@@ -1603,7 +1629,7 @@ a.btn-pill {
 }
 .manif-line.manif-past {
   filter: none;
-  opacity: 0.65;
+  opacity: 0.92;
   color: var(--ink);
   transform: translateY(0);
 }
@@ -1698,7 +1724,7 @@ a.btn-pill {
 
 /* Anchored sections clear the fixed capsule header */
 section[id] {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 110px;
 }
 
 /* Layout shells */

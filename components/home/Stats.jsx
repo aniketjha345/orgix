@@ -1,10 +1,38 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
 import Icon from "../core/Icon";
 import SectionHeading from "../ui/SectionHeading";
+import { FadeUp } from "../motion/MotionPrimitives";
 import { trustedBy } from "@/data/site";
+
+/** Zero-dep in-view hook (once) — replaces framer-motion's useInView. */
+function useInViewOnce(margin = "50px") {
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setInView(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            setInView(true);
+            io.disconnect();
+          }
+        });
+      },
+      { rootMargin: margin }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [margin]);
+  return [ref, inView];
+}
 
 // Milestones ticker — the biggest real outcomes from the roster, derived
 // from data/site.js so the numbers always match the rest of the site.
@@ -24,8 +52,7 @@ const MILESTONES = [...trustedBy]
 function AnimatedNumber({ value, suffix = "", decimals = 0 }) {
   const [displayValue, setDisplayValue] = useState(value);
   const [landed, setLanded] = useState(false);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [ref, isInView] = useInViewOnce("-50px");
   const hasAnimated = useRef(false);
 
   useEffect(() => {
@@ -89,11 +116,7 @@ export default function Stats() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {/* Flagship Monument: 1.0B+ Views */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          <FadeUp
             className="relative p-7 sm:p-8 rounded-2xl bg-surface-muted/80 border border-accent/30 shadow-[0_12px_32px_-10px_rgba(46,91,255,0.14)] flex flex-col justify-between overflow-hidden group hover:border-accent/60 transition-colors"
           >
             {/* Top Tag */}
@@ -127,14 +150,11 @@ export default function Stats() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </FadeUp>
 
           {/* Monument 2: 85+ Scaled Authorities */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0 }}
-            transition={{ duration: 0.5, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+          <FadeUp
+            delay={0.08}
             className="p-7 sm:p-8 rounded-2xl bg-surface-muted/60 border border-border shadow-subtle flex flex-col justify-between hover:border-ink/25 transition-colors"
           >
             <div>
@@ -155,14 +175,11 @@ export default function Stats() {
             <p className="text-body-sm text-ink-secondary leading-relaxed font-light mt-4 pt-4 border-t border-border/80">
               From day zero to millions of engaged followers. From Shark Tank founders to top tech coaches, internet icons, and doctors.
             </p>
-          </motion.div>
+          </FadeUp>
 
           {/* Monument 3: 100% Organic */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0 }}
-            transition={{ duration: 0.5, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
+          <FadeUp
+            delay={0.16}
             className="p-7 sm:p-8 rounded-2xl bg-surface-muted/60 border border-border shadow-subtle flex flex-col justify-between hover:border-ink/25 transition-colors"
           >
             <div>
@@ -183,7 +200,7 @@ export default function Stats() {
             <p className="text-body-sm text-ink-secondary leading-relaxed font-light mt-4 pt-4 border-t border-border/80">
               No paid boosts. No engagement pods. No fake comments. True algorithmic distribution that converts cold scrollers into loyal advocates.
             </p>
-          </motion.div>
+          </FadeUp>
         </div>
       </div>
     </section>

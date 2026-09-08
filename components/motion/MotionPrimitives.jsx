@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 export const transitions = {
   fast: { duration: 0.18, ease: [0.16, 1, 0.3, 1] },
@@ -8,6 +8,63 @@ export const transitions = {
   emphasis: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
   cinematic: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
 };
+
+/**
+ * Zero-dependency reveal hook — replaces framer-motion's whileInView.
+ * Uses a single IntersectionObserver per element + the existing
+ * `.reveal-item` / `.reveal-visual` CSS in globals.css (600ms, stagger
+ * via transition-delay). Content is visible by default when JS is off,
+ * reduced-motion is on, or the observer never fires (fallback timer).
+ */
+function useReveal({ y = 20, scale = false, delay = 0, duration = 0.6, once = true } = {}) {
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setInView(true);
+      return;
+    }
+    const el = ref.current;
+    if (!el) return;
+    // Safety net: never leave content hidden (e.g. observer blocked)
+    const fallback = setTimeout(() => setInView(true), 2500);
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setInView(true);
+            clearTimeout(fallback);
+            if (once) io.disconnect();
+          } else if (!once) {
+            setInView(false);
+          }
+        });
+      },
+      { threshold: 0.05, rootMargin: "60px" }
+    );
+    io.observe(el);
+    return () => {
+      clearTimeout(fallback);
+      io.disconnect();
+    };
+  }, [once]);
+
+  const style = {
+    transitionDelay: delay ? `${Math.round(delay * 1000)}ms` : undefined,
+    transitionDuration: duration ? `${Math.round(duration * 1000)}ms` : undefined,
+    ...(inView
+      ? null
+      : y
+        ? { transform: `translateY(${y}px)` }
+        : scale
+          ? { transform: `scale(${scale})` }
+          : null),
+  };
+
+  return { ref, inView, style };
+}
 
 /**
  * FadeUp — progressive enhancement reveal that is always visible by default
@@ -20,22 +77,15 @@ export function FadeUp({
   className = "",
   once = true,
 }) {
-  const prefersReduced = useReducedMotion();
-
-  if (prefersReduced) {
-    return <div className={className}>{children}</div>;
-  }
-
+  const { ref, inView, style } = useReveal({ y, delay, duration, once });
   return (
-    <motion.div
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once, amount: 0.05 }}
-      transition={{ duration, delay, ease: [0.16, 1, 0.3, 1] }}
-      className={className}
+    <div
+      ref={ref}
+      style={style}
+      className={`reveal-item${inView ? " is-revealed" : ""}${className ? ` ${className}` : ""}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -49,22 +99,15 @@ export function FadeIn({
   className = "",
   once = true,
 }) {
-  const prefersReduced = useReducedMotion();
-
-  if (prefersReduced) {
-    return <div className={className}>{children}</div>;
-  }
-
+  const { ref, inView, style } = useReveal({ y: 0, delay, duration, once });
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once, amount: 0.05 }}
-      transition={{ duration, delay, ease: "easeOut" }}
-      className={className}
+    <div
+      ref={ref}
+      style={style}
+      className={`reveal-item${inView ? " is-revealed" : ""}${className ? ` ${className}` : ""}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -79,27 +122,22 @@ export function ScaleIn({
   className = "",
   once = true,
 }) {
-  const prefersReduced = useReducedMotion();
-
-  if (prefersReduced) {
-    return <div className={className}>{children}</div>;
-  }
-
+  const { ref, inView, style } = useReveal({ y: 0, scale, delay, duration, once });
   return (
-    <motion.div
-      initial={{ opacity: 0, scale }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once, amount: 0.05 }}
-      transition={{ duration, delay, ease: [0.16, 1, 0.3, 1] }}
-      className={className}
+    <div
+      ref={ref}
+      style={style}
+      className={`reveal-visual${inView ? " is-revealed" : ""}${className ? ` ${className}` : ""}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
 
 /**
- * StaggerContainer & StaggerItem
+ * StaggerContainer & StaggerItem — CSS-delay stagger, no JS orchestration.
+ * StaggerContainer simply reveals; children use StaggerItem with an
+ * auto-incremented delay via CSS variable so markup order = stagger order.
  */
 export function StaggerContainer({
   children,
@@ -108,30 +146,15 @@ export function StaggerContainer({
   className = "",
   once = true,
 }) {
-  const prefersReduced = useReducedMotion();
-
-  if (prefersReduced) {
-    return <div className={className}>{children}</div>;
-  }
-
+  const { ref, inView } = useReveal({ y: 0, delay, duration: 0.3, once });
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once, amount: 0.05 }}
-      variants={{
-        hidden: {},
-        visible: {
-          transition: {
-            staggerChildren: stagger,
-            delayChildren: delay,
-          },
-        },
-      }}
-      className={className}
+    <div
+      ref={ref}
+      style={{ "--stagger-step": `${Math.round(stagger * 1000)}ms` }}
+      className={`reveal-item${inView ? " is-revealed" : ""}${className ? ` ${className}` : ""}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -141,25 +164,14 @@ export function StaggerItem({
   duration = 0.5,
   className = "",
 }) {
-  const prefersReduced = useReducedMotion();
-
-  if (prefersReduced) {
-    return <div className={className}>{children}</div>;
-  }
-
+  const { ref, inView, style } = useReveal({ y, delay: 0, duration });
   return (
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: { duration, ease: [0.16, 1, 0.3, 1] },
-        },
-      }}
-      className={className}
+    <div
+      ref={ref}
+      style={style}
+      className={`reveal-item${inView ? " is-revealed" : ""}${className ? ` ${className}` : ""}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

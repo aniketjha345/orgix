@@ -1,16 +1,11 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState } from "react";
 import ParticleRing from "../ParticleRing";
 import Button from "../core/Button";
 import { heroCreators, imgSrc } from "@/data/site";
-import { sound } from "@/lib/sound";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const HEADLINE = "Grow Organically.";
+const HEADLINE = "Build the Brand Behind You.";
 
 export const SQUAD = [
   {
@@ -20,7 +15,7 @@ export const SQUAD = [
     emoji: "🔍",
     role: "Moat Architect",
     level: "Lvl 5",
-    img: "/images/figurines/strategist.png",
+    img: "/images/figurines/strategist.webp",
     pillar: "AUTHORITATIVE POSITIONING",
     themeColor: "#EA580C",
     glowColor: "rgba(234, 88, 12, 0.35)",
@@ -37,7 +32,7 @@ export const SQUAD = [
     emoji: "✍️",
     role: "Viral Hook Architect",
     level: "Lvl 4",
-    img: "/images/figurines/creator.png",
+    img: "/images/figurines/creator.webp",
     pillar: "VIRAL THUMB-STOP INFLUENCE",
     themeColor: "#16A34A",
     glowColor: "rgba(22, 163, 74, 0.35)",
@@ -54,7 +49,7 @@ export const SQUAD = [
     emoji: "🎥",
     role: "Camera Commander",
     level: "Lvl 5",
-    img: "/images/figurines/director.png",
+    img: "/images/figurines/director.webp",
     pillar: "EXECUTIVE CINEMATIC PRESENCE",
     themeColor: "#DB2777",
     glowColor: "rgba(219, 39, 119, 0.35)",
@@ -71,7 +66,7 @@ export const SQUAD = [
     emoji: "🎧",
     role: "Sound & Foley Master",
     level: "Lvl 5",
-    img: "/images/figurines/alchemist.png",
+    img: "/images/figurines/alchemist.webp",
     pillar: "PSYCHOLOGICAL RETENTION RHYTHM",
     themeColor: "#0891B2",
     glowColor: "rgba(8, 145, 178, 0.35)",
@@ -88,7 +83,7 @@ export const SQUAD = [
     emoji: "📊",
     role: "Algorithm Scientist",
     level: "Lvl 5",
-    img: "/images/figurines/analyst.png",
+    img: "/images/figurines/analyst.webp",
     pillar: "ALGORITHMIC VELOCITY & REACH",
     themeColor: "#7C3AED",
     glowColor: "rgba(124, 58, 237, 0.35)",
@@ -105,7 +100,7 @@ export const SQUAD = [
     emoji: "💬",
     role: "Conversion Sage & Dealmaker",
     level: "Lvl 6",
-    img: "/images/figurines/whisperer.png",
+    img: "/images/figurines/whisperer.webp",
     pillar: "HIGH-TICKET INBOUND DM FLOWS",
     themeColor: "#059669",
     glowColor: "rgba(5, 150, 105, 0.38)",
@@ -122,7 +117,7 @@ export const SQUAD = [
     emoji: "⚡",
     role: "Trend Igniter & Accelerator",
     level: "Lvl 5",
-    img: "/images/figurines/catalyst.png",
+    img: "/images/figurines/catalyst.webp",
     pillar: "EXPLORE VELOCITY & SPEED",
     themeColor: "#D97706",
     glowColor: "rgba(217, 119, 6, 0.38)",
@@ -139,7 +134,7 @@ export const SQUAD = [
     emoji: "🚀",
     role: "Scale & Revenue General",
     level: "Lvl 6",
-    img: "/images/figurines/builder.png",
+    img: "/images/figurines/builder.webp",
     pillar: "COMPOUNDING INBOUND PIPELINE",
     themeColor: "#2E5BFF",
     glowColor: "rgba(46, 91, 255, 0.40)",
@@ -156,30 +151,7 @@ export default function Hero() {
   const [reduced, setReduced] = useState(false);
   const [ringOn, setRingOn] = useState(false);
   const [go, setGo] = useState(false);
-  const [activeIdx, setActiveIdx] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [pokedLeft, setPokedLeft] = useState(false);
-  const [pokedRight, setPokedRight] = useState(false);
-  const [sparkleLeft, setSparkleLeft] = useState(false);
-  const [sparkleRight, setSparkleRight] = useState(false);
-  const timerRef = useRef(null);
-
-  const len = SQUAD.length;
-  const current = SQUAD[activeIdx];
-  const nextIdx = (activeIdx + 1) % len;
-  const nextChar = SQUAD[nextIdx];
-
-  // Auto-rotate the squad around the hero headline every 4.8s
-  useEffect(() => {
-    if (isPaused) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    timerRef.current = setInterval(() => {
-      setActiveIdx((prev) => (prev + 1) % len);
-    }, 4800);
-
-    return () => clearInterval(timerRef.current);
-  }, [isPaused, len, activeIdx]);
+  
 
   // Entrance choreography
   useEffect(() => {
@@ -211,27 +183,34 @@ export default function Hero() {
     };
   }, []);
 
-  // GSAP scroll-linked parallax
+  // Scroll-linked parallax (zero-dep rAF — was GSAP ScrollTrigger).
+  // Fades + lifts the headline block slightly as the hero scrolls away.
+  const parallaxRef = useRef(null);
   useEffect(() => {
-    const hero = document.getElementById("hero");
-    if (!hero) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    const ctx = gsap.context(() => {
-      gsap.to(".hero-parallax-text", {
-        y: -56,
-        opacity: 0.35,
-        ease: "none",
-        scrollTrigger: {
-          trigger: hero,
-          start: "top top",
-          end: "bottom top",
-          scrub: 0.5,
-        },
-      });
-    }, hero);
-
-    return () => ctx.revert();
+    const hero = document.getElementById("hero");
+    const el = parallaxRef.current;
+    if (!hero || !el) return;
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const r = hero.getBoundingClientRect();
+      // 0 when hero fully in view → 1 when scrolled past
+      const p = Math.min(Math.max(-r.top / Math.max(r.height, 1), 0), 1);
+      el.style.transform = `translate3d(0, ${(-32 * p).toFixed(1)}px, 0)`;
+      el.style.opacity = (1 - 0.3 * p).toFixed(3);
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   const done = chars >= HEADLINE.length;
@@ -245,45 +224,13 @@ export default function Hero() {
     }
   };
 
-  const handlePokeLeft = () => {
-    sound.playPop();
-    setPokedLeft(true);
-    setSparkleLeft(true);
-    setTimeout(() => {
-      setPokedLeft(false);
-      setSparkleLeft(false);
-    }, 900);
-  };
-
-  const handlePokeRight = () => {
-    sound.playPop();
-    setPokedRight(true);
-    setSparkleRight(true);
-    setTimeout(() => {
-      setPokedRight(false);
-      setSparkleRight(false);
-    }, 900);
-  };
-
-  const handlePrev = () => {
-    sound.playClick();
-    setActiveIdx((prev) => (prev - 1 + len) % len);
-  };
-
-  const handleNext = () => {
-    sound.playClick();
-    setActiveIdx((prev) => (prev + 1) % len);
-  };
+  
 
   return (
     <section
       id="hero"
       className={`editorial-section section-bg relative overflow-hidden flex flex-col justify-center items-center text-center ${go ? "hero-go" : ""}`}
-      style={{ minHeight: "100svh", scrollSnapAlign: "start" }}
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onTouchStart={() => setIsPaused(true)}
-      onTouchEnd={() => setIsPaused(false)}
+      style={{ minHeight: "100svh" }}
     >
       {/* Particle ring */}
       <div
@@ -298,140 +245,49 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center py-6 sm:py-10">
         
         {/* ============================================================
-            HERO MAIN STAGE: LEFT MASCOT + CENTER HEADLINE + RIGHT MASCOT
-            With Interactive Comic Talk Bubbles!
+            HERO MAIN STAGE: REAL CREATOR PROOF + CENTER HEADLINE
+            Human-first — no mascots.
            ============================================================ */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-12 items-center">
           
           {/* ============================================================
-              LEFT SIDE: FREESTANDING 3D CHARACTER + INTERACTIVE TALK BUBBLE
+              LEFT SIDE: REAL CREATOR PROOF (human-first — no mascots)
              ============================================================ */}
           <div
-            className="hidden lg:flex lg:col-span-3 flex-col items-center select-none group/left relative"
-            title={`Chief! Tap to banter with ${current.name}`}
+            className="hidden lg:flex lg:col-span-3 flex-col gap-4 items-center select-none"
+            aria-label="Real creators who trust Orgix"
           >
-            {/* Interactive Floating Talk Bubble (Above Left Character) */}
-            <div
-              onClick={handlePokeLeft}
-              className="relative mb-3 w-[240px] xl:w-[270px] rounded-2xl bg-[#F6F4EF]/95 backdrop-blur-xl border border-line/90 p-3 text-ink shadow-[0_12px_28px_rgba(15,26,46,0.18)] cursor-pointer hover:border-accent transition-all duration-300 animate-in fade-in slide-in-from-bottom-2"
-            >
-              {/* Balloon tail pointing down toward mascot's head */}
-              <div
-                className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-[#F6F4EF] border-r border-b border-line/90 rotate-45"
-                aria-hidden="true"
-              />
-              <div className="flex items-center justify-between gap-1 pb-1 mb-1.5 border-b border-line/50 font-mono text-[9px]">
-                <div className="flex items-center gap-1">
-                  <span
-                    className="w-1.5 h-1.5 rounded-full animate-pulse"
-                    style={{ backgroundColor: current.themeColor }}
-                  />
-                  <span className="font-bold text-accent uppercase">
-                    {current.name}
-                  </span>
-                </div>
-                <span className="text-[8.5px] text-ink-soft bg-black/5 px-1 rounded">
-                  {current.level}
-                </span>
-              </div>
-              <p className="font-body text-[11.5px] text-ink leading-snug font-normal text-left">
-                {pokedLeft ? current.banter : current.talkBubble}
-              </p>
-            </div>
 
-            {/* Mascot Figurine Container */}
-            <div
-              className="relative flex flex-col items-center cursor-pointer"
-              onClick={handlePokeLeft}
-            >
-              {/* Floating Sparkle Particles */}
-              {sparkleLeft && (
-                <div className="absolute -top-6 pointer-events-none flex items-center gap-1 text-sm animate-bounce z-20">
-                  <span>✨</span>
-                  <span>⭐</span>
-                  <span>💫</span>
-                </div>
-              )}
-
-              {/* Ambient radial aura behind the character */}
+            <span className="font-mono text-[9.5px] uppercase tracking-[0.22em] text-ink-soft">
+              Real faces · Real growth
+            </span>
+            {heroCreators.slice(0, 2).map((c) => (
               <div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 xl:w-56 xl:h-56 rounded-full blur-2xl pointer-events-none transition-colors duration-700 opacity-60"
-                style={{ backgroundColor: current.glowColor }}
-                aria-hidden="true"
-              />
-
-              {/* Freestanding 3D Mascot Image */}
-              <div
-                key={`left-${current.id}`}
-                className={`relative w-44 h-68 xl:w-54 xl:h-80 flex items-end justify-center animate-fig-levitate transition-transform duration-300 group-hover/left:scale-105 ${
-                  pokedLeft ? "-translate-y-4 scale-110 rotate-2" : ""
-                }`}
+                key={c.handle}
+                className="w-[220px] xl:w-[248px] flex items-center gap-3 rounded-2xl bg-white/85 backdrop-blur-md border border-line shadow-sm p-3 text-left transition-all hover:border-accent/50 hover:shadow-md"
               >
                 <img
-                  src={current.img}
-                  alt={current.name}
-                  className="w-full h-full object-contain drop-shadow-[0_24px_45px_rgba(15,26,46,0.32)]"
+                  src={imgSrc(c.img)}
+                  alt={c.role || c.handle}
+                  width={52}
+                  height={52}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-13 h-13 rounded-full object-cover border-2 border-white shadow-2xs shrink-0"
                 />
-
-                {/* Level Medal */}
-                <div className="absolute top-2 right-0 px-2 py-0.5 rounded-full bg-[#0F1A2E] text-white font-mono text-[9px] uppercase tracking-wider font-bold shadow-md border border-white/20">
-                  {current.level}
+                <div className="min-w-0 flex-1 leading-tight">
+                  <div className="font-display font-medium text-[13px] text-ink truncate">{c.handle}</div>
+                  <div className="font-mono text-[9px] text-ink-soft uppercase tracking-wider truncate">{c.role}</div>
+                  <div className="text-[10.5px] font-semibold text-accent">{c.followers} followers</div>
                 </div>
               </div>
-
-              {/* Freestanding Ground Shadow */}
-              <div
-                className="w-32 xl:w-38 h-3 rounded-full bg-[#0F1A2E]/25 blur-xs animate-fig-shadow mt-1"
-                style={{
-                  boxShadow: `0 0 24px 6px ${current.glowColor}`,
-                }}
-              />
-
-              {/* Character Identity & Controls */}
-              <div className="mt-2.5 text-center flex flex-col items-center">
-                <div className="font-display font-medium text-[15px] xl:text-[16px] text-ink flex items-center justify-center gap-1.5">
-                  <span>{current.emoji}</span>
-                  <span>{current.name}</span>
-                </div>
-                <div className="font-mono text-[10px] xl:text-[10.5px] text-accent font-semibold uppercase tracking-wider">
-                  {current.role}
-                </div>
-                {/* Arrow to cycle */}
-                <div className="mt-1.5 flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handlePrev();
-                    }}
-                    className="w-5 h-5 rounded-full bg-white border border-line text-ink-soft hover:text-accent hover:border-accent flex items-center justify-center text-[10px] transition-colors cursor-pointer shadow-2xs"
-                    title="Previous character"
-                  >
-                    ‹
-                  </button>
-                  <span className="font-mono text-[9px] text-ink-soft">
-                    {activeIdx + 1}/{len}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleNext();
-                    }}
-                    className="w-5 h-5 rounded-full bg-white border border-line text-ink-soft hover:text-accent hover:border-accent flex items-center justify-center text-[10px] transition-colors cursor-pointer shadow-2xs"
-                    title="Next character"
-                  >
-                    ›
-                  </button>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* ============================================================
-              CENTER: MAIN HERO TEXT ("Grow Organically.", Pills, CTAs)
+              CENTER: MAIN HERO TEXT ("Build the Brand Behind You.", Pills, CTAs)
              ============================================================ */}
-          <div className="lg:col-span-6 hero-parallax-text flex flex-col items-center text-center px-2">
+          <div ref={parallaxRef} className="lg:col-span-6 hero-parallax-text flex flex-col items-center text-center px-2">
             {/* Authentic promise pill */}
             <div className="hero-rise hero-rise-1 inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/85 border border-line shadow-xs mb-4 text-[11px] sm:text-[12px] font-mono tracking-wide text-ink select-none backdrop-blur-md">
               <span className="relative flex h-2 w-2">
@@ -445,8 +301,8 @@ export default function Hero() {
 
             <span className="hero-rise hero-rise-2 editorial-kicker mb-2.5">The Personal Branding Agency in India</span>
 
-            {/* Giant Typewriter Headline: Grow Organically. */}
-            <h1 className="display-h1 text-center mb-2 select-none" aria-label={HEADLINE}>
+            {/* Giant Typewriter Headline: Build the Brand Behind You. */}
+            <h1 className="display-h1 hero-long-headline text-center mb-2 select-none" aria-label={HEADLINE}>
               <span aria-hidden="true">
                 {HEADLINE.slice(0, chars)}
                 {!done && !reduced && <span className="type-caret" />}
@@ -473,7 +329,7 @@ export default function Hero() {
             </h1>
 
             <p className="hero-rise hero-rise-3 body-editorial text-center max-w-xl mx-auto mb-6 leading-relaxed text-[15px] sm:text-[16px]">
-              We help creators and brands grow on Instagram, LinkedIn and beyond — with organic content, not ads.
+              We turn expertise into personal brands that get noticed, trusted and remembered.
             </p>
 
             {/* CTAs */}
@@ -489,13 +345,16 @@ export default function Hero() {
             {/* Verified Social Proof Pill */}
             <div className="hero-rise hero-rise-5 inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/75 border border-line backdrop-blur-md shadow-2xs text-left select-none mb-2">
               <div className="flex -space-x-2">
-                {heroCreators.slice(0, 4).map((c) => (
+                {heroCreators.slice(0, 4).map((c, i) => (
                   <img
                     key={c.handle}
                     src={imgSrc(c.img)}
                     alt={c.role || c.handle}
                     width={26}
                     height={26}
+                    loading="eager"
+                    fetchPriority={i === 0 ? "high" : "auto"}
+                    decoding="async"
                     className="w-7 h-7 rounded-full object-cover border-2 border-white"
                   />
                 ))}
@@ -506,227 +365,64 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Squad Roster Rail: All 8 Characters at Chief's Command */}
-            <div className="mt-3 flex flex-wrap items-center justify-center gap-1.5 max-w-lg select-none">
-              <span className="text-[10px] font-mono text-ink-soft uppercase tracking-wider mr-1">
-                Squad:
-              </span>
-              {SQUAD.map((sq, i) => {
-                const isSelected = activeIdx === i;
-                return (
-                  <button
-                    key={sq.id}
-                    type="button"
-                    onClick={() => {
-                      sound.playPop();
-                      setActiveIdx(i);
-                    }}
-                    className={`px-2 py-0.5 rounded-full font-mono text-[9.5px] transition-all cursor-pointer flex items-center gap-1 border ${
-                      isSelected
-                        ? "bg-ink text-white border-ink font-bold shadow-xs scale-105"
-                        : "bg-white/80 hover:bg-white text-ink-soft border-line hover:border-accent"
-                    }`}
-                    title={`Summon ${sq.name} (${sq.role}) to stage`}
-                  >
-                    <span
-                      className="w-1.5 h-1.5 rounded-full"
-                      style={{ backgroundColor: sq.themeColor }}
-                    />
-                    <span>{sq.shortName}</span>
-                  </button>
-                );
-              })}
-            </div>
+            
           </div>
 
           {/* ============================================================
-              RIGHT SIDE: FREESTANDING 3D CHARACTER + INTERACTIVE TALK BUBBLE
+              RIGHT SIDE: REAL CREATOR PROOF (human-first — no mascots)
              ============================================================ */}
           <div
-            className="hidden lg:flex lg:col-span-3 flex-col items-center select-none group/right relative"
-            title={`Chief! Tap to banter with ${nextChar.name}`}
+            className="hidden lg:flex lg:col-span-3 flex-col gap-4 items-center select-none"
+            aria-label="Creators trusted across India"
           >
-            {/* Interactive Floating Talk Bubble (Above Right Character) */}
-            <div
-              onClick={handlePokeRight}
-              className="relative mb-3 w-[240px] xl:w-[270px] rounded-2xl bg-[#F6F4EF]/95 backdrop-blur-xl border border-line/90 p-3 text-ink shadow-[0_12px_28px_rgba(15,26,46,0.18)] cursor-pointer hover:border-accent transition-all duration-300 animate-in fade-in slide-in-from-bottom-2"
-            >
-              {/* Balloon tail pointing down toward mascot's head */}
-              <div
-                className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-[#F6F4EF] border-r border-b border-line/90 rotate-45"
-                aria-hidden="true"
-              />
-              <div className="flex items-center justify-between gap-1 pb-1 mb-1.5 border-b border-line/50 font-mono text-[9px]">
-                <div className="flex items-center gap-1">
-                  <span
-                    className="w-1.5 h-1.5 rounded-full animate-pulse"
-                    style={{ backgroundColor: nextChar.themeColor }}
-                  />
-                  <span className="font-bold text-accent uppercase">
-                    {nextChar.name}
-                  </span>
-                </div>
-                <span className="text-[8.5px] text-white bg-accent px-1 rounded font-bold">
-                  Next ➔
-                </span>
-              </div>
-              <p className="font-body text-[11.5px] text-ink leading-snug font-normal text-left">
-                {pokedRight ? nextChar.banter : nextChar.talkBubble}
-              </p>
-            </div>
 
-            {/* Mascot Figurine Container */}
-            <div
-              className="relative flex flex-col items-center cursor-pointer"
-              onClick={handlePokeRight}
-            >
-              {/* Floating Sparkle Particles */}
-              {sparkleRight && (
-                <div className="absolute -top-6 pointer-events-none flex items-center gap-1 text-sm animate-bounce z-20">
-                  <span>✨</span>
-                  <span>⭐</span>
-                  <span>💫</span>
-                </div>
-              )}
-
-              {/* Ambient radial aura behind the character */}
+            <span className="font-mono text-[9.5px] uppercase tracking-[0.22em] text-ink-soft">
+              85+ creators scaled
+            </span>
+            {heroCreators.slice(2, 4).map((c) => (
               <div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 xl:w-56 xl:h-56 rounded-full blur-2xl pointer-events-none transition-colors duration-700 opacity-40"
-                style={{ backgroundColor: nextChar.glowColor }}
-                aria-hidden="true"
-              />
-
-              {/* Freestanding 3D Mascot Image */}
-              <div
-                key={`right-${nextChar.id}`}
-                className={`relative w-40 h-64 xl:w-50 xl:h-76 flex items-end justify-center animate-fig-levitate transition-transform duration-300 group-hover/right:scale-105 ${
-                  pokedRight ? "-translate-y-4 scale-110 rotate-2" : ""
-                }`}
-                style={{ animationDelay: "1.5s" }}
+                key={c.handle}
+                className="w-[220px] xl:w-[248px] flex items-center gap-3 rounded-2xl bg-white/85 backdrop-blur-md border border-line shadow-sm p-3 text-left transition-all hover:border-accent/50 hover:shadow-md"
               >
                 <img
-                  src={nextChar.img}
-                  alt={nextChar.name}
-                  className="w-full h-full object-contain drop-shadow-[0_20px_35px_rgba(15,26,46,0.22)] opacity-85 group-hover:opacity-100"
+                  src={imgSrc(c.img)}
+                  alt={c.role || c.handle}
+                  width={52}
+                  height={52}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-13 h-13 rounded-full object-cover border-2 border-white shadow-2xs shrink-0"
                 />
-
-                {/* Level Medal */}
-                <div className="absolute top-2 left-0 px-2 py-0.5 rounded-full bg-accent text-white font-mono text-[9px] uppercase tracking-wider font-bold shadow-md">
-                  {nextChar.level}
+                <div className="min-w-0 flex-1 leading-tight">
+                  <div className="font-display font-medium text-[13px] text-ink truncate">{c.handle}</div>
+                  <div className="font-mono text-[9px] text-ink-soft uppercase tracking-wider truncate">{c.role}</div>
+                  <div className="text-[10.5px] font-semibold text-accent">{c.followers} followers</div>
                 </div>
               </div>
-
-              {/* Freestanding Ground Shadow */}
-              <div
-                className="w-28 xl:w-34 h-2.5 rounded-full bg-[#0F1A2E]/20 blur-xs animate-fig-shadow mt-1"
-                style={{
-                  boxShadow: `0 0 20px 5px ${nextChar.glowColor}`,
-                }}
-              />
-
-              {/* Character Identity & Controls */}
-              <div className="mt-2.5 text-center flex flex-col items-center">
-                <div className="font-display font-medium text-[14px] xl:text-[15px] text-ink-soft flex items-center justify-center gap-1.5">
-                  <span>{nextChar.emoji}</span>
-                  <span>{nextChar.name}</span>
-                </div>
-                <div className="font-mono text-[10px] text-ink-soft/80 uppercase tracking-wider">
-                  {nextChar.role}
-                </div>
-                <div className="mt-1.5 flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handlePrev();
-                    }}
-                    className="w-5 h-5 rounded-full bg-white border border-line text-ink-soft hover:text-accent hover:border-accent flex items-center justify-center text-[10px] transition-colors cursor-pointer shadow-2xs"
-                    title="Previous character"
-                  >
-                    ‹
-                  </button>
-                  <span className="font-mono text-[9px] text-ink-soft">
-                    {nextIdx + 1}/{len}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleNext();
-                    }}
-                    className="w-5 h-5 rounded-full bg-white border border-line text-ink-soft hover:text-accent hover:border-accent flex items-center justify-center text-[10px] transition-colors cursor-pointer shadow-2xs"
-                    title="Next character"
-                  >
-                    ›
-                  </button>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
 
         </div>
 
-        {/* ============================================================
-            MOBILE / TABLET FREESTANDING CHARACTER (< lg screens)
-            With Talk Bubble & Interactive Poking!
-           ============================================================ */}
-        <div
-          className="flex lg:hidden flex-col items-center mt-6 select-none cursor-pointer group/mobile"
-          onClick={handlePokeLeft}
-        >
-          {/* Mobile Talk Bubble */}
-          <div className="relative mb-2.5 w-[260px] sm:w-[290px] rounded-2xl bg-[#F6F4EF]/95 border border-line p-2.5 text-ink shadow-sm">
-            <div
-              className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-[#F6F4EF] border-r border-b border-line rotate-45"
-              aria-hidden="true"
-            />
-            <div className="flex items-center justify-between pb-1 mb-1 border-b border-line/40 font-mono text-[8.5px]">
-              <span className="font-bold text-accent uppercase">
-                {current.emoji} {current.name}
-              </span>
-              <span className="text-ink-soft">{current.level}</span>
-            </div>
-            <p className="font-body text-[11px] text-ink leading-snug">
-              {pokedLeft ? current.banter : current.talkBubble}
-            </p>
-          </div>
-
-          <div className="relative w-40 h-60 sm:w-48 sm:h-68 flex items-end justify-center animate-fig-levitate">
-            <img
-              src={current.img}
-              alt={current.name}
-              className="w-full h-full object-contain drop-shadow-[0_20px_35px_rgba(15,26,46,0.28)]"
-            />
-            <div className="absolute top-2 right-0 px-2 py-0.5 rounded-full bg-[#0F1A2E] text-white font-mono text-[9px] uppercase tracking-wider font-bold shadow-md border border-white/20">
-              {current.level}
-            </div>
-          </div>
-          <div className="w-28 h-3 rounded-full bg-[#0F1A2E]/25 blur-xs animate-fig-shadow mt-1" />
-          
-          <div className="mt-2 flex items-center gap-2">
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                handlePrev();
-              }}
-              className="w-6 h-6 rounded-full bg-white border border-line text-ink-soft flex items-center justify-center text-xs"
-            >
-              ‹
-            </button>
-            <span className="font-display font-medium text-[14px] text-ink">
-              {current.name}
-            </span>
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                handleNext();
-              }}
-              className="w-6 h-6 rounded-full bg-white border border-line text-ink-soft flex items-center justify-center text-xs"
-            >
-              ›
-            </button>
+        {/* Mobile: real creator faces — human-first proof, no mascot */}
+        <div className="flex lg:hidden flex-col items-center mt-4 gap-3 select-none">
+          <span className="font-mono text-[9.5px] uppercase tracking-[0.22em] text-ink-soft">
+            Real faces · real growth · 85+ creators
+          </span>
+          <div className="flex -space-x-2.5">
+            {heroCreators.map((c, i) => (
+              <img
+                key={c.handle}
+                src={imgSrc(c.img)}
+                alt={c.role || c.handle}
+                width={44}
+                height={44}
+                loading={i === 0 ? "eager" : "lazy"}
+                fetchPriority={i === 0 ? "high" : "auto"}
+                decoding="async"
+                className="w-11 h-11 rounded-full object-cover border-2 border-white"
+              />
+            ))}
           </div>
         </div>
 

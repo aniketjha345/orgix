@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Icon from "../core/Icon";
 import SectionHeading from "../ui/SectionHeading";
 import Button from "../ui/Button";
@@ -27,37 +26,37 @@ const stepDeliverables = {
 
 const stageArchetypes = {
   "01": {
-    img: "/images/figurines/strategist.png",
+    img: "/images/figurines/strategist.webp",
     name: "The Strategist",
     emoji: "🔍",
     line: "Finds the white space and maps the moat before anyone else does.",
   },
   "02": {
-    img: "/images/figurines/creator.png",
+    img: "/images/figurines/creator.webp",
     name: "The Creator",
     emoji: "✍️",
     line: "Turns deep expertise into hooks that stop the scroll in 1.2s.",
   },
   "03": {
-    img: "/images/figurines/director.png",
+    img: "/images/figurines/director.webp",
     name: "The Director",
     emoji: "🎥",
     line: "Guides every shoot and camera angle for executive confidence.",
   },
   "04": {
-    img: "/images/figurines/alchemist.png",
+    img: "/images/figurines/alchemist.webp",
     name: "The Alchemist",
     emoji: "🎧",
     line: "Injects micro-cut rhythms, audio foley, and psychological pacing.",
   },
   "05": {
-    img: "/images/figurines/analyst.png",
+    img: "/images/figurines/analyst.webp",
     name: "The Analyst",
     emoji: "📊",
     line: "Models algorithm curve dynamics, metadata, and viral syndication.",
   },
   "06": {
-    img: "/images/figurines/builder.png",
+    img: "/images/figurines/builder.webp",
     name: "The Builder",
     emoji: "🚀",
     line: "Turns community engagement and DM funnels into inbound pipeline.",
@@ -239,14 +238,10 @@ export default function Process({ index = "03" }) {
           {/* Right Column: Active Stage Detail & Architecture Artifact (Compact Cockpit) */}
           <div className="lg:col-span-8">
             <div className="rounded-[24px] bg-white/90 border border-black/[0.08] p-5 sm:p-6 shadow-[0_16px_40px_-10px_rgba(15,26,46,0.06),inset_0_1px_0_rgba(255,255,255,1)] relative overflow-hidden backdrop-blur-xl">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentStep.n}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-                >
+              <div
+                key={currentStep.n}
+                className="process-stage-enter"
+              >
                   {/* Stage Top Meta Bar */}
                   <div className="flex items-center justify-between pb-3 border-b border-black/[0.06] mb-4">
                     <div className="flex items-center gap-2">
@@ -400,8 +395,7 @@ export default function Process({ index = "03" }) {
                       <span>{paused ? "Paused" : "Auto-cycling"} · 0{activeIdx + 1} / 06</span>
                     </div>
                   </div>
-                </motion.div>
-              </AnimatePresence>
+                </div>
             </div>
           </div>
         </div>

@@ -53,7 +53,7 @@ export default function Footer() {
           <div className="lg:col-span-5">
             <Link className="inline-block mb-4" href="/" aria-label={`${company.name} — home`}>
               <img
-                src={imgSrc("/images/logo/orgix-logo.png")}
+                src={imgSrc("/images/logo/orgix-logo.webp")}
                 alt="Orgix Media"
                 width={40}
                 height={40}

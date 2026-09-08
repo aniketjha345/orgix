@@ -1,21 +1,28 @@
+import dynamic from "next/dynamic";
 import Hero from "@/components/home/Hero";
 import CreatorMarquee from "@/components/home/CreatorMarquee";
 import Manifesto from "@/components/home/Manifesto";
 import Stats from "@/components/home/Stats";
-import WhatWeDo from "@/components/home/WhatWeDo";
-import ArchetypeCast from "@/components/home/ArchetypeCast";
-import Process from "@/components/home/Process";
-import VideoEditingSection from "@/components/home/VideoEditingSection";
-import InstagramGrowthSection from "@/components/home/InstagramGrowthSection";
-import ResultsSection from "@/components/home/ResultsSection";
-import GrowthCalculator from "@/components/home/GrowthCalculator";
-import ComparisonMatrix from "@/components/home/ComparisonMatrix";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
-import VideoProof from "@/components/home/VideoProof";
-import LeadershipEditorial from "@/components/home/LeadershipEditorial";
-import FaqAccordion from "@/components/home/FaqAccordion";
-import LatestBlogGrid from "@/components/home/LatestBlogGrid";
-import SplitCtaBanner from "@/components/home/SplitCtaBanner";
+
+// Below-fold sections are code-split with next/dynamic: each becomes its
+// own JS chunk fetched after first paint, while SSR still renders the HTML
+// (SEO + no-JS unaffected). Only the first screen ships eagerly.
+const ScrollStory = dynamic(() => import("@/components/home/ScrollStory"));
+const WhatWeDo = dynamic(() => import("@/components/home/WhatWeDo"));
+const GrowthSprint = dynamic(() => import("@/components/home/GrowthSprint"));
+const ArchetypeCast = dynamic(() => import("@/components/home/ArchetypeCast"));
+const Process = dynamic(() => import("@/components/home/Process"));
+const VideoEditingSection = dynamic(() => import("@/components/home/VideoEditingSection"));
+const InstagramGrowthSection = dynamic(() => import("@/components/home/InstagramGrowthSection"));
+const ResultsSection = dynamic(() => import("@/components/home/ResultsSection"));
+const GrowthCalculator = dynamic(() => import("@/components/home/GrowthCalculator"));
+const ComparisonMatrix = dynamic(() => import("@/components/home/ComparisonMatrix"));
+const TestimonialsSection = dynamic(() => import("@/components/home/TestimonialsSection"));
+const VideoProof = dynamic(() => import("@/components/home/VideoProof"));
+const LeadershipEditorial = dynamic(() => import("@/components/home/LeadershipEditorial"));
+const FaqAccordion = dynamic(() => import("@/components/home/FaqAccordion"));
+const LatestBlogGrid = dynamic(() => import("@/components/home/LatestBlogGrid"));
+const SplitCtaBanner = dynamic(() => import("@/components/home/SplitCtaBanner"));
 
 /**
  * Orgix Media — Personal Branding & Social Growth Agency (Home)
@@ -54,8 +61,14 @@ export default function HomePage() {
       {/* 04 — COMPOUNDING METRICS (1B+ / 85+ / 100%) */}
       <Stats />
 
+      {/* 04b — THE ORGIX STORY (scroll-view story: 2022 room → 1B+ views era) */}
+      <ScrollStory />
+
       {/* 05 — WHAT WE DO (INSTAGRAM + YOUTUBE MANAGEMENT) */}
       <WhatWeDo />
+
+      {/* 05b — PLAYFUL 10-SEC GROWTH SPRINT (fun hook → book a call) */}
+      <GrowthSprint />
 
       {/* 06 — THE ORGIX CAST (4 CHARACTER ARCHETYPES) */}
       <ArchetypeCast />

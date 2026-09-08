@@ -165,7 +165,7 @@ const quotesData = [
                   <img
                     src={q.avatar}
                     alt={q.name}
-                    className="w-12 h-12 rounded-full object-cover border border-line grayscale"
+                    className="w-12 h-12 rounded-full object-cover border border-line"
                     loading="lazy"
                   />
                 </div>

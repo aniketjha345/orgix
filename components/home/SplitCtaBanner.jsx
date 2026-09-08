@@ -14,7 +14,7 @@ const ALL_CHARACTERS = [
     level: "Lvl 5",
     themeColor: "#EA580C",
     glowColor: "rgba(234, 88, 12, 0.40)",
-    img: "/images/figurines/strategist.png",
+    img: "/images/figurines/strategist.webp",
     bubble: "Chief! We map your category monopoly before filming a single frame! 🔍",
   },
   {
@@ -25,7 +25,7 @@ const ALL_CHARACTERS = [
     level: "Lvl 4",
     themeColor: "#16A34A",
     glowColor: "rgba(22, 163, 74, 0.40)",
-    img: "/images/figurines/creator.png",
+    img: "/images/figurines/creator.webp",
     bubble: "1.2-second hooks that freeze thumbs and demand attention! ✍️",
   },
   {
@@ -36,7 +36,7 @@ const ALL_CHARACTERS = [
     level: "Lvl 5",
     themeColor: "#DB2777",
     glowColor: "rgba(219, 39, 119, 0.40)",
-    img: "/images/figurines/director.png",
+    img: "/images/figurines/director.webp",
     bubble: "4 hours in our Delhi studio gives you 30 days of high-authority reels! 🎬",
   },
   {
@@ -47,7 +47,7 @@ const ALL_CHARACTERS = [
     level: "Lvl 5",
     themeColor: "#0891B2",
     glowColor: "rgba(8, 145, 178, 0.40)",
-    img: "/images/figurines/alchemist.png",
+    img: "/images/figurines/alchemist.webp",
     bubble: "Micro-cuts & audio foley that keep 73% mute viewers glued! 🎧",
   },
   {
@@ -58,7 +58,7 @@ const ALL_CHARACTERS = [
     level: "Lvl 5",
     themeColor: "#7C3AED",
     glowColor: "rgba(124, 58, 237, 0.40)",
-    img: "/images/figurines/analyst.png",
+    img: "/images/figurines/analyst.webp",
     bubble: "Average Percentage Viewed > 85% to trigger organic explore reach! 📊",
   },
   {
@@ -69,7 +69,7 @@ const ALL_CHARACTERS = [
     level: "Lvl 6",
     themeColor: "#059669",
     glowColor: "rgba(5, 150, 105, 0.40)",
-    img: "/images/figurines/whisperer.png",
+    img: "/images/figurines/whisperer.webp",
     bubble: "Turning viral views into booked client calls & high-ticket contracts! 💬",
   },
   {
@@ -80,7 +80,7 @@ const ALL_CHARACTERS = [
     level: "Lvl 5",
     themeColor: "#D97706",
     glowColor: "rgba(217, 119, 6, 0.40)",
-    img: "/images/figurines/catalyst.png",
+    img: "/images/figurines/catalyst.webp",
     bubble: "Riding cultural momentum early to blow up your reach worldwide! ⚡",
   },
   {
@@ -91,7 +91,7 @@ const ALL_CHARACTERS = [
     level: "Lvl 6",
     themeColor: "#2E5BFF",
     glowColor: "rgba(46, 91, 255, 0.45)",
-    img: "/images/figurines/builder.png",
+    img: "/images/figurines/builder.webp",
     bubble: "All 8 studio minds are assembled and locked in your corner! 🚀",
   },
 ];

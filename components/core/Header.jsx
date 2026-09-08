@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, useScroll, useSpring, useReducedMotion } from "framer-motion";
 import { company, imgSrc } from "@/data/site";
 
 export default function Header() {
@@ -73,20 +72,45 @@ export default function Header() {
   };
 
   // Reading-progress bar — a thin accent line that tracks scroll depth.
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 140,
-    damping: 30,
-    restDelta: 0.001,
-  });
-  const reduceMotion = useReducedMotion();
+  // Zero-dep rAF-throttled transform (was framer-motion useScroll/useSpring).
+  const progressRef = useRef(null);
+  const [motionOK, setMotionOK] = useState(false);
+
+  useEffect(() => {
+    setMotionOK(
+      typeof window !== "undefined" &&
+        !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    );
+    const el = progressRef.current;
+    if (!el) return;
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      const p = max > 0 ? h.scrollTop / max : 0;
+      el.style.transform = `scaleX(${Math.min(Math.max(p, 0), 1)})`;
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
 
   return (
     <>
-      {!reduceMotion && (
-        <motion.div
+      {motionOK && (
+        <div
+          ref={progressRef}
           className="fixed top-0 left-0 right-0 h-[2.5px] bg-accent origin-left z-[60] pointer-events-none"
-          style={{ scaleX }}
+          style={{ transform: "scaleX(0)" }}
           aria-hidden="true"
         />
       )}
@@ -96,8 +120,8 @@ export default function Header() {
         <div
           className={`pointer-events-auto rounded-full transition-all duration-300 px-4 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between w-full border ${
             scrolled
-              ? "bg-[#F6F4EF]/95 backdrop-blur-2xl border-line/90 shadow-[0_12px_36px_-8px_rgba(15,26,46,0.14)]"
-              : "bg-[#F6F4EF]/90 backdrop-blur-xl border-line shadow-[0_4px_24px_rgba(15,26,46,0.05)]"
+              ? "bg-[#F6F4EF]/98 backdrop-blur-2xl border-line/90 shadow-[0_12px_36px_-8px_rgba(15,26,46,0.14)]"
+              : "bg-[#F6F4EF]/97 backdrop-blur-xl border-line shadow-[0_4px_24px_rgba(15,26,46,0.05)]"
           }`}
         >
           {/* Brand Logo & Wordmark */}
@@ -107,10 +131,13 @@ export default function Header() {
             aria-label={`${company.name} Home`}
           >
             <img
-              src={imgSrc("/images/logo/orgix-logo.png")}
+              src={imgSrc("/images/logo/orgix-logo.webp")}
               alt="Orgix Media"
               width={32}
               height={32}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg object-contain"
             />
             <span className="font-display font-medium text-[15px] sm:text-[16px] tracking-tight text-ink flex items-center gap-1.5">

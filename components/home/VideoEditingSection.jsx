@@ -40,6 +40,30 @@ function PhoneReelMockup() {
     return () => video.removeEventListener("timeupdate", onTime);
   }, []);
 
+  // Lazy playback: only download + play the 2.3MB reel while the phone is
+  // actually visible (was autoPlay on mount, even far below the fold).
+  useEffect(() => {
+    const video = videoRef.current;
+    const el = tiltRef.current;
+    if (!video || !el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (typeof IntersectionObserver === "undefined") {
+      video.play().catch(() => {});
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) video.play().catch(() => {});
+          else video.pause();
+        });
+      },
+      { threshold: 0.2 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   // Pointer-follow tilt — ±4° max, fine pointers only.
   useEffect(() => {
     const el = tiltRef.current;
@@ -101,11 +125,10 @@ function PhoneReelMockup() {
             <video
               ref={videoRef}
               src="/images/reel.webm"
-              autoPlay
               loop
               muted={isMuted}
               playsInline
-              preload="metadata"
+              preload="none"
               poster="/images/founders/pari-jain.jpg"
               className="w-full h-full object-cover"
               aria-label="Orgix Media high-retention reel preview"
